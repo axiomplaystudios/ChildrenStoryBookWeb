@@ -1,34 +1,58 @@
+import { createIllustration } from './illustration.js';
+
 const motion = matchMedia('(prefers-reduced-motion: reduce)');
 const landscape = matchMedia('(orientation: landscape)');
 
-export function createReader({ frame, onPage, onNext, onBack }) {
+export function createReader({ frame, onPage, onNext, onBack, speedForPage = () => 1 }) {
   let book, page = 0, flip, loading, active = false, failed = false, layoutKey = '', suppress = false;
   const native = document.createElement('div'); native.className = 'plain-book';
   const curled = document.createElement('div'); curled.className = 'flip-book';
   frame.append(curled, native);
   const spread = () => landscape.matches ? 2 : 1;
   const fallback = () => motion.matches || failed || !flip;
+  let plainPages = [], flipPages = [], plainKey = '', visibleScenes = new Set();
+  const scenes = new Map();
+  let userPaused = false;
+  const scenePages = new Map();
   function pages() {
     return book.pages.map((entry, index) => {
       const el = document.createElement('article'); el.className = 'story-page';
       el.setAttribute('aria-label', `Page ${index + 1}`);
-      const img = document.createElement('img'); img.src = `./books/${book.id}/${entry.image}`; img.alt = entry.alt; img.draggable = false;
+      const illustration = createIllustration({ bookId: book.id, page: entry });
+      illustration.setReducedMotion(motion.matches); scenes.set(el, illustration); scenePages.set(illustration, index);
+      illustration.setSpeed(speedForPage(book.id, index));
       const text = document.createElement('p'); text.textContent = entry.text;
       const number = document.createElement('span'); number.className = 'page-number'; number.textContent = index + 1;
       const content = document.createElement('div'); content.className = 'page-content';
-      content.append(img, text, number); el.append(content); return el;
+      content.append(illustration.element, text, number); el.append(content); return el;
     });
   }
   function sync() {
     if (!book) return;
     native.hidden = !fallback(); curled.hidden = fallback();
     if (fallback()) {
-      native.replaceChildren(...pages().slice(page, page + spread()));
+      const key = `${page}-${spread()}`;
+      if (key !== plainKey) { native.replaceChildren(...plainPages.slice(page, page + spread())); plainKey = key; }
       native.style.setProperty('--spread', spread());
     }
     // Hidden page text must not be read by assistive technology.
     curled.querySelectorAll('.story-page').forEach((el, index) => el.setAttribute('aria-hidden', String(index < page || index >= page + spread())));
+    syncScenes();
     onPage(page, spread());
+  }
+  function syncScenes(turnState = flip?.getState()) {
+    const shown = active ? (fallback() ? plainPages : flipPages).slice(page, page + spread()) : [];
+    const current = new Set(shown.map(el => scenes.get(el)));
+    const paused = userPaused || document.hidden || motion.matches || (!fallback() && turnState !== 'read');
+    for (const controller of scenes.values()) {
+      controller.setReducedMotion(motion.matches);
+      if (!current.has(controller)) controller.pause();
+      else {
+        if (!visibleScenes.has(controller)) controller.reset();
+        if (paused) controller.pause(); else controller.activate();
+      }
+    }
+    visibleScenes = current;
   }
   function dimensions() {
     const expanded = frame.parentElement.classList.contains('is-expanded');
@@ -75,7 +99,9 @@ export function createReader({ frame, onPage, onNext, onBack }) {
       flip = new PageFlip(curled, { width: w, height: h, size: 'fixed', autoSize: false, usePortrait: true, showCover: false, startPage: page, flippingTime: 450, maxShadowOpacity: 0.15, mobileScrollSupport: true, showPageCorners: false, disableFlipByClick: true });
       flip.on('flip', event => { if (suppress) return; page = event.data; if (active) sync(); });
       flip.on('init', () => { if (active) sync(); });
-      flip.loadFromHTML(pages());
+      // The library emits before updating getState(); use the announced state.
+      flip.on('changeState', event => syncScenes(event.data));
+      flipPages = pages(); flip.loadFromHTML(flipPages);
       sync();
     } catch { failed = true; sync(); }
     finally { loading = false; }
@@ -84,9 +110,12 @@ export function createReader({ frame, onPage, onNext, onBack }) {
   // Reusing it avoids accumulating loops when moving between books.
   function open(story, initialPage = 0) {
     finishTurn();
+    for (const controller of scenes.values()) controller.destroy();
+    scenes.clear(); scenePages.clear(); visibleScenes.clear(); userPaused = false; plainKey = ''; flipPages = [];
     book = story; page = initialPage; active = true;
+    plainPages = pages();
     if (flip) {
-      suppress = true; flip.turnToPage(0); flip.updateFromHtml(pages()); flip.turnToPage(page); suppress = false;
+      suppress = true; flip.turnToPage(0); flipPages = pages(); flip.updateFromHtml(flipPages); flip.turnToPage(page); suppress = false;
     }
     resize(); void loadFlip();
   }
@@ -129,6 +158,7 @@ export function createReader({ frame, onPage, onNext, onBack }) {
     start = null;
   }, { passive: true });
   window.addEventListener('resize', resize);
+  document.addEventListener('visibilitychange', () => syncScenes());
   window.visualViewport?.addEventListener('resize', resize);
   const observer = new ResizeObserver(resize);
   observer.observe(frame);
@@ -144,6 +174,10 @@ export function createReader({ frame, onPage, onNext, onBack }) {
     resize();
     void loadFlip();
   });
-  return { open, close() { active = false; finishTurn(); }, go, spread, resize };
+  return { open,
+    refreshSpeeds() { for (const controller of scenes.values()) controller.setSpeed(speedForPage(book.id, scenePages.get(controller))); },
+    setPaused(value) { userPaused = value; syncScenes(); },
+    replay() { userPaused = false; for (const controller of visibleScenes) controller.reset(); syncScenes(); },
+    close() { active = false; finishTurn(); syncScenes(); }, go, spread, resize };
 
 }

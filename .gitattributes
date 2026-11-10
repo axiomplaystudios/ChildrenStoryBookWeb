@@ -1,0 +1,2 @@
+# Preserve the archived publisher HTML exactly, including its source whitespace.
+authoring/a-house-for-mouse/source.html -text whitespace=-blank-at-eol,-blank-at-eof

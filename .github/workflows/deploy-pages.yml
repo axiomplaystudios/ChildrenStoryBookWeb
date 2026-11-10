@@ -28,6 +28,8 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
+      - name: Install browser for book image validation
+        run: npx playwright install --with-deps chromium
       - name: Test story data and reading state
         run: npm test
       - name: Read GitHub Pages configuration

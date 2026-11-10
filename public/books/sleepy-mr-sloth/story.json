@@ -2,7 +2,7 @@
   "title": "Sleepy Mr Sloth",
   "subtitle": "A sleepy climb to the perfect branch",
   "cover": "cover.webp",
-  "credit": "Originally published by Book Dash under a Creative Commons CC BY 4.0 licence. This book can be read for free on www.bookdash.org and was created by Paul Kennedy (writer), Graham Paterson (illustrator), Nick Mulgrew (designer) and Arthur Attwell (editor). For Bedtime Bookshelf, illustrations were converted to WebP, the original text was laid out separately, and four conversation questions were added.",
+  "credit": "Originally published by Book Dash under a Creative Commons CC BY 4.0 licence. This book can be read for free on www.bookdash.org and was created by Paul Kennedy (writer), Graham Paterson (illustrator), Nick Mulgrew (designer) and Arthur Attwell (editor). For Bedtime Bookshelf, illustrations were converted to WebP, selected parts of each illustration were separated and animated with repaired backgrounds, the original text was laid out separately, and four conversation questions were added.",
   "sourceUrl": "https://bookdash.org/books/sleepy-mr-sloth/",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "logo": "book-dash-logo.png",
@@ -11,62 +11,706 @@
     {
       "image": "page-01.webp",
       "text": "One day, Mr Sloth came to visit. He said:\n\nI’m sleepy! I need a good branch for a bed!",
-      "alt": "Mr Sloth is sleepy and yawning."
+      "alt": "Mr Sloth is sleepy and yawning.",
+      "scene": {
+        "width": 1024,
+        "height": 1021,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "sloth-jaw",
+            "image": "page-01-sloth-jaw.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1021,
+            "pivot": [
+              706,
+              395
+            ]
+          },
+          {
+            "id": "sloth-hand",
+            "image": "page-01-sloth-hand.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1021,
+            "pivot": [
+              706,
+              450
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "sloth-jaw",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 6,
+              "angle": 5
+            },
+            "durationMs": 3200,
+            "restMs": 6000,
+            "delayMs": 450,
+            "playback": "once"
+          }
+        ]
+      }
     },
     {
       "image": "page-02.webp",
       "text": "I’m quite good at climbing. I know how to swing.\n\nBut sleeping’s my favourite, favourite thing!",
-      "alt": "Mr Sloth starts climbing the tree."
+      "alt": "Mr Sloth starts climbing the tree.",
+      "scene": {
+        "width": 1024,
+        "height": 1023,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "sloth-torso",
+            "image": "page-02-sloth-torso.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              477,
+              467
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "sloth-torso",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -6,
+              "angle": 2.5
+            },
+            "durationMs": 3300,
+            "restMs": 3600,
+            "delayMs": 450,
+            "playback": "once"
+          }
+        ]
+      }
     },
     {
       "image": "page-03.webp",
       "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-      "alt": "Mr Sloth spots a branch. Is that a big ear nearby?"
+      "alt": "Mr Sloth spots a branch. Is that a big ear nearby?",
+      "scene": {
+        "width": 1024,
+        "height": 1021,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "giraffe-ear",
+            "image": "page-03-giraffe-ear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1021,
+            "pivot": [
+              153,
+              272
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "giraffe-ear",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -10
+            },
+            "durationMs": 1000,
+            "restMs": 4300,
+            "delayMs": 450,
+            "playback": "repeat"
+          }
+        ]
+      }
     },
     {
       "image": "page-04.webp",
       "text": "Oh no, Mr Sloth! A giraffe’s eating there!\n\nHe might think you’re lunch and start nibbling your hair!",
-      "alt": "A giraffe bites Mr Sloth by mistake!"
+      "alt": "A giraffe bites Mr Sloth by mistake!",
+      "scene": {
+        "width": 1024,
+        "height": 1021,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "giraffe-jaw",
+            "image": "page-04-giraffe-jaw.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1021,
+            "pivot": [
+              320,
+              559
+            ]
+          },
+          {
+            "id": "giraffe-neck-foreground",
+            "image": "page-04-giraffe-neck-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1021,
+            "pivot": [
+              0,
+              0
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "giraffe-jaw",
+            "preset": "squawk",
+            "parameters": {
+              "angle": -4
+            },
+            "durationMs": 2200,
+            "restMs": 3600,
+            "delayMs": 450,
+            "playback": "once"
+          }
+        ]
+      }
     },
     {
       "image": "page-05.webp",
       "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-      "alt": "Mr Sloth spots a branch. There are a few bees flying around."
+      "alt": "Mr Sloth spots a branch. There are a few bees flying around.",
+      "scene": {
+        "width": 1024,
+        "height": 1023,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "bee-1",
+            "image": "page-05-bee-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              338,
+              602
+            ]
+          },
+          {
+            "id": "bee-2",
+            "image": "page-05-bee-2.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              184,
+              744
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "bee-1",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 43,
+              "radiusY": 24,
+              "phase": 0
+            },
+            "durationMs": 4500,
+            "restMs": 700,
+            "delayMs": 450,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bee-2",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 31,
+              "radiusY": 18,
+              "phase": 120
+            },
+            "durationMs": 5100,
+            "restMs": 850,
+            "delayMs": 700,
+            "playback": "repeat"
+          }
+        ]
+      }
     },
     {
       "image": "page-06.webp",
       "text": "Oh no, Mr Sloth! There’s a beehive right there!\n\nYou’ll never get sleep with those bees everywhere!",
-      "alt": "Bees fly out of a beehive around Mr Sloth!"
+      "alt": "Bees fly out of a beehive around Mr Sloth!",
+      "scene": {
+        "width": 1024,
+        "height": 976,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "bee-1",
+            "image": "page-06-bee-1.svg",
+            "x": 370,
+            "y": 130,
+            "width": 30,
+            "height": 30,
+            "pivot": [
+              385,
+              145
+            ]
+          },
+          {
+            "id": "bee-2",
+            "image": "page-06-bee-2.svg",
+            "x": 585,
+            "y": 181,
+            "width": 34,
+            "height": 41,
+            "pivot": [
+              602,
+              201.5
+            ]
+          },
+          {
+            "id": "bee-3",
+            "image": "page-06-bee-3.svg",
+            "x": 457,
+            "y": 655,
+            "width": 25,
+            "height": 31,
+            "pivot": [
+              469.5,
+              670.5
+            ]
+          },
+          {
+            "id": "bee-4",
+            "image": "page-06-bee-4.svg",
+            "x": 748,
+            "y": 621,
+            "width": 31,
+            "height": 36,
+            "pivot": [
+              763.5,
+              639
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "bee-1",
+            "preset": "bee-emerge",
+            "playback": "repeat",
+            "durationMs": 4600,
+            "restMs": 700,
+            "delayMs": 350,
+            "parameters": {
+              "radiusX": 54,
+              "radiusY": 28,
+              "phase": 0,
+              "fromX": -245,
+              "fromY": 432
+            }
+          },
+          {
+            "layer": "bee-2",
+            "preset": "bee-emerge",
+            "playback": "repeat",
+            "durationMs": 5020,
+            "restMs": 700,
+            "delayMs": 730,
+            "parameters": {
+              "radiusX": 75,
+              "radiusY": 25,
+              "phase": 160,
+              "fromX": -462,
+              "fromY": 375.5
+            }
+          },
+          {
+            "layer": "bee-3",
+            "preset": "bee-emerge",
+            "playback": "repeat",
+            "durationMs": 5440,
+            "restMs": 700,
+            "delayMs": 1110,
+            "parameters": {
+              "radiusX": 48,
+              "radiusY": 17,
+              "phase": 30,
+              "fromX": -329.5,
+              "fromY": -93.5
+            }
+          },
+          {
+            "layer": "bee-4",
+            "preset": "bee-emerge",
+            "playback": "repeat",
+            "durationMs": 5860,
+            "restMs": 700,
+            "delayMs": 1490,
+            "parameters": {
+              "radiusX": 37,
+              "radiusY": 20,
+              "phase": 220,
+              "fromX": -623.5,
+              "fromY": -62
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-07.webp",
       "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-      "alt": "Mr Sloth spots a branch. There is a tail nearby."
+      "alt": "Mr Sloth spots a branch. There is a tail nearby.",
+      "scene": {
+        "width": 1024,
+        "height": 1023,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "snake-tail",
+            "image": "page-07-snake-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              928,
+              426
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "snake-tail",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 11
+            },
+            "durationMs": 2500,
+            "restMs": 4500,
+            "delayMs": 450,
+            "playback": "repeat"
+          }
+        ]
+      }
     },
     {
       "image": "page-08.webp",
       "text": "Oh no, Mr Sloth, that’s a snake over there!\n\nNot a branch! Poor old snake. You gave him quite a scare.",
-      "alt": "Mr Sloth grabs snake by mistake!"
+      "alt": "Mr Sloth grabs snake by mistake!",
+      "scene": {
+        "width": 1024,
+        "height": 1024,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "snake-head",
+            "image": "page-08-snake-head.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1024,
+            "pivot": [
+              554,
+              424
+            ]
+          },
+          {
+            "id": "snake-tongue",
+            "image": "page-08-snake-tongue.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1024,
+            "pivot": [
+              620,
+              253
+            ],
+            "parent": "snake-head"
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "snake-head",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 1500,
+            "restMs": 3600,
+            "delayMs": 450,
+            "playback": "once"
+          },
+          {
+            "layer": "snake-tongue",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 500,
+            "restMs": 2700,
+            "delayMs": 900,
+            "playback": "repeat"
+          }
+        ]
+      }
     },
     {
       "image": "page-09.webp",
       "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-      "alt": "Mr Sloth spots a branch. There are feet nearby."
+      "alt": "Mr Sloth spots a branch. There are feet nearby.",
+      "scene": {
+        "width": 1024,
+        "height": 1023,
+        "background": "page-09-background.svg",
+        "layers": [
+          {
+            "id": "bird-toes",
+            "image": "page-09-bird-toes.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              428,
+              121
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "bird-toes",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -2,
+              "angle": -9
+            },
+            "durationMs": 1800,
+            "restMs": 3600,
+            "delayMs": 450,
+            "playback": "once"
+          }
+        ]
+      }
     },
     {
       "image": "page-10.webp",
       "text": "Oh no, Mr Sloth! There’s a bird squawking there!\n\nYou’ll never get sleep with that noise in the air!",
-      "alt": "A hadeda is squawking loudly there!"
+      "alt": "A hadeda is squawking loudly there!",
+      "scene": {
+        "width": 1024,
+        "height": 1021,
+        "background": "page-10-background.svg",
+        "layers": [
+          {
+            "id": "bird-beak",
+            "image": "page-10-beak.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1021,
+            "pivot": [
+              470,
+              202
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "bird-beak",
+            "preset": "squawk",
+            "playback": "repeat",
+            "durationMs": 1800,
+            "restMs": 3600,
+            "delayMs": 500,
+            "parameters": {
+              "angle": -14
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-11.webp",
       "text": "Try climb one more branch, Mr Sloth! they all said.\n\nAnd that branch was just the right one for his bed.",
-      "alt": "Mr Sloth climbs to the top of the tree and smiles."
+      "alt": "Mr Sloth climbs to the top of the tree and smiles.",
+      "scene": {
+        "width": 1024,
+        "height": 1023,
+        "background": "page-11-background.svg",
+        "layers": [
+          {
+            "id": "sloth-eyelids",
+            "image": "page-11-sloth-eyelids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": "sloth-chest",
+            "image": "page-11-sloth-chest.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              533,
+              679
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "sloth-eyelids",
+            "preset": "fade-in",
+            "parameters": {},
+            "durationMs": 1500,
+            "restMs": 3600,
+            "delayMs": 450,
+            "playback": "once"
+          },
+          {
+            "layer": "sloth-chest",
+            "preset": "breathe",
+            "parameters": {
+              "amount": 0.018
+            },
+            "durationMs": 5200,
+            "restMs": 1200,
+            "delayMs": 1500,
+            "playback": "repeat"
+          }
+        ]
+      }
     },
     {
       "image": "page-12.webp",
       "text": "The bird and the snake, the giraffe and each bee\n\nwere happy to have Mr Sloth in their tree.",
-      "alt": "Mr Sloth and the animals are all sleeping nicely in the tree together."
+      "alt": "Mr Sloth and the animals are all sleeping nicely in the tree together.",
+      "scene": {
+        "width": 1024,
+        "height": 1023,
+        "background": "page-12-background.svg",
+        "layers": [
+          {
+            "id": "sleep-mark-1",
+            "image": "page-12-sleep-mark-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              510,
+              280
+            ]
+          },
+          {
+            "id": "sleep-mark-2",
+            "image": "page-12-sleep-mark-2.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              533,
+              252
+            ]
+          },
+          {
+            "id": "sleep-mark-3",
+            "image": "page-12-sleep-mark-3.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              570,
+              222
+            ]
+          },
+          {
+            "id": "sleeping-sloth",
+            "image": "page-12-sleeping-sloth.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 1023,
+            "pivot": [
+              477,
+              345
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "sleep-mark-1",
+            "preset": "sleep-rise",
+            "parameters": {
+              "distanceY": 20
+            },
+            "durationMs": 3900,
+            "restMs": 900,
+            "delayMs": 450,
+            "playback": "repeat"
+          },
+          {
+            "layer": "sleep-mark-2",
+            "preset": "sleep-rise",
+            "parameters": {
+              "distanceY": 25
+            },
+            "durationMs": 3900,
+            "restMs": 900,
+            "delayMs": 1000,
+            "playback": "repeat"
+          },
+          {
+            "layer": "sleep-mark-3",
+            "preset": "sleep-rise",
+            "parameters": {
+              "distanceY": 30
+            },
+            "durationMs": 3900,
+            "restMs": 900,
+            "delayMs": 1700,
+            "playback": "repeat"
+          },
+          {
+            "layer": "sleeping-sloth",
+            "preset": "breathe",
+            "parameters": {
+              "amount": 0.025
+            },
+            "durationMs": 5400,
+            "restMs": 1000,
+            "delayMs": 450,
+            "playback": "repeat"
+          }
+        ]
+      }
     }
   ],
   "questions": [

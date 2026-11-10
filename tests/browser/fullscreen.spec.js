@@ -30,7 +30,7 @@ async function expectFits(page) {
   expect(bounds.buttonRight).toBeLessThanOrEqual(bounds.viewportWidth);
   expect(bounds.buttonTop).toBeGreaterThanOrEqual(0);
   const pages = await page.locator('.story-page:visible').evaluateAll(pages => pages.map(el => {
-    const img = el.querySelector('img').getBoundingClientRect();
+    const img = el.querySelector('.illustration > :not([hidden])').getBoundingClientRect();
     const p = el.querySelector('p'); const box = p.getBoundingClientRect();
     const range = document.createRange(); range.selectNodeContents(p); const text = range.getBoundingClientRect();
     return { imageHeight: img.height, top: text.top, bottom: text.bottom, boxTop: box.top, boxBottom: box.bottom };

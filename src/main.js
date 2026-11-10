@@ -1,4 +1,5 @@
 import './style.css';
+import { animationSpeeds, loadAnimationSettings, saveAnimationSettings, resolveSpeed, setSpeed } from './animation-settings.js';
 import { registerSW } from 'virtual:pwa-register';
 import { validateStory } from './story.js';
 import { createSession, advance, back, revealAnswer, setPage } from './session.js';
@@ -12,6 +13,7 @@ const readerView = document.querySelector('#reader');
 let storage;
 try { storage = window.localStorage; } catch {}
 const preferences = loadPreferences(storage);
+const animationSettings = loadAnimationSettings(storage);
 const services = createBedtimeServices();
 let books = [], session = null, installPrompt, updateSW, updateAvailable = false;
 const el = (tag, className, text) => {
@@ -54,8 +56,47 @@ const next = button('Next page →', () => turn(1)); next.setAttribute('aria-lab
 readerControls.append(previous, dots, next);
 const readerTip = el('p', 'reader-tip', 'Read slowly. Point at the pictures. Enjoy being here together.');
 const fullscreenStatus = el('p', 'fullscreen-status'); fullscreenStatus.setAttribute('role', 'status'); fullscreenStatus.hidden = true;
-readerView.append(readerBar, frame, readerControls, readerTip, fullscreenStatus);
-const reader = createReader({ frame, onPage: updatePage, onNext: () => turn(1), onBack: () => turn(-1) });
+const animationPanel = el('details', 'animation-settings');
+animationPanel.append(el('summary', '', 'Illustration settings'));
+const animationFields = el('div', 'animation-fields');
+function settingSelect(label, inherit = false) {
+  const wrapper = el('label', '', label);
+  const select = el('select');
+  if (inherit) { const option = el('option', '', 'Inherit'); option.value = ''; select.append(option); }
+  for (const speed of animationSpeeds) { const option = el('option', '', `${speed}×`); option.value = speed; select.append(option); }
+  wrapper.append(select); animationFields.append(wrapper); return select;
+}
+const globalSpeed = settingSelect('Default speed');
+const bookSpeed = settingSelect('This book', true);
+const pageChoiceLabel = el('label', '', 'Choose page');
+const pageChoice = el('select'); pageChoiceLabel.append(pageChoice); animationFields.append(pageChoiceLabel);
+const pageSpeed = settingSelect('This page', true);
+let illustrationsPaused = false;
+const pauseIllustrations = button('Pause illustrations', () => {
+  illustrationsPaused = !illustrationsPaused; reader.setPaused(illustrationsPaused); syncPause();
+}, 'quiet-button');
+function syncPause() {
+  pauseIllustrations.textContent = illustrationsPaused ? 'Resume illustrations' : 'Pause illustrations';
+  pauseIllustrations.setAttribute('aria-pressed', String(illustrationsPaused));
+}
+const replayIllustrations = button('Replay illustrations', () => { illustrationsPaused = false; reader.replay(); syncPause(); }, 'quiet-button');
+animationFields.append(pauseIllustrations, replayIllustrations);
+const motionNote = el('p', 'animation-note', 'Reduced motion keeps pictures still when enabled on your device.');
+animationPanel.append(animationFields, motionNote);
+readerView.append(readerBar, animationPanel, frame, readerControls, readerTip, fullscreenStatus);
+function syncAnimationFields() {
+  if (!session) return;
+  globalSpeed.value = String(animationSettings.global);
+  bookSpeed.value = String(animationSettings.books[session.story.id] ?? '');
+  pageSpeed.value = String(animationSettings.pages[session.story.id]?.[pageChoice.value] ?? '');
+}
+for (const [select, scope] of [[globalSpeed, 'global'], [bookSpeed, 'book'], [pageSpeed, 'page']]) select.addEventListener('change', () => {
+  if (!session) return;
+  setSpeed(animationSettings, scope, select.value === '' ? null : Number(select.value), session.story.id, Number(pageChoice.value));
+  saveAnimationSettings(storage, animationSettings); reader.refreshSpeeds(); syncAnimationFields();
+});
+pageChoice.addEventListener('change', syncAnimationFields);
+const reader = createReader({ frame, speedForPage: (id, page) => resolveSpeed(animationSettings, id, page), onPage: updatePage, onNext: () => turn(1), onBack: () => turn(-1) });
 const fullscreen = createFullscreen({ element: readerView, button: fullscreenButton, status: fullscreenStatus, onChange: () => reader.resize() });
 function updatePage(page, spread) {
   if (!session || session.view !== 'reader') return;
@@ -64,6 +105,12 @@ function updatePage(page, spread) {
   const end = Math.min(page + spread, session.story.pages.length);
   progress.textContent = `${spread > 1 && end > page + 1 ? `${page + 1}–${end}` : page + 1} / ${session.story.pages.length}`;
   previous.disabled = page === 0;
+  const selected = Number(pageChoice.value);
+  pageChoice.replaceChildren(...session.story.pages.slice(page, end).map((_, offset) => {
+    const option = el('option', '', `Page ${page + offset + 1}`); option.value = page + offset; return option;
+  }));
+  pageChoice.value = String(selected >= page && selected < end ? selected : page);
+  syncAnimationFields();
   const last = end === session.story.pages.length;
   next.textContent = last ? 'Let’s talk' : 'Next page →'; next.setAttribute('aria-label', last ? 'Let’s talk' : 'Next page');
   dots.replaceChildren(...session.story.pages.map((_, i) => el('span', i >= page && i < end ? 'active' : '')));
@@ -72,6 +119,7 @@ function updatePage(page, spread) {
 }
 function startBook(story) {
   session = createSession(story);
+  illustrationsPaused = false; syncPause();
   main.hidden = true; readerView.hidden = false; document.body.classList.add('reading');
   readerTitle.textContent = story.title;
   reader.open(story); void services.setReading(true); focusHeading(readerView);
