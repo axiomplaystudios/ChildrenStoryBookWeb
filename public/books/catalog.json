@@ -1,5 +1,799 @@
 [
   {
+    "id": "a-house-for-mouse",
+    "title": "A House for Mouse",
+    "subtitle": "A little mouse looks for a cosy place to sleep",
+    "cover": "cover.svg",
+    "credit": "Originally published by Book Dash, created by Michele Fry, Amy Uzzell (now Richards) and Jennifer Jacobs, under CC BY 4.0. For Bedtime Bookshelf: new vector artwork and animation; the original wordless fireplace page is grouped into the adjacent scene; original story text preserved and four conversation questions added.",
+    "sourceUrl": "https://bookdash.github.io/bookdash-books/a-house-for-mouse/en/index.html",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "logo": "book-dash-logo.png",
+    "sample": false,
+    "pages": [
+      {
+        "image": "page-01.svg",
+        "text": "Mouse was looking for a new house.",
+        "alt": "A scarf-wearing grey mouse follows a winding garden path towards a golden cottage.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-01-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                311,
+                617
+              ]
+            },
+            {
+              "id": "mouse-body",
+              "image": "page-01-mouse-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                360,
+                631
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-body",
+              "preset": "gesture",
+              "parameters": {
+                "x": 13,
+                "y": -7,
+                "angle": 3
+              },
+              "durationMs": 2600,
+              "restMs": 1200,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 9
+              },
+              "durationMs": 3200,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-02.svg",
+        "text": "This looks like a nice house.",
+        "alt": "Mouse pauses on the welcome mat and lifts its nose towards the open green door.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-02-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                379,
+                600
+              ]
+            },
+            {
+              "id": "mouse-body",
+              "image": "page-02-mouse-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                434,
+                615
+              ]
+            },
+            {
+              "id": "mouse-head",
+              "image": "page-02-mouse-head.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                417,
+                508
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-head",
+              "preset": "gesture",
+              "parameters": {
+                "x": 2,
+                "y": -5,
+                "angle": -7
+              },
+              "durationMs": 2300,
+              "restMs": 2300,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 6
+              },
+              "durationMs": 3400,
+              "restMs": 700,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-03.svg",
+        "text": "“You can come and sleep with me,” said Puppy.\n\n“Thank you,” said Mouse.",
+        "alt": "A friendly charcoal puppy wags its tail in a woven basket as Mouse listens.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "puppy-tail",
+              "image": "page-03-puppy-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                481,
+                457
+              ]
+            },
+            {
+              "id": "puppy",
+              "image": "page-03-puppy.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                621,
+                540
+              ]
+            },
+            {
+              "id": "mouse-tail",
+              "image": "page-03-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                237.94,
+                594.48
+              ]
+            },
+            {
+              "id": "mouse-body",
+              "image": "page-03-mouse-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                284,
+                607.64
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "puppy-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 18
+              },
+              "durationMs": 1900,
+              "restMs": 700,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "mouse-body",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": -5
+              },
+              "durationMs": 2100,
+              "restMs": 3500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-04.svg",
+        "text": "That night, Mouse’s dreams were bouncy and muddy.",
+        "alt": "In a moonlit dream, Mouse bounces above a muddy puddle while Puppy watches.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "dream-mouse",
+              "image": "page-04-dream-mouse.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                432,
+                565
+              ]
+            },
+            {
+              "id": "mud-splashes",
+              "image": "page-04-mud-splashes.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                443,
+                560
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "dream-mouse",
+              "preset": "gesture",
+              "parameters": {
+                "x": 6,
+                "y": -47,
+                "angle": -7
+              },
+              "durationMs": 1800,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "mud-splashes",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -19,
+                "angle": 0
+              },
+              "durationMs": 1800,
+              "restMs": 600,
+              "delayMs": 400,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-05.svg",
+        "text": "“You can come and sleep with me,” said Parrot.\n\n“Thank you,” said Mouse.",
+        "alt": "A red-headed green parrot opens its wing on a wooden perch; Mouse looks up.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "parrot-body",
+              "image": "page-05-parrot-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                601,
+                276
+              ]
+            },
+            {
+              "id": "parrot-wing",
+              "image": "page-05-parrot-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                569,
+                162
+              ]
+            },
+            {
+              "id": "mouse-tail",
+              "image": "page-05-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                303.55,
+                594.1
+              ]
+            },
+            {
+              "id": "mouse-body",
+              "image": "page-05-mouse-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                355,
+                608.8
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "parrot-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 16
+              },
+              "durationMs": 2100,
+              "restMs": 2200,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "mouse-body",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -3,
+                "angle": -4
+              },
+              "durationMs": 2700,
+              "restMs": 3000,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-06.svg",
+        "text": "That night, Mouse’s dreams were noisy and wild.",
+        "alt": "Mouse dreams beneath sweeping forest leaves while a parrot calls from a branch.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "calling-parrot",
+              "image": "page-06-calling-parrot.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                611,
+                340
+              ]
+            },
+            {
+              "id": "forest-leaves",
+              "image": "page-06-forest-leaves.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                600
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "calling-parrot",
+              "preset": "squawk",
+              "parameters": {
+                "angle": 7
+              },
+              "durationMs": 1900,
+              "restMs": 1500,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "forest-leaves",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": 0,
+                "angle": 2
+              },
+              "durationMs": 3400,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-07.svg",
+        "text": "“You can come and sleep with me,” said Fish.\n\n“Thank you,” said Mouse.",
+        "alt": "A golden fish swims in its glass bowl on a wooden table as Mouse watches.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "swimming-fish",
+              "image": "page-07-swimming-fish.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                614,
+                355
+              ]
+            },
+            {
+              "id": "mouse-tail",
+              "image": "page-07-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                212.14000000000001,
+                613.88
+              ]
+            },
+            {
+              "id": "mouse-body",
+              "image": "page-07-mouse-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                268,
+                629.84
+              ]
+            },
+            {
+              "id": "fish-bubbles",
+              "image": "page-07-fish-bubbles.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                668,
+                313
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "swimming-fish",
+              "preset": "gesture",
+              "parameters": {
+                "x": 31,
+                "y": -5,
+                "angle": -4
+              },
+              "durationMs": 3800,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "fish-bubbles",
+              "preset": "sleep-rise",
+              "parameters": {
+                "distanceY": 35
+              },
+              "durationMs": 2600,
+              "restMs": 500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-08.svg",
+        "text": "That night, Mouse’s dreams were cold and wet.",
+        "alt": "Mouse dreams on an underwater cushion amid tall reeds, goldfish and bubbles.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "water-reeds",
+              "image": "page-08-water-reeds.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                635
+              ]
+            },
+            {
+              "id": "dream-bubbles",
+              "image": "page-08-dream-bubbles.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                450
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "water-reeds",
+              "preset": "gesture",
+              "parameters": {
+                "x": 9,
+                "y": 0,
+                "angle": 2
+              },
+              "durationMs": 4200,
+              "restMs": 0,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "dream-bubbles",
+              "preset": "sleep-rise",
+              "parameters": {
+                "distanceY": 65
+              },
+              "durationMs": 4600,
+              "restMs": 0,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-09.svg",
+        "text": "Mouse needed somewhere warm and dry.",
+        "alt": "Mouse finds a cushioned chair beside a glowing fireplace and warm wooden floor.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-09-background.svg",
+          "layers": [
+            {
+              "id": "hearth-flame",
+              "image": "page-09-hearth-flame.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                615,
+                443
+              ]
+            },
+            {
+              "id": "mouse-tail",
+              "image": "page-09-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                200.37,
+                508.54
+              ]
+            },
+            {
+              "id": "mouse-body",
+              "image": "page-09-mouse-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                243,
+                520.72
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "hearth-flame",
+              "preset": "breathe",
+              "parameters": {
+                "amount": 0.06
+              },
+              "durationMs": 1700,
+              "restMs": 100,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "mouse-tail",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": 8
+              },
+              "durationMs": 3700,
+              "restMs": 1400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-10.svg",
+        "text": "Mouse found a bookshelf nearby.",
+        "alt": "Between tall books, Mouse discovers a soft folded blanket in a cosy bookshelf nook.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-10-background.svg",
+          "layers": [
+            {
+              "id": "exploring-mouse",
+              "image": "page-10-exploring-mouse.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                519,
+                581
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "exploring-mouse",
+              "preset": "arrive",
+              "parameters": {
+                "x": 65,
+                "y": 0,
+                "angle": 0
+              },
+              "durationMs": 2600,
+              "restMs": 0,
+              "delayMs": 100,
+              "playback": "once"
+            }
+          ]
+        }
+      },
+      {
+        "image": "page-11.svg",
+        "text": "That night, Mouse had warm and cosy dreams.",
+        "alt": "Mouse sleeps peacefully under a patchwork quilt in the golden light of the bookshelf nook.",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-11-background.svg",
+          "layers": [
+            {
+              "id": "cosy-quilt",
+              "image": "page-11-cosy-quilt.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                462,
+                574
+              ]
+            },
+            {
+              "id": "cosy-dream",
+              "image": "page-11-cosy-dream.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                635,
+                231
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "cosy-quilt",
+              "preset": "breathe",
+              "parameters": {
+                "amount": 0.025
+              },
+              "durationMs": 4600,
+              "restMs": 800,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "cosy-dream",
+              "preset": "sleep-rise",
+              "parameters": {
+                "distanceY": 17
+              },
+              "durationMs": 5200,
+              "restMs": 1000,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who first invited Mouse to come and sleep?",
+        "a": "Puppy invited Mouse first.",
+        "hintPage": 3
+      },
+      {
+        "type": "literal",
+        "q": "Where did Mouse finally find a cosy place to sleep?",
+        "a": "On a bookshelf nearby.",
+        "hintPage": 10
+      },
+      {
+        "type": "feeling",
+        "q": "How might Mouse feel in the warm bookshelf bed?",
+        "a": "Mouse might feel comfortable, safe or happy. Other feelings your child notices are welcome.",
+        "hintPage": 11
+      },
+      {
+        "type": "personal",
+        "q": "What makes your own bed feel cosy?",
+        "a": "There is no wrong answer. Listen and invite your child to tell you more.",
+        "hintPage": 11
+      }
+    ]
+  },
+  {
     "title": "Pip Finds a Friend",
     "subtitle": "An original sample about a small act of kindness",
     "cover": "cover.svg",
@@ -9,42 +803,623 @@
       {
         "image": "page-01.svg",
         "text": "Pip is a little owl. Pip lives in a big green tree.",
-        "alt": "Pip, a small brown owl, sits on a branch of a green tree beneath a crescent moon."
+        "alt": "Pip, a small brown owl, sits on a branch of a green tree beneath a crescent moon.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "pip-head",
+              "image": "page-01-pip-head.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                290,
+                160.75
+              ]
+            },
+            {
+              "id": "pip-eyelids",
+              "image": "page-01-pip-eyelids.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                290,
+                160.75
+              ],
+              "parent": "pip-head"
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-head",
+              "preset": "gesture",
+              "playback": "once",
+              "durationMs": 2200,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": 4
+              }
+            },
+            {
+              "layer": "pip-eyelids",
+              "preset": "blink",
+              "playback": "repeat",
+              "durationMs": 260,
+              "restMs": 5200,
+              "delayMs": 1100,
+              "parameters": {}
+            }
+          ]
+        }
       },
       {
         "image": "page-02.svg",
         "text": "One evening, Pip heard a sound. “Sniff, sniff.” Who was crying?",
-        "alt": "Pip looks down from the tree at Rabbit, who is crying in the grass."
+        "alt": "Pip looks down from the tree at Rabbit, who is crying in the grass.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "rabbit-nose",
+              "image": "page-02-rabbit-nose.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                520,
+                397
+              ]
+            },
+            {
+              "id": "rabbit-tear",
+              "image": "page-03-tear.svg",
+              "x": 498,
+              "y": 387,
+              "width": 11,
+              "height": 18,
+              "pivot": [
+                503,
+                387
+              ]
+            },
+            {
+              "id": "rabbit-tear-second",
+              "image": "page-03-tear.svg",
+              "x": 498,
+              "y": 387,
+              "width": 11,
+              "height": 18,
+              "pivot": [
+                503,
+                387
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rabbit-nose",
+              "preset": "gesture",
+              "playback": "repeat",
+              "durationMs": 650,
+              "restMs": 2200,
+              "delayMs": 450,
+              "parameters": {
+                "x": 0,
+                "y": -2.6,
+                "angle": 0
+              }
+            },
+            {
+              "layer": "rabbit-tear",
+              "preset": "tear-fall",
+              "playback": "repeat",
+              "durationMs": 1800,
+              "restMs": 1700,
+              "delayMs": 450,
+              "parameters": {
+                "distanceY": 89
+              }
+            },
+            {
+              "layer": "rabbit-tear-second",
+              "preset": "tear-fall",
+              "playback": "repeat",
+              "durationMs": 1800,
+              "restMs": 1700,
+              "delayMs": 1250,
+              "parameters": {
+                "distanceY": 89
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-03.svg",
         "text": "It was Rabbit. “I lost my red ball,” said Rabbit. Rabbit felt very sad.",
-        "alt": "Rabbit has a tear on one cheek while Pip listens beside a bush."
+        "alt": "Rabbit has a tear on one cheek while Pip listens beside a bush.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "rabbit-tear",
+              "image": "page-03-tear.svg",
+              "x": 488,
+              "y": 368,
+              "width": 14,
+              "height": 22,
+              "pivot": [
+                495,
+                368
+              ]
+            },
+            {
+              "id": "rabbit-tear-second",
+              "image": "page-03-tear.svg",
+              "x": 489,
+              "y": 368,
+              "width": 12,
+              "height": 19,
+              "pivot": [
+                495,
+                368
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rabbit-tear",
+              "preset": "tear-fall",
+              "playback": "repeat",
+              "durationMs": 1800,
+              "restMs": 1700,
+              "delayMs": 450,
+              "parameters": {
+                "distanceY": 105
+              }
+            },
+            {
+              "layer": "rabbit-tear-second",
+              "preset": "tear-fall",
+              "playback": "repeat",
+              "durationMs": 1800,
+              "restMs": 1700,
+              "delayMs": 1250,
+              "parameters": {
+                "distanceY": 105
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-04.svg",
         "text": "“I will help you look,” said Pip. They looked beside the flowers. No ball!",
-        "alt": "Pip and Rabbit look beside three yellow flowers. The ball is not there."
+        "alt": "Pip and Rabbit look beside three yellow flowers. The ball is not there.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "pip-gaze",
+              "image": "page-04-pip-gaze.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                285,
+                361.9
+              ]
+            },
+            {
+              "id": "rabbit-head",
+              "image": "page-04-rabbit-head.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                450,
+                405.3
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-gaze",
+              "preset": "gesture",
+              "playback": "repeat",
+              "durationMs": 2800,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "x": 6,
+                "y": 3,
+                "angle": 0
+              }
+            },
+            {
+              "layer": "rabbit-head",
+              "preset": "gesture",
+              "playback": "repeat",
+              "durationMs": 2800,
+              "restMs": 4000,
+              "delayMs": 700,
+              "parameters": {
+                "x": 2,
+                "y": 1,
+                "angle": 7
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-05.svg",
         "text": "They looked behind a bush. No ball there, either. Pip looked up.",
-        "alt": "Pip and Rabbit look around a leafy green bush. The ball is not there."
+        "alt": "Pip and Rabbit look around a leafy green bush. The ball is not there.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "pip-head",
+              "image": "page-05-pip-head.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                250,
+                382.75
+              ]
+            },
+            {
+              "id": "pip-gaze",
+              "image": "page-05-pip-gaze.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                250,
+                360.9
+              ],
+              "parent": "pip-head"
+            },
+            {
+              "id": "bush-foreground",
+              "image": "page-05-bush-foreground.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                390,
+                427
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-head",
+              "preset": "settle",
+              "playback": "once",
+              "durationMs": 2200,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "x": 0,
+                "y": -9,
+                "angle": -7
+              }
+            },
+            {
+              "layer": "pip-gaze",
+              "preset": "settle",
+              "playback": "once",
+              "durationMs": 1300,
+              "restMs": 4000,
+              "delayMs": 950,
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 0
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-06.svg",
         "text": "“There it is!” said Pip. The red ball was up in the tree. Pip flew up to get it.",
-        "alt": "A red ball rests on a high branch. Pip flies toward it while Rabbit waits below."
+        "alt": "A red ball rests on a high branch. Pip flies toward it while Rabbit waits below.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "pip-body",
+              "image": "page-06-pip-body.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                430,
+                210
+              ]
+            },
+            {
+              "id": "pip-wing-left",
+              "image": "page-06-pip-wing-left.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                381.55,
+                198.1
+              ],
+              "parent": "pip-body"
+            },
+            {
+              "id": "pip-wing-right",
+              "image": "page-06-pip-wing-right.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                478.45,
+                198.1
+              ],
+              "parent": "pip-body"
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-body",
+              "preset": "arrive",
+              "playback": "once",
+              "durationMs": 2600,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "x": 24,
+                "y": 56,
+                "angle": 0
+              }
+            },
+            {
+              "layer": "pip-wing-left",
+              "preset": "flap",
+              "playback": "once",
+              "durationMs": 2600,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "angle": 38
+              }
+            },
+            {
+              "layer": "pip-wing-right",
+              "preset": "flap",
+              "playback": "once",
+              "durationMs": 2600,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "angle": -38
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-07.svg",
         "text": "Pip gave the ball to Rabbit. “Thank you, Pip!” said Rabbit. Now Pip had a new friend.",
-        "alt": "Pip and a smiling Rabbit stand together with the red ball between them."
+        "alt": "Pip and a smiling Rabbit stand together with the red ball between them.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "rabbit-ear-left",
+              "image": "page-07-rabbit-ear-left.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                500.5,
+                359.5
+              ]
+            },
+            {
+              "id": "rabbit-ear-right",
+              "image": "page-07-rabbit-ear-right.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                544.6,
+                359.5
+              ]
+            },
+            {
+              "id": "rabbit-foreground",
+              "image": "page-07-rabbit-foreground.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                523,
+                382
+              ]
+            },
+            {
+              "id": "red-ball",
+              "image": "page-07-red-ball.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                449,
+                447
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "red-ball",
+              "preset": "settle",
+              "playback": "once",
+              "durationMs": 2100,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "x": 31,
+                "y": 3,
+                "angle": 70
+              }
+            },
+            {
+              "layer": "rabbit-ear-left",
+              "preset": "arrive",
+              "playback": "once",
+              "durationMs": 1200,
+              "restMs": 4000,
+              "delayMs": 1400,
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": -13
+              }
+            },
+            {
+              "layer": "rabbit-ear-right",
+              "preset": "arrive",
+              "playback": "once",
+              "durationMs": 1200,
+              "restMs": 4000,
+              "delayMs": 1400,
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": 13
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-08.svg",
         "text": "The friends rested under the moon. Rabbit kept the red ball close. “Goodnight, friend,” whispered Pip.",
-        "alt": "Pip closes his eyes on the tree branch. Rabbit rests below beside the red ball in the moonlight."
+        "alt": "Pip closes his eyes on the tree branch. Rabbit rests below beside the red ball in the moonlight.",
+        "scene": {
+          "width": 720,
+          "height": 540,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "pip-head",
+              "image": "page-08-pip-head.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                290,
+                169.25
+              ]
+            },
+            {
+              "id": "rabbit-back",
+              "image": "page-08-rabbit-back.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                511,
+                415
+              ]
+            },
+            {
+              "id": "rabbit-chest",
+              "image": "page-08-rabbit-chest.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                511,
+                478.7
+              ]
+            },
+            {
+              "id": "rabbit-foreground",
+              "image": "page-08-rabbit-foreground.svg",
+              "x": 0,
+              "y": 0,
+              "width": 720,
+              "height": 540,
+              "pivot": [
+                511,
+                415
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-head",
+              "preset": "settle",
+              "playback": "once",
+              "durationMs": 2200,
+              "restMs": 4000,
+              "delayMs": 450,
+              "parameters": {
+                "x": 0,
+                "y": 2,
+                "angle": 2
+              }
+            },
+            {
+              "layer": "rabbit-chest",
+              "preset": "breathe",
+              "playback": "repeat",
+              "durationMs": 4000,
+              "restMs": 1800,
+              "delayMs": 450,
+              "parameters": {
+                "amount": 0.035
+              }
+            }
+          ]
+        }
       }
     ],
     "questions": [
@@ -79,7 +1454,7 @@
     "title": "Sleepy Mr Sloth",
     "subtitle": "A sleepy climb to the perfect branch",
     "cover": "cover.webp",
-    "credit": "Originally published by Book Dash under a Creative Commons CC BY 4.0 licence. This book can be read for free on www.bookdash.org and was created by Paul Kennedy (writer), Graham Paterson (illustrator), Nick Mulgrew (designer) and Arthur Attwell (editor). For Bedtime Bookshelf, illustrations were converted to WebP, the original text was laid out separately, and four conversation questions were added.",
+    "credit": "Originally published by Book Dash under a Creative Commons CC BY 4.0 licence. This book can be read for free on www.bookdash.org and was created by Paul Kennedy (writer), Graham Paterson (illustrator), Nick Mulgrew (designer) and Arthur Attwell (editor). For Bedtime Bookshelf, illustrations were converted to WebP, selected parts of each illustration were separated and animated with repaired backgrounds, the original text was laid out separately, and four conversation questions were added.",
     "sourceUrl": "https://bookdash.org/books/sleepy-mr-sloth/",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
     "logo": "book-dash-logo.png",
@@ -88,62 +1463,706 @@
       {
         "image": "page-01.webp",
         "text": "One day, Mr Sloth came to visit. He said:\n\nI’m sleepy! I need a good branch for a bed!",
-        "alt": "Mr Sloth is sleepy and yawning."
+        "alt": "Mr Sloth is sleepy and yawning.",
+        "scene": {
+          "width": 1024,
+          "height": 1021,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "sloth-jaw",
+              "image": "page-01-sloth-jaw.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1021,
+              "pivot": [
+                706,
+                395
+              ]
+            },
+            {
+              "id": "sloth-hand",
+              "image": "page-01-sloth-hand.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1021,
+              "pivot": [
+                706,
+                450
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "sloth-jaw",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": 6,
+                "angle": 5
+              },
+              "durationMs": 3200,
+              "restMs": 6000,
+              "delayMs": 450,
+              "playback": "once"
+            }
+          ]
+        }
       },
       {
         "image": "page-02.webp",
         "text": "I’m quite good at climbing. I know how to swing.\n\nBut sleeping’s my favourite, favourite thing!",
-        "alt": "Mr Sloth starts climbing the tree."
+        "alt": "Mr Sloth starts climbing the tree.",
+        "scene": {
+          "width": 1024,
+          "height": 1023,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "sloth-torso",
+              "image": "page-02-sloth-torso.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                477,
+                467
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "sloth-torso",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -6,
+                "angle": 2.5
+              },
+              "durationMs": 3300,
+              "restMs": 3600,
+              "delayMs": 450,
+              "playback": "once"
+            }
+          ]
+        }
       },
       {
         "image": "page-03.webp",
         "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-        "alt": "Mr Sloth spots a branch. Is that a big ear nearby?"
+        "alt": "Mr Sloth spots a branch. Is that a big ear nearby?",
+        "scene": {
+          "width": 1024,
+          "height": 1021,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "giraffe-ear",
+              "image": "page-03-giraffe-ear.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1021,
+              "pivot": [
+                153,
+                272
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "giraffe-ear",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": -10
+              },
+              "durationMs": 1000,
+              "restMs": 4300,
+              "delayMs": 450,
+              "playback": "repeat"
+            }
+          ]
+        }
       },
       {
         "image": "page-04.webp",
         "text": "Oh no, Mr Sloth! A giraffe’s eating there!\n\nHe might think you’re lunch and start nibbling your hair!",
-        "alt": "A giraffe bites Mr Sloth by mistake!"
+        "alt": "A giraffe bites Mr Sloth by mistake!",
+        "scene": {
+          "width": 1024,
+          "height": 1021,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "giraffe-jaw",
+              "image": "page-04-giraffe-jaw.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1021,
+              "pivot": [
+                320,
+                559
+              ]
+            },
+            {
+              "id": "giraffe-neck-foreground",
+              "image": "page-04-giraffe-neck-foreground.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1021,
+              "pivot": [
+                0,
+                0
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "giraffe-jaw",
+              "preset": "squawk",
+              "parameters": {
+                "angle": -4
+              },
+              "durationMs": 2200,
+              "restMs": 3600,
+              "delayMs": 450,
+              "playback": "once"
+            }
+          ]
+        }
       },
       {
         "image": "page-05.webp",
         "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-        "alt": "Mr Sloth spots a branch. There are a few bees flying around."
+        "alt": "Mr Sloth spots a branch. There are a few bees flying around.",
+        "scene": {
+          "width": 1024,
+          "height": 1023,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "bee-1",
+              "image": "page-05-bee-1.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                338,
+                602
+              ]
+            },
+            {
+              "id": "bee-2",
+              "image": "page-05-bee-2.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                184,
+                744
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "bee-1",
+              "preset": "bee-flight",
+              "parameters": {
+                "radiusX": 43,
+                "radiusY": 24,
+                "phase": 0
+              },
+              "durationMs": 4500,
+              "restMs": 700,
+              "delayMs": 450,
+              "playback": "repeat"
+            },
+            {
+              "layer": "bee-2",
+              "preset": "bee-flight",
+              "parameters": {
+                "radiusX": 31,
+                "radiusY": 18,
+                "phase": 120
+              },
+              "durationMs": 5100,
+              "restMs": 850,
+              "delayMs": 700,
+              "playback": "repeat"
+            }
+          ]
+        }
       },
       {
         "image": "page-06.webp",
         "text": "Oh no, Mr Sloth! There’s a beehive right there!\n\nYou’ll never get sleep with those bees everywhere!",
-        "alt": "Bees fly out of a beehive around Mr Sloth!"
+        "alt": "Bees fly out of a beehive around Mr Sloth!",
+        "scene": {
+          "width": 1024,
+          "height": 976,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "bee-1",
+              "image": "page-06-bee-1.svg",
+              "x": 370,
+              "y": 130,
+              "width": 30,
+              "height": 30,
+              "pivot": [
+                385,
+                145
+              ]
+            },
+            {
+              "id": "bee-2",
+              "image": "page-06-bee-2.svg",
+              "x": 585,
+              "y": 181,
+              "width": 34,
+              "height": 41,
+              "pivot": [
+                602,
+                201.5
+              ]
+            },
+            {
+              "id": "bee-3",
+              "image": "page-06-bee-3.svg",
+              "x": 457,
+              "y": 655,
+              "width": 25,
+              "height": 31,
+              "pivot": [
+                469.5,
+                670.5
+              ]
+            },
+            {
+              "id": "bee-4",
+              "image": "page-06-bee-4.svg",
+              "x": 748,
+              "y": 621,
+              "width": 31,
+              "height": 36,
+              "pivot": [
+                763.5,
+                639
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "bee-1",
+              "preset": "bee-emerge",
+              "playback": "repeat",
+              "durationMs": 4600,
+              "restMs": 700,
+              "delayMs": 350,
+              "parameters": {
+                "radiusX": 54,
+                "radiusY": 28,
+                "phase": 0,
+                "fromX": -245,
+                "fromY": 432
+              }
+            },
+            {
+              "layer": "bee-2",
+              "preset": "bee-emerge",
+              "playback": "repeat",
+              "durationMs": 5020,
+              "restMs": 700,
+              "delayMs": 730,
+              "parameters": {
+                "radiusX": 75,
+                "radiusY": 25,
+                "phase": 160,
+                "fromX": -462,
+                "fromY": 375.5
+              }
+            },
+            {
+              "layer": "bee-3",
+              "preset": "bee-emerge",
+              "playback": "repeat",
+              "durationMs": 5440,
+              "restMs": 700,
+              "delayMs": 1110,
+              "parameters": {
+                "radiusX": 48,
+                "radiusY": 17,
+                "phase": 30,
+                "fromX": -329.5,
+                "fromY": -93.5
+              }
+            },
+            {
+              "layer": "bee-4",
+              "preset": "bee-emerge",
+              "playback": "repeat",
+              "durationMs": 5860,
+              "restMs": 700,
+              "delayMs": 1490,
+              "parameters": {
+                "radiusX": 37,
+                "radiusY": 20,
+                "phase": 220,
+                "fromX": -623.5,
+                "fromY": -62
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-07.webp",
         "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-        "alt": "Mr Sloth spots a branch. There is a tail nearby."
+        "alt": "Mr Sloth spots a branch. There is a tail nearby.",
+        "scene": {
+          "width": 1024,
+          "height": 1023,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "snake-tail",
+              "image": "page-07-snake-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                928,
+                426
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "snake-tail",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": 11
+              },
+              "durationMs": 2500,
+              "restMs": 4500,
+              "delayMs": 450,
+              "playback": "repeat"
+            }
+          ]
+        }
       },
       {
         "image": "page-08.webp",
         "text": "Oh no, Mr Sloth, that’s a snake over there!\n\nNot a branch! Poor old snake. You gave him quite a scare.",
-        "alt": "Mr Sloth grabs snake by mistake!"
+        "alt": "Mr Sloth grabs snake by mistake!",
+        "scene": {
+          "width": 1024,
+          "height": 1024,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "snake-head",
+              "image": "page-08-snake-head.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1024,
+              "pivot": [
+                554,
+                424
+              ]
+            },
+            {
+              "id": "snake-tongue",
+              "image": "page-08-snake-tongue.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1024,
+              "pivot": [
+                620,
+                253
+              ],
+              "parent": "snake-head"
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "snake-head",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": 0,
+                "angle": 5
+              },
+              "durationMs": 1500,
+              "restMs": 3600,
+              "delayMs": 450,
+              "playback": "once"
+            },
+            {
+              "layer": "snake-tongue",
+              "preset": "blink",
+              "parameters": {},
+              "durationMs": 500,
+              "restMs": 2700,
+              "delayMs": 900,
+              "playback": "repeat"
+            }
+          ]
+        }
       },
       {
         "image": "page-09.webp",
         "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
-        "alt": "Mr Sloth spots a branch. There are feet nearby."
+        "alt": "Mr Sloth spots a branch. There are feet nearby.",
+        "scene": {
+          "width": 1024,
+          "height": 1023,
+          "background": "page-09-background.svg",
+          "layers": [
+            {
+              "id": "bird-toes",
+              "image": "page-09-bird-toes.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                428,
+                121
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "bird-toes",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -2,
+                "angle": -9
+              },
+              "durationMs": 1800,
+              "restMs": 3600,
+              "delayMs": 450,
+              "playback": "once"
+            }
+          ]
+        }
       },
       {
         "image": "page-10.webp",
         "text": "Oh no, Mr Sloth! There’s a bird squawking there!\n\nYou’ll never get sleep with that noise in the air!",
-        "alt": "A hadeda is squawking loudly there!"
+        "alt": "A hadeda is squawking loudly there!",
+        "scene": {
+          "width": 1024,
+          "height": 1021,
+          "background": "page-10-background.svg",
+          "layers": [
+            {
+              "id": "bird-beak",
+              "image": "page-10-beak.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1021,
+              "pivot": [
+                470,
+                202
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "bird-beak",
+              "preset": "squawk",
+              "playback": "repeat",
+              "durationMs": 1800,
+              "restMs": 3600,
+              "delayMs": 500,
+              "parameters": {
+                "angle": -14
+              }
+            }
+          ]
+        }
       },
       {
         "image": "page-11.webp",
         "text": "Try climb one more branch, Mr Sloth! they all said.\n\nAnd that branch was just the right one for his bed.",
-        "alt": "Mr Sloth climbs to the top of the tree and smiles."
+        "alt": "Mr Sloth climbs to the top of the tree and smiles.",
+        "scene": {
+          "width": 1024,
+          "height": 1023,
+          "background": "page-11-background.svg",
+          "layers": [
+            {
+              "id": "sloth-eyelids",
+              "image": "page-11-sloth-eyelids.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "sloth-chest",
+              "image": "page-11-sloth-chest.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                533,
+                679
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "sloth-eyelids",
+              "preset": "fade-in",
+              "parameters": {},
+              "durationMs": 1500,
+              "restMs": 3600,
+              "delayMs": 450,
+              "playback": "once"
+            },
+            {
+              "layer": "sloth-chest",
+              "preset": "breathe",
+              "parameters": {
+                "amount": 0.018
+              },
+              "durationMs": 5200,
+              "restMs": 1200,
+              "delayMs": 1500,
+              "playback": "repeat"
+            }
+          ]
+        }
       },
       {
         "image": "page-12.webp",
         "text": "The bird and the snake, the giraffe and each bee\n\nwere happy to have Mr Sloth in their tree.",
-        "alt": "Mr Sloth and the animals are all sleeping nicely in the tree together."
+        "alt": "Mr Sloth and the animals are all sleeping nicely in the tree together.",
+        "scene": {
+          "width": 1024,
+          "height": 1023,
+          "background": "page-12-background.svg",
+          "layers": [
+            {
+              "id": "sleep-mark-1",
+              "image": "page-12-sleep-mark-1.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                510,
+                280
+              ]
+            },
+            {
+              "id": "sleep-mark-2",
+              "image": "page-12-sleep-mark-2.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                533,
+                252
+              ]
+            },
+            {
+              "id": "sleep-mark-3",
+              "image": "page-12-sleep-mark-3.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                570,
+                222
+              ]
+            },
+            {
+              "id": "sleeping-sloth",
+              "image": "page-12-sleeping-sloth.svg",
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 1023,
+              "pivot": [
+                477,
+                345
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "sleep-mark-1",
+              "preset": "sleep-rise",
+              "parameters": {
+                "distanceY": 20
+              },
+              "durationMs": 3900,
+              "restMs": 900,
+              "delayMs": 450,
+              "playback": "repeat"
+            },
+            {
+              "layer": "sleep-mark-2",
+              "preset": "sleep-rise",
+              "parameters": {
+                "distanceY": 25
+              },
+              "durationMs": 3900,
+              "restMs": 900,
+              "delayMs": 1000,
+              "playback": "repeat"
+            },
+            {
+              "layer": "sleep-mark-3",
+              "preset": "sleep-rise",
+              "parameters": {
+                "distanceY": 30
+              },
+              "durationMs": 3900,
+              "restMs": 900,
+              "delayMs": 1700,
+              "playback": "repeat"
+            },
+            {
+              "layer": "sleeping-sloth",
+              "preset": "breathe",
+              "parameters": {
+                "amount": 0.025
+              },
+              "durationMs": 5400,
+              "restMs": 1000,
+              "delayMs": 450,
+              "playback": "repeat"
+            }
+          ]
+        }
       }
     ],
     "questions": [

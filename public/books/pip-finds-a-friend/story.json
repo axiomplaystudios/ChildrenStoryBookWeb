@@ -8,42 +8,623 @@
     {
       "image": "page-01.svg",
       "text": "Pip is a little owl. Pip lives in a big green tree.",
-      "alt": "Pip, a small brown owl, sits on a branch of a green tree beneath a crescent moon."
+      "alt": "Pip, a small brown owl, sits on a branch of a green tree beneath a crescent moon.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "pip-head",
+            "image": "page-01-pip-head.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              290,
+              160.75
+            ]
+          },
+          {
+            "id": "pip-eyelids",
+            "image": "page-01-pip-eyelids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              290,
+              160.75
+            ],
+            "parent": "pip-head"
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-head",
+            "preset": "gesture",
+            "playback": "once",
+            "durationMs": 2200,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 4
+            }
+          },
+          {
+            "layer": "pip-eyelids",
+            "preset": "blink",
+            "playback": "repeat",
+            "durationMs": 260,
+            "restMs": 5200,
+            "delayMs": 1100,
+            "parameters": {}
+          }
+        ]
+      }
     },
     {
       "image": "page-02.svg",
       "text": "One evening, Pip heard a sound. “Sniff, sniff.” Who was crying?",
-      "alt": "Pip looks down from the tree at Rabbit, who is crying in the grass."
+      "alt": "Pip looks down from the tree at Rabbit, who is crying in the grass.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "rabbit-nose",
+            "image": "page-02-rabbit-nose.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              520,
+              397
+            ]
+          },
+          {
+            "id": "rabbit-tear",
+            "image": "page-03-tear.svg",
+            "x": 498,
+            "y": 387,
+            "width": 11,
+            "height": 18,
+            "pivot": [
+              503,
+              387
+            ]
+          },
+          {
+            "id": "rabbit-tear-second",
+            "image": "page-03-tear.svg",
+            "x": 498,
+            "y": 387,
+            "width": 11,
+            "height": 18,
+            "pivot": [
+              503,
+              387
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "rabbit-nose",
+            "preset": "gesture",
+            "playback": "repeat",
+            "durationMs": 650,
+            "restMs": 2200,
+            "delayMs": 450,
+            "parameters": {
+              "x": 0,
+              "y": -2.6,
+              "angle": 0
+            }
+          },
+          {
+            "layer": "rabbit-tear",
+            "preset": "tear-fall",
+            "playback": "repeat",
+            "durationMs": 1800,
+            "restMs": 1700,
+            "delayMs": 450,
+            "parameters": {
+              "distanceY": 89
+            }
+          },
+          {
+            "layer": "rabbit-tear-second",
+            "preset": "tear-fall",
+            "playback": "repeat",
+            "durationMs": 1800,
+            "restMs": 1700,
+            "delayMs": 1250,
+            "parameters": {
+              "distanceY": 89
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-03.svg",
       "text": "It was Rabbit. “I lost my red ball,” said Rabbit. Rabbit felt very sad.",
-      "alt": "Rabbit has a tear on one cheek while Pip listens beside a bush."
+      "alt": "Rabbit has a tear on one cheek while Pip listens beside a bush.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "rabbit-tear",
+            "image": "page-03-tear.svg",
+            "x": 488,
+            "y": 368,
+            "width": 14,
+            "height": 22,
+            "pivot": [
+              495,
+              368
+            ]
+          },
+          {
+            "id": "rabbit-tear-second",
+            "image": "page-03-tear.svg",
+            "x": 489,
+            "y": 368,
+            "width": 12,
+            "height": 19,
+            "pivot": [
+              495,
+              368
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "rabbit-tear",
+            "preset": "tear-fall",
+            "playback": "repeat",
+            "durationMs": 1800,
+            "restMs": 1700,
+            "delayMs": 450,
+            "parameters": {
+              "distanceY": 105
+            }
+          },
+          {
+            "layer": "rabbit-tear-second",
+            "preset": "tear-fall",
+            "playback": "repeat",
+            "durationMs": 1800,
+            "restMs": 1700,
+            "delayMs": 1250,
+            "parameters": {
+              "distanceY": 105
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-04.svg",
       "text": "“I will help you look,” said Pip. They looked beside the flowers. No ball!",
-      "alt": "Pip and Rabbit look beside three yellow flowers. The ball is not there."
+      "alt": "Pip and Rabbit look beside three yellow flowers. The ball is not there.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "pip-gaze",
+            "image": "page-04-pip-gaze.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              285,
+              361.9
+            ]
+          },
+          {
+            "id": "rabbit-head",
+            "image": "page-04-rabbit-head.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              450,
+              405.3
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-gaze",
+            "preset": "gesture",
+            "playback": "repeat",
+            "durationMs": 2800,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "x": 6,
+              "y": 3,
+              "angle": 0
+            }
+          },
+          {
+            "layer": "rabbit-head",
+            "preset": "gesture",
+            "playback": "repeat",
+            "durationMs": 2800,
+            "restMs": 4000,
+            "delayMs": 700,
+            "parameters": {
+              "x": 2,
+              "y": 1,
+              "angle": 7
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-05.svg",
       "text": "They looked behind a bush. No ball there, either. Pip looked up.",
-      "alt": "Pip and Rabbit look around a leafy green bush. The ball is not there."
+      "alt": "Pip and Rabbit look around a leafy green bush. The ball is not there.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "pip-head",
+            "image": "page-05-pip-head.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              250,
+              382.75
+            ]
+          },
+          {
+            "id": "pip-gaze",
+            "image": "page-05-pip-gaze.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              250,
+              360.9
+            ],
+            "parent": "pip-head"
+          },
+          {
+            "id": "bush-foreground",
+            "image": "page-05-bush-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              390,
+              427
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-head",
+            "preset": "settle",
+            "playback": "once",
+            "durationMs": 2200,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "x": 0,
+              "y": -9,
+              "angle": -7
+            }
+          },
+          {
+            "layer": "pip-gaze",
+            "preset": "settle",
+            "playback": "once",
+            "durationMs": 1300,
+            "restMs": 4000,
+            "delayMs": 950,
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 0
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-06.svg",
       "text": "“There it is!” said Pip. The red ball was up in the tree. Pip flew up to get it.",
-      "alt": "A red ball rests on a high branch. Pip flies toward it while Rabbit waits below."
+      "alt": "A red ball rests on a high branch. Pip flies toward it while Rabbit waits below.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "pip-body",
+            "image": "page-06-pip-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              430,
+              210
+            ]
+          },
+          {
+            "id": "pip-wing-left",
+            "image": "page-06-pip-wing-left.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              381.55,
+              198.1
+            ],
+            "parent": "pip-body"
+          },
+          {
+            "id": "pip-wing-right",
+            "image": "page-06-pip-wing-right.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              478.45,
+              198.1
+            ],
+            "parent": "pip-body"
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-body",
+            "preset": "arrive",
+            "playback": "once",
+            "durationMs": 2600,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "x": 24,
+              "y": 56,
+              "angle": 0
+            }
+          },
+          {
+            "layer": "pip-wing-left",
+            "preset": "flap",
+            "playback": "once",
+            "durationMs": 2600,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "angle": 38
+            }
+          },
+          {
+            "layer": "pip-wing-right",
+            "preset": "flap",
+            "playback": "once",
+            "durationMs": 2600,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "angle": -38
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-07.svg",
       "text": "Pip gave the ball to Rabbit. “Thank you, Pip!” said Rabbit. Now Pip had a new friend.",
-      "alt": "Pip and a smiling Rabbit stand together with the red ball between them."
+      "alt": "Pip and a smiling Rabbit stand together with the red ball between them.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "rabbit-ear-left",
+            "image": "page-07-rabbit-ear-left.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              500.5,
+              359.5
+            ]
+          },
+          {
+            "id": "rabbit-ear-right",
+            "image": "page-07-rabbit-ear-right.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              544.6,
+              359.5
+            ]
+          },
+          {
+            "id": "rabbit-foreground",
+            "image": "page-07-rabbit-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              523,
+              382
+            ]
+          },
+          {
+            "id": "red-ball",
+            "image": "page-07-red-ball.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              449,
+              447
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "red-ball",
+            "preset": "settle",
+            "playback": "once",
+            "durationMs": 2100,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "x": 31,
+              "y": 3,
+              "angle": 70
+            }
+          },
+          {
+            "layer": "rabbit-ear-left",
+            "preset": "arrive",
+            "playback": "once",
+            "durationMs": 1200,
+            "restMs": 4000,
+            "delayMs": 1400,
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -13
+            }
+          },
+          {
+            "layer": "rabbit-ear-right",
+            "preset": "arrive",
+            "playback": "once",
+            "durationMs": 1200,
+            "restMs": 4000,
+            "delayMs": 1400,
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 13
+            }
+          }
+        ]
+      }
     },
     {
       "image": "page-08.svg",
       "text": "The friends rested under the moon. Rabbit kept the red ball close. “Goodnight, friend,” whispered Pip.",
-      "alt": "Pip closes his eyes on the tree branch. Rabbit rests below beside the red ball in the moonlight."
+      "alt": "Pip closes his eyes on the tree branch. Rabbit rests below beside the red ball in the moonlight.",
+      "scene": {
+        "width": 720,
+        "height": 540,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "pip-head",
+            "image": "page-08-pip-head.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              290,
+              169.25
+            ]
+          },
+          {
+            "id": "rabbit-back",
+            "image": "page-08-rabbit-back.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              511,
+              415
+            ]
+          },
+          {
+            "id": "rabbit-chest",
+            "image": "page-08-rabbit-chest.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              511,
+              478.7
+            ]
+          },
+          {
+            "id": "rabbit-foreground",
+            "image": "page-08-rabbit-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 720,
+            "height": 540,
+            "pivot": [
+              511,
+              415
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-head",
+            "preset": "settle",
+            "playback": "once",
+            "durationMs": 2200,
+            "restMs": 4000,
+            "delayMs": 450,
+            "parameters": {
+              "x": 0,
+              "y": 2,
+              "angle": 2
+            }
+          },
+          {
+            "layer": "rabbit-chest",
+            "preset": "breathe",
+            "playback": "repeat",
+            "durationMs": 4000,
+            "restMs": 1800,
+            "delayMs": 450,
+            "parameters": {
+              "amount": 0.035
+            }
+          }
+        ]
+      }
     }
   ],
   "questions": [

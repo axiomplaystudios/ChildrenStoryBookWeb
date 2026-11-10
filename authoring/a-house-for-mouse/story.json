@@ -1,0 +1,794 @@
+{
+  "id": "a-house-for-mouse",
+  "title": "A House for Mouse",
+  "subtitle": "A little mouse looks for a cosy place to sleep",
+  "cover": "cover.svg",
+  "credit": "Originally published by Book Dash, created by Michele Fry, Amy Uzzell (now Richards) and Jennifer Jacobs, under CC BY 4.0. For Bedtime Bookshelf: new vector artwork and animation; the original wordless fireplace page is grouped into the adjacent scene; original story text preserved and four conversation questions added.",
+  "sourceUrl": "https://bookdash.github.io/bookdash-books/a-house-for-mouse/en/index.html",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "logo": "book-dash-logo.png",
+  "sample": false,
+  "pages": [
+    {
+      "image": "page-01.svg",
+      "text": "Mouse was looking for a new house.",
+      "alt": "A scarf-wearing grey mouse follows a winding garden path towards a golden cottage.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "mouse-tail",
+            "image": "page-01-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              311,
+              617
+            ]
+          },
+          {
+            "id": "mouse-body",
+            "image": "page-01-mouse-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              360,
+              631
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "mouse-body",
+            "preset": "gesture",
+            "parameters": {
+              "x": 13,
+              "y": -7,
+              "angle": 3
+            },
+            "durationMs": 2600,
+            "restMs": 1200,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-tail",
+            "preset": "flap",
+            "parameters": {
+              "angle": 9
+            },
+            "durationMs": 3200,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-02.svg",
+      "text": "This looks like a nice house.",
+      "alt": "Mouse pauses on the welcome mat and lifts its nose towards the open green door.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "mouse-tail",
+            "image": "page-02-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              379,
+              600
+            ]
+          },
+          {
+            "id": "mouse-body",
+            "image": "page-02-mouse-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              434,
+              615
+            ]
+          },
+          {
+            "id": "mouse-head",
+            "image": "page-02-mouse-head.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              417,
+              508
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "mouse-head",
+            "preset": "gesture",
+            "parameters": {
+              "x": 2,
+              "y": -5,
+              "angle": -7
+            },
+            "durationMs": 2300,
+            "restMs": 2300,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-tail",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3400,
+            "restMs": 700,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-03.svg",
+      "text": "“You can come and sleep with me,” said Puppy.\n\n“Thank you,” said Mouse.",
+      "alt": "A friendly charcoal puppy wags its tail in a woven basket as Mouse listens.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "puppy-tail",
+            "image": "page-03-puppy-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              481,
+              457
+            ]
+          },
+          {
+            "id": "puppy",
+            "image": "page-03-puppy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              621,
+              540
+            ]
+          },
+          {
+            "id": "mouse-tail",
+            "image": "page-03-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              237.94,
+              594.48
+            ]
+          },
+          {
+            "id": "mouse-body",
+            "image": "page-03-mouse-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              284,
+              607.64
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "puppy-tail",
+            "preset": "flap",
+            "parameters": {
+              "angle": 18
+            },
+            "durationMs": 1900,
+            "restMs": 700,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-body",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -5
+            },
+            "durationMs": 2100,
+            "restMs": 3500,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-04.svg",
+      "text": "That night, Mouse’s dreams were bouncy and muddy.",
+      "alt": "In a moonlit dream, Mouse bounces above a muddy puddle while Puppy watches.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "dream-mouse",
+            "image": "page-04-dream-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              432,
+              565
+            ]
+          },
+          {
+            "id": "mud-splashes",
+            "image": "page-04-mud-splashes.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              443,
+              560
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "dream-mouse",
+            "preset": "gesture",
+            "parameters": {
+              "x": 6,
+              "y": -47,
+              "angle": -7
+            },
+            "durationMs": 1800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mud-splashes",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -19,
+              "angle": 0
+            },
+            "durationMs": 1800,
+            "restMs": 600,
+            "delayMs": 400,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-05.svg",
+      "text": "“You can come and sleep with me,” said Parrot.\n\n“Thank you,” said Mouse.",
+      "alt": "A red-headed green parrot opens its wing on a wooden perch; Mouse looks up.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "parrot-body",
+            "image": "page-05-parrot-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              601,
+              276
+            ]
+          },
+          {
+            "id": "parrot-wing",
+            "image": "page-05-parrot-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              569,
+              162
+            ]
+          },
+          {
+            "id": "mouse-tail",
+            "image": "page-05-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              303.55,
+              594.1
+            ]
+          },
+          {
+            "id": "mouse-body",
+            "image": "page-05-mouse-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              355,
+              608.8
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "parrot-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 16
+            },
+            "durationMs": 2100,
+            "restMs": 2200,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-body",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -3,
+              "angle": -4
+            },
+            "durationMs": 2700,
+            "restMs": 3000,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-06.svg",
+      "text": "That night, Mouse’s dreams were noisy and wild.",
+      "alt": "Mouse dreams beneath sweeping forest leaves while a parrot calls from a branch.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "calling-parrot",
+            "image": "page-06-calling-parrot.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              611,
+              340
+            ]
+          },
+          {
+            "id": "forest-leaves",
+            "image": "page-06-forest-leaves.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              600
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "calling-parrot",
+            "preset": "squawk",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 1900,
+            "restMs": 1500,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "forest-leaves",
+            "preset": "gesture",
+            "parameters": {
+              "x": 7,
+              "y": 0,
+              "angle": 2
+            },
+            "durationMs": 3400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-07.svg",
+      "text": "“You can come and sleep with me,” said Fish.\n\n“Thank you,” said Mouse.",
+      "alt": "A golden fish swims in its glass bowl on a wooden table as Mouse watches.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "swimming-fish",
+            "image": "page-07-swimming-fish.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              614,
+              355
+            ]
+          },
+          {
+            "id": "mouse-tail",
+            "image": "page-07-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              212.14000000000001,
+              613.88
+            ]
+          },
+          {
+            "id": "mouse-body",
+            "image": "page-07-mouse-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              268,
+              629.84
+            ]
+          },
+          {
+            "id": "fish-bubbles",
+            "image": "page-07-fish-bubbles.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              668,
+              313
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "swimming-fish",
+            "preset": "gesture",
+            "parameters": {
+              "x": 31,
+              "y": -5,
+              "angle": -4
+            },
+            "durationMs": 3800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "fish-bubbles",
+            "preset": "sleep-rise",
+            "parameters": {
+              "distanceY": 35
+            },
+            "durationMs": 2600,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-08.svg",
+      "text": "That night, Mouse’s dreams were cold and wet.",
+      "alt": "Mouse dreams on an underwater cushion amid tall reeds, goldfish and bubbles.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "water-reeds",
+            "image": "page-08-water-reeds.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              635
+            ]
+          },
+          {
+            "id": "dream-bubbles",
+            "image": "page-08-dream-bubbles.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              450
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "water-reeds",
+            "preset": "gesture",
+            "parameters": {
+              "x": 9,
+              "y": 0,
+              "angle": 2
+            },
+            "durationMs": 4200,
+            "restMs": 0,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "dream-bubbles",
+            "preset": "sleep-rise",
+            "parameters": {
+              "distanceY": 65
+            },
+            "durationMs": 4600,
+            "restMs": 0,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-09.svg",
+      "text": "Mouse needed somewhere warm and dry.",
+      "alt": "Mouse finds a cushioned chair beside a glowing fireplace and warm wooden floor.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-09-background.svg",
+        "layers": [
+          {
+            "id": "hearth-flame",
+            "image": "page-09-hearth-flame.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              615,
+              443
+            ]
+          },
+          {
+            "id": "mouse-tail",
+            "image": "page-09-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              200.37,
+              508.54
+            ]
+          },
+          {
+            "id": "mouse-body",
+            "image": "page-09-mouse-body.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              243,
+              520.72
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "hearth-flame",
+            "preset": "breathe",
+            "parameters": {
+              "amount": 0.06
+            },
+            "durationMs": 1700,
+            "restMs": 100,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-tail",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 8
+            },
+            "durationMs": 3700,
+            "restMs": 1400,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-10.svg",
+      "text": "Mouse found a bookshelf nearby.",
+      "alt": "Between tall books, Mouse discovers a soft folded blanket in a cosy bookshelf nook.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-10-background.svg",
+        "layers": [
+          {
+            "id": "exploring-mouse",
+            "image": "page-10-exploring-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              519,
+              581
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "exploring-mouse",
+            "preset": "arrive",
+            "parameters": {
+              "x": 65,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 2600,
+            "restMs": 0,
+            "delayMs": 100,
+            "playback": "once"
+          }
+        ]
+      }
+    },
+    {
+      "image": "page-11.svg",
+      "text": "That night, Mouse had warm and cosy dreams.",
+      "alt": "Mouse sleeps peacefully under a patchwork quilt in the golden light of the bookshelf nook.",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-11-background.svg",
+        "layers": [
+          {
+            "id": "cosy-quilt",
+            "image": "page-11-cosy-quilt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              462,
+              574
+            ]
+          },
+          {
+            "id": "cosy-dream",
+            "image": "page-11-cosy-dream.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              635,
+              231
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "cosy-quilt",
+            "preset": "breathe",
+            "parameters": {
+              "amount": 0.025
+            },
+            "durationMs": 4600,
+            "restMs": 800,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cosy-dream",
+            "preset": "sleep-rise",
+            "parameters": {
+              "distanceY": 17
+            },
+            "durationMs": 5200,
+            "restMs": 1000,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "Who first invited Mouse to come and sleep?",
+      "a": "Puppy invited Mouse first.",
+      "hintPage": 3
+    },
+    {
+      "type": "literal",
+      "q": "Where did Mouse finally find a cosy place to sleep?",
+      "a": "On a bookshelf nearby.",
+      "hintPage": 10
+    },
+    {
+      "type": "feeling",
+      "q": "How might Mouse feel in the warm bookshelf bed?",
+      "a": "Mouse might feel comfortable, safe or happy. Other feelings your child notices are welcome.",
+      "hintPage": 11
+    },
+    {
+      "type": "personal",
+      "q": "What makes your own bed feel cosy?",
+      "a": "There is no wrong answer. Listen and invite your child to tell you more.",
+      "hintPage": 11
+    }
+  ]
+}

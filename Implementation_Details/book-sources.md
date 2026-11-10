@@ -1,6 +1,6 @@
 # Book sources and adaptations
 
-Verified 10 November 2026. Both books and all their page images are local assets under `public/books/`; reading requires no remote image service.
+Verified 10 November 2026. All three books and all their page images are local assets under `public/books/`; reading requires no remote image service.
 
 ## Pip Finds a Friend
 
@@ -8,6 +8,7 @@ Verified 10 November 2026. Both books and all their page images are local assets
 - Eight story pages and an illustrated cover, all original SVG drawings authored for this implementation.
 - Original sample text reconstructed from the project’s owl, Rabbit, red ball and four-question story outline. The earlier prototype was not present, so these files do not claim to reproduce its artwork or exact wording.
 - The book is explicitly marked `sample: true`; its subtitle and credit identify it as an original sample. It is not presented as a Book Dash book or as third-party open-licensed material.
+- All eight pages animate selected parts of the original artwork. On page 3, the fixed tear is removed from a derivative SVG background and two staggered drops fall from Rabbit’s eye. The original illustration remains the static fallback.
 - Separate text and alt text accompany each illustration. Four spoken prompts cover two literal details, one feeling, and one personal connection. Hint pages use one-based numbering.
 
 ## Sleepy Mr Sloth
@@ -33,7 +34,7 @@ The current reuse page requests acknowledgement of all four creators, a link to 
 - The English edition's 12 illustrations are used in order without cropping, recolouring or added artwork. The source JPEGs were converted to WebP with Pillow, quality 88, method 6, at original pixel dimensions. The original cover was converted in the same way. The logo remains its original PNG.
 - Story wording, paragraph order and source alternative descriptions are preserved. Text remains real text in `story.json`; it is not flattened into page images. The source cover includes its original lettering.
 - The subtitle and four spoken conversation questions were added for Bedtime Bookshelf. Questions were written after reading the full text and reviewing all 12 illustrations; their one-based hints are pages 1, 10, 12 and 11.
-- The two literal prompts concern sleep and the squawking bird. The feeling prompt refers to the explicitly happy ending. The personal prompt has no wrong answer. No additional story interactions or motions were added.
+- The two literal prompts concern sleep and the squawking bird. The feeling prompt refers to the explicitly happy ending. The personal prompt has no wrong answer. All twelve Sloth pages animate selected parts: yawning, torso movement, ear twitching, chewing, bee flight, snake movement, toe shuffling, squawking, closing eyes and sleep marks. These SVG assets embed pixels from the original WebP images; local white and ink repairs replace the original stationary parts. The original drawn flight trails are retained. The original source files are unchanged. Original illustrations remain the loading/error/reduced-motion fallback. Text stays still. Whole-image pan/zoom has been removed. No extra audio or story interactions were added.
 - The source is English as supplied by Book Dash; no translation was made.
 
 ### Retrieved-source fingerprints
@@ -73,3 +74,15 @@ Original logo: https://bookdash.github.io/bookdash-books/sleepy-mr-sloth/en/imag
 - Confirmed all cover, page and logo filenames are safe local basenames, and every referenced asset exists and decodes (SVG XML or WebP/PNG).
 - Reviewed the complete Book Dash illustration contact sheet and the sample's rendered SVG illustrations.
 - No remaining content or attribution gaps were identified. Actual device rendering remains an application-level check.
+
+
+## A House for Mouse — newly illustrated animated adaptation
+
+- Source English edition: https://bookdash.github.io/bookdash-books/a-house-for-mouse/en/index.html
+- Publisher page: https://bookdash.org/books/a-house-for-mouse/
+- CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+- Original creators: Michele Fry (writer), Jennifer Jacobs (designer), Amy Uzzell (illustrator, credited on the current publisher page as Amy Richards (Uzzell)). The source HTML identifies all three and explicitly permits adaptation with attribution.
+- Source wording and order are retained. The original has twelve illustrations but eleven text-bearing scenes: the wordless fireplace illustration is grouped with the adjacent warm-and-dry scene. No new narrative text is added.
+- All illustrations are newly authored vector artwork for this adaptation, with separate character/object layers. They do not reproduce or claim to preserve the original illustrator's drawings. New motion and four discussion questions are added.
+- The authoring package records source, changes and per-page animation review. The source HTML snapshot and SHA-256 record remain under `authoring/a-house-for-mouse/` for reproducibility; only finished local artwork and metadata are installed in `public/books/a-house-for-mouse/`.
+- Attribution, a source link, the CC BY link and Book Dash logo remain visible in the book credits. No endorsement is claimed.
