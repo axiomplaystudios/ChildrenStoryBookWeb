@@ -11,7 +11,12 @@ export function createFullscreen({ element, button, status, onChange }) {
     const expanded = mode !== 'normal';
     element.classList.toggle('is-expanded', expanded);
     document.body.classList.toggle('reader-expanded', expanded);
-    button.textContent = mode === 'expanded' ? 'Exit expanded view' : expanded ? 'Exit full screen' : 'Full screen';
+    const label = mode === 'expanded' ? 'Exit expanded view' : expanded ? 'Exit full screen' : 'Full screen';
+    button.setAttribute('aria-label', label);
+    button.title = label;
+    if (expanded) {
+      button.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 9h5V4m11 5h-5V4M4 15h5v5m11-5h-5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    } else button.textContent = label;
     button.setAttribute('aria-pressed', String(expanded));
     status.hidden = mode !== 'expanded';
     status.textContent = mode === 'expanded'

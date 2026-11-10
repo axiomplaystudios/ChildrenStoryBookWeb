@@ -32,7 +32,7 @@ export function createReader({ frame, onPage, onNext, onBack }) {
   }
   function dimensions() {
     const expanded = frame.parentElement.classList.contains('is-expanded');
-    const w = Math.max(1, Math.floor(Math.min(expanded ? 1400 : 1000, frame.clientWidth) / spread()));
+    const w = Math.max(1, Math.floor((expanded ? frame.clientWidth : Math.min(1000, frame.clientWidth)) / spread()));
     const h = expanded ? Math.max(1, Math.floor(frame.clientHeight)) : Math.max(420, Math.min(680, innerHeight - 230));
     return { w, h, key: `${w}-${h}-${spread()}` };
   }
@@ -104,6 +104,22 @@ export function createReader({ frame, onPage, onNext, onBack }) {
     if (x < bounds.width * 0.18) onBack();
     else if (x > bounds.width * 0.82) onNext();
   });
+  // StPageFlip has no page beyond the last spread. A final forward swipe
+  // proceeds to questions, just like a forward edge tap.
+  let finalSwipeStart;
+  frame.addEventListener('touchstart', e => {
+    finalSwipeStart = active && !fallback() && page + spread() >= book.pages.length
+      ? e.changedTouches[0] : null;
+  }, { passive: true });
+  frame.addEventListener('touchend', e => {
+    if (!finalSwipeStart) return;
+    const end = e.changedTouches[0];
+    const dx = end.clientX - finalSwipeStart.clientX;
+    const dy = end.clientY - finalSwipeStart.clientY;
+    finalSwipeStart = null;
+    if (active && dx < -45 && Math.abs(dy) < Math.abs(dx)) onNext();
+  }, { passive: true });
+  frame.addEventListener('touchcancel', () => { finalSwipeStart = null; });
   let start;
   native.addEventListener('touchstart', e => { start = e.changedTouches[0]; }, { passive: true });
   native.addEventListener('touchend', e => {
