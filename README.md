@@ -25,7 +25,7 @@ Wait for “Ready for offline reading” before disconnecting. Both complete boo
 ## What is included
 
 - Cover shelf, realistic StPageFlip turns, edge taps, touch swipes and arrow-key navigation.
-- One page in portrait; two-page spreads in landscape. Escape returns to the shelf.
+- One page in portrait; two-page spreads in landscape. A **Full screen** button expands the reader to the available display, with page controls and an exit button always visible. Rotation keeps the current page in view. Escape exits full screen first; outside full screen it returns to the shelf.
 - A static tap/swipe reader when reduced motion is enabled or the page-turn library fails.
 - Four spoken questions with relevant pictures and a hidden suggested answer. No scoring or recording.
 - Warm palette, optional quiet page rustle/chime, gradual reader tint and best-effort wake lock.
@@ -35,6 +35,14 @@ Wait for “Ready for offline reading” before disconnecting. Both complete boo
 - Offline support and an install manifest through `vite-plugin-pwa`. Updates are offered from the shelf instead of interrupting a story.
 
 See [book provenance and adaptations](Implementation_Details/book-sources.md). Book Dash content is CC BY 4.0; those licences and creator credits remain attached to the book. No licence for the rest of the project is implied.
+
+## Full-screen reading
+
+Open a book and tap **Full screen** in the reader toolbar. Rotate your device freely: portrait shows a single page, landscape shows a two-page spread. Tap **Exit full screen** to return to normal reading. Returning to the shelf or starting the questions also exits full screen.
+
+The app requests native full screen directly from your tap and does not lock orientation. On browsers that do not support or allow it, it uses an **expanded view** filling the browser viewport; browser bars may remain. For more space on iPhone, use Safari’s **Share → Add to Home Screen**, then launch the installed app. Safari supports the unprefixed Fullscreen API on iPadOS 16.4 and later; capability detection and the expanded fallback also cover other browser versions. [WebKit release notes](https://webkit.org/blog/13966/webkit-features-in-safari-16-4/).
+
+Automated checks cover native entry/exit, denied/unavailable APIs, phone/tablet rotation, short landscape displays, and navigation during pending requests. Actual iPad Safari fullscreen transitions and device safe-area behavior still need physical-device checks. At unusually short viewport heights (around 240 px), illustrations may become small so text and controls remain accessible.
 
 ## Add a book
 

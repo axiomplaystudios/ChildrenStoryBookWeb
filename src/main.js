@@ -5,6 +5,7 @@ import { createSession, advance, back, revealAnswer, setPage } from './session.j
 import { loadPreferences, savePreferences } from './storage.js';
 import { createBedtimeServices } from './services.js';
 import { createReader } from './reader.js';
+import { createFullscreen } from './fullscreen.js';
 
 const main = document.querySelector('#main');
 const readerView = document.querySelector('#reader');
@@ -42,7 +43,9 @@ const readerBar = el('div', 'reader-bar');
 const shelfButton = button('← Bookshelf', showShelf, 'text-button');
 const readerTitle = el('h1', 'reader-title');
 const progress = el('span', 'page-progress'); progress.dataset.testid = 'page-progress'; progress.setAttribute('role', 'status');
-readerBar.append(shelfButton, readerTitle, progress);
+const fullscreenButton = el('button', 'quiet-button fullscreen-toggle', 'Full screen');
+fullscreenButton.type = 'button'; fullscreenButton.setAttribute('aria-controls', 'reader');
+readerBar.append(shelfButton, readerTitle, progress, fullscreenButton);
 const frame = el('div', 'book-frame');
 const readerControls = el('nav', 'reader-controls'); readerControls.setAttribute('aria-label', 'Turn pages');
 const previous = button('← Previous page', () => turn(-1), 'quiet-button'); previous.setAttribute('aria-label', 'Previous page');
@@ -50,8 +53,10 @@ const dots = el('div', 'page-dots'); dots.setAttribute('aria-hidden', 'true');
 const next = button('Next page →', () => turn(1)); next.setAttribute('aria-label', 'Next page');
 readerControls.append(previous, dots, next);
 const readerTip = el('p', 'reader-tip', 'Read slowly. Point at the pictures. Enjoy being here together.');
-readerView.append(readerBar, frame, readerControls, readerTip);
+const fullscreenStatus = el('p', 'fullscreen-status'); fullscreenStatus.setAttribute('role', 'status'); fullscreenStatus.hidden = true;
+readerView.append(readerBar, frame, readerControls, readerTip, fullscreenStatus);
 const reader = createReader({ frame, onPage: updatePage, onNext: () => turn(1), onBack: () => turn(-1) });
+const fullscreen = createFullscreen({ element: readerView, button: fullscreenButton, status: fullscreenStatus, onChange: () => reader.resize() });
 function updatePage(page, spread) {
   if (!session || session.view !== 'reader') return;
   const changed = page !== session.page;
@@ -74,7 +79,7 @@ function startBook(story) {
 function turn(direction) {
   if (!session || session.view !== 'reader') return;
   if (direction > 0 && session.page + reader.spread() >= session.story.pages.length) {
-    session = advance(session, reader.spread()); reader.close();
+    session = advance(session, reader.spread()); reader.close(); void fullscreen.exit({ restoreFocus: false });
     readerView.hidden = true; main.hidden = false; document.body.classList.remove('reading');
     services.sound('chime', preferences.sound); showQuestion();
   } else reader.go(direction);
@@ -82,7 +87,10 @@ function turn(direction) {
 window.addEventListener('keydown', event => {
   if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest('input, textarea, select')) return;
   if (session?.view === 'reader' && ['ArrowRight', 'ArrowLeft'].includes(event.key)) { event.preventDefault(); turn(event.key === 'ArrowRight' ? 1 : -1); }
-  if (session && event.key === 'Escape') showShelf();
+  if (session && event.key === 'Escape') {
+    if (fullscreen.isExpanded()) { event.preventDefault(); void fullscreen.exit(); }
+    else showShelf();
+  }
 });
 
 function creditPanel(story, open = false) {
@@ -95,7 +103,7 @@ function creditPanel(story, open = false) {
   return details;
 }
 function showShelf() {
-  session = null; reader.close(); void services.setReading(false);
+  session = null; reader.close(); void fullscreen.exit({ restoreFocus: false }); void services.setReading(false);
   readerView.hidden = true; main.hidden = false; document.body.classList.remove('reading');
   main.replaceChildren();
   const hero = el('section', 'shelf-hero');

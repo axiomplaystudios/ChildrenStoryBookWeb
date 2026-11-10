@@ -31,8 +31,9 @@ export function createReader({ frame, onPage, onNext, onBack }) {
     onPage(page, spread());
   }
   function dimensions() {
-    const w = Math.floor(Math.min(1000, frame.clientWidth) / spread());
-    const h = Math.max(420, Math.min(680, innerHeight - 230));
+    const expanded = frame.parentElement.classList.contains('is-expanded');
+    const w = Math.max(1, Math.floor(Math.min(expanded ? 1400 : 1000, frame.clientWidth) / spread()));
+    const h = expanded ? Math.max(1, Math.floor(frame.clientHeight)) : Math.max(420, Math.min(680, innerHeight - 230));
     return { w, h, key: `${w}-${h}-${spread()}` };
   }
   function finishTurn() {
@@ -112,6 +113,9 @@ export function createReader({ frame, onPage, onNext, onBack }) {
     start = null;
   }, { passive: true });
   window.addEventListener('resize', resize);
+  window.visualViewport?.addEventListener('resize', resize);
+  const observer = new ResizeObserver(resize);
+  observer.observe(frame);
   motion.addEventListener('change', () => {
     if (!active) return;
     finishTurn();
@@ -124,6 +128,6 @@ export function createReader({ frame, onPage, onNext, onBack }) {
     resize();
     void loadFlip();
   });
-  return { open, close() { active = false; finishTurn(); }, go, spread };
+  return { open, close() { active = false; finishTurn(); }, go, spread, resize };
 
 }
