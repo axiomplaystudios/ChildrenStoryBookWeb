@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#172e35" />
+  <meta name="description" content="A little bookshelf for slow stories, big imaginations, and a gentle goodnight. Read together, then talk together." />
+  <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+  <link rel="apple-touch-icon" href="./icon-192.png" />
+  <title>Bedtime Bookshelf</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to stories</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Bedtime Bookshelf home"><span class="brand-mark" aria-hidden="true">☾</span><span>bedtime<span class="brand-sub">BOOKSHELF</span></span></a>
+    <div class="preferences" aria-label="Reading preferences">
+      <button id="warm-toggle" class="quiet-button" type="button" aria-pressed="false"><span aria-hidden="true">☼</span> Warm light</button>
+      <button id="sound-toggle" class="quiet-button" type="button" aria-pressed="false"><span aria-hidden="true">♪</span> Sound off</button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><p class="loading">Getting the bookshelf ready…</p></main>
+  <section id="reader" class="reader-view" hidden aria-label="Story reader"></section>
+  <footer class="site-footer"><span>A little story. A little wonder. A gentle goodnight.</span><span id="offline-status" role="status"></span></footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

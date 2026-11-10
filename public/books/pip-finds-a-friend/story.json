@@ -1,0 +1,75 @@
+{
+  "title": "Pip Finds a Friend",
+  "subtitle": "An original sample about a small act of kindness",
+  "cover": "cover.svg",
+  "credit": "Original sample story and SVG illustrations created for Bedtime Bookshelf. Reconstructed from the project plan; this is not a Book Dash title or the missing prototype artwork.",
+  "sample": true,
+  "pages": [
+    {
+      "image": "page-01.svg",
+      "text": "Pip is a little owl. Pip lives in a big green tree.",
+      "alt": "Pip, a small brown owl, sits on a branch of a green tree beneath a crescent moon."
+    },
+    {
+      "image": "page-02.svg",
+      "text": "One evening, Pip heard a sound. “Sniff, sniff.” Who was crying?",
+      "alt": "Pip looks down from the tree at Rabbit, who is crying in the grass."
+    },
+    {
+      "image": "page-03.svg",
+      "text": "It was Rabbit. “I lost my red ball,” said Rabbit. Rabbit felt very sad.",
+      "alt": "Rabbit has a tear on one cheek while Pip listens beside a bush."
+    },
+    {
+      "image": "page-04.svg",
+      "text": "“I will help you look,” said Pip. They looked beside the flowers. No ball!",
+      "alt": "Pip and Rabbit look beside three yellow flowers. The ball is not there."
+    },
+    {
+      "image": "page-05.svg",
+      "text": "They looked behind a bush. No ball there, either. Pip looked up.",
+      "alt": "Pip and Rabbit look around a leafy green bush. The ball is not there."
+    },
+    {
+      "image": "page-06.svg",
+      "text": "“There it is!” said Pip. The red ball was up in the tree. Pip flew up to get it.",
+      "alt": "A red ball rests on a high branch. Pip flies toward it while Rabbit waits below."
+    },
+    {
+      "image": "page-07.svg",
+      "text": "Pip gave the ball to Rabbit. “Thank you, Pip!” said Rabbit. Now Pip had a new friend.",
+      "alt": "Pip and a smiling Rabbit stand together with the red ball between them."
+    },
+    {
+      "image": "page-08.svg",
+      "text": "The friends rested under the moon. Rabbit kept the red ball close. “Goodnight, friend,” whispered Pip.",
+      "alt": "Pip closes his eyes on the tree branch. Rabbit rests below beside the red ball in the moonlight."
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What did Rabbit lose?",
+      "a": "A red ball.",
+      "hintPage": 3
+    },
+    {
+      "type": "literal",
+      "q": "Where did Pip find the ball?",
+      "a": "Up in the tree.",
+      "hintPage": 6
+    },
+    {
+      "type": "feeling",
+      "q": "How did Rabbit feel when the ball was lost?",
+      "a": "Sad. Rabbit was crying because the ball was lost.",
+      "hintPage": 3
+    },
+    {
+      "type": "personal",
+      "q": "Have you ever lost a toy?",
+      "a": "There is no wrong answer. You could ask who helped your child look.",
+      "hintPage": 7
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "title": "Sleepy Mr Sloth",
+  "subtitle": "A sleepy climb to the perfect branch",
+  "cover": "cover.webp",
+  "credit": "Originally published by Book Dash under a Creative Commons CC BY 4.0 licence. This book can be read for free on www.bookdash.org and was created by Paul Kennedy (writer), Graham Paterson (illustrator), Nick Mulgrew (designer) and Arthur Attwell (editor). For Bedtime Bookshelf, illustrations were converted to WebP, the original text was laid out separately, and four conversation questions were added.",
+  "sourceUrl": "https://bookdash.org/books/sleepy-mr-sloth/",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "logo": "book-dash-logo.png",
+  "sample": false,
+  "pages": [
+    {
+      "image": "page-01.webp",
+      "text": "One day, Mr Sloth came to visit. He said:\n\nI’m sleepy! I need a good branch for a bed!",
+      "alt": "Mr Sloth is sleepy and yawning."
+    },
+    {
+      "image": "page-02.webp",
+      "text": "I’m quite good at climbing. I know how to swing.\n\nBut sleeping’s my favourite, favourite thing!",
+      "alt": "Mr Sloth starts climbing the tree."
+    },
+    {
+      "image": "page-03.webp",
+      "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
+      "alt": "Mr Sloth spots a branch. Is that a big ear nearby?"
+    },
+    {
+      "image": "page-04.webp",
+      "text": "Oh no, Mr Sloth! A giraffe’s eating there!\n\nHe might think you’re lunch and start nibbling your hair!",
+      "alt": "A giraffe bites Mr Sloth by mistake!"
+    },
+    {
+      "image": "page-05.webp",
+      "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
+      "alt": "Mr Sloth spots a branch. There are a few bees flying around."
+    },
+    {
+      "image": "page-06.webp",
+      "text": "Oh no, Mr Sloth! There’s a beehive right there!\n\nYou’ll never get sleep with those bees everywhere!",
+      "alt": "Bees fly out of a beehive around Mr Sloth!"
+    },
+    {
+      "image": "page-07.webp",
+      "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
+      "alt": "Mr Sloth spots a branch. There is a tail nearby."
+    },
+    {
+      "image": "page-08.webp",
+      "text": "Oh no, Mr Sloth, that’s a snake over there!\n\nNot a branch! Poor old snake. You gave him quite a scare.",
+      "alt": "Mr Sloth grabs snake by mistake!"
+    },
+    {
+      "image": "page-09.webp",
+      "text": "This branch looks lovely! I think I’ll sleep here.\n\nAnd you? Don’t you think that’s a splendid idea?",
+      "alt": "Mr Sloth spots a branch. There are feet nearby."
+    },
+    {
+      "image": "page-10.webp",
+      "text": "Oh no, Mr Sloth! There’s a bird squawking there!\n\nYou’ll never get sleep with that noise in the air!",
+      "alt": "A hadeda is squawking loudly there!"
+    },
+    {
+      "image": "page-11.webp",
+      "text": "Try climb one more branch, Mr Sloth! they all said.\n\nAnd that branch was just the right one for his bed.",
+      "alt": "Mr Sloth climbs to the top of the tree and smiles."
+    },
+    {
+      "image": "page-12.webp",
+      "text": "The bird and the snake, the giraffe and each bee\n\nwere happy to have Mr Sloth in their tree.",
+      "alt": "Mr Sloth and the animals are all sleeping nicely in the tree together."
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What did Mr Sloth want to do?",
+      "a": "Sleep! He wanted a good branch for a bed.",
+      "hintPage": 1
+    },
+    {
+      "type": "literal",
+      "q": "Who made a loud squawking noise?",
+      "a": "The bird. It was too noisy for Mr Sloth to sleep there.",
+      "hintPage": 10
+    },
+    {
+      "type": "feeling",
+      "q": "How did the animals feel at the end?",
+      "a": "Happy to have Mr Sloth in their tree. Other feelings your child notices are welcome, too.",
+      "hintPage": 12
+    },
+    {
+      "type": "personal",
+      "q": "Where do you like to sleep?",
+      "a": "There is no wrong answer. Listen, then invite your child to tell you more.",
+      "hintPage": 11
+    }
+  ]
+}
