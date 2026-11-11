@@ -761,8 +761,8 @@
       "activity": {
         "kind": "discover",
         "id": "discover-stepping-shapes",
-        "physicalPrompt": "Optional: with your adult, trace circle, triangle, square in the air while seated. You can also point at those three pictures on screen.",
-        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "physicalPrompt": "Optional: with your adult, arrange safe familiar objects already nearby and within reach in a short left-to-right row while seated. Or point to circle, triangle, square on screen; no objects are needed.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together. If safe familiar objects are already within reach, help your child arrange a short row; no materials are required. Do not fetch anything. The full pictured screen sequence or skip reaches the same story ending.",
         "screen": {
           "label": "Copy the pictured trail from left to right. Touch a shape for each picture, then check your answer.",
           "image": "stepping-shapes-clue.svg",
@@ -1177,7 +1177,7 @@
           ]
         },
         "stepping-shapes": {
-          "instruction": "Point along the row together from left to right. Invite your child to name, trace or point to each next shape.",
+          "instruction": "Point along the pictured row together from left to right. Invite your child to name, trace or point to each next shape. If you choose the optional object row, help arrange it nearby together.",
           "feedback": {
             "complete": "The three shapes are in order. The map can see the library’s roof.",
             "retry": "Start on the left. Circle comes first, then triangle, then square."

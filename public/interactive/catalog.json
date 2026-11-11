@@ -31,9 +31,9 @@
     "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
     "cover": "./covers/imani-and-the-lost-shape-map--v1.svg",
     "manifestUrl": "./imani-and-the-lost-shape-map/v1/bundle.json",
-    "manifestSha256": "2923b07e58d201aa8939e96c8399d4e3eaf84de945038e829385d2f88f29c8bb",
+    "manifestSha256": "aca09fc6f2f0526cb9e5e15f6773d87fe357073ccfe15970626bb9b3c306343c",
     "manifestBytes": 15833,
-    "totalBytes": 191861
+    "totalBytes": 192080
   },
   {
     "id": "mina-and-the-shadow-stage",
@@ -43,9 +43,9 @@
     "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
     "cover": "./covers/mina-and-the-shadow-stage--v1.svg",
     "manifestUrl": "./mina-and-the-shadow-stage/v1/bundle.json",
-    "manifestSha256": "d63a42f69e38ecd111b622f62fa4161555a6533afa92e44e32b4e87022395065",
+    "manifestSha256": "73aa4b7032d9a665f0534aea2c00ad43122f5f9837ffd9c23e39de5afab1d1f0",
     "manifestBytes": 13270,
-    "totalBytes": 228405
+    "totalBytes": 228408
   },
   {
     "id": "noris-seaside-picnic",
@@ -67,9 +67,9 @@
     "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
     "cover": "./covers/tavis-dinosaur-ramp-rally--v1.svg",
     "manifestUrl": "./tavis-dinosaur-ramp-rally/v1/bundle.json",
-    "manifestSha256": "0d09ee5892a8f62bd9dfb74f3c49681633ccb6cf5d35e3688d88ce5e91760afc",
+    "manifestSha256": "b452fa1f2a2a05ce30485dddf206525fbcc394b227d2f6b323b9c763c115eca7",
     "manifestBytes": 13257,
-    "totalBytes": 255717
+    "totalBytes": 255681
   },
   {
     "id": "the-penguin-sound-post",

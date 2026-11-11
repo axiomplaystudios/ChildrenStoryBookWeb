@@ -1,7 +1,7 @@
 import './interactive/style.css';
 import {createInteractiveShelf} from './interactive/shelf.js';
 import {mountInteractiveReader} from './interactive/reader.js';
-import {loadRun,saveRun,progressKey} from './interactive/progress.js';
+import {loadRun,saveRun,progressKey,progressBase} from './interactive/progress.js';
 import {createRun} from './interactive/state.js';
 import './style.css';
 import { animationSpeeds, loadAnimationSettings, saveAnimationSettings, resolveSpeed, setSpeed } from './animation-settings.js';
@@ -48,32 +48,76 @@ syncPreferences();
 const interactiveRoot = el('section'); interactiveRoot.hidden = true; interactiveRoot.id = 'interactive-reader'; readerView.after(interactiveRoot);
 let interactiveReader = null, interactiveBundle = null, opening = 0, interactiveActive = false;
 const memoryRuns = new Map();
+const interactiveBase = progressBase();
 const interactiveShelf = createInteractiveShelf({storage,onOpen:openInteractive});
 function closeInteractive() {
   ++opening; interactiveReader?.destroy(); interactiveReader = null;
   interactiveBundle?.dispose(); interactiveBundle = null;
   interactiveRoot.hidden = true; interactiveRoot.replaceChildren(); interactiveActive = false;
 }
-async function openInteractive({summary,edition,store,version}) {
-  const token=++opening; interactiveActive=true;
+async function openInteractive({summary, edition, store, version}) {
+  const token = ++opening;
+  interactiveActive = true;
   try {
-    const bundle=await store.open(summary.id,version);
-    if(token!==opening){bundle.dispose();return;}
-    interactiveShelf.detach(); session=null; reader.close(); void fullscreen.exit({restoreFocus:false});
-    interactiveBundle=bundle; interactiveActive=true;
-    main.hidden=true; readerView.hidden=true; interactiveRoot.hidden=false; document.body.classList.add('reading'); void services.setReading(true);
-    const key=progressKey(bundle.pair.id,edition), loaded=loadRun(storage,bundle.pair,edition), memory=memoryRuns.get(key);
-    if(memory&&memory.pairVersion===bundle.pair.version){loaded.run=memory;loaded.status='loaded';}
-    const begin=()=>{if(token!==opening)return;interactiveRoot.replaceChildren();interactiveReader=mountInteractiveReader({root:interactiveRoot,pair:bundle.pair,bundle,run:loaded.run,storage,animationSettings,speedForPage:(id,index)=>resolveSpeed(animationSettings,id,index),onSave:run=>{memoryRuns.set(key,run);saveRun(storage,run);},onExit:showShelf});};
-    if(loaded.status==='loaded'||loaded.status==='restart') {
-      interactiveRoot.replaceChildren(el('h1','',bundle.pair.title),el('p','',loaded.status==='restart'?'For your adult: this saved edition is damaged or belongs to an older version. Restart to replace it.':'Your saved story is waiting.'));
-      if(loaded.status==='loaded')interactiveRoot.append(button('Resume story',begin));
-      interactiveRoot.append(button('Start edition again',()=>{if(token!==opening)return;loaded.run=createRun(bundle.pair,edition);memoryRuns.set(key,loaded.run);saveRun(storage,loaded.run);begin();}),button('Bookshelf',showShelf));
+    const bundle = await store.open(summary.id, version);
+    if (token !== opening) { bundle.dispose(); return; }
+    interactiveShelf.detach();
+    session = null;
+    reader.close();
+    void fullscreen.exit({restoreFocus:false});
+    interactiveBundle = bundle;
+    interactiveActive = true;
+    main.hidden = true;
+    readerView.hidden = true;
+    interactiveRoot.hidden = false;
+    document.body.classList.add('reading');
+    void services.setReading(true);
+    const key = progressKey(bundle.pair.id, edition, interactiveBase);
+    const loaded = loadRun(storage, bundle.pair, edition, interactiveBase);
+    const memory = memoryRuns.get(key);
+    if (memory && memory.pairVersion === bundle.pair.version) {
+      loaded.run = memory;
+      loaded.status = 'loaded';
+    }
+    const begin = () => {
+      if (token !== opening) return;
+      interactiveRoot.replaceChildren();
+      interactiveReader = mountInteractiveReader({
+        root:interactiveRoot, pair:bundle.pair, bundle, run:loaded.run, storage,
+        animationSettings,
+        speedForPage:(id,index) => resolveSpeed(animationSettings,id,index),
+        onSave:run => {
+          memoryRuns.set(key, run);
+          saveRun(storage, run, interactiveBase);
+        },
+        onExit:showShelf,
+      });
+    };
+    if (loaded.status === 'loaded' || loaded.status === 'restart') {
+      interactiveRoot.replaceChildren(
+        el('h1', '', bundle.pair.title),
+        el('p', '', loaded.status === 'restart'
+          ? 'For your adult: this saved edition is damaged or belongs to an older version. Restart to replace it.'
+          : 'Your saved story is waiting.'),
+      );
+      if (loaded.status === 'loaded') interactiveRoot.append(button('Resume story', begin));
+      interactiveRoot.append(
+        button('Start edition again', () => {
+          if (token !== opening) return;
+          loaded.run = createRun(bundle.pair, edition);
+          memoryRuns.set(key, loaded.run);
+          saveRun(storage, loaded.run, interactiveBase);
+          begin();
+        }),
+        button('Bookshelf', showShelf),
+      );
     } else begin();
   } catch {
-    if(token!==opening)return;
-    interactiveActive=false;
-    const message=el('p','interactive-open-error','For your adult: the saved story could not open. Download it again, then retry.');message.setAttribute('role','alert');interactiveShelf.element.prepend(message);
+    if (token !== opening) return;
+    interactiveActive = false;
+    const message = el('p', 'interactive-open-error', 'For your adult: the saved story could not open. Download it again, then retry.');
+    message.setAttribute('role', 'alert');
+    interactiveShelf.element.prepend(message);
   }
 }
 

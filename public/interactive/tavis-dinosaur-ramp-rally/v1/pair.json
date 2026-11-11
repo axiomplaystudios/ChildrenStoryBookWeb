@@ -1182,7 +1182,7 @@
     },
     {
       "id": "ending",
-      "narrative": "The rally neighbours gather beside the track. Tavi has watched the same cart stop nearby from the gentler ramp’s lower start and farther away from the steeper ramp’s higher start. He can choose a ramp tilt for each delivery in this picture model. Fern waves a leaf; Bronto nods from the far stop. The parcels can join the rally, and there is always time for another try.",
+      "narrative": "The rally neighbours gather beside the track. In this picture model, the same cart can stop nearby from the gentler ramp’s lower start and farther away from the steeper ramp’s higher start. Tavi can choose a ramp tilt for each delivery. Fern waves a leaf; Bronto nods from the far stop. The parcels can join the rally, and there is always time for another try.",
       "alt": "Tavi and a blue dinosaur neighbour stand beside their red parcel cart and leafy parcels, ready for the rally deliveries.",
       "image": "ending.svg",
       "scene": {
@@ -1470,7 +1470,7 @@
           ]
         },
         "ending": {
-          "instruction": "Compare the near and far deliveries together. What did changing the ramp tilt help Tavi notice?",
+          "instruction": "Look back at a saved delivery together. What did the ramp tilt help Tavi notice?",
           "feedback": {
             "complete": "One track can invite more than one question.",
             "retry": "Look at the people and the picture while your adult reads."
@@ -1730,7 +1730,7 @@
           ]
         },
         "ending": {
-          "instruction": "Look back at the two cart stops.",
+          "instruction": "Look back at a saved cart stop.",
           "feedback": {
             "complete": "One track can invite more than one question.",
             "retry": "Look at the people and the picture while your adult reads."
@@ -1754,7 +1754,7 @@
   },
   "endings": {
     "sceneId": "ending",
-    "text": "The rally neighbours gather beside the track. Tavi has watched the same cart stop nearby from the gentler ramp’s lower start and farther away from the steeper ramp’s higher start. He can choose a ramp tilt for each delivery in this picture model. Fern waves a leaf; Bronto nods from the far stop. The parcels can join the rally, and there is always time for another try.",
+    "text": "The rally neighbours gather beside the track. In this picture model, the same cart can stop nearby from the gentler ramp’s lower start and farther away from the steeper ramp’s higher start. Tavi can choose a ramp tilt for each delivery. Fern waves a leaf; Bronto nods from the far stop. The parcels can join the rally, and there is always time for another try.",
     "variants": [],
     "recap": []
   },

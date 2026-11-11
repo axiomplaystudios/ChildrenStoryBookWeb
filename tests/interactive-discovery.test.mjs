@@ -27,3 +27,19 @@ for(const[id,recipe]of Object.entries(discoveryRecipes)){
 test('Penguin visual pattern work never requires hearing or making a sound',async()=>{const p=await load('the-penguin-sound-post');assert.match(p.scenes[0].narrative,/pictures|visual/i);for(const s of p.scenes.filter(s=>s.activity)){assert.match(s.activity.adultHelp,/sound|silent/i);assert.match(s.activity.screen.label,/left to right/i);assert.doesNotMatch(s.activity.screen.label,/listen|hear/i);}});
 
 test('Discovery decorative loops remain continuous at late cycles and preserve completion layers',async()=>{const{sampleTrack}=await import('../src/scene-motion.js');for(const id of Object.keys(discoveryRecipes)){const p=await load(id);for(const s of p.scenes)for(const track of s.scene.tracks){assert.equal(track.layer,'wind');for(const cycle of [1,19,101]){const time=cycle*(track.durationMs+track.restMs);const a=sampleTrack(track,time-.001),b=sampleTrack(track,time+.001);for(const k of ['x','y','angle','opacity'])assert.ok(Math.abs(a[k]-b[k])<.001,`${id} ${s.id} ${k} loop continuity`);}assert.ok(Math.abs(sampleTrack(track,track.durationMs/12).angle)>1,'decorative motion has a visible pose');}}});
+
+
+test('Imani offers optional adult-assisted familiar-object arranging beside a complete screen sequence', async () => {
+ const pair = await load('imani-and-the-lost-shape-map');
+ const scene = pair.scenes.find(s => s.id === 'stepping-shapes');
+ assert.match(scene.activity.physicalPrompt, /arrange/i);
+ assert.match(scene.activity.physicalPrompt, /adult/i);
+ assert.match(scene.activity.physicalPrompt, /familiar objects/i);
+ assert.match(scene.activity.physicalPrompt, /already.*(nearby|reach)|within reach/i);
+ assert.match(scene.activity.adultHelp, /no materials.*(needed|required)/i);
+ assert.match(scene.activity.adultHelp, /skip/i);
+ assert.deepEqual(scene.activity.screen.answer, ['circle', 'triangle', 'square']);
+ for (const edition of ['together', 'independent']) {
+  assert.match(pair.editions[edition].scenes[scene.id].instruction, /row|circle.*triangle.*square/i);
+ }
+});

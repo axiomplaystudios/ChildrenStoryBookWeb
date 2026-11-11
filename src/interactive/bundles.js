@@ -98,6 +98,15 @@ export function createBundleStore({baseUrl}={}){
   assert(url.href===expected.href,'Invalid bundle manifest URL');
   return {summary,manifestUrl:url.href};
  }
+ async function installedRecords(storage, id) {
+  let records;
+  const prefix = `version:${id}:`;
+  await transaction(storage, 'readonly', store => {
+   const request = store.getAll(IDBKeyRange.bound(prefix, `${prefix}\uffff`));
+   request.onsuccess = () => { records = request.result; };
+  });
+  return records;
+ }
  async function rememberError(id,version,error){
   const info={version,error:errorInfo(error)};
   try{await transaction(await db(),'readwrite',r=>r.put(info,`error:${id}`));failures.delete(idKey(id));}catch{failures.set(idKey(id),info);/* Retain retry state if the error itself cannot be persisted. */}
@@ -126,7 +135,8 @@ export function createBundleStore({baseUrl}={}){
    let record=installedVersion&&await read(storage,versionKey(summary.id,installedVersion));
    if(record)try{await cached(record);}catch(error){await invalidate(summary.id,installedVersion,error);deleteWhenUnused(summary.id,installedVersion,record.cacheName);record=null;}
    const problem=failures.get(idKey(summary.id))??await read(storage,`error:${summary.id}`);
-   const result={status:record?(installedVersion===summary.version?'ready':'update-available'):'not-downloaded',installedVersion:record?installedVersion:null,usable:!!record,verifiedBytes:record?record.summary.totalBytes:0,totalBytes:summary.totalBytes};
+   const hasDownloads = (await installedRecords(storage, summary.id)).length > 0;
+   const result={hasDownloads,status:record?(installedVersion===summary.version?'ready':'update-available'):'not-downloaded',installedVersion:record?installedVersion:null,usable:!!record,verifiedBytes:record?record.summary.totalBytes:0,totalBytes:summary.totalBytes};
    if(record&&installedVersion===summary.version&&!sameSummary(record.summary,summary))return {...result,status:'error',error:{name:'Error',code:'summary-mismatch',message:'Catalog metadata disagrees with the installed immutable version'}};
    if(problem?.version===summary.version)return {...result,status:'error',error:problem.error};
    return result;
@@ -180,12 +190,24 @@ export function createBundleStore({baseUrl}={}){
    return {pair:data.pair,resolveAsset(file){if(disposed)throw new Error('Story bundle disposed');assert(urls.has(file),'Unknown story asset');return urls.get(file);},dispose(){if(disposed)return;disposed=true;for(const url of urls.values())URL.revokeObjectURL(url);release();}};
   }catch(error){if(urls)for(const url of urls.values())URL.revokeObjectURL(url);release();throw error;}
  }
- async function remove(id,version){
-  identity(id,version);
-  await locked(mutation(id),async()=>{
-   const storage=await db(),record=await read(storage,versionKey(id,version));
-   await transaction(storage,'readwrite',r=>{r.delete(versionKey(id,version));r.delete(`error:${id}`);const request=r.get(`current:${id}`);request.onsuccess=()=>{if(request.result===version)r.delete(`current:${id}`);};});
-   failures.delete(idKey(id));if(record)deleteWhenUnused(id,version,record.cacheName);
+ async function remove(id, version) {
+  identity(id, version ?? 'v1');
+  await locked(mutation(id), async () => {
+   const storage = await db();
+   const records = version === undefined
+    ? await installedRecords(storage, id)
+    : [await read(storage, versionKey(id, version))].filter(Boolean);
+   await transaction(storage, 'readwrite', store => {
+    for (const record of records) store.delete(versionKey(id, record.summary.version));
+    store.delete(`error:${id}`);
+    if (version === undefined) store.delete(`current:${id}`);
+    else {
+     const request = store.get(`current:${id}`);
+     request.onsuccess = () => { if (request.result === version) store.delete(`current:${id}`); };
+    }
+   });
+   failures.delete(idKey(id));
+   for (const record of records) deleteWhenUnused(id, record.summary.version, record.cacheName);
   });
  }
  return {status,install,open,remove};

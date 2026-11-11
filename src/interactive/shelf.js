@@ -152,7 +152,7 @@ export function createInteractiveShelf({
       open.disabled = !status.usable;
       controls.append(open);
     }
-    if (status.usable)
+    if (status.usable || status.hasDownloads)
       controls.append(
         button('Remove download', () => {
           const confirmation = node('div', 'download-removal');
@@ -160,11 +160,11 @@ export function createInteractiveShelf({
             node(
               'p',
               '',
-              'For your adult: remove this offline download? Saved activities will be kept.',
+              'For your adult: remove all offline versions of this story? Saved activities will be kept.',
             ),
             button('Confirm removal', async () => {
               try {
-                await store.remove(summary.id, status.installedVersion);
+                await store.remove(summary.id);
                 if (current(token))
                   renderCard(card, summary, await store.status(summary), token);
               } catch {

@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
 import {
   prepareBundleFixtures,
   restoreBundleBuild,
@@ -219,7 +220,7 @@ test('corrupt save offers explicit replacement and editions remain independent',
 }) => {
   await page.addInitScript(() =>
     localStorage.setItem(
-      'interactive-run:fixture-pair:independent',
+      `interactive-run:${location.origin}/:fixture-pair:independent`,
       '{"bad":true}',
     ),
   );
@@ -375,4 +376,77 @@ test('every active reader control including expanded illustration settings has a
     expect(controls.length).toBeGreaterThan(10);
     expect(controls.filter(control => control.width < 48 || control.height < 48)).toEqual([]);
   }
+});
+
+
+test('same-origin hosted copies keep resume, restart, editions and version replacement separate', async ({browser}) => {
+ const context = await browser.newContext({serviceWorkers:'block'});
+ const first = await context.newPage(), second = await context.newPage();
+ const origin = 'http://127.0.0.1:4173';
+ const firstBase = `${origin}/copies/first/`, secondBase = `${origin}/copies/second/`;
+ let secondUpdated = false;
+ await context.route('**/copies/**', async route => {
+  const pathname = new URL(route.request().url()).pathname;
+  const relative = pathname.replace(/^\/copies\/(first|second)\//, '') || 'index.html';
+  let body = await readFile(`dist/${relative}`);
+  if (secondUpdated && pathname.startsWith('/copies/second/') && relative === 'interactive/catalog.json') {
+   const catalog = JSON.parse(body);
+   const manifest = await readFile('dist/interactive/fixture-pair/v2/bundle.json');
+   const {createHash} = await import('node:crypto');
+   const parsed = JSON.parse(manifest);
+   Object.assign(catalog[0], {version:'v2',manifestUrl:'./fixture-pair/v2/bundle.json',manifestBytes:manifest.length,manifestSha256:createHash('sha256').update(manifest).digest('hex'),totalBytes:manifest.length+parsed.files.reduce((n,f)=>n+f.bytes,0)});
+   body = Buffer.from(JSON.stringify(catalog));
+  }
+  const contentType = relative.endsWith('.js') ? 'text/javascript' : relative.endsWith('.css') ? 'text/css' : relative.endsWith('.svg') ? 'image/svg+xml' : relative.endsWith('.html') ? 'text/html' : 'application/json';
+  await route.fulfill({body,contentType});
+ });
+ const card = page => page.locator('.interactive-card').first();
+ const openEdition = async (page, label='Play by Myself') => card(page).getByRole('button',{name:label,exact:true}).click();
+ const place = async page => {
+  await page.getByRole('button',{name:'One bun, copy 1',exact:true}).click();
+  await page.getByRole('button',{name:'Box for one bun',exact:true}).click();
+ };
+ const shelf = page => page.getByRole('button',{name:'Bookshelf',exact:true}).click();
+ const next = page => page.getByRole('button',{name:'Next scene',exact:true});
+ try {
+  for (const [page, base] of [[first,firstBase],[second,secondBase]]) {
+   await page.goto(base);
+   await card(page).getByRole('button',{name:'Download story',exact:true}).click();
+   await expect(card(page)).toContainText('Ready offline');
+  }
+  await first.evaluate(() => localStorage.setItem('interactive-run:fixture-pair:together','{"unscoped":"keep unchanged"}'));
+  await openEdition(first); await place(first); await shelf(first);
+  await openEdition(second);
+  await expect(second.getByRole('button',{name:'Resume story',exact:true})).toHaveCount(0);
+  await expect(next(second)).toBeDisabled();
+  await place(second); await shelf(second);
+  await second.reload(); await openEdition(second);
+  await second.getByRole('button',{name:'Resume story',exact:true}).click();
+  await expect(next(second)).toBeEnabled();
+  await second.getByRole('button',{name:'Restart edition',exact:true}).click();
+  await second.getByRole('button',{name:'Restart this edition',exact:true}).click();
+  await expect(next(second)).toBeDisabled(); await shelf(second);
+  await first.reload(); await openEdition(first);
+  await first.getByRole('button',{name:'Resume story',exact:true}).click();
+  await expect(next(first)).toBeEnabled(); await shelf(first);
+  await openEdition(second,'Read Together'); await place(second); await shelf(second);
+  secondUpdated = true;
+  await second.getByRole('button',{name:'Update bookshelf',exact:true}).click();
+  await expect(card(second)).toContainText('Update available');
+  await card(second).getByRole('button',{name:'Update download',exact:true}).click();
+  await expect(card(second)).toContainText('Ready offline');
+  await openEdition(second);
+  await expect(second.getByText(/saved edition is damaged or belongs to an older version/)).toBeVisible();
+  await second.getByRole('button',{name:'Start edition again',exact:true}).click();
+  await expect(next(second)).toBeDisabled();
+  const records = await second.evaluate(() => Object.fromEntries(Object.entries(localStorage).filter(([key])=>key.startsWith('interactive-run:'))));
+  expect(JSON.parse(records[`interactive-run:${firstBase}:fixture-pair:independent`]).actions).toHaveLength(1);
+  expect(JSON.parse(records[`interactive-run:${secondBase}:fixture-pair:independent`]).pairVersion).toBe('v2');
+  expect(JSON.parse(records[`interactive-run:${secondBase}:fixture-pair:together`]).pairVersion).toBe('v1');
+  expect(JSON.parse(records[`interactive-run:${secondBase}:fixture-pair:together`]).actions).toHaveLength(1);
+  expect(records['interactive-run:fixture-pair:together']).toBe('{"unscoped":"keep unchanged"}');
+  await openEdition(first);
+  await first.getByRole('button',{name:'Resume story',exact:true}).click();
+  await expect(next(first)).toBeEnabled();
+ } finally { await context.close(); }
 });

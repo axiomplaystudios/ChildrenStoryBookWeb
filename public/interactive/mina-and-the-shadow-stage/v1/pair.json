@@ -1182,7 +1182,7 @@
     },
     {
       "id": "ending",
-      "narrative": "The curtain is ready for the pocket forest show. Mina knows how one tree puppet can make a towering shadow near the light and a smaller shadow near the screen. Arun remembers the repeated trials and the two observations. Their little forest can seem to grow and shrink while the lamp and screen stay still. The siblings take a bow together.",
+      "narrative": "The curtain is ready for the pocket forest show. Mina knows how one tree puppet can make a towering shadow near the light and a smaller shadow near the screen. Arun can look back at a saved observation or try another puppet position. Their little forest can seem to grow and shrink while the lamp and screen stay still. The siblings take a bow together.",
       "alt": "Mina and Arun take a bow beside their purple paper-puppet stage. A tall tree silhouette fills the theatre screen, ready for another forest story.",
       "image": "ending.svg",
       "scene": {
@@ -1470,7 +1470,7 @@
           ]
         },
         "ending": {
-          "instruction": "Look back together at the forest show. Which puppet position made the larger shadow, and what stayed fixed?",
+          "instruction": "Look back together at the forest show. What can move to change the shadow, and what stays fixed?",
           "feedback": {
             "complete": "A little tree can make a forest full of questions.",
             "retry": "Look at the people and the picture while your adult reads."
@@ -1492,7 +1492,7 @@
       "prompts": [
         {
           "type": "literal",
-          "question": "What moved between the two shadow trials?",
+          "question": "What can move to change the tree shadow?",
           "answer": "Only the upright tree puppet changed position. The lamp and screen stayed fixed.",
           "sceneId": "shadow-notebook"
         },
@@ -1749,12 +1749,12 @@
           ]
         }
       },
-      "reflection": "Which tree shadow would you like in your forest story? Tell your adult what you noticed in the two puppet positions."
+      "reflection": "Which tree shadow would you like in your forest story? Tell your adult what you noticed in a saved trial."
     }
   },
   "endings": {
     "sceneId": "ending",
-    "text": "The curtain is ready for the pocket forest show. Mina knows how one tree puppet can make a towering shadow near the light and a smaller shadow near the screen. Arun remembers the repeated trials and the two observations. Their little forest can seem to grow and shrink while the lamp and screen stay still. The siblings take a bow together.",
+    "text": "The curtain is ready for the pocket forest show. Mina knows how one tree puppet can make a towering shadow near the light and a smaller shadow near the screen. Arun can look back at a saved observation or try another puppet position. Their little forest can seem to grow and shrink while the lamp and screen stay still. The siblings take a bow together.",
     "variants": [],
     "recap": []
   },

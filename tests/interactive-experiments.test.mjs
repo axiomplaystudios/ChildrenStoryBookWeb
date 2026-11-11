@@ -39,3 +39,31 @@ test('prediction pictures describe only an expected result, without implying ano
   }
  }
 });
+
+
+for (const id of ['tavis-dinosaur-ramp-rally', 'mina-and-the-shadow-stage']) {
+ test(`${id}: one setup reaches an ending without claiming unobserved trials`, async () => {
+  const pair = await load(id);
+  for (const edition of ['together', 'independent']) for (const controlIndex of [0, 1]) {
+   let run = createRun(pair, edition);
+   const observations = new Set();
+   for (const scene of pair.scenes) {
+    if (run.sceneId !== scene.id) run = dispatch(run, pair, {type:'NAVIGATE',sceneId:scene.id}).run;
+    if (!scene.activity) continue;
+    const a = scene.activity;
+    for (const action of [
+     {type:'SELECT',activityId:a.id,controlId:a.controls[controlIndex].id,trialIndex:0},
+     {type:'PREDICT',activityId:a.id,predictionId:a.predictions[controlIndex].id,trialIndex:0},
+     {type:'TEST',activityId:a.id,trialIndex:0},
+    ]) { const result = dispatch(run, pair, action); assert.equal(result.accepted, true); run = result.run; }
+    observations.add(deriveScene(pair, run).activity.trials[0].observation);
+   }
+   assert.equal(observations.size, 1);
+   const ending = deriveEnding(pair, run);
+   assert.equal(ending.complete, true);
+   assert.doesNotMatch(ending.text, /has watched.*farther|remembers.*(repeated trials|two observations)/i);
+   assert.match(ending.text, /can|could/i);
+   assert.doesNotMatch(pair.editions[edition].scenes.ending.instruction + (pair.editions[edition].reflection ?? ''), /noticed in the two puppet positions|compare the near and far deliveries|look back at the two cart stops/i);
+  }
+ });
+}

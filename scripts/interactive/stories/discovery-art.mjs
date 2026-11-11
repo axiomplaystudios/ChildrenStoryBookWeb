@@ -28,7 +28,37 @@ export async function publishDiscovery({folder,id,title,opening,ending,jobs,them
  const ref=active?pattern(j.answer,{w:440,h:160,prefix:`scene-${i}-`}):'';const foreground=(active?g(ref,430,519,1):'')+p('M42 626 Q139 600 207 631 M871 603 Q926 578 985 607','none',polar?'#c2dfe1':'#c6ae75',6);const completed=polar?envelope(846,437,.65,'#f8d481')+c(847,435,12,teal)+p('M839 435 845 442 858 428','none',cream,4):symbol(j.answer?.at(-1)||'circle',846,452,.8)+p('M820 494 836 505 865 479','none',teal,9);
  const bodies={landmark,character:char,...(companion?{companion}:{}),wind,foreground,...(active?{completed}:{})};const back=add(`${j.id}-background.svg`,bg);const layers=Object.entries(bodies).map(([key,b])=>({id:key,image:add(`${j.id}-${key}.svg`,b),x:0,y:0,width:1000,height:680,pivot:key==='wind'?[polar?884:905,polar?113:146]:[500,400]}));const image=add(`${j.id}.svg`,bg+Object.entries(bodies).filter(([k])=>k!=='completed').map(([,b])=>b).join(''));
  const scene={id:j.id,narrative:j.narrative,alt:active?`${polar?'Pico the penguin courier':'Imani and the friendly talking map'} at ${j.name}. ${j.visual} A large separate card shows ${j.answer.map(v=>v==='pause'?'two pause bars':v).join(', ')} from left to right; the completed discovery appears only after an activity path is finished.`:polar?(i===0?'Pico, a small dark penguin in an orange scarf, carries an envelope outside a copper-coloured post house beneath snowy mountain peaks.':'Pico and a neighbour gather at the snowy harbour post house, with warm windows and delivered letters.'):i===0?'Imani wears a teal explorer hat and golden jacket on a sandy geometric island. A smiling folded map with eyes greets her beside turquoise water.':'Imani and the talking map reach the island library, a coral building with a triangular roof and open teal door.',image,scene:{width:1000,height:680,background:back,layers,tracks:[{layer:'wind',preset:polar?'gesture':'flap',parameters:polar?{x:12,y:5,angle:14}:{angle:8},durationMs:4600,restMs:650,delayMs:0,playback:'repeat'}]}};
- if(active){const clue=add(`${j.id}-clue.svg`,pattern(j.answer,{prefix:`clue-${i}-`}),440,160);const demo=add(`${j.id}-demo.svg`,pattern(j.answer,{prefix:`demo-${i}-`}),440,160);scene.hiddenLayers=['completed'];scene.activity={kind:'discover',id:`discover-${j.id}`,physicalPrompt:j.physical,adultHelp:polar?'Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.':'Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.',screen:{label:polar?'Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.':j.mode==='match'?'Look at the large clue picture. Choose the same shape below, then check your answer.':'Copy the pictured trail from left to right. Touch a shape for each picture, then check your answer.',image:clue,mode:j.mode,options:symbols.map(key=>({id:key,label:({circle:'Circle',triangle:'Triangle',square:'Square',arch:'Arch',dot:'Dot',dash:'Long dash',pause:'Pause bars'})[key],image:`${key}-control.svg`})),answer:j.answer},effects:[{type:'show',sceneId:j.id,layerId:'completed'}]};j.clue=clue;j.demo=demo;}
+ if (active) {
+  const clue = add(`${j.id}-clue.svg`, pattern(j.answer, {prefix:`clue-${i}-`}), 440, 160);
+  const demo = add(`${j.id}-demo.svg`, pattern(j.answer, {prefix:`demo-${i}-`}), 440, 160);
+  scene.hiddenLayers = ['completed'];
+  scene.activity = {
+   kind:'discover',
+   id:`discover-${j.id}`,
+   physicalPrompt:j.physical,
+   adultHelp:j.adultHelp ?? (polar
+    ? 'Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.'
+    : 'Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.'),
+   screen:{
+    label:polar
+     ? 'Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.'
+     : j.mode === 'match'
+      ? 'Look at the large clue picture. Choose the same shape below, then check your answer.'
+      : 'Copy the pictured trail from left to right. Touch a shape for each picture, then check your answer.',
+    image:clue,
+    mode:j.mode,
+    options:symbols.map(key => ({
+     id:key,
+     label:({circle:'Circle',triangle:'Triangle',square:'Square',arch:'Arch',dot:'Dot',dash:'Long dash',pause:'Pause bars'})[key],
+     image:`${key}-control.svg`,
+    })),
+    answer:j.answer,
+   },
+   effects:[{type:'show',sceneId:j.id,layerId:'completed'}],
+  };
+  j.clue = clue;
+  j.demo = demo;
+ }
  return scene;});
  const guidance=together=>Object.fromEntries(scenes.map((s,i)=>{const j=jobs[i-1],active=!!s.activity;return[s.id,{instruction:active?(together?j.together:j.independent):i===0?(together?'Read the opening together. Pause for your child to point at the traveller and imagine the journey.':'Look at the traveller and the first destination.'):(together?'Read the ending together. Invite your child to remember a clue that helped the traveller.':'Look at the final destination and remember your favourite clue.'),feedback:{complete:active?j.complete:'Every way of joining in belongs in this story.',retry:active?j.retry:'Take your time looking at the scene.'},demonstration:active?[{action:'point',image:j.clue,label:j.mode==='match'?'Look at the shape of the clue.':'Begin at the left of the pictured row.'},{action:'select',image:`${j.answer[0]}-control.svg`,label:`Touch the ${j.answer[0]==='pause'?'pause bars':j.answer[0]} picture ${j.mode==='match'?'that matches':'first'}.`},{action:'point',image:j.demo,label:j.mode==='match'?'The same shape makes a match. Then check your answer.':'Keep following each picture in order. Then check your answer.'},...(together?[{action:'point',image:j.clue,label:'Pause to talk about what the pictures helped you notice.'}]:[])]:[{action:'point',image:s.image,label:i===0?'Meet the traveller at the start.':'Look at the traveller’s final destination.'},{action:'point',image:scenes[i===0?1:6].image,label:i===0?'The first clue starts a journey.':'The last clue helped complete the journey.'}]}];}));
  add('cover.svg',assets.get(scenes[0].image).replace(/^<svg[^>]*>/,'').replace(/<\/svg>$/,''));
