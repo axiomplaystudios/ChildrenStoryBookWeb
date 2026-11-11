@@ -44,9 +44,9 @@
           {
             "layer": "pip-head",
             "preset": "gesture",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2200,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 0,
@@ -59,7 +59,7 @@
             "preset": "blink",
             "playback": "repeat",
             "durationMs": 260,
-            "restMs": 5200,
+            "restMs": 1800,
             "delayMs": 1100,
             "parameters": {}
           }
@@ -118,7 +118,7 @@
             "preset": "gesture",
             "playback": "repeat",
             "durationMs": 650,
-            "restMs": 2200,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 0,
@@ -251,7 +251,7 @@
             "preset": "gesture",
             "playback": "repeat",
             "durationMs": 2800,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 6,
@@ -264,7 +264,7 @@
             "preset": "gesture",
             "playback": "repeat",
             "durationMs": 2800,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 700,
             "parameters": {
               "x": 2,
@@ -326,9 +326,9 @@
           {
             "layer": "pip-head",
             "preset": "settle",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2200,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 0,
@@ -339,9 +339,9 @@
           {
             "layer": "pip-gaze",
             "preset": "settle",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 1300,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 950,
             "parameters": {
               "x": 0,
@@ -404,9 +404,9 @@
           {
             "layer": "pip-body",
             "preset": "arrive",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2600,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 24,
@@ -417,9 +417,9 @@
           {
             "layer": "pip-wing-left",
             "preset": "flap",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2600,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "angle": 38
@@ -428,9 +428,9 @@
           {
             "layer": "pip-wing-right",
             "preset": "flap",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2600,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "angle": -38
@@ -501,9 +501,9 @@
           {
             "layer": "red-ball",
             "preset": "settle",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2100,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 31,
@@ -514,9 +514,9 @@
           {
             "layer": "rabbit-ear-left",
             "preset": "arrive",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 1200,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 1400,
             "parameters": {
               "x": 0,
@@ -527,9 +527,9 @@
           {
             "layer": "rabbit-ear-right",
             "preset": "arrive",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 1200,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 1400,
             "parameters": {
               "x": 0,
@@ -602,9 +602,9 @@
           {
             "layer": "pip-head",
             "preset": "settle",
-            "playback": "once",
+            "playback": "repeat",
             "durationMs": 2200,
-            "restMs": 4000,
+            "restMs": 1800,
             "delayMs": 450,
             "parameters": {
               "x": 0,

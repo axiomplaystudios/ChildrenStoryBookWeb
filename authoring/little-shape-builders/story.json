@@ -1,0 +1,362 @@
+{
+  "id": "little-shape-builders",
+  "title": "The Little Shape Builders",
+  "subtitle": "A playhouse made from friendly shapes",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Shapes",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Mouse and Rabbit wanted a playhouse. They found a pile of shapes.",
+      "alt": "Mouse and Rabbit stand beside four large building shapes in a garden.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-01-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              175,
+              613
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "“A circle for a round window!” said Mouse. The circle had no corners.",
+      "alt": "A large circular window sits on a workbench, with Mouse beside it.",
+      "image": "page-02.svg",
+      "learning": {
+        "shape": "circle"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-02-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              735,
+              615
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Rabbit chose a square window. It had four equal sides.",
+      "alt": "One square with four equal straight sides rests beside Rabbit.",
+      "image": "page-03.svg",
+      "learning": {
+        "shape": "square"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-03-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              730,
+              575
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A triangle made a pointed roof. “Three sides!” said Mouse.",
+      "alt": "A large triangular roof with three straight sides rests above the unfinished walls.",
+      "image": "page-04.svg",
+      "learning": {
+        "shape": "triangle"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-04-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              170,
+              610
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The rectangle became a door. Now the friends could go in.",
+      "alt": "A tall rectangular blue door has two long sides and two short sides.",
+      "image": "page-05.svg",
+      "learning": {
+        "shape": "rectangle"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-05-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              210,
+              575
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Mouse matched the circle to the round opening. Rabbit matched the square to the square opening.",
+      "alt": "Circle and square windows match outlined openings on the playhouse.",
+      "image": "page-06.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-06-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              175,
+              625
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Circle, square, triangle, rectangle. Together, the shapes made their playhouse!",
+      "alt": "The completed playhouse combines a triangle roof, square and circular windows, and a rectangle door.",
+      "image": "page-07.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-07-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              155,
+              635
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The friends opened the door. There was room for a story inside.",
+      "alt": "Mouse waves outside the finished playhouse while Rabbit waits beside it with a book.",
+      "image": "page-08.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-08-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              560
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "Which shape made the roof?",
+      "a": "A triangle made the roof.",
+      "hintPage": 4
+    },
+    {
+      "type": "literal",
+      "q": "How many equal sides did the square have?",
+      "a": "It had four equal sides.",
+      "hintPage": 3
+    },
+    {
+      "type": "feeling",
+      "q": "How might the friends feel when their playhouse is ready?",
+      "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+      "hintPage": 7
+    },
+    {
+      "type": "personal",
+      "q": "What shape can you find near you?",
+      "a": "Any answer is welcome. Invite your child to tell you more.",
+      "hintPage": 8
+    }
+  ]
+}

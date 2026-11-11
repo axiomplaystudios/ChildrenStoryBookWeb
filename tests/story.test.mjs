@@ -28,3 +28,7 @@ test('catalog discovers folders, rejects missing assets, and keeps valid book da
     assert.equal(books[0].pages[0].text, 'Goodnight.');
   } finally { await rm(root, { recursive: true, force: true }); }
 });
+test('original learning metadata is explicit and validated',()=>{
+ assert.doesNotThrow(()=>validateStory({...story(),origin:'original',category:'LEARN TOGETHER',learningTopic:'Shapes'}));
+ for(const value of [{origin:'pretend-publisher'},{origin:'original',learningTopic:''},{origin:'original',category:123}])assert.throws(()=>validateStory({...story(),...value}),/origin|topic|category/i);
+});

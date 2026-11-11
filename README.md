@@ -20,13 +20,13 @@ npm run build
 npm run preview
 ```
 
-Wait for “Ready for offline reading” before disconnecting. All three complete books and their animation assets are cached together. Browser storage can be evicted, so offline availability is subject to browser/device storage rules. Use the HTTPS GitHub Pages address for home-screen installation. Physical iPad/Android installation and wake-lock behavior still need device checks.
+Wait for “Ready for offline reading” before disconnecting. All thirteen complete books and their animation assets are cached together. Browser storage can be evicted, so offline availability is subject to browser/device storage rules. Use the HTTPS GitHub Pages address for home-screen installation. Physical iPad/Android installation and wake-lock behavior still need device checks.
 
 ## What is included
 
 - Cover shelf, realistic StPageFlip turns, edge taps, touch swipes and arrow-key navigation.
 - One page in portrait; two-page spreads in landscape. A **Full screen** button expands the reader to the available display, with a small exit icon and a collapsible illustration-settings panel. Swipe or tap the left/right page edges to navigate. Rotation keeps the current page in view. Escape exits full screen first; outside full screen it returns to the shelf.
-- All 31 story pages have illustration animations: falling tears, flapping wings, moving ears, flying bees, a swaying snake tail, an articulating beak, and sleepy breathing. Individual parts move while the picture and text stay fixed.
+- All 139 story pages have illustration animations: falling tears, flapping wings, moving ears, flying bees, a swaying snake tail, an articulating beak, and sleepy breathing. Individual parts move while the picture and text stay fixed.
 - A tap/swipe reader when reduced motion is enabled or the page-turn library fails. Reduce Motion disables both page turns and picture movement; a library failure still allows the pictures to move.
 - Four spoken questions with relevant pictures and a hidden suggested answer. No scoring or recording.
 - Warm palette, optional quiet page rustle/chime, gradual reader tint and best-effort wake lock.
@@ -37,6 +37,27 @@ Wait for “Ready for offline reading” before disconnecting. All three complet
 - Offline support and an install manifest through `vite-plugin-pwa`. Updates are offered from the shelf instead of interrupting a story.
 
 See [book provenance and adaptations](Implementation_Details/book-sources.md). Book Dash content is CC BY 4.0; those licences and creator credits remain attached to the book. No licence for the rest of the project is implied.
+
+## Learning stories
+
+Ten original **Learn Together** books offer playful shared reading with a four-year-old. They use familiar characters, short sentences, optional pointing/counting prompts and repeating illustration movement. They are introductions to explore together, not a curriculum checklist or a requirement to memorise everything.
+
+| Book | Learning focus | Pages |
+| --- | --- | ---: |
+| Pip’s Alphabet Adventure | Uppercase/lowercase A–Z and familiar words | 28 |
+| Mouse’s Counting Picnic | Quantities 1–10 and counting each item once | 12 |
+| Rabbit’s Rainbow Garden | Seven colours and matching objects | 10 |
+| The Little Shape Builders | Circle, square, triangle and rectangle | 8 |
+| Pip’s Planet Journey | Eight planet names in order; simple facts | 10 |
+| Big Bear, Little Mouse | Big/small, tall/short and other opposites | 8 |
+| Where Is Teddy? | In, on, under, behind and beside | 8 |
+| The Weather Window | Weather words and suitable clothing | 8 |
+| The Pattern Parade | Simple repeating AB and AAB patterns | 8 |
+| A Day of Feelings | Naming feelings and safe ways to respond | 8 |
+
+The alphabet adventure can be read over several sittings. Planet names are enrichment, with imaginary travel and diagrams labelled not to scale. Counted objects and pattern sequences stay in place during animation. Four discussion prompts finish each book, with no scoring or forced answers.
+
+These ten books contain original AI-assisted text and vector illustrations. They are credited separately from the Book Dash adaptations. Complete packages live under `authoring/`; reusable generators live under `scripts/learning/`. Regeneration resets their review flags. See [original-content authoring](docs/assisted-book-workflow.md#original-learning-stories) and [book provenance](Implementation_Details/book-sources.md).
 
 ## Full-screen reading
 
@@ -62,7 +83,7 @@ The [AI handoff guide](docs/another-ai-handoff.md) contains the complete master 
 
 Open this repository in the other AI's coding tool. When transferring to another machine, include current uncommitted and untracked project files: a fresh clone may not contain the latest importer, speed controls or example. Install dependencies with `npm ci`; do not transfer `node_modules` or `dist`.
 
-Provide the book's file path or URL, language, and any source/permission information you have. The assisted importer currently requires real HTTPS source and licence links. If these are unavailable for a private book, the assistant should identify the missing information rather than invent links or mark its source review complete.
+Provide the book's file path or URL, language, and any source/permission information you have. For adapted books, the assisted importer requires real HTTPS source and licence links. Original stories use the explicit original-content metadata documented in the authoring guide. If these are unavailable for a private book, the assistant should identify the missing information rather than invent links or mark its source review complete.
 
 ### 2. Paste this prompt
 
@@ -171,7 +192,7 @@ Book-package image validation and browser tests use installed Google Chrome at `
 
 This implements the first-version reading experience with GitHub Pages deployment. Book provenance is included in this repository; local planning notes and diagnostic logs stay in the development workspace.
 
-Still check on real hardware: iPad Safari page dragging, Android touch behavior, home-screen installation, wake-lock behavior after backgrounding, and text size at your usual reading distance. Small landscape phones may scroll vertically to keep text readable. All 31 pages include character or object motion. Story-specific tappable sounds remain future work.
+Still check on real hardware: iPad Safari page dragging, Android touch behavior, home-screen installation, wake-lock behavior after backgrounding, and text size at your usual reading distance. Small landscape phones may scroll vertically to keep text readable. All 139 pages include character or object motion. Story-specific tappable sounds remain future work.
 
 ## GitHub Pages
 
@@ -203,3 +224,22 @@ The scene renderer uses the original image for loading/error/reduced-motion fall
 Run `node scripts/prepare-animation-samples.mjs`, `node scripts/prepare-pip-scenes.mjs`, and `node scripts/prepare-sloth-scenes.mjs` to rebuild the Pip and Sloth scene assets and metadata from the untouched originals. Pip uses a small vector tear asset styled to match the illustration; the Sloth cutouts embed original pixels with SVG masks. Local white and ink repairs replace stationary parts; the original flight trails remain. Generated background-edit drafts were evaluated but not used because they changed surrounding linework. No runtime image service is required.
 
 The Mouse book uses new vector illustrations designed as separate parts. `node scripts/prepare-mouse-art.mjs` rebuilds its authoring assets; re-review them before updating the installed copy.
+
+
+## Animation looping requirement
+
+Every moving part must continue looping while its page is visible. Set every authored track to `playback: "repeat"`; keep `restMs` at or below **1800 ms** (scene time, scaled by the reader speed). A short pause is allowed, but a motion that plays once and stops is not a finished page animation. The assisted importer rejects one-shot tracks and longer rests.
+
+For `settle`, `arrive` and `fade-in`, repeat mode travels out and back smoothly within `durationMs`; one duration includes both halves. Choose a gentle duration and inspect both directions. Use parent layers to keep attached parts together. Do not reset or teleport visible characters at a cycle boundary. Bee emergence is an introductory movement followed by continuously repeating flight.
+
+Add this requirement to any AI authoring prompt:
+
+```text
+Make every moving part repeat while the page is visible. Use playback="repeat"
+and restMs <= 1800. Review at least three full cycles at 0.5×, 1× and 2×,
+including the return movement and loop boundary. Confirm actual movement
+continues after one minute; a running animation timer alone is insufficient.
+Test all pages, not just a sample. Update asset generators as well as book
+metadata so regeneration cannot restore one-shot animation. Pause/hidden-tab
+behavior and reduced-motion static fallbacks must still work.
+```

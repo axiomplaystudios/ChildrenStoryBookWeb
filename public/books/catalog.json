@@ -128,7 +128,7 @@
                 "angle": -7
               },
               "durationMs": 2300,
-              "restMs": 2300,
+              "restMs": 1800,
               "delayMs": 0,
               "playback": "repeat"
             },
@@ -225,7 +225,7 @@
                 "angle": -5
               },
               "durationMs": 2100,
-              "restMs": 3500,
+              "restMs": 1800,
               "delayMs": 0,
               "playback": "repeat"
             }
@@ -362,7 +362,7 @@
                 "angle": 16
               },
               "durationMs": 2100,
-              "restMs": 2200,
+              "restMs": 1800,
               "delayMs": 0,
               "playback": "repeat"
             },
@@ -375,7 +375,7 @@
                 "angle": -4
               },
               "durationMs": 2700,
-              "restMs": 3000,
+              "restMs": 1800,
               "delayMs": 0,
               "playback": "repeat"
             }
@@ -700,7 +700,7 @@
               "durationMs": 2600,
               "restMs": 0,
               "delayMs": 100,
-              "playback": "once"
+              "playback": "repeat"
             }
           ]
         }
@@ -794,6 +794,2106 @@
     ]
   },
   {
+    "id": "big-bear-little-mouse",
+    "title": "Big Bear, Little Mouse",
+    "subtitle": "Two friends make a place to play",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Opposites",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Bear and Mouse were making a play space. They brought different things to share.",
+        "alt": "Bear and Mouse bring buckets and a cart to an empty garden play space.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-01-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                165,
+                620
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A big ball and a small ball rolled onto the grass. Both were fun to play with.",
+        "alt": "Two matching red balls differ clearly in size; Bear watches and Mouse stands beside them.",
+        "image": "page-02.svg",
+        "learning": {
+          "opposites": [
+            "big",
+            "small"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-02-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                160,
+                615
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Bear built a tall tower. Mouse built a short tower beside it.",
+        "alt": "A tall tower of six blue blocks and a short tower of two blue blocks stand on the same ground.",
+        "image": "page-03.svg",
+        "learning": {
+          "opposites": [
+            "tall",
+            "short"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-03-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                765,
+                530
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "One flowerpot was near Mouse. One flowerpot was far from Mouse. He waved to Bear by the far pot.",
+        "alt": "Mouse stands next to the near flowerpot in the foreground; a second flowerpot and Bear are far across the garden.",
+        "image": "page-04.svg",
+        "learning": {
+          "opposites": [
+            "near",
+            "far"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-04-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                170,
+                635
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "One bucket was full of sand. One bucket was empty, ready for a turn.",
+        "alt": "Two equal blue buckets show a full sandy opening and a dark empty interior.",
+        "image": "page-05.svg",
+        "learning": {
+          "opposites": [
+            "full",
+            "empty"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-05-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                145,
+                635
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "One cart rolled fast. The other rolled slowly. Bear and Mouse watched them go.",
+        "alt": "Two matching carts travel in separate lanes, one fast and one slow, with Bear and Mouse watching nearby.",
+        "image": "page-06.svg",
+        "learning": {
+          "opposites": [
+            "fast",
+            "slow"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "fast-cart",
+              "image": "page-06-fast-cart.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "slow-cart",
+              "image": "page-06-slow-cart.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "fast-cart",
+              "preset": "gesture",
+              "parameters": {
+                "x": 85,
+                "y": 0,
+                "angle": 0
+              },
+              "durationMs": 1400,
+              "restMs": 200,
+              "delayMs": 0,
+              "playback": "repeat"
+            },
+            {
+              "layer": "slow-cart",
+              "preset": "gesture",
+              "parameters": {
+                "x": 85,
+                "y": 0,
+                "angle": 0
+              },
+              "durationMs": 4400,
+              "restMs": 200,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "They parked the carts near the towers. Big and small things all belonged in their play space.",
+        "alt": "Big and small balls, tall and short towers and two carts fill the completed play area.",
+        "image": "page-07.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-07-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                750,
+                485
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "“Let’s play together,” said little Mouse. “Yes!” said big Bear.",
+        "alt": "Bear and Mouse sit together beside a ball in their shared garden.",
+        "image": "page-08.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-08-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                260,
+                620
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which tower had more blocks?",
+        "a": "The tall tower had more blocks.",
+        "hintPage": 3
+      },
+      {
+        "type": "literal",
+        "q": "What was in the full bucket?",
+        "a": "Sand was in the full bucket.",
+        "hintPage": 5
+      },
+      {
+        "type": "feeling",
+        "q": "How might Mouse feel when Bear agrees to play?",
+        "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+        "hintPage": 8
+      },
+      {
+        "type": "personal",
+        "q": "What big and small things could you play with?",
+        "a": "Any answer is welcome. Invite your child to tell you more.",
+        "hintPage": 8
+      }
+    ]
+  },
+  {
+    "id": "day-of-feelings",
+    "title": "A Day of Feelings",
+    "subtitle": "Bear finds words for a changing day",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Feelings",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Bear came to play with Mouse. So many things could happen in one day.",
+        "alt": "Bear arrives in the playroom with Mouse and a blue bucket.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-01-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                685,
+                515
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "“I feel happy,” said Bear. Mouse had saved some blocks for him.",
+        "alt": "Bear smiles beside Mouse and a neat tower of colourful blocks.",
+        "image": "page-02.svg",
+        "learning": {
+          "feeling": "happy"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-02-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                700,
+                515
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The tower fell. “I feel sad,” said Bear. Mouse sat with him.",
+        "alt": "Bear has a downturned mouth and a tear beside fallen blocks; Mouse stays nearby.",
+        "image": "page-03.svg",
+        "learning": {
+          "feeling": "sad"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-03-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                710,
+                515
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The blocks would not balance. “I feel angry!” Bear put them down and took a slow breath.",
+        "alt": "Bear’s eyebrows angle inward and his mouth is tight; the blocks rest safely on the floor.",
+        "image": "page-04.svg",
+        "learning": {
+          "feeling": "angry"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-04-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                260,
+                505
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "“I feel worried it will fall again,” said Bear. “Can you help me?”",
+        "alt": "Bear’s raised inner eyebrows and wavy mouth accompany his request for help; Mouse stands by the fallen blocks.",
+        "image": "page-05.svg",
+        "learning": {
+          "feeling": "worried"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-05-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                265,
+                505
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Together, they made a wide base. “I feel excited to try!” said Bear.",
+        "alt": "Bear has an open joyful mouth and raised eyebrows; a wide base supports their rebuilt tower.",
+        "image": "page-06.svg",
+        "learning": {
+          "feeling": "excited"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-06-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                710,
+                515
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The tower stood. Bear rested beside Mouse. “Now I feel calm.”",
+        "alt": "Bear rests with softly closed eyes and a small relaxed smile beside Mouse and the standing tower.",
+        "image": "page-07.svg",
+        "learning": {
+          "feeling": "calm"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-07-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                710,
+                515
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "“All my feelings could come and go,” said Bear. “I could tell you.” Mouse stayed close.",
+        "alt": "Bear and Mouse sit close together on the rug, with the finished tower beside them.",
+        "image": "page-08.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-08-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                535,
+                525
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What happened to Bear’s first tower?",
+        "a": "The tower fell.",
+        "hintPage": 3
+      },
+      {
+        "type": "literal",
+        "q": "Who helped Bear try again?",
+        "a": "Mouse helped Bear.",
+        "hintPage": 6
+      },
+      {
+        "type": "feeling",
+        "q": "How might Bear feel when Mouse stays close?",
+        "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+        "hintPage": 8
+      },
+      {
+        "type": "personal",
+        "q": "Who can you talk to about your feelings?",
+        "a": "Any answer is welcome. Invite your child to tell you more.",
+        "hintPage": 8
+      }
+    ]
+  },
+  {
+    "id": "little-shape-builders",
+    "title": "The Little Shape Builders",
+    "subtitle": "A playhouse made from friendly shapes",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Shapes",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Mouse and Rabbit wanted a playhouse. They found a pile of shapes.",
+        "alt": "Mouse and Rabbit stand beside four large building shapes in a garden.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-01-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                175,
+                613
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "“A circle for a round window!” said Mouse. The circle had no corners.",
+        "alt": "A large circular window sits on a workbench, with Mouse beside it.",
+        "image": "page-02.svg",
+        "learning": {
+          "shape": "circle"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-02-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                735,
+                615
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Rabbit chose a square window. It had four equal sides.",
+        "alt": "One square with four equal straight sides rests beside Rabbit.",
+        "image": "page-03.svg",
+        "learning": {
+          "shape": "square"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-03-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                730,
+                575
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A triangle made a pointed roof. “Three sides!” said Mouse.",
+        "alt": "A large triangular roof with three straight sides rests above the unfinished walls.",
+        "image": "page-04.svg",
+        "learning": {
+          "shape": "triangle"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-04-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                170,
+                610
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The rectangle became a door. Now the friends could go in.",
+        "alt": "A tall rectangular blue door has two long sides and two short sides.",
+        "image": "page-05.svg",
+        "learning": {
+          "shape": "rectangle"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-05-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                210,
+                575
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Mouse matched the circle to the round opening. Rabbit matched the square to the square opening.",
+        "alt": "Circle and square windows match outlined openings on the playhouse.",
+        "image": "page-06.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-06-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                175,
+                625
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Circle, square, triangle, rectangle. Together, the shapes made their playhouse!",
+        "alt": "The completed playhouse combines a triangle roof, square and circular windows, and a rectangle door.",
+        "image": "page-07.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-07-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                155,
+                635
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The friends opened the door. There was room for a story inside.",
+        "alt": "Mouse waves outside the finished playhouse while Rabbit waits beside it with a book.",
+        "image": "page-08.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-08-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                560
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which shape made the roof?",
+        "a": "A triangle made the roof.",
+        "hintPage": 4
+      },
+      {
+        "type": "literal",
+        "q": "How many equal sides did the square have?",
+        "a": "It had four equal sides.",
+        "hintPage": 3
+      },
+      {
+        "type": "feeling",
+        "q": "How might the friends feel when their playhouse is ready?",
+        "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+        "hintPage": 7
+      },
+      {
+        "type": "personal",
+        "q": "What shape can you find near you?",
+        "a": "Any answer is welcome. Invite your child to tell you more.",
+        "hintPage": 8
+      }
+    ]
+  },
+  {
+    "id": "mouses-counting-picnic",
+    "title": "Mouse’s Counting Picnic",
+    "subtitle": "One, two, three — enough to share",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Counting 1–10",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Mouse invited the friends to a picnic. “I’ll count as I pack, so there is plenty to share.”",
+        "alt": "Mouse stands beside a picnic basket and an empty quilt, ready to pack for friends.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-01-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "One apple to slice and share. Mouse began with 1.",
+        "alt": "Numeral 1 and exactly 1 separate apples on the packing mat. Mouse counts beside them.",
+        "image": "page-02.svg",
+        "learning": {
+          "number": 1,
+          "item": "apples"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-02-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "2 cups for pouring water. Mouse touched each cup once.",
+        "alt": "Numeral 2 and exactly 2 separate cups on the packing mat. Mouse counts beside them.",
+        "image": "page-03.svg",
+        "learning": {
+          "number": 2,
+          "item": "cups"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-03-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "3 sandwiches for the plate. Mouse counted, “One, two, three.”",
+        "alt": "Numeral 3 and exactly 3 separate sandwiches on the packing mat. Mouse counts beside them.",
+        "image": "page-04.svg",
+        "learning": {
+          "number": 3,
+          "item": "sandwiches"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-04-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "4 carrots for a crunchy snack. Rabbit would be pleased.",
+        "alt": "Numeral 4 and exactly 4 separate carrots on the packing mat. Mouse counts beside them.",
+        "image": "page-05.svg",
+        "learning": {
+          "number": 4,
+          "item": "carrots"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-05-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "5 napkins to wipe sticky paws. Mouse laid them in a row.",
+        "alt": "Numeral 5 and exactly 5 separate napkins on the packing mat. Mouse counts beside them.",
+        "image": "page-06.svg",
+        "learning": {
+          "number": 5,
+          "item": "napkins"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-06-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "6 spoons for the picnic basket. Mouse counted them one by one.",
+        "alt": "Numeral 6 and exactly 6 separate spoons on the packing mat. Mouse counts beside them.",
+        "image": "page-07.svg",
+        "learning": {
+          "number": 6,
+          "item": "spoons"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-07-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "7 oranges for the friends to share. The picnic was growing!",
+        "alt": "Numeral 7 and exactly 7 separate oranges on the packing mat. Mouse counts beside them.",
+        "image": "page-08.svg",
+        "learning": {
+          "number": 7,
+          "item": "oranges"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-08-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "8 strawberries, bright and red. Mouse checked the count again.",
+        "alt": "Numeral 8 and exactly 8 separate strawberries on the packing mat. Mouse counts beside them.",
+        "image": "page-09.svg",
+        "learning": {
+          "number": 8,
+          "item": "strawberries"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-09-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-09-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "9 leaves to decorate the quilt. Mouse left space between them.",
+        "alt": "Numeral 9 and exactly 9 separate leaves on the packing mat. Mouse counts beside them.",
+        "image": "page-10.svg",
+        "learning": {
+          "number": 9,
+          "item": "leaves"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-10-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-10-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "10 flowers for the picnic table. “Everything is ready!” said Mouse.",
+        "alt": "Numeral 10 and exactly 10 separate flowers on the packing mat. Mouse counts beside them.",
+        "image": "page-11.svg",
+        "learning": {
+          "number": 10,
+          "item": "flowers"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-11-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-11-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The friends gathered on the quilt. “Counting helped me get ready,” said Mouse. “Now we can share!”",
+        "alt": "Mouse, Pip, Rabbit and Bear gather around the picnic quilt with packed food to share.",
+        "image": "page-12.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-12-background.svg",
+          "layers": [
+            {
+              "id": "mouse-tail",
+              "image": "page-12-mouse-tail.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                100,
+                614
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "mouse-tail",
+              "preset": "flap",
+              "parameters": {
+                "angle": 11
+              },
+              "durationMs": 2900,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many apples did Mouse pack?",
+        "a": "Mouse packed one apple to slice and share.",
+        "hintPage": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Mouse count ten of?",
+        "a": "Mouse counted ten flowers.",
+        "hintPage": 11
+      },
+      {
+        "type": "feeling",
+        "q": "How might Mouse feel when the friends arrive?",
+        "a": "Mouse might feel happy or excited to share. Other ideas are welcome.",
+        "hintPage": 12
+      },
+      {
+        "type": "personal",
+        "q": "What would you like to bring to a picnic?",
+        "a": "Any picnic idea is welcome. You could count a few real objects together.",
+        "hintPage": 12
+      }
+    ]
+  },
+  {
+    "id": "pattern-parade",
+    "title": "The Pattern Parade",
+    "subtitle": "What comes next in our celebration?",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Repeating patterns",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "The friends planned a parade. Mouse wanted a repeating pattern for the decorations.",
+        "alt": "Mouse and Rabbit prepare a parade arch with an undecorated ribbon and two blue buckets.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-01-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                175,
+                610
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Red, blue, red, blue. Mouse made a row of round badges.",
+        "alt": "A left-to-right pattern: red circle, blue circle, red circle, blue circle. Mouse watches without moving the sequence.",
+        "image": "page-02.svg",
+        "learning": {
+          "pattern": [
+            "red",
+            "blue",
+            "red",
+            "blue"
+          ],
+          "unit": [
+            "red",
+            "blue"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-02-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Yellow, green, yellow, green. Rabbit made another repeating row.",
+        "alt": "A left-to-right pattern: yellow square, green square, yellow square, green square. Mouse watches without moving the sequence.",
+        "image": "page-03.svg",
+        "learning": {
+          "pattern": [
+            "yellow",
+            "green",
+            "yellow",
+            "green"
+          ],
+          "unit": [
+            "yellow",
+            "green"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-03-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                170,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Circle, triangle, circle, triangle. This pattern changed shape, not colour.",
+        "alt": "A left-to-right pattern: blue circle, blue triangle, blue circle, blue triangle. Mouse watches without moving the sequence.",
+        "image": "page-04.svg",
+        "learning": {
+          "pattern": [
+            "circle",
+            "triangle",
+            "circle",
+            "triangle"
+          ],
+          "unit": [
+            "circle",
+            "triangle"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-04-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Red, red, blue. Red, red, blue. Bear tried a longer repeating bit.",
+        "alt": "A left-to-right pattern: red circle, red circle, blue circle, red circle, red circle, blue circle. Mouse watches without moving the sequence.",
+        "image": "page-05.svg",
+        "learning": {
+          "pattern": [
+            "red",
+            "red",
+            "blue",
+            "red",
+            "red",
+            "blue"
+          ],
+          "unit": [
+            "red",
+            "red",
+            "blue"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-05-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Yellow, yellow, green. Yellow, yellow, green. The next row was ready too.",
+        "alt": "A left-to-right pattern: yellow triangle, yellow triangle, green triangle, yellow triangle, yellow triangle, green triangle. Mouse watches without moving the sequence.",
+        "image": "page-06.svg",
+        "learning": {
+          "pattern": [
+            "yellow",
+            "yellow",
+            "green",
+            "yellow",
+            "yellow",
+            "green"
+          ],
+          "unit": [
+            "yellow",
+            "yellow",
+            "green"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-06-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                170,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Red, blue, red, blue, red… One badge was missing. What could come next?",
+        "alt": "A left-to-right pattern: red circle, blue circle, red circle, blue circle, red circle. Mouse watches without moving the sequence.",
+        "image": "page-07.svg",
+        "learning": {
+          "pattern": [
+            "red",
+            "blue",
+            "red",
+            "blue",
+            "red"
+          ],
+          "unit": [
+            "red",
+            "blue"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-07-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A blue badge! The pattern was ready. The friends marched past their colourful rows.",
+        "alt": "The completed red-blue pattern shows six stationary badges above Mouse, Rabbit and Bear in the parade.",
+        "image": "page-08.svg",
+        "learning": {
+          "pattern": [
+            "red",
+            "blue",
+            "red",
+            "blue",
+            "red",
+            "blue"
+          ],
+          "unit": [
+            "red",
+            "blue"
+          ]
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-08-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                375,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What came after red in Mouse’s first row?",
+        "a": "Blue came after red.",
+        "hintPage": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which badge filled the empty place?",
+        "a": "A blue badge filled the empty place.",
+        "hintPage": 8
+      },
+      {
+        "type": "feeling",
+        "q": "How might the friends feel when the parade is ready?",
+        "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+        "hintPage": 8
+      },
+      {
+        "type": "personal",
+        "q": "What repeating pattern would you make?",
+        "a": "Any answer is welcome. Invite your child to tell you more.",
+        "hintPage": 8
+      }
+    ]
+  },
+  {
     "title": "Pip Finds a Friend",
     "subtitle": "An original sample about a small act of kindness",
     "cover": "cover.svg",
@@ -839,9 +2939,9 @@
             {
               "layer": "pip-head",
               "preset": "gesture",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2200,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 0,
@@ -854,7 +2954,7 @@
               "preset": "blink",
               "playback": "repeat",
               "durationMs": 260,
-              "restMs": 5200,
+              "restMs": 1800,
               "delayMs": 1100,
               "parameters": {}
             }
@@ -913,7 +3013,7 @@
               "preset": "gesture",
               "playback": "repeat",
               "durationMs": 650,
-              "restMs": 2200,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 0,
@@ -1046,7 +3146,7 @@
               "preset": "gesture",
               "playback": "repeat",
               "durationMs": 2800,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 6,
@@ -1059,7 +3159,7 @@
               "preset": "gesture",
               "playback": "repeat",
               "durationMs": 2800,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 700,
               "parameters": {
                 "x": 2,
@@ -1121,9 +3221,9 @@
             {
               "layer": "pip-head",
               "preset": "settle",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2200,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 0,
@@ -1134,9 +3234,9 @@
             {
               "layer": "pip-gaze",
               "preset": "settle",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 1300,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 950,
               "parameters": {
                 "x": 0,
@@ -1199,9 +3299,9 @@
             {
               "layer": "pip-body",
               "preset": "arrive",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2600,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 24,
@@ -1212,9 +3312,9 @@
             {
               "layer": "pip-wing-left",
               "preset": "flap",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2600,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "angle": 38
@@ -1223,9 +3323,9 @@
             {
               "layer": "pip-wing-right",
               "preset": "flap",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2600,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "angle": -38
@@ -1296,9 +3396,9 @@
             {
               "layer": "red-ball",
               "preset": "settle",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2100,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 31,
@@ -1309,9 +3409,9 @@
             {
               "layer": "rabbit-ear-left",
               "preset": "arrive",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 1200,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 1400,
               "parameters": {
                 "x": 0,
@@ -1322,9 +3422,9 @@
             {
               "layer": "rabbit-ear-right",
               "preset": "arrive",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 1200,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 1400,
               "parameters": {
                 "x": 0,
@@ -1397,9 +3497,9 @@
             {
               "layer": "pip-head",
               "preset": "settle",
-              "playback": "once",
+              "playback": "repeat",
               "durationMs": 2200,
-              "restMs": 4000,
+              "restMs": 1800,
               "delayMs": 450,
               "parameters": {
                 "x": 0,
@@ -1449,6 +3549,2125 @@
       }
     ],
     "id": "pip-finds-a-friend"
+  },
+  {
+    "id": "pips-alphabet-adventure",
+    "title": "Pip’s Alphabet Adventure",
+    "subtitle": "An A-to-Z party of things and pictures",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Alphabet recognition",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Pip wanted an alphabet party. “Let’s find a thing or a picture for every letter!”",
+        "alt": "Pip the owl and Mouse prepare an empty display board for their alphabet party.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-01-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                134,
+                511
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A a — apple. Pip found an apple for the feast.",
+        "alt": "Uppercase A, lowercase a, and a clearly pictured apple. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-02.svg",
+        "learning": {
+          "letter": "A",
+          "word": "apple"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-02-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "B b — ball. Mouse rolled a ball for their games.",
+        "alt": "Uppercase B, lowercase b, and a clearly pictured ball. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-03.svg",
+        "learning": {
+          "letter": "B",
+          "word": "ball"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-03-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "C c — cup. Pip chose a cup for a thirsty friend.",
+        "alt": "Uppercase C, lowercase c, and a clearly pictured cup. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-04.svg",
+        "learning": {
+          "letter": "C",
+          "word": "cup"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-04-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "D d — drum. A drum would call everyone together.",
+        "alt": "Uppercase D, lowercase d, and a clearly pictured drum. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-05.svg",
+        "learning": {
+          "letter": "D",
+          "word": "drum"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-05-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "E e — egg. Pip drew an egg on a little card.",
+        "alt": "Uppercase E, lowercase e, and a clearly pictured egg. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-06.svg",
+        "learning": {
+          "letter": "E",
+          "word": "egg"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-06-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "F f — fish. By the pond, Pip drew a fish.",
+        "alt": "Uppercase F, lowercase f, and a clearly pictured fish. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-07.svg",
+        "learning": {
+          "letter": "F",
+          "word": "fish"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-07-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "G g — gift. Mouse wrapped a gift for the guests.",
+        "alt": "Uppercase G, lowercase g, and a clearly pictured gift. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-08.svg",
+        "learning": {
+          "letter": "G",
+          "word": "gift"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-08-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "H h — hat. Pip borrowed a sunny yellow hat.",
+        "alt": "Uppercase H, lowercase h, and a clearly pictured hat. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-09.svg",
+        "learning": {
+          "letter": "H",
+          "word": "hat"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-09-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-09-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "I i — insect. An insect landed nearby. Pip drew its six legs.",
+        "alt": "Uppercase I, lowercase i, and a clearly pictured insect. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-10.svg",
+        "learning": {
+          "letter": "I",
+          "word": "insect"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-10-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-10-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "J j — jug. A jug would hold cool water.",
+        "alt": "Uppercase J, lowercase j, and a clearly pictured jug. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-11.svg",
+        "learning": {
+          "letter": "J",
+          "word": "jug"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-11-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-11-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "K k — kite. Pip chose a kite for the breezy field.",
+        "alt": "Uppercase K, lowercase k, and a clearly pictured kite. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-12.svg",
+        "learning": {
+          "letter": "K",
+          "word": "kite"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-12-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-12-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "L l — leaf. A leaf made a lovely table decoration.",
+        "alt": "Uppercase L, lowercase l, and a clearly pictured leaf. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-13.svg",
+        "learning": {
+          "letter": "L",
+          "word": "leaf"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-13-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-13-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "M m — moon. Pip made a moon picture for the evening.",
+        "alt": "Uppercase M, lowercase m, and a clearly pictured moon. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-14.svg",
+        "learning": {
+          "letter": "M",
+          "word": "moon"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-14-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-14-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "N n — nest. Pip drew a nest and left the real one safe.",
+        "alt": "Uppercase N, lowercase n, and a clearly pictured nest. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-15.svg",
+        "learning": {
+          "letter": "N",
+          "word": "nest"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-15-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-15-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "O o — orange. An orange joined the picnic food.",
+        "alt": "Uppercase O, lowercase o, and a clearly pictured orange. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-16.svg",
+        "learning": {
+          "letter": "O",
+          "word": "orange"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-16-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-16-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "P p — paintbrush. A paintbrush helped Pip finish the pictures.",
+        "alt": "Uppercase P, lowercase p, and a clearly pictured paintbrush. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-17.svg",
+        "learning": {
+          "letter": "P",
+          "word": "paintbrush"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-17-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-17-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Q q — quilt. Mouse brought a quilt for everyone to sit on.",
+        "alt": "Uppercase Q, lowercase q, and a clearly pictured quilt. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-18.svg",
+        "learning": {
+          "letter": "Q",
+          "word": "quilt"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-18-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-18-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "R r — rabbit. Rabbit came along to help.",
+        "alt": "Uppercase R, lowercase r, and a clearly pictured rabbit. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-19.svg",
+        "learning": {
+          "letter": "R",
+          "word": "rabbit"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-19-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-19-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "S s — sock. A clean sock became a silly puppet.",
+        "alt": "Uppercase S, lowercase s, and a clearly pictured sock. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-20.svg",
+        "learning": {
+          "letter": "S",
+          "word": "sock"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-20-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-20-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "T t — teddy. Mouse brought a teddy to join the fun.",
+        "alt": "Uppercase T, lowercase t, and a clearly pictured teddy. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-21.svg",
+        "learning": {
+          "letter": "T",
+          "word": "teddy"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-21-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-21-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "U u — umbrella. An umbrella would give a patch of shade.",
+        "alt": "Uppercase U, lowercase u, and a clearly pictured umbrella. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-22.svg",
+        "learning": {
+          "letter": "U",
+          "word": "umbrella"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-22-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-22-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "V v — vase. Pip found a vase for the table.",
+        "alt": "Uppercase V, lowercase v, and a clearly pictured vase. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-23.svg",
+        "learning": {
+          "letter": "V",
+          "word": "vase"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-23-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-23-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "W w — wagon. A wagon carried the party things.",
+        "alt": "Uppercase W, lowercase w, and a clearly pictured wagon. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-24.svg",
+        "learning": {
+          "letter": "W",
+          "word": "wagon"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-24-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-24-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "X x — x-ray. Mouse brought an x-ray picture showing bones.",
+        "alt": "Uppercase X, lowercase x, and a clearly pictured x-ray. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-25.svg",
+        "learning": {
+          "letter": "X",
+          "word": "x-ray"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-25-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-25-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Y y — yarn. Yarn tied the picture cards together.",
+        "alt": "Uppercase Y, lowercase y, and a clearly pictured yarn. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-26.svg",
+        "learning": {
+          "letter": "Y",
+          "word": "yarn"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-26-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-26-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Z z — zip. Pip closed the bag with its zip.",
+        "alt": "Uppercase Z, lowercase z, and a clearly pictured zip. Pip collects things and picture cards for the alphabet party.",
+        "image": "page-27.svg",
+        "learning": {
+          "letter": "Z",
+          "word": "zip"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-27-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-27-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                109,
+                516
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The alphabet party was ready, from A to Z. “We can visit our favourite letters again,” said Pip.",
+        "alt": "Pip, Mouse and Rabbit celebrate under alphabet bunting, with a quilt, food and the picture cards.",
+        "image": "page-28.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-28-background.svg",
+          "layers": [
+            {
+              "id": "pip-wing",
+              "image": "page-28-pip-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                129,
+                475
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "pip-wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 12
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was Pip getting ready for?",
+        "a": "An alphabet party.",
+        "hintPage": 1
+      },
+      {
+        "type": "literal",
+        "q": "What carried the party things?",
+        "a": "A wagon carried the party things.",
+        "hintPage": 24
+      },
+      {
+        "type": "feeling",
+        "q": "How might Pip feel when the party is ready?",
+        "a": "Pip might feel happy, proud or excited. Other ideas are welcome.",
+        "hintPage": 28
+      },
+      {
+        "type": "personal",
+        "q": "Which thing or picture would you bring to an alphabet party?",
+        "a": "Any idea is welcome. You can name its first letter together if you like.",
+        "hintPage": 28
+      }
+    ]
+  },
+  {
+    "id": "pips-planet-journey",
+    "title": "Pip’s Planet Journey",
+    "subtitle": "An imaginary trip past eight real planets",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "The eight planets",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Pip imagines a trip past eight planets. The Sun is a star, and the Moon is not a planet.",
+        "alt": "Pip dreams beside a cardboard rocket. A starry thought cloud shows the Sun labelled star and the Moon labelled not a planet. Diagram not to scale.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "pip",
+              "image": "page-01-pip.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "wing",
+              "image": "page-01-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                238.3,
+                528.75
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 16
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Mercury is the smallest planet. Pip starts close to the Sun.",
+        "alt": "Imaginary space traveller Pip watches Mercury, planet 1 from the Sun. Mercury is the smallest planet. The diagram is labelled NOT TO SCALE.",
+        "image": "page-02.svg",
+        "learning": {
+          "planet": "Mercury",
+          "order": 1
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-02-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Venus is the hottest planet. Pip looks from far away.",
+        "alt": "Imaginary space traveller Pip watches Venus, planet 2 from the Sun. Venus is the hottest planet. The diagram is labelled NOT TO SCALE.",
+        "image": "page-03.svg",
+        "learning": {
+          "planet": "Venus",
+          "order": 2
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-03-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Earth has oceans of water. Pip waves to home.",
+        "alt": "Imaginary space traveller Pip watches Earth, planet 3 from the Sun. Earth has oceans of water. The diagram is labelled NOT TO SCALE.",
+        "image": "page-04.svg",
+        "learning": {
+          "planet": "Earth",
+          "order": 3
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-04-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Mars looks red from far away. Pip spots the dusty planet.",
+        "alt": "Imaginary space traveller Pip watches Mars, planet 4 from the Sun. Mars looks red from far away. The diagram is labelled NOT TO SCALE.",
+        "image": "page-05.svg",
+        "learning": {
+          "planet": "Mars",
+          "order": 4
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-05-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Jupiter is the biggest planet. What a giant to meet!",
+        "alt": "Imaginary space traveller Pip watches Jupiter, planet 5 from the Sun. Jupiter is the biggest planet. The diagram is labelled NOT TO SCALE.",
+        "image": "page-06.svg",
+        "learning": {
+          "planet": "Jupiter",
+          "order": 5
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-06-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Saturn has rings of ice and rock. Pip draws a ring in the air.",
+        "alt": "Imaginary space traveller Pip watches Saturn, planet 6 from the Sun. Saturn has rings of ice and rock. The diagram is labelled NOT TO SCALE.",
+        "image": "page-07.svg",
+        "learning": {
+          "planet": "Saturn",
+          "order": 6
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-07-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Uranus spins on its side. Pip tilts his head.",
+        "alt": "Imaginary space traveller Pip watches Uranus, planet 7 from the Sun. Uranus spins on its side. The diagram is labelled NOT TO SCALE.",
+        "image": "page-08.svg",
+        "learning": {
+          "planet": "Uranus",
+          "order": 7
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-08-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Neptune is the farthest planet from the Sun. Pip is ready to go home.",
+        "alt": "Imaginary space traveller Pip watches Neptune, planet 8 from the Sun. Neptune is the farthest planet from the Sun. The diagram is labelled NOT TO SCALE.",
+        "image": "page-09.svg",
+        "learning": {
+          "planet": "Neptune",
+          "order": 8
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-09-background.svg",
+          "layers": [
+            {
+              "id": "rocket",
+              "image": "page-09-rocket.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rocket",
+              "preset": "gesture",
+              "parameters": {
+                "x": 7,
+                "y": -12,
+                "angle": 2
+              },
+              "durationMs": 3600,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Pip lands on his soft rug. “Hello, Earth. I am glad to be home!”",
+        "alt": "Pip and Mouse sit on a rug with a cardboard rocket and a drawing of Earth labelled NOT TO SCALE.",
+        "image": "page-10.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-10-background.svg",
+          "layers": [
+            {
+              "id": "pip",
+              "image": "page-10-pip.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "wing",
+              "image": "page-10-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                263.7,
+                516.25
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 16
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which planet is the biggest?",
+        "a": "Jupiter is the biggest planet.",
+        "hintPage": 6
+      },
+      {
+        "type": "literal",
+        "q": "Which planet has rings of ice and rock?",
+        "a": "Saturn has rings of ice and rock.",
+        "hintPage": 7
+      },
+      {
+        "type": "feeling",
+        "q": "How does Pip feel about coming home?",
+        "a": "Pip says he is glad to be home.",
+        "hintPage": 10
+      },
+      {
+        "type": "personal",
+        "q": "Which planet would you draw?",
+        "a": "Choose any planet, or imagine a picture together.",
+        "hintPage": 10
+      }
+    ]
+  },
+  {
+    "id": "rabbits-rainbow-garden",
+    "title": "Rabbit’s Rainbow Garden",
+    "subtitle": "Seven colours make a place to share",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Colours and matching",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Rabbit wants a garden full of colours. Where can she find them?",
+        "alt": "Rabbit stands by empty garden beds with a watering can while a butterfly visits.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "rabbit",
+              "image": "page-01-rabbit.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "butterfly",
+              "image": "page-01-butterfly.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "butterfly",
+              "preset": "gesture",
+              "parameters": {
+                "x": 40,
+                "y": -18,
+                "angle": 8
+              },
+              "durationMs": 3300,
+              "restMs": 400,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Red flowers! Rabbit plants them by the gate.",
+        "alt": "Rabbit finds red flowers by the gate. A large label says red.",
+        "image": "page-02.svg",
+        "learning": {
+          "colour": "red"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-02-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -14,
+                "angle": 8
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Orange carrots! Rabbit gives them a drink.",
+        "alt": "Rabbit finds orange carrots in the soil. A large label says orange.",
+        "image": "page-03.svg",
+        "learning": {
+          "colour": "orange"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-03-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 4,
+                "y": 23,
+                "angle": 0
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Yellow sunflowers! They reach up to the sun.",
+        "alt": "Rabbit finds yellow sunflowers reaching upward. A large label says yellow.",
+        "image": "page-04.svg",
+        "learning": {
+          "colour": "yellow"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-04-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -14,
+                "angle": 8
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Green leaves! They make a cool little nook.",
+        "alt": "Rabbit finds green leaves around a garden nook. A large label says green.",
+        "image": "page-05.svg",
+        "learning": {
+          "colour": "green"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-05-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -14,
+                "angle": 8
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Blue flowers! Mouse brings some for the path.",
+        "alt": "Rabbit finds blue flowers beside Mouse on the path. A large label says blue.",
+        "image": "page-06.svg",
+        "learning": {
+          "colour": "blue"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-06-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -14,
+                "angle": 8
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Purple plums! Rabbit finds them on the tree.",
+        "alt": "Rabbit finds purple plums hanging on a tree. A large label says purple.",
+        "image": "page-07.svg",
+        "learning": {
+          "colour": "purple"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-07-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -14,
+                "angle": 8
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Pink flowers! Now the garden has a soft pink corner.",
+        "alt": "Rabbit finds pink flowers in the corner. A large label says pink.",
+        "image": "page-08.svg",
+        "learning": {
+          "colour": "pink"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "visitor",
+              "image": "page-08-visitor.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "visitor",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -14,
+                "angle": 8
+              },
+              "durationMs": 2800,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Rabbit matches each flower to a colour pot. Can you find the blue pair?",
+        "alt": "Seven flowers line up over matching red, orange, yellow, green, blue, purple and pink pots. Rabbit watches.",
+        "image": "page-09.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-09-background.svg",
+          "layers": [
+            {
+              "id": "rabbit",
+              "image": "page-09-rabbit.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "rabbit",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 2
+              },
+              "durationMs": 3200,
+              "restMs": 600,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "The colour garden is ready. Rabbit and Mouse share a rainbow of garden colours!",
+        "alt": "Rabbit and Mouse sit together among red, orange, yellow, green, blue, purple and pink garden flowers; no sky rainbow is shown.",
+        "image": "page-10.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-10-background.svg",
+          "layers": [
+            {
+              "id": "butterfly",
+              "image": "page-10-butterfly.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "butterfly",
+              "preset": "gesture",
+              "parameters": {
+                "x": 30,
+                "y": -18,
+                "angle": 7
+              },
+              "durationMs": 3000,
+              "restMs": 400,
+              "delayMs": 200,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What colour are the carrots?",
+        "a": "The carrots are orange.",
+        "hintPage": 3
+      },
+      {
+        "type": "literal",
+        "q": "Who brings blue flowers?",
+        "a": "Mouse brings blue flowers.",
+        "hintPage": 6
+      },
+      {
+        "type": "feeling",
+        "q": "How might Rabbit feel when the garden is ready?",
+        "a": "She might feel proud, glad or peaceful. Other ideas are welcome.",
+        "hintPage": 10
+      },
+      {
+        "type": "personal",
+        "q": "Which garden colour would you choose?",
+        "a": "Any colour is welcome; you can point to one.",
+        "hintPage": 9
+      }
+    ]
   },
   {
     "title": "Sleepy Mr Sloth",
@@ -1504,9 +5723,9 @@
                 "angle": 5
               },
               "durationMs": 3200,
-              "restMs": 6000,
+              "restMs": 1800,
               "delayMs": 450,
-              "playback": "once"
+              "playback": "repeat"
             }
           ]
         }
@@ -1543,9 +5762,9 @@
                 "angle": 2.5
               },
               "durationMs": 3300,
-              "restMs": 3600,
+              "restMs": 1800,
               "delayMs": 450,
-              "playback": "once"
+              "playback": "repeat"
             }
           ]
         }
@@ -1582,7 +5801,7 @@
                 "angle": -10
               },
               "durationMs": 1000,
-              "restMs": 4300,
+              "restMs": 1800,
               "delayMs": 450,
               "playback": "repeat"
             }
@@ -1631,9 +5850,9 @@
                 "angle": -4
               },
               "durationMs": 2200,
-              "restMs": 3600,
+              "restMs": 1800,
               "delayMs": 450,
-              "playback": "once"
+              "playback": "repeat"
             }
           ]
         }
@@ -1856,7 +6075,7 @@
                 "angle": 11
               },
               "durationMs": 2500,
-              "restMs": 4500,
+              "restMs": 1800,
               "delayMs": 450,
               "playback": "repeat"
             }
@@ -1908,16 +6127,16 @@
                 "angle": 5
               },
               "durationMs": 1500,
-              "restMs": 3600,
+              "restMs": 1800,
               "delayMs": 450,
-              "playback": "once"
+              "playback": "repeat"
             },
             {
               "layer": "snake-tongue",
               "preset": "blink",
               "parameters": {},
               "durationMs": 500,
-              "restMs": 2700,
+              "restMs": 1800,
               "delayMs": 900,
               "playback": "repeat"
             }
@@ -1956,9 +6175,9 @@
                 "angle": -9
               },
               "durationMs": 1800,
-              "restMs": 3600,
+              "restMs": 1800,
               "delayMs": 450,
-              "playback": "once"
+              "playback": "repeat"
             }
           ]
         }
@@ -1991,7 +6210,7 @@
               "preset": "squawk",
               "playback": "repeat",
               "durationMs": 1800,
-              "restMs": 3600,
+              "restMs": 1800,
               "delayMs": 500,
               "parameters": {
                 "angle": -14
@@ -2040,9 +6259,9 @@
               "preset": "fade-in",
               "parameters": {},
               "durationMs": 1500,
-              "restMs": 3600,
+              "restMs": 1800,
               "delayMs": 450,
-              "playback": "once"
+              "playback": "repeat"
             },
             {
               "layer": "sloth-chest",
@@ -2192,5 +6411,765 @@
       }
     ],
     "id": "sleepy-mr-sloth"
+  },
+  {
+    "id": "weather-window",
+    "title": "The Weather Window",
+    "subtitle": "Mouse and Pip peek at faraway skies",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Weather and clothes",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Mouse finds a pretend travel window. “Let us look at weather in faraway places!”",
+        "alt": "Mouse and Pip face a golden pretend window with a winding path through green hills.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "pip",
+              "image": "page-01-pip.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "wing",
+              "image": "page-01-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                576.8,
+                575
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 16
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A sunny place! Mouse sees bright light on the grass.",
+        "alt": "Through their pretend travel window Mouse and Pip see a sunny place: sunlight over grass and a butterfly.",
+        "image": "page-02.svg",
+        "learning": {
+          "weather": "sunny"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "weather",
+              "image": "page-02-weather.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                575,
+                270
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "weather",
+              "preset": "gesture",
+              "parameters": {
+                "x": 20,
+                "y": -8,
+                "angle": 5
+              },
+              "durationMs": 3200,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A rainy place! Drops splash into a puddle.",
+        "alt": "Through their pretend travel window Mouse and Pip see a rainy place: rain falling into a puddle.",
+        "image": "page-03.svg",
+        "learning": {
+          "weather": "rainy"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "weather",
+              "image": "page-03-weather.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                575,
+                270
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "weather",
+              "preset": "gesture",
+              "parameters": {
+                "x": -5,
+                "y": 19,
+                "angle": 0
+              },
+              "durationMs": 3200,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A windy place! The wind lifts a little kite.",
+        "alt": "Through their pretend travel window Mouse and Pip see a windy place: a kite lifted beside a bending tree.",
+        "image": "page-04.svg",
+        "learning": {
+          "weather": "windy"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "weather",
+              "image": "page-04-weather.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                575,
+                270
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "weather",
+              "preset": "gesture",
+              "parameters": {
+                "x": 17,
+                "y": -8,
+                "angle": 7
+              },
+              "durationMs": 3200,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A cloudy place! Soft clouds cover much of the sky.",
+        "alt": "Through their pretend travel window Mouse and Pip see a cloudy place: large clouds covering much of the sky.",
+        "image": "page-05.svg",
+        "learning": {
+          "weather": "cloudy"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "weather",
+              "image": "page-05-weather.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                575,
+                270
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "weather",
+              "preset": "gesture",
+              "parameters": {
+                "x": 22,
+                "y": 0,
+                "angle": 0
+              },
+              "durationMs": 3200,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A snowy place! White flakes settle on the ground.",
+        "alt": "Through their pretend travel window Mouse and Pip see a snowy place: snowflakes over white ground and fir trees.",
+        "image": "page-06.svg",
+        "learning": {
+          "weather": "snowy"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "weather",
+              "image": "page-06-weather.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                575,
+                270
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "weather",
+              "preset": "gesture",
+              "parameters": {
+                "x": 8,
+                "y": 16,
+                "angle": 0
+              },
+              "durationMs": 3200,
+              "restMs": 350,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "A sun hat, rain boots, a warm coat. “We choose for the weather,” says Mouse.",
+        "alt": "Mouse chooses clothes on three labelled hooks: sun hat for sunny weather, rain boots for rainy weather, warm coat for cold snowy weather.",
+        "image": "page-07.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "pip",
+              "image": "page-07-pip.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "wing",
+              "image": "page-07-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                104.9,
+                583.75
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 16
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "They close the pretend window and look outside. “What weather is here?” asks Mouse.",
+        "alt": "Mouse and Pip sit by their real small window looking at pale sky and a cloud, with coat, boots and hat ready nearby.",
+        "image": "page-08.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "pip",
+              "image": "page-08-pip.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                450,
+                360
+              ]
+            },
+            {
+              "id": "wing",
+              "image": "page-08-wing.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                436.4,
+                532.5
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "wing",
+              "preset": "flap",
+              "parameters": {
+                "angle": 16
+              },
+              "durationMs": 2400,
+              "restMs": 500,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What lifts the kite?",
+        "a": "The wind lifts the kite.",
+        "hintPage": 4
+      },
+      {
+        "type": "literal",
+        "q": "What does Mouse choose for rainy weather?",
+        "a": "Mouse chooses rain boots.",
+        "hintPage": 7
+      },
+      {
+        "type": "feeling",
+        "q": "How might Mouse feel looking through the pretend window?",
+        "a": "Mouse might feel curious, excited or surprised. Other ideas are welcome.",
+        "hintPage": 1
+      },
+      {
+        "type": "personal",
+        "q": "What is the weather like where you are?",
+        "a": "Look together and describe what you notice; no single answer is expected.",
+        "hintPage": 8
+      }
+    ]
+  },
+  {
+    "id": "where-is-teddy",
+    "title": "Where Is Teddy?",
+    "subtitle": "A hide-and-seek game with Mouse",
+    "origin": "original",
+    "category": "LEARN TOGETHER",
+    "learningTopic": "Position words",
+    "cover": "cover.svg",
+    "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+    "pages": [
+      {
+        "text": "Rabbit had a game for Mouse. “Close your eyes. I’ll hide Teddy!”",
+        "alt": "Rabbit holds a small teddy in the cosy room while Mouse closes his eyes.",
+        "image": "page-01.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-01-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-01-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                240,
+                610
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Mouse looked in the box. There was Teddy, in the box!",
+        "alt": "Teddy sits inside an open box, with the front of the box covering his lower body.",
+        "image": "page-02.svg",
+        "learning": {
+          "position": "in"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-02-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-02-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                185,
+                615
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Rabbit hid Teddy again. This time, Teddy was on the stool.",
+        "alt": "The whole teddy sits on the top surface of a low stool.",
+        "image": "page-03.svg",
+        "learning": {
+          "position": "on"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-03-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-03-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                205,
+                620
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Mouse bent down. Teddy was under the table!",
+        "alt": "Teddy is fully visible beneath the tabletop, between its four legs.",
+        "image": "page-04.svg",
+        "learning": {
+          "position": "under"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-04-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-04-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                190,
+                640
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Two round ears peeked out. Teddy was behind the box.",
+        "alt": "Teddy’s ears and head peek above a solid box that hides his body.",
+        "image": "page-05.svg",
+        "learning": {
+          "position": "behind"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-05-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-05-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                180,
+                615
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "Now Teddy was beside the box. Mouse could see all of him.",
+        "alt": "The entire teddy sits to the right of the box with a clear gap between them.",
+        "image": "page-06.svg",
+        "learning": {
+          "position": "beside"
+        },
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-06-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-06-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                155,
+                630
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "For the last turn, Rabbit gave a clue. “Look under something with four legs.”",
+        "alt": "Mouse considers a table with Teddy clearly visible beneath it, and Rabbit watches the search.",
+        "image": "page-07.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-07-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-07-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                170,
+                620
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      },
+      {
+        "text": "“Under the table!” Mouse found Teddy and gave him a cuddle. Now Mouse could hide him.",
+        "alt": "Mouse cuddles Teddy after finding him beneath the table; Rabbit waits for a new round.",
+        "image": "page-08.svg",
+        "scene": {
+          "width": 900,
+          "height": 720,
+          "background": "page-08-background.svg",
+          "layers": [
+            {
+              "id": "friend",
+              "image": "page-08-friend.svg",
+              "x": 0,
+              "y": 0,
+              "width": 900,
+              "height": 720,
+              "pivot": [
+                485,
+                617
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "layer": "friend",
+              "preset": "gesture",
+              "parameters": {
+                "x": 0,
+                "y": -5,
+                "angle": 1
+              },
+              "durationMs": 3000,
+              "restMs": 600,
+              "delayMs": 0,
+              "playback": "repeat"
+            }
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where was Teddy on the first turn?",
+        "a": "Teddy was in the box.",
+        "hintPage": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where was Teddy for the last turn?",
+        "a": "Teddy was under the table.",
+        "hintPage": 8
+      },
+      {
+        "type": "feeling",
+        "q": "How might Mouse feel after finding Teddy?",
+        "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+        "hintPage": 8
+      },
+      {
+        "type": "personal",
+        "q": "Where would you hide a toy?",
+        "a": "Any answer is welcome. Invite your child to tell you more.",
+        "hintPage": 8
+      }
+    ]
   }
 ]

@@ -2,6 +2,9 @@ import { validateAsset as asset, validateScene } from './scene-schema.js';
 export function validateStory(story) {
   const required = (value, label) => { if (typeof value !== 'string' || !value.trim()) throw new Error(`Missing ${label}`); };
   if (!story || typeof story !== 'object') throw new Error('Invalid story');
+  if (story.origin !== undefined && !['original','adapted'].includes(story.origin)) throw new Error('Invalid origin');
+  if (story.learningTopic !== undefined) required(story.learningTopic, 'learning topic');
+  if (story.category !== undefined) required(story.category, 'category');
   required(story.title, 'title'); required(story.credit, 'credit'); asset(story.cover); if (story.logo) asset(story.logo);
   if (!Array.isArray(story.pages) || !story.pages.length) throw new Error('Story needs pages');
   story.pages.forEach(page => { asset(page.image); required(page.text, 'page text'); required(page.alt, 'image description'); if (page.scene !== undefined) validateScene(page.scene); });

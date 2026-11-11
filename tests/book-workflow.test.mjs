@@ -47,3 +47,20 @@ test('undecodable images are rejected before installation',async t=>{
  await assert.rejects(installBook(f.input,f.output),/decode|image/i);
  assert.deepEqual(await readdir(f.output),[]);
 });
+test('assisted packages reject one-shot motion and long idle gaps',async t=>{
+ const f=await fixture(t);f.story.pages[0].scene.tracks[0].playback='once';await f.write('story.json',f.story);
+ await assert.rejects(checkPackage(f.input),/repeat|loop/i);
+ f.story.pages[0].scene.tracks[0].playback='repeat';f.story.pages[0].scene.tracks[0].restMs=6000;await f.write('story.json',f.story);
+ await assert.rejects(checkPackage(f.input),/rest|1800/i);
+});
+test('original packages need honest provenance but no invented external source',async t=>{
+ const f=await fixture(t);delete f.story.sourceUrl;delete f.story.licenseUrl;f.story.origin='original';f.story.category='LEARN TOGETHER';f.story.learningTopic='Counting';
+ f.source.kind='original';delete f.source.url;f.source.license='Original project content; no additional licence granted';
+ await f.write('story.json',f.story);await f.write('source.json',f.source);
+ assert.equal((await checkPackage(f.input)).story.origin,'original');
+ delete f.source.kind;await f.write('source.json',f.source);await assert.rejects(checkPackage(f.input),/original|provenance/i);
+ f.source.kind='original';f.source.creators=[];await f.write('source.json',f.source);await assert.rejects(checkPackage(f.input),/provenance/i);
+});
+test('adaptations cannot bypass source verification by claiming original provenance only',async t=>{
+ const f=await fixture(t);f.source.kind='original';await f.write('source.json',f.source);await assert.rejects(checkPackage(f.input),/original|provenance/i);
+});

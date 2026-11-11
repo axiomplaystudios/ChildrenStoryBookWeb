@@ -14,7 +14,7 @@ Confirm these exist:
 - authoring/a-house-for-mouse/story.json
 - src/scene-schema.js and src/scene-motion.js
 
-Supply your PDF, ordered page images, or source URL. Include title/language and any source/permission information you have. The current importer requires real HTTPS source and licence links; the AI must not invent them for a private book. If that metadata is unavailable, it should explain the gap and prepare the draft without falsely marking source review complete.
+Supply your PDF, ordered page images, or source URL. Include title/language and any source/permission information you have. For adaptations, the current importer requires real HTTPS source and licence links; the AI must not invent them for a private book. If that metadata is unavailable, it should explain the gap and prepare the draft without falsely marking source review complete.
 
 ## Master prompt — paste this first
 
@@ -135,3 +135,29 @@ Successful delivery includes:
 - No publication unless you explicitly requested it.
 
 An AI without browser/filesystem tools should provide the draft assets and metadata plus an explicit handoff to a coding agent; it should not claim the book was installed or tested.
+
+
+## Animation looping requirement
+
+Every moving part must continue looping while its page is visible. Set every authored track to `playback: "repeat"`; keep `restMs` at or below **1800 ms** (scene time, scaled by the reader speed). A short pause is allowed, but a motion that plays once and stops is not a finished page animation. The assisted importer rejects one-shot tracks and longer rests.
+
+For `settle`, `arrive` and `fade-in`, repeat mode travels out and back smoothly within `durationMs`; one duration includes both halves. Choose a gentle duration and inspect both directions. Use parent layers to keep attached parts together. Do not reset or teleport visible characters at a cycle boundary. Bee emergence is an introductory movement followed by continuously repeating flight.
+
+Add this requirement to any AI authoring prompt:
+
+```text
+Make every moving part repeat while the page is visible. Use playback="repeat"
+and restMs <= 1800. Review at least three full cycles at 0.5×, 1× and 2×,
+including the return movement and loop boundary. Confirm actual movement
+continues after one minute; a running animation timer alone is insufficient.
+Test all pages, not just a sample. Update asset generators as well as book
+metadata so regeneration cannot restore one-shot animation. Pause/hidden-tab
+behavior and reduced-motion static fallbacks must still work.
+```
+
+
+## If you are asked to write an original learning book
+
+Use the explicit original-content mode described in `docs/assisted-book-workflow.md`, not an invented external source. Set `story.origin="original"`, `source.kind="original"`, truthful project/AI-assisted credits, a topic and `category="LEARN TOGETHER"`. Keep the source title matching. Do not claim Book Dash authorship or attach an unrequested Creative Commons licence. Check `scripts/learning/` for reusable art and package generation; author unique text and compositions appropriate to the topic.
+
+Include independent checks for educational content: exact visible quantities, A–Z ordering and correct letter examples, actual pattern order and spatial relations, accurate planet names/order and primary-source factual notes. Every moving layer must repeat and be visually inspected after later cycles. Keep countable targets and pattern symbols stable while other parts move. Never infer educational correctness solely from matching your generator's input to its output.

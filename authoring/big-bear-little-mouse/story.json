@@ -1,0 +1,405 @@
+{
+  "id": "big-bear-little-mouse",
+  "title": "Big Bear, Little Mouse",
+  "subtitle": "Two friends make a place to play",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Opposites",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Bear and Mouse were making a play space. They brought different things to share.",
+      "alt": "Bear and Mouse bring buckets and a cart to an empty garden play space.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-01-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              165,
+              620
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A big ball and a small ball rolled onto the grass. Both were fun to play with.",
+      "alt": "Two matching red balls differ clearly in size; Bear watches and Mouse stands beside them.",
+      "image": "page-02.svg",
+      "learning": {
+        "opposites": [
+          "big",
+          "small"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-02-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              160,
+              615
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Bear built a tall tower. Mouse built a short tower beside it.",
+      "alt": "A tall tower of six blue blocks and a short tower of two blue blocks stand on the same ground.",
+      "image": "page-03.svg",
+      "learning": {
+        "opposites": [
+          "tall",
+          "short"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-03-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              765,
+              530
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "One flowerpot was near Mouse. One flowerpot was far from Mouse. He waved to Bear by the far pot.",
+      "alt": "Mouse stands next to the near flowerpot in the foreground; a second flowerpot and Bear are far across the garden.",
+      "image": "page-04.svg",
+      "learning": {
+        "opposites": [
+          "near",
+          "far"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-04-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              170,
+              635
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "One bucket was full of sand. One bucket was empty, ready for a turn.",
+      "alt": "Two equal blue buckets show a full sandy opening and a dark empty interior.",
+      "image": "page-05.svg",
+      "learning": {
+        "opposites": [
+          "full",
+          "empty"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-05-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              145,
+              635
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "One cart rolled fast. The other rolled slowly. Bear and Mouse watched them go.",
+      "alt": "Two matching carts travel in separate lanes, one fast and one slow, with Bear and Mouse watching nearby.",
+      "image": "page-06.svg",
+      "learning": {
+        "opposites": [
+          "fast",
+          "slow"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "fast-cart",
+            "image": "page-06-fast-cart.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "slow-cart",
+            "image": "page-06-slow-cart.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "fast-cart",
+            "preset": "gesture",
+            "parameters": {
+              "x": 85,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 1400,
+            "restMs": 200,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "slow-cart",
+            "preset": "gesture",
+            "parameters": {
+              "x": 85,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 4400,
+            "restMs": 200,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "They parked the carts near the towers. Big and small things all belonged in their play space.",
+      "alt": "Big and small balls, tall and short towers and two carts fill the completed play area.",
+      "image": "page-07.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-07-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              750,
+              485
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "“Let’s play together,” said little Mouse. “Yes!” said big Bear.",
+      "alt": "Bear and Mouse sit together beside a ball in their shared garden.",
+      "image": "page-08.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-08-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              260,
+              620
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "Which tower had more blocks?",
+      "a": "The tall tower had more blocks.",
+      "hintPage": 3
+    },
+    {
+      "type": "literal",
+      "q": "What was in the full bucket?",
+      "a": "Sand was in the full bucket.",
+      "hintPage": 5
+    },
+    {
+      "type": "feeling",
+      "q": "How might Mouse feel when Bear agrees to play?",
+      "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+      "hintPage": 8
+    },
+    {
+      "type": "personal",
+      "q": "What big and small things could you play with?",
+      "a": "Any answer is welcome. Invite your child to tell you more.",
+      "hintPage": 8
+    }
+  ]
+}

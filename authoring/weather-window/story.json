@@ -1,0 +1,395 @@
+{
+  "id": "weather-window",
+  "title": "The Weather Window",
+  "subtitle": "Mouse and Pip peek at faraway skies",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Weather and clothes",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Mouse finds a pretend travel window. “Let us look at weather in faraway places!”",
+      "alt": "Mouse and Pip face a golden pretend window with a winding path through green hills.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "pip",
+            "image": "page-01-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "wing",
+            "image": "page-01-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              576.8,
+              575
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 16
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A sunny place! Mouse sees bright light on the grass.",
+      "alt": "Through their pretend travel window Mouse and Pip see a sunny place: sunlight over grass and a butterfly.",
+      "image": "page-02.svg",
+      "learning": {
+        "weather": "sunny"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "weather",
+            "image": "page-02-weather.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              575,
+              270
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "weather",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -8,
+              "angle": 5
+            },
+            "durationMs": 3200,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A rainy place! Drops splash into a puddle.",
+      "alt": "Through their pretend travel window Mouse and Pip see a rainy place: rain falling into a puddle.",
+      "image": "page-03.svg",
+      "learning": {
+        "weather": "rainy"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "weather",
+            "image": "page-03-weather.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              575,
+              270
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "weather",
+            "preset": "gesture",
+            "parameters": {
+              "x": -5,
+              "y": 19,
+              "angle": 0
+            },
+            "durationMs": 3200,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A windy place! The wind lifts a little kite.",
+      "alt": "Through their pretend travel window Mouse and Pip see a windy place: a kite lifted beside a bending tree.",
+      "image": "page-04.svg",
+      "learning": {
+        "weather": "windy"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "weather",
+            "image": "page-04-weather.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              575,
+              270
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "weather",
+            "preset": "gesture",
+            "parameters": {
+              "x": 17,
+              "y": -8,
+              "angle": 7
+            },
+            "durationMs": 3200,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A cloudy place! Soft clouds cover much of the sky.",
+      "alt": "Through their pretend travel window Mouse and Pip see a cloudy place: large clouds covering much of the sky.",
+      "image": "page-05.svg",
+      "learning": {
+        "weather": "cloudy"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "weather",
+            "image": "page-05-weather.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              575,
+              270
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "weather",
+            "preset": "gesture",
+            "parameters": {
+              "x": 22,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 3200,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A snowy place! White flakes settle on the ground.",
+      "alt": "Through their pretend travel window Mouse and Pip see a snowy place: snowflakes over white ground and fir trees.",
+      "image": "page-06.svg",
+      "learning": {
+        "weather": "snowy"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "weather",
+            "image": "page-06-weather.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              575,
+              270
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "weather",
+            "preset": "gesture",
+            "parameters": {
+              "x": 8,
+              "y": 16,
+              "angle": 0
+            },
+            "durationMs": 3200,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A sun hat, rain boots, a warm coat. “We choose for the weather,” says Mouse.",
+      "alt": "Mouse chooses clothes on three labelled hooks: sun hat for sunny weather, rain boots for rainy weather, warm coat for cold snowy weather.",
+      "image": "page-07.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "pip",
+            "image": "page-07-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "wing",
+            "image": "page-07-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              104.9,
+              583.75
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 16
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "They close the pretend window and look outside. “What weather is here?” asks Mouse.",
+      "alt": "Mouse and Pip sit by their real small window looking at pale sky and a cloud, with coat, boots and hat ready nearby.",
+      "image": "page-08.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "pip",
+            "image": "page-08-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "wing",
+            "image": "page-08-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              436.4,
+              532.5
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 16
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What lifts the kite?",
+      "a": "The wind lifts the kite.",
+      "hintPage": 4
+    },
+    {
+      "type": "literal",
+      "q": "What does Mouse choose for rainy weather?",
+      "a": "Mouse chooses rain boots.",
+      "hintPage": 7
+    },
+    {
+      "type": "feeling",
+      "q": "How might Mouse feel looking through the pretend window?",
+      "a": "Mouse might feel curious, excited or surprised. Other ideas are welcome.",
+      "hintPage": 1
+    },
+    {
+      "type": "personal",
+      "q": "What is the weather like where you are?",
+      "a": "Look together and describe what you notice; no single answer is expected.",
+      "hintPage": 8
+    }
+  ]
+}

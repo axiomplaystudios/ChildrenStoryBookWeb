@@ -1,0 +1,461 @@
+{
+  "id": "rabbits-rainbow-garden",
+  "title": "Rabbit’s Rainbow Garden",
+  "subtitle": "Seven colours make a place to share",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Colours and matching",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Rabbit wants a garden full of colours. Where can she find them?",
+      "alt": "Rabbit stands by empty garden beds with a watering can while a butterfly visits.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "rabbit",
+            "image": "page-01-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "butterfly",
+            "image": "page-01-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "butterfly",
+            "preset": "gesture",
+            "parameters": {
+              "x": 40,
+              "y": -18,
+              "angle": 8
+            },
+            "durationMs": 3300,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Red flowers! Rabbit plants them by the gate.",
+      "alt": "Rabbit finds red flowers by the gate. A large label says red.",
+      "image": "page-02.svg",
+      "learning": {
+        "colour": "red"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-02-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -14,
+              "angle": 8
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Orange carrots! Rabbit gives them a drink.",
+      "alt": "Rabbit finds orange carrots in the soil. A large label says orange.",
+      "image": "page-03.svg",
+      "learning": {
+        "colour": "orange"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-03-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 4,
+              "y": 23,
+              "angle": 0
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Yellow sunflowers! They reach up to the sun.",
+      "alt": "Rabbit finds yellow sunflowers reaching upward. A large label says yellow.",
+      "image": "page-04.svg",
+      "learning": {
+        "colour": "yellow"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-04-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -14,
+              "angle": 8
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Green leaves! They make a cool little nook.",
+      "alt": "Rabbit finds green leaves around a garden nook. A large label says green.",
+      "image": "page-05.svg",
+      "learning": {
+        "colour": "green"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-05-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -14,
+              "angle": 8
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Blue flowers! Mouse brings some for the path.",
+      "alt": "Rabbit finds blue flowers beside Mouse on the path. A large label says blue.",
+      "image": "page-06.svg",
+      "learning": {
+        "colour": "blue"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-06-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -14,
+              "angle": 8
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Purple plums! Rabbit finds them on the tree.",
+      "alt": "Rabbit finds purple plums hanging on a tree. A large label says purple.",
+      "image": "page-07.svg",
+      "learning": {
+        "colour": "purple"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-07-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -14,
+              "angle": 8
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Pink flowers! Now the garden has a soft pink corner.",
+      "alt": "Rabbit finds pink flowers in the corner. A large label says pink.",
+      "image": "page-08.svg",
+      "learning": {
+        "colour": "pink"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "visitor",
+            "image": "page-08-visitor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "visitor",
+            "preset": "gesture",
+            "parameters": {
+              "x": 20,
+              "y": -14,
+              "angle": 8
+            },
+            "durationMs": 2800,
+            "restMs": 350,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Rabbit matches each flower to a colour pot. Can you find the blue pair?",
+      "alt": "Seven flowers line up over matching red, orange, yellow, green, blue, purple and pink pots. Rabbit watches.",
+      "image": "page-09.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-09-background.svg",
+        "layers": [
+          {
+            "id": "rabbit",
+            "image": "page-09-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "rabbit",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 2
+            },
+            "durationMs": 3200,
+            "restMs": 600,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The colour garden is ready. Rabbit and Mouse share a rainbow of garden colours!",
+      "alt": "Rabbit and Mouse sit together among red, orange, yellow, green, blue, purple and pink garden flowers; no sky rainbow is shown.",
+      "image": "page-10.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-10-background.svg",
+        "layers": [
+          {
+            "id": "butterfly",
+            "image": "page-10-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "butterfly",
+            "preset": "gesture",
+            "parameters": {
+              "x": 30,
+              "y": -18,
+              "angle": 7
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What colour are the carrots?",
+      "a": "The carrots are orange.",
+      "hintPage": 3
+    },
+    {
+      "type": "literal",
+      "q": "Who brings blue flowers?",
+      "a": "Mouse brings blue flowers.",
+      "hintPage": 6
+    },
+    {
+      "type": "feeling",
+      "q": "How might Rabbit feel when the garden is ready?",
+      "a": "She might feel proud, glad or peaceful. Other ideas are welcome.",
+      "hintPage": 10
+    },
+    {
+      "type": "personal",
+      "q": "Which garden colour would you choose?",
+      "a": "Any colour is welcome; you can point to one.",
+      "hintPage": 9
+    }
+  ]
+}

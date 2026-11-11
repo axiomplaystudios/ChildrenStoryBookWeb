@@ -52,9 +52,9 @@
               "angle": 5
             },
             "durationMs": 3200,
-            "restMs": 6000,
+            "restMs": 1800,
             "delayMs": 450,
-            "playback": "once"
+            "playback": "repeat"
           }
         ]
       }
@@ -91,9 +91,9 @@
               "angle": 2.5
             },
             "durationMs": 3300,
-            "restMs": 3600,
+            "restMs": 1800,
             "delayMs": 450,
-            "playback": "once"
+            "playback": "repeat"
           }
         ]
       }
@@ -130,7 +130,7 @@
               "angle": -10
             },
             "durationMs": 1000,
-            "restMs": 4300,
+            "restMs": 1800,
             "delayMs": 450,
             "playback": "repeat"
           }
@@ -179,9 +179,9 @@
               "angle": -4
             },
             "durationMs": 2200,
-            "restMs": 3600,
+            "restMs": 1800,
             "delayMs": 450,
-            "playback": "once"
+            "playback": "repeat"
           }
         ]
       }
@@ -404,7 +404,7 @@
               "angle": 11
             },
             "durationMs": 2500,
-            "restMs": 4500,
+            "restMs": 1800,
             "delayMs": 450,
             "playback": "repeat"
           }
@@ -456,16 +456,16 @@
               "angle": 5
             },
             "durationMs": 1500,
-            "restMs": 3600,
+            "restMs": 1800,
             "delayMs": 450,
-            "playback": "once"
+            "playback": "repeat"
           },
           {
             "layer": "snake-tongue",
             "preset": "blink",
             "parameters": {},
             "durationMs": 500,
-            "restMs": 2700,
+            "restMs": 1800,
             "delayMs": 900,
             "playback": "repeat"
           }
@@ -504,9 +504,9 @@
               "angle": -9
             },
             "durationMs": 1800,
-            "restMs": 3600,
+            "restMs": 1800,
             "delayMs": 450,
-            "playback": "once"
+            "playback": "repeat"
           }
         ]
       }
@@ -539,7 +539,7 @@
             "preset": "squawk",
             "playback": "repeat",
             "durationMs": 1800,
-            "restMs": 3600,
+            "restMs": 1800,
             "delayMs": 500,
             "parameters": {
               "angle": -14
@@ -588,9 +588,9 @@
             "preset": "fade-in",
             "parameters": {},
             "durationMs": 1500,
-            "restMs": 3600,
+            "restMs": 1800,
             "delayMs": 450,
-            "playback": "once"
+            "playback": "repeat"
           },
           {
             "layer": "sloth-chest",

@@ -172,7 +172,7 @@ function showShelf() {
     const coverArt = el('span', 'cover-art'); coverArt.append(img);
     const badge = el('span', 'cover-badge', complete ? '✦ A goodnight shared' : 'Open a little adventure');
     coverArt.append(badge); cover.append(coverArt);
-    card.append(cover, el('p', 'book-category', story.sample ? 'OUR LITTLE SAMPLE STORY' : 'FROM BOOK DASH'), el('h3', '', story.title), el('p', 'book-description', story.subtitle || 'A story to read and wonder about together.'));
+    card.append(cover, el('p', 'book-category', story.origin === 'original' ? (story.category || 'ORIGINAL STORY') : story.sample ? 'OUR LITTLE SAMPLE STORY' : 'FROM BOOK DASH'), el('h3', '', story.title), el('p', 'book-description', story.subtitle || 'A story to read and wonder about together.'));
     card.append(el('p', 'book-meta', `${story.pages.length} pages  ·  4 things to wonder about`), creditPanel(story)); grid.append(card);
   });
   shelf.append(shelfHeading, grid);

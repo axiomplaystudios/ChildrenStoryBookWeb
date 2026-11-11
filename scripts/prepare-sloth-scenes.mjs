@@ -7,7 +7,7 @@ const heights=[1021,1023,1021,1021,1023,976,1023,1024,1023,1021,1023,1023];
 const ink='#3b2100';
 const wrap=(h,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="${h}" viewBox="0 0 1024 ${h}">${body}</svg>\n`;
 const path=(d,fill='white')=>`<path d="${d}" fill="${fill}"/>`;
-const track=(layer,preset,parameters,{durationMs=2200,restMs=3600,delayMs=450,playback='repeat'}={})=>({layer,preset,parameters,durationMs,restMs,delayMs,playback});
+const track=(layer,preset,parameters,{durationMs=2200,restMs=3600,delayMs=450,playback='repeat'}={})=>({layer,preset,parameters,durationMs,restMs:Math.min(restMs,1800),delayMs,playback});
 async function scene(n,definitions,tracks){
  const prefix=`page-${String(n).padStart(2,'0')}`,h=heights[n-1];
  const src=`data:image/webp;base64,${(await readFile(root+prefix+'.webp')).toString('base64')}`;
@@ -28,13 +28,13 @@ async function scene(n,definitions,tracks){
 await scene(1,[
  {id:'sloth-jaw',shape:'M675 388Q716 378 745 400L748 425L730 437L714 420L701 415L687 439L672 430Z',pivot:[706,395]},
  {id:'sloth-hand',shape:'M671 427L684 412L696 413L705 447L714 456L709 429L711 411L724 416L740 455L757 475L737 488L702 476L673 457Z',repair:'',pivot:[706,450]},
-], [track('sloth-jaw','gesture',{x:0,y:6,angle:5},{durationMs:3200,restMs:6000,playback:'once'})]);
+], [track('sloth-jaw','gesture',{x:0,y:6,angle:5},{durationMs:3200,restMs:6000,playback:'repeat'})]);
 // Articulate the broad hanging torso around its upper attachment. The original
 // feet, hands and trunk remain foreground, keeping grips fixed.
 const torso2='M536 572Q560 586 580 584L600 625L633 661L657 690L650 714L605 697L572 668L548 628Z';
 await scene(2,[
  {id:'sloth-torso',shape:torso2,fill:ink,pivot:[477,467]},
-], [track('sloth-torso','gesture',{x:0,y:-6,angle:2.5},{durationMs:3300,playback:'once'})]);
+], [track('sloth-torso','gesture',{x:0,y:-6,angle:2.5},{durationMs:3300,playback:'repeat'})]);
 await scene(3,[
  {id:'giraffe-ear',shape:'M92 328L101 297L119 271L142 256L163 265L159 285L132 308Z',pivot:[153,272]},
 ], [track('giraffe-ear','gesture',{x:0,y:0,angle:-10},{durationMs:1000,restMs:4300})]);
@@ -42,7 +42,7 @@ const jaw4='M316 552Q367 538 414 502Q448 501 474 490L500 515Q419 559 319 572Z';
 await scene(4,[
  {id:'giraffe-jaw',shape:jaw4,pivot:[320,559],repair:path(jaw4,ink)+path('M315 546L374 529L375 570L315 577Z','white')},
  {id:'giraffe-neck-foreground',shape:'M290 515H377L372 554L369 590H290Z',repair:''},
-], [track('giraffe-jaw','squawk',{angle:-4},{durationMs:2200,playback:'once'})]);
+], [track('giraffe-jaw','squawk',{angle:-4},{durationMs:2200,playback:'repeat'})]);
 await scene(5,[
  {id:'bee-1',shape:'M322 577H354V624H322Z',pivot:[338,602]},
  {id:'bee-2',shape:'M166 718H202V769H166Z',pivot:[184,744]},
@@ -55,16 +55,16 @@ const snake8='M545 430Q528 382 515 331Q504 286 516 255Q528 243 541 258L551 320L5
 await scene(8,[
  {id:'snake-head',shape:snake8,pivot:[554,424]},
  {id:'snake-tongue',art:`<path d="M619 254l12-12m-2 2 7 1m-7-1 1-7" fill="none" stroke="${ink}" stroke-width="3" stroke-linecap="round"/>`,parent:'snake-head',pivot:[620,253]},
-], [track('snake-head','gesture',{x:0,y:0,angle:5},{durationMs:1500,playback:'once'}),track('snake-tongue','blink',{}, {durationMs:500,restMs:2700,delayMs:900})]);
+], [track('snake-head','gesture',{x:0,y:0,angle:5},{durationMs:1500,playback:'repeat'}),track('snake-tongue','blink',{}, {durationMs:500,restMs:2700,delayMs:900})]);
 const toes9='M411 113L437 114L451 138L456 154L446 160L434 145L436 159L426 168L421 145L408 152L390 168L378 171L388 155L403 143Z';
 await scene(9,[
  {id:'bird-toes',shape:toes9,pivot:[428,121]},
-], [track('bird-toes','gesture',{x:0,y:-2,angle:-9},{durationMs:1800,playback:'once'})]);
+], [track('bird-toes','gesture',{x:0,y:-2,angle:-9},{durationMs:1800,playback:'repeat'})]);
 // Closed lids cover only the original eyes, not the entire face.
 await scene(11,[
  {id:'sloth-eyelids',art:`<path d="M510 401Q522 394 539 400L541 412L508 415Z" fill="white"/><path d="M575 404Q593 399 609 416L614 443L573 430Z" fill="white"/><path d="M512 406q12 6 25-1M578 413q14 10 26 8" fill="none" stroke="${ink}" stroke-width="4" stroke-linecap="round"/>`},
  {id:'sloth-chest',shape:'M474 545Q540 565 599 530L595 641L563 678L518 691L474 668Z',fill:ink,pivot:[533,679]},
-], [track('sloth-eyelids','fade-in',{}, {durationMs:1500,playback:'once'}),track('sloth-chest','breathe',{amount:.018},{durationMs:5200,restMs:1200,delayMs:1500})]);
+], [track('sloth-eyelids','fade-in',{}, {durationMs:1500,playback:'repeat'}),track('sloth-chest','breathe',{amount:.018},{durationMs:5200,restMs:1200,delayMs:1500})]);
 await scene(12,[
  {id:'sleep-mark-1',shape:'M500 268H521V290H500Z',pivot:[510,280]},
  {id:'sleep-mark-2',shape:'M516 235H551V267H516Z',pivot:[533,252]},

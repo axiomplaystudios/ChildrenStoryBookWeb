@@ -1,0 +1,365 @@
+{
+  "id": "where-is-teddy",
+  "title": "Where Is Teddy?",
+  "subtitle": "A hide-and-seek game with Mouse",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Position words",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Rabbit had a game for Mouse. “Close your eyes. I’ll hide Teddy!”",
+      "alt": "Rabbit holds a small teddy in the cosy room while Mouse closes his eyes.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-01-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              240,
+              610
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Mouse looked in the box. There was Teddy, in the box!",
+      "alt": "Teddy sits inside an open box, with the front of the box covering his lower body.",
+      "image": "page-02.svg",
+      "learning": {
+        "position": "in"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-02-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              185,
+              615
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Rabbit hid Teddy again. This time, Teddy was on the stool.",
+      "alt": "The whole teddy sits on the top surface of a low stool.",
+      "image": "page-03.svg",
+      "learning": {
+        "position": "on"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-03-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              205,
+              620
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Mouse bent down. Teddy was under the table!",
+      "alt": "Teddy is fully visible beneath the tabletop, between its four legs.",
+      "image": "page-04.svg",
+      "learning": {
+        "position": "under"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-04-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Two round ears peeked out. Teddy was behind the box.",
+      "alt": "Teddy’s ears and head peek above a solid box that hides his body.",
+      "image": "page-05.svg",
+      "learning": {
+        "position": "behind"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-05-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              615
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Now Teddy was beside the box. Mouse could see all of him.",
+      "alt": "The entire teddy sits to the right of the box with a clear gap between them.",
+      "image": "page-06.svg",
+      "learning": {
+        "position": "beside"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-06-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              155,
+              630
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "For the last turn, Rabbit gave a clue. “Look under something with four legs.”",
+      "alt": "Mouse considers a table with Teddy clearly visible beneath it, and Rabbit watches the search.",
+      "image": "page-07.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-07-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              170,
+              620
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "“Under the table!” Mouse found Teddy and gave him a cuddle. Now Mouse could hide him.",
+      "alt": "Mouse cuddles Teddy after finding him beneath the table; Rabbit waits for a new round.",
+      "image": "page-08.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-08-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              485,
+              617
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "Where was Teddy on the first turn?",
+      "a": "Teddy was in the box.",
+      "hintPage": 2
+    },
+    {
+      "type": "literal",
+      "q": "Where was Teddy for the last turn?",
+      "a": "Teddy was under the table.",
+      "hintPage": 8
+    },
+    {
+      "type": "feeling",
+      "q": "How might Mouse feel after finding Teddy?",
+      "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+      "hintPage": 8
+    },
+    {
+      "type": "personal",
+      "q": "Where would you hide a toy?",
+      "a": "Any answer is welcome. Invite your child to tell you more.",
+      "hintPage": 8
+    }
+  ]
+}

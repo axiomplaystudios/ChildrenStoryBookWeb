@@ -32,10 +32,15 @@ export function sampleTrack(track, elapsed) {
   const progress = Math.min(1, time / track.durationMs);
   const p = track.parameters;
   const smooth = progress * progress * (3 - 2 * progress);
-  if (track.preset === 'fade-in') return { x: 0, y: 0, angle: 0, opacity: smooth };
+  // Repeated transitions travel out and back within one duration, then rest.
+  // Their endpoints match, avoiding a visible teleport at the cycle boundary.
+  const triangle = progress <= .5 ? progress * 2 : (1 - progress) * 2;
+  const roundTrip = triangle * triangle * (3 - 2 * triangle);
+  const transition = track.playback === 'repeat' ? roundTrip : smooth;
+  if (track.preset === 'fade-in') return { x: 0, y: 0, angle: 0, opacity: transition };
   if (track.preset === 'sleep-rise') return { x: 0, y: -p.distanceY * progress, angle: 0, opacity: elapsed < track.delayMs ? 0 : Math.sin(Math.PI * progress) };
   if (['gesture', 'settle', 'arrive'].includes(track.preset)) {
-    const amount = track.preset === 'gesture' ? Math.sin(Math.PI * progress) : track.preset === 'arrive' ? 1 - smooth : smooth;
+    const amount = track.preset === 'gesture' ? Math.sin(Math.PI * progress) : track.preset === 'arrive' ? 1 - transition : transition;
     return { x: p.x * amount, y: p.y * amount, angle: p.angle * amount, opacity: 1 };
   }
   if (track.preset === 'breathe') return { x: 0, y: 0, angle: 0, opacity: 1, scaleY: 1 + p.amount * Math.sin(Math.PI * progress) ** 2 };

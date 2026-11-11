@@ -40,6 +40,6 @@ await writeSVG(sloth,'page-10-background.svg',1024,1021,`<defs><clipPath id="rep
 await writeSVG(sloth,'page-10-beak.svg',1024,1021,`<defs><clipPath id="jaw"><path d="${jaw}"/></clipPath></defs><image href="${source10}" width="1024" height="1021" clip-path="url(#jaw)"/>`);
 slothStory.pages[9].scene={width:1024,height:1021,background:'page-10-background.svg',layers:[
  {id:'bird-beak',image:'page-10-beak.svg',x:0,y:0,width:1024,height:1021,pivot:[470,202]},
-],tracks:[{layer:'bird-beak',preset:'squawk',playback:'repeat',durationMs:1800,restMs:3600,delayMs:500,parameters:{angle:-14}}]};
+],tracks:[{layer:'bird-beak',preset:'squawk',playback:'repeat',durationMs:1800,restMs:1800,delayMs:500,parameters:{angle:-14}}]};
 slothStory.credit=slothStory.credit.replace('illustrations were converted to WebP and displayed with gentle pan and zoom','illustrations were converted to WebP, selected parts of pages 6 and 10 were separated and animated with repaired backgrounds');
 await writeFile(`${root}${sloth}/story.json`,JSON.stringify(slothStory,null,2)+'\n');
