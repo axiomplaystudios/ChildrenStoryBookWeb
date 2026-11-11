@@ -9,7 +9,7 @@ The user clarified on 2026-11-11: “I will read aloud. No need to complicate th
 
 Audio generation, narration engines, packaged audio, listening/review/start gates and playback controls are removed. Tasks 1 and 5 are superseded, not pending or blocked. The unused validator and its dedicated tests are removed. The audio spike in authoring/interactive/audio-review.md is historical evidence only, with a superseded header; none of its commands or gates govern current work.
 
-**Tasks2–4 and6–11 complete and independently reviewed. Tasks1/5 superseded. Task12 final regression and whole-branch review pending.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
+**Tasks2–4 and6–11 complete and independently reviewed. Tasks1/5 superseded. Task12 and final scoped review complete; local handoff approved.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
 
 ## Preflight after scope amendment
 | Tasks | Shared contract / consistency | Finding |
@@ -45,7 +45,7 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - [x] Task9 complete, commitsfa4e671/7a9684b, reviewed.
 - [x] Task10 complete, commit6ca1f08, reviewed.
 - [x] Task11 complete, commitd72b579, reviewed.
-- [ ] Task12 final regression, docs and whole-branch review in progress.
+- [x] Task12 complete; final171unit/177browser/build and scoped final review approved.
 
 ## Baseline and historical work
 - Baseline npm ci completed (pre-existing glob deprecation warning); npm test: 97 passed, 0 failed.
@@ -113,3 +113,17 @@ Concurrency: controller grants build/browser and commit windows (shared dist/git
 - Task11: complete (commits622634e..d72b579, review clean). /root/task11_review specPASS/qualityApproved, no findings. Actual composed scenes/allguidance/phone parade inspected; source-public parity confirmed. Controller catalog8ids/legacy13 confirmed; final174browser suite underway.
 
 - Task12 implementationa29928c: full npm run check166unit/174browser/build all pass, all8importers/parity/legacydiff pass. Preview http://localhost:4173/ session9300. Physical hardware unavailable, emulation only. Scoped /root/task12_review pending; final whole-branch review pending. Exact sizes in docs/interactive-story-validation.md.
+
+- Task12 scoped review /root/task12_review PASS/Approved. No material findings; minor pre-existing NO_COLOR/FORCE_COLOR warnings environment-only. Final reviewer /root/final_branch_review dispatched basea03e676..b5bd892 on whole implementation. All content and integration gates pass; final review pending.
+
+- Final whole-branch review /root/final_branch_review: With fixes, noCritical. I1 retained old versions inaccessible to shelf removal; I2 progress keys missing app-base isolation; I3 Imani lacks optional familiar-object arrangement. MinorM1 endings claim untried observations; M2 compressed generator/oracle style nonblocking. Report final-review-report.md.
+- Single consolidated final fix wave /root/final_fix_wave dispatched baseb5bd892 forI1–I3+M1; targeted formatting only, M2 broad polish deferred. Agent owns shared build/index and will rerun appropriate regression/fullcheck then scoped rereview. No publish.
+- Reviewer declined areas acknowledged: generated audio explicitly out of scope; hardware unavailable; indefinite browser retention unguaranteed; no-Web-Locks fallback documented; empirical child learning/enjoyment untested; deployment unauthorised. None require expanded implementation scope.
+
+- Final fix wave087e17d complete: I1 all-version removal with pin-safe cleanup; I2 absolute-base scoped persisted+memory saves, unscoped records untouched; I3 adult-assisted optional object arrangement; M1 truthful experiment endings. All208SVG unchanged, changed rendered text/guidance inspected both editions.
+- Final corrected npm run check171unit/177browser/build PASS (8.5m), all8importer/parity, legacydiff/diffcheckPASS. First unit gate caught stale generated catalog; regenerated before successful full rerun, maintenance instruction corrected. Packages1788939bytes. Preview http://127.0.0.1:4173/ session31880.
+- Scoped final rereview /root/final_branch_review dispatched b5bd892..087e17d; final-rereview-report.md pending. M2 broad formatting polish remains nonblocking/deferred.
+
+- Final scoped review /root/final_branch_review: PASS/APPROVED, local handoff ready. I1/I2/I3/M1 addressed; no newCritical/Important findings. M2 broad formatting remains nonblocking. Report final-rereview-report.md.
+- Task12: complete (a29928c integration plus087e17d final fix, final review approved). Final counts21titles/8pairs/16editions/13legacy139pages;171unit+177browser pass;1788939bundlebytes.
+- User explicitly selected keep local: branchfeature/interactive-story-pairs and isolated worktree preserved, approved documents tracked, main untouched. No push/merge/deploy. Local preview4173 remains running. Review evidence retained locally to support handoff.
