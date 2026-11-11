@@ -9,7 +9,7 @@ The user clarified on 2026-11-11: “I will read aloud. No need to complicate th
 
 Audio generation, narration engines, packaged audio, listening/review/start gates and playback controls are removed. Tasks 1 and 5 are superseded, not pending or blocked. The unused validator and its dedicated tests are removed. The audio spike in authoring/interactive/audio-review.md is historical evidence only, with a superseded header; none of its commands or gates govern current work.
 
-**Resume at Task 2.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
+**Task 4 is in progress; Tasks 2 and 3 are complete and reviewed.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
 
 ## Preflight after scope amendment
 | Tasks | Shared contract / consistency | Finding |
@@ -35,9 +35,9 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 
 ## Tasks
 - [x] Task 1: superseded by user clarification; abandoned tooling removed, not claimed as passed.
-- [ ] Task 2: next — schema, importer and packaging; no audio gate.
-- [ ] Task 3: pending Task 2.
-- [ ] Task 4: pending preceding shared contracts.
+- [x] Task 2: complete, reviewed; commits b3ba037, def05b1.
+- [x] Task 3: complete, reviewed; commit 2a713d5.
+- [ ] Task 4: in progress; /root/task4_bundles, base 2a713d5.
 - [x] Task 5: superseded by user clarification; no narrator implementation needed.
 - [ ] Task 6: pending Tasks 2–4; includes replayable visual guidance.
 - [ ] Task 7: pending Task 6; parent-read Bakery vertical slice.
@@ -58,3 +58,13 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - Fresh npm test after deleting the abandoned validator/test: 97 passed, 0 failed, 0 skipped (2026-11-11).
 - git diff --check: passed. Active spec/plan audit found only explicit out-of-scope or superseded audio mentions; executable references remain solely inside the historical audio-review evidence.
 - Spec/plan/task-number consistency reviewed: eight pair titles, sixteen experiences, all Tasks 1–12 retained, Tasks 1/5 superseded, Task 2 next. No application runtime changes; build/browser tests were not repeated for this documentation/tooling removal.
+
+- Scope amendment committed ee874c7: parent reads both editions; Tasks 1 and 5 superseded. 97 tests passed.
+- Task 2 started, base ee874c7; implementer /root/task2_packages; task-2-brief.md and task-2-report.md are local artifacts.
+- Scope amendment independent review /root/scope_review: spec PASS, quality APPROVED, no material findings.
+- Task 2 implementation b3ba037 (base ee874c7) ready; reviewer /root/task2_review pending. 112 unit tests, build passed. Report task-2-report.md; concrete shared contracts docs/interactive-story-authoring.md.
+- Task 2: fix round 1/5 (1 addressed, 0 open — shared placement supply matching; commits b3ba037..def05b1). Reviewer approved scoped fix; 17 focused/115 full unit tests passed.
+- Task 2: complete (commits ee874c7..def05b1, review clean).
+- Task 3: started (base def05b1); next implementer owns state/progress only.
+- Task 3: complete (commits def05b1..2a713d5, review clean). Reviewer /root/task3_review PASS/APPROVE. 14 focused,129 full unit tests pass. Report task-3-report.md. Runtime contract docs/interactive-story-authoring.md; use dispatch(run,pair,action).
+- Task 4 started (base 2a713d5); transactional bundle store and browser tests.
