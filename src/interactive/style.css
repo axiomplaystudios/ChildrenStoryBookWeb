@@ -11,9 +11,14 @@
   overflow: auto;
   max-width: none;
 }
+/* Settings also inherit legacy rules loaded later; these scoped selectors
+   keep the interactive target size stronger than .animation-fields controls. */
 .interactive-reader button,
 .interactive-shelf button,
-.interactive-reader select {
+.interactive-reader select,
+.interactive-reader summary,
+.interactive-reader .animation-fields button,
+.interactive-reader .animation-fields select {
   min-width: 48px;
   min-height: 48px;
   touch-action: manipulation;

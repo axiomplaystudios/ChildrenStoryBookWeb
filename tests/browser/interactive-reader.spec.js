@@ -360,3 +360,19 @@ test('reduced motion keeps authored visible outcomes opaque despite decorative f
  await page.getByRole('button',{name:'One bun, copy 1',exact:true}).click();await page.getByRole('button',{name:'Box for one bun',exact:true}).click();await page.getByRole('button',{name:'Next scene',exact:true}).click();await page.getByRole('button',{name:'Gentle ramp',exact:true}).click();await page.getByRole('button',{name:'Near line',exact:true}).click();await page.getByRole('button',{name:'Test',exact:true}).click();await page.getByRole('button',{name:'Next scene',exact:true}).click();await page.getByRole('button',{name:'Open sky',exact:true}).click();
  const layer=page.locator('[data-layer="result"]');await expect(layer).toHaveAttribute('opacity','1');await expect(layer).not.toHaveAttribute('transform',/.+/);await expect(layer).not.toHaveCSS('display','none');
 });
+
+test('every active reader control including expanded illustration settings has a 48px target', async ({ page }) => {
+  await open(page);
+  const reader = page.locator('#interactive-reader');
+  await reader.getByText('Illustration settings', { exact: true }).click();
+  await reader.getByRole('button', { name: 'Show me', exact: true }).click();
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1024, height: 768 }]) {
+    await page.setViewportSize(viewport);
+    const controls = await reader.locator('button:visible, select:visible, summary:visible').evaluateAll(elements => elements.map(element => {
+      const bounds = element.getBoundingClientRect();
+      return { label: element.getAttribute('aria-label') || element.textContent.trim(), width: bounds.width, height: bounds.height };
+    }));
+    expect(controls.length).toBeGreaterThan(10);
+    expect(controls.filter(control => control.width < 48 || control.height < 48)).toEqual([]);
+  }
+});
