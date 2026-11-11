@@ -28,3 +28,25 @@ Review found and corrected clipped sibling hair, shadow screen width, weak capti
 
 ## Limits
 Physics is an authored illustrative model, not simulation or a promise of real-world cart distance. Browser touch emulation does not replace physical device/child observation. Contact sheets inspect sampled animation poses; numeric continuity assertions additionally check late loop boundaries. Full current unit suite passed; broader release browser regression belongs to integration task. No publishing performed.
+
+## Fix round 1: setup-independent prediction pictures
+
+Important review finding: prediction cards reused complete outcome diagrams. The example selected control0, predicted prediction1, then tested control0, so the predict picture appeared to change the ramp or puppet setup without a SELECT action. Verified the finding against the helper and actual package SVGs.
+
+Changed `scripts/interactive/stories/experiments-art.mjs` to render result-only prediction cards: the same rollout line with the cart at a nearer/farther stop, or the same pale screen with a larger/smaller tree shadow. Prediction pictures contain no ramp, lamp, puppet position, boundary rays or named setup. Existing selection and actual test-result diagrams retain their reviewed geometry. New helper and touched construction block are formatted across readable lines. The remaining pre-existing compact generator formatting is deferred as a minor readability issue, with no runtime effect.
+
+Covering test: `tests/interactive-experiments.test.mjs`, “prediction pictures describe only an expected result, without implying another setup selection”. It checks every prediction asset and both editions’ demonstration references across all12 experiment scenes. RED: the added assertion failed on the original SVGs with `a prediction must not depict or name a selected apparatus configuration`. GREEN command `node --test tests/interactive-experiments.test.mjs`:8 tests,8 pass,0 failures (final run226.9ms).
+
+Actually rendered and opened PNGs with view_image before setting review flags: `experiments-evidence/fix1-prediction-icons.png` (all4 new pictures), `tavis-dinosaur-ramp-rally-fix1-guidance.png` and `mina-and-the-shadow-stage-fix1-guidance.png` (all48 demonstration steps per pair across both editions). No predict step now depicts an apparatus change. Controller independently inspected Tavi’s refreshed guidance sheet. Asset SHA comparisons prove only the2 prediction images changed per pair; previously inspected rest/motion/outcome art remains byte-identical. Regeneration reset review flags; after these checks the prior unchanged-art attestations and new-picture/guidance inspection were recorded again.
+
+Controller approved replacement of unpublished local v1 packages. Existing public directories were backed up to `/tmp/task8-fix1-unpublished-backup`, removed locally, then installed through the unchanged importer; the importer never overwrote an existing version. The initial attempted cross-filesystem rename failed EXDEV, corrected by copying to backup first. An obsolete browser run against unchanged installed packages was interrupted and excluded from evidence.
+
+Final commands/output against corrected installed packages:
+- `node scripts/interactive/prepare-pair.mjs check authoring/interactive/tavis-dinosaur-ramp-rally`:Validated8 scenes,68 local files.
+- Equivalent Mina check:Validated8 scenes,68 local files. Both `install` commands completed successfully.
+- `npm run build`:exit0,13 legacy books and8 interactive pairs validated; Vite build and PWA generation passed.
+- `npx playwright test tests/browser/interactive-experiments.spec.js --reporter=line`:12 passed (1.1min), both editions online/saved return, full offline reload journeys and touch/reduced-motion phone journeys. These journeys replay every example then test both outcomes per scene.
+- `npm test`:165 tests,165 pass,0 failures (3.9s).
+- `git diff --check`:clean.
+
+Updated measured bundle sizes including manifests: Tavi255,717 bytes; Mina228,405 bytes. No runtime/schema changes, audio, publishing or shared catalog changes included in the fix commit.

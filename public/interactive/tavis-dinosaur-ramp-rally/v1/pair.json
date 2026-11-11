@@ -1777,15 +1777,15 @@
       "id": "prediction-near-stop",
       "file": "prediction-near-stop.svg",
       "mediaType": "image/svg+xml",
-      "bytes": 3095,
-      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+      "bytes": 1524,
+      "sha256": "8c4f12ce2c951524dde58a0394f3aa93687b0067ae84ff3ec8a97e8aae8bbbaf"
     },
     {
       "id": "prediction-far-stop",
       "file": "prediction-far-stop.svg",
       "mediaType": "image/svg+xml",
-      "bytes": 3057,
-      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+      "bytes": 1525,
+      "sha256": "b953ae28cdd800d01a12cc0e29bac6b589f7988293e48dd5370167bda874adc9"
     },
     {
       "id": "opening-cast",

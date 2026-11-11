@@ -18,3 +18,24 @@ test('ramp tilt raises the same length hinged ramp; shadow boundaries obey fixed
  const ramp=await load('tavis-dinosaur-ramp-rally');for(const s of ramp.scenes.filter(s=>s.activity)){const lengths=[];for(const [index,o]of s.activity.outcomes.entries()){const art=await readFile(`authoring/interactive/${ramp.id}/${o.image}`,'utf8'),m=art.match(/d="M([\d.]+) ([\d.]+) 420 460 875 460"/);assert.ok(m,'same fixed hinge and rollout endpoint');const sx=Number(m[1]),sy=Number(m[2]);lengths.push(Math.hypot(420-sx,460-sy));assert.equal(sy,index===0?320:220);assert.match(art,/SAME RAMP LENGTH/);}assert.ok(Math.abs(lengths[0]-lengths[1])<.00001);}
  const shadow=await load('mina-and-the-shadow-stage');for(const s of shadow.scenes.filter(s=>s.activity))for(const[index,o]of s.activity.outcomes.entries()){const art=await readFile(`authoring/interactive/${shadow.id}/${o.image}`,'utf8'),m=art.match(/d="M120 340 800 ([\d.]+) M120 340 800 ([\d.]+)"/);assert.ok(m);const d=index===0?250:480;assert.ok(Math.abs(Number(m[1])-(340-40*680/d))<.00001);assert.ok(Math.abs(Number(m[2])-(340+40*680/d))<.00001);}
 });
+test('prediction pictures describe only an expected result, without implying another setup selection', async () => {
+ for (const id of ['tavis-dinosaur-ramp-rally', 'mina-and-the-shadow-stage']) {
+  const pair = await load(id);
+  for (const scene of pair.scenes.filter(scene => scene.activity)) {
+   for (const prediction of scene.activity.predictions) {
+    const image = await readFile(`authoring/interactive/${id}/${prediction.image}`, 'utf8');
+    assert.doesNotMatch(image,
+     /model-ramp-|model-puppet-|ray-top-bottom|FIXED LIGHT|FIXED HINGE|Same ramp (raised|lowered)|Near the (light|screen)/,
+     'a prediction must not depict or name a selected apparatus configuration');
+    assert.match(image, /id="prediction-result-/, 'prediction has an independent result illustration');
+   }
+   for (const edition of ['together', 'independent']) {
+    const steps = pair.editions[edition].scenes[scene.id].demonstration;
+    assert.equal(steps[0].controlId, scene.activity.controls[0].id);
+    assert.equal(steps[1].predictionId, scene.activity.predictions[1].id);
+    assert.equal(steps[1].controlId, undefined);
+    assert.equal(steps[1].image, scene.activity.predictions[1].image);
+   }
+  }
+ }
+});

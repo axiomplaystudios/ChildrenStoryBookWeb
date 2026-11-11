@@ -6,8 +6,8 @@
   "files": [
     {
       "file": "pair.json",
-      "sha256": "55a11287411e2912d2dbd2ce8af766592c4583a7c214847bb7a85a26a5fc2b4c",
-      "bytes": 75802,
+      "sha256": "0d63fc659d424d1ab28c5f18cf5e82e4219c546fa8e3ce174996595ff80a92c6",
+      "bytes": 75800,
       "mediaType": "application/json"
     },
     {
@@ -36,14 +36,14 @@
     },
     {
       "file": "prediction-large-shadow.svg",
-      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
-      "bytes": 2118,
+      "sha256": "fce1564dff9fa4ec39a6ad4851aa2dacee3e88acd00a4e57426da89a42bb9e75",
+      "bytes": 665,
       "mediaType": "image/svg+xml"
     },
     {
       "file": "prediction-small-shadow.svg",
-      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
-      "bytes": 2159,
+      "sha256": "276dfe974550c8af114439665a2097e18a3a4a906ce8e905007d85e83af5bc6b",
+      "bytes": 666,
       "mediaType": "image/svg+xml"
     },
     {

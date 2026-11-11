@@ -1777,15 +1777,15 @@
       "id": "prediction-large-shadow",
       "file": "prediction-large-shadow.svg",
       "mediaType": "image/svg+xml",
-      "bytes": 2118,
-      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+      "bytes": 665,
+      "sha256": "fce1564dff9fa4ec39a6ad4851aa2dacee3e88acd00a4e57426da89a42bb9e75"
     },
     {
       "id": "prediction-small-shadow",
       "file": "prediction-small-shadow.svg",
       "mediaType": "image/svg+xml",
-      "bytes": 2159,
-      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+      "bytes": 666,
+      "sha256": "276dfe974550c8af114439665a2097e18a3a4a906ce8e905007d85e83af5bc6b"
     },
     {
       "id": "opening-cast",
