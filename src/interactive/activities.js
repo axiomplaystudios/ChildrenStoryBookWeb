@@ -169,7 +169,9 @@ export function renderActivity({ activity, view, onAction }) {
   } else if (activity.kind === 'discover') {
     const screen = activity.screen;
     element.append(node('p', '', screen.label));
-    element.append(picture(screen, view.resolveAsset));
+    const reference = picture(screen, view.resolveAsset);
+    reference.className = 'discovery-reference';
+    element.append(reference);
     const answer = node('p', 'selection-status');
     answer.setAttribute('role', 'status');
     element.append(answer);

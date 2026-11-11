@@ -1,0 +1,2026 @@
+{
+  "schemaVersion": 1,
+  "id": "imani-and-the-lost-shape-map",
+  "version": "v1",
+  "title": "Imani and the Lost Shape Map",
+  "category": "discovery",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {},
+  "scenes": [
+    {
+      "id": "the-talking-map",
+      "narrative": "Imani finds a folded map on the island shore. It opens two papery eyes. “I belong in the island library,” it says, “but the wind has muddled my trail!” Imani puts on her explorer hat. “We can look at the shapes together.” The first clue glows beside a round pool.",
+      "alt": "Imani wears a teal explorer hat and golden jacket on a sandy geometric island. A smiling folded map with eyes greets her beside turquoise water.",
+      "image": "the-talking-map.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "the-talking-map-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "the-talking-map-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "the-talking-map-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "the-talking-map-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "the-talking-map-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "round-lagoon",
+      "narrative": "The map points to a lagoon with one smooth edge that goes all the way around. “My first clue has no corners,” it says. Imani sees a circle reflected in the pool. Matching that shape will show which path leaves the shore.",
+      "alt": "Imani and the friendly talking map at the round lagoon. A round lagoon repeats the smooth circle on the map clue. A large separate card shows circle from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "round-lagoon.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "round-lagoon-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "round-lagoon-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "round-lagoon-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "round-lagoon-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "round-lagoon-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "round-lagoon-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "round-lagoon-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-round-lagoon",
+        "physicalPrompt": "Optional: with your adult, trace a round shape in the air while seated, or point to a round shape already in view.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "screen": {
+          "label": "Look at the large clue picture. Choose the same shape below, then check your answer.",
+          "image": "round-lagoon-clue.svg",
+          "mode": "match",
+          "options": [
+            {
+              "id": "circle",
+              "label": "Circle",
+              "image": "circle-control.svg"
+            },
+            {
+              "id": "triangle",
+              "label": "Triangle",
+              "image": "triangle-control.svg"
+            },
+            {
+              "id": "square",
+              "label": "Square",
+              "image": "square-control.svg"
+            },
+            {
+              "id": "arch",
+              "label": "Arch",
+              "image": "arch-control.svg"
+            }
+          ],
+          "answer": [
+            "circle"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "round-lagoon",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "triangle-pass",
+      "narrative": "A tall rock rises ahead. Two sloping sides meet at its peak, and one side lies across the ground. “Three sides!” says Imani. The map brightens. Its next clue belongs to this pointed pass, where a sheltered path crosses the hill.",
+      "alt": "Imani and the friendly talking map at the triangle pass. Two sloping rock sides meet at a pointed peak above a triangular opening. A large separate card shows triangle from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "triangle-pass.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "triangle-pass-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "triangle-pass-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "triangle-pass-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "triangle-pass-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "triangle-pass-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "triangle-pass-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "triangle-pass-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-triangle-pass",
+        "physicalPrompt": "Optional: with your adult, draw a triangle in the air with one finger while seated. Count its three sides together.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "screen": {
+          "label": "Look at the large clue picture. Choose the same shape below, then check your answer.",
+          "image": "triangle-pass-clue.svg",
+          "mode": "match",
+          "options": [
+            {
+              "id": "circle",
+              "label": "Circle",
+              "image": "circle-control.svg"
+            },
+            {
+              "id": "triangle",
+              "label": "Triangle",
+              "image": "triangle-control.svg"
+            },
+            {
+              "id": "square",
+              "label": "Square",
+              "image": "square-control.svg"
+            },
+            {
+              "id": "arch",
+              "label": "Arch",
+              "image": "arch-control.svg"
+            }
+          ],
+          "answer": [
+            "triangle"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "triangle-pass",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "square-gate",
+      "narrative": "Behind the pass is a stone gate. Its clue has four straight sides, all the same length. “I nearly called that a triangle,” the map admits. “Let’s look once more.” Imani follows the four corners. The square will guide them through the old wall.",
+      "alt": "Imani and the friendly talking map at the square gate. A sandy stone gate frames a square clue with four equal straight sides. A large separate card shows square from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "square-gate.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "square-gate-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "square-gate-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "square-gate-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "square-gate-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "square-gate-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "square-gate-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "square-gate-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-square-gate",
+        "physicalPrompt": "Optional: with your adult, trace a square in the air while seated, or point at a square shape already within view.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "screen": {
+          "label": "Look at the large clue picture. Choose the same shape below, then check your answer.",
+          "image": "square-gate-clue.svg",
+          "mode": "match",
+          "options": [
+            {
+              "id": "circle",
+              "label": "Circle",
+              "image": "circle-control.svg"
+            },
+            {
+              "id": "triangle",
+              "label": "Triangle",
+              "image": "triangle-control.svg"
+            },
+            {
+              "id": "square",
+              "label": "Square",
+              "image": "square-control.svg"
+            },
+            {
+              "id": "arch",
+              "label": "Arch",
+              "image": "arch-control.svg"
+            }
+          ],
+          "answer": [
+            "square"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "square-gate",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arch-cove",
+      "narrative": "The seaside path bends beneath a great stone arch. The clue has a curved top, two straight sides and a flat bottom. “A doorway shape!” says Imani. The map remembers sitting beside a library door like this. First, they must find the crossing beyond the cove.",
+      "alt": "Imani and the friendly talking map at the arch cove. A lavender stone arch curves over the shore and repeats the rounded-top clue. A large separate card shows arch from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "arch-cove.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "arch-cove-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "arch-cove-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "arch-cove-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "arch-cove-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "arch-cove-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "arch-cove-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "arch-cove-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-arch-cove",
+        "physicalPrompt": "Optional: with your adult, trace a curved doorway in the air while seated. Let your finger travel over the top and down.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "screen": {
+          "label": "Look at the large clue picture. Choose the same shape below, then check your answer.",
+          "image": "arch-cove-clue.svg",
+          "mode": "match",
+          "options": [
+            {
+              "id": "circle",
+              "label": "Circle",
+              "image": "circle-control.svg"
+            },
+            {
+              "id": "triangle",
+              "label": "Triangle",
+              "image": "triangle-control.svg"
+            },
+            {
+              "id": "square",
+              "label": "Square",
+              "image": "square-control.svg"
+            },
+            {
+              "id": "arch",
+              "label": "Arch",
+              "image": "arch-control.svg"
+            }
+          ],
+          "answer": [
+            "arch"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "arch-cove",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stepping-shapes",
+      "narrative": "Three broad stepping stones cross a little ribbon of water. Their pictures go circle, triangle, square from left to right. “My trail remembers an order,” says the map. Imani follows the pictured row with her eyes. Copying it will lead them safely to the far bank in the story.",
+      "alt": "Imani and the friendly talking map at the three stepping shapes. Three stepping stones carry a circle, triangle and square in a visible left-to-right row. A large separate card shows circle, triangle, square from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "stepping-shapes.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "stepping-shapes-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "stepping-shapes-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "stepping-shapes-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "stepping-shapes-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "stepping-shapes-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "stepping-shapes-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "stepping-shapes-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-stepping-shapes",
+        "physicalPrompt": "Optional: with your adult, trace circle, triangle, square in the air while seated. You can also point at those three pictures on screen.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the pictured trail from left to right. Touch a shape for each picture, then check your answer.",
+          "image": "stepping-shapes-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "circle",
+              "label": "Circle",
+              "image": "circle-control.svg"
+            },
+            {
+              "id": "triangle",
+              "label": "Triangle",
+              "image": "triangle-control.svg"
+            },
+            {
+              "id": "square",
+              "label": "Square",
+              "image": "square-control.svg"
+            },
+            {
+              "id": "arch",
+              "label": "Arch",
+              "image": "arch-control.svg"
+            }
+          ],
+          "answer": [
+            "circle",
+            "triangle",
+            "square"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "stepping-shapes",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "homeward-trail",
+      "narrative": "At the far bank, four trail markers lead toward a warm coral building. Square, circle, square, circle: the same little pair repeats. “That is my homeward trail!” says the map. Imani copies the whole visible pattern. With every shape in its place, the library is just ahead.",
+      "alt": "Imani and the friendly talking map at the repeating homeward trail. Four trail markers alternate a teal square and coral circle toward the library. A large separate card shows square, circle, square, circle from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "homeward-trail.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "homeward-trail-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "homeward-trail-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "homeward-trail-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "homeward-trail-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "homeward-trail-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "homeward-trail-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "homeward-trail-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-homeward-trail",
+        "physicalPrompt": "Optional: with your adult, point to square, circle, square, circle on the screen while seated. You may trace the repeating pair in the air instead.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay safely seated together; no materials are needed. Point only at something already within view. Use the pictured screen activity or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the pictured trail from left to right. Touch a shape for each picture, then check your answer.",
+          "image": "homeward-trail-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "circle",
+              "label": "Circle",
+              "image": "circle-control.svg"
+            },
+            {
+              "id": "triangle",
+              "label": "Triangle",
+              "image": "triangle-control.svg"
+            },
+            {
+              "id": "square",
+              "label": "Square",
+              "image": "square-control.svg"
+            },
+            {
+              "id": "arch",
+              "label": "Arch",
+              "image": "arch-control.svg"
+            }
+          ],
+          "answer": [
+            "square",
+            "circle",
+            "square",
+            "circle"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "homeward-trail",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "island-library",
+      "narrative": "Beyond the patterned trail stands the island library. Its roof has three sides, its windows have four, and its door curves like the cove. “Home!” says the map. Imani places it on a welcoming shelf. She has not needed to carry any shapes away: looking closely has helped a lost friend find its place.",
+      "alt": "Imani and the talking map reach the island library, a coral building with a triangular roof and open teal door.",
+      "image": "island-library.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "island-library-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "island-library-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "island-library-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "island-library-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "island-library-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              905,
+              146
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "island-library-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "flap",
+            "parameters": {
+              "angle": 8
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "the-talking-map": {
+          "instruction": "Read the opening together. Pause for your child to point at the traveller and imagine the journey.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "the-talking-map.svg",
+              "label": "Meet the traveller at the start."
+            },
+            {
+              "action": "point",
+              "image": "round-lagoon.svg",
+              "label": "The first clue starts a journey."
+            }
+          ]
+        },
+        "round-lagoon": {
+          "instruction": "Read the map’s clue. Trace its smooth edge together, then invite your child to choose the same shape.",
+          "feedback": {
+            "complete": "The circle matches. The map remembers the path toward the rocky pass.",
+            "retry": "Look for a smooth round edge with no corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "round-lagoon-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "circle-control.svg",
+              "label": "Touch the circle picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "round-lagoon-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "round-lagoon-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "triangle-pass": {
+          "instruction": "Follow the three sides with a finger in the air. How does this shape differ from the round lagoon?",
+          "feedback": {
+            "complete": "The triangle matches. Through the pass, Imani can see a gate.",
+            "retry": "Look for three straight sides meeting at three corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "triangle-pass-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "triangle-control.svg",
+              "label": "Touch the triangle picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "triangle-pass-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "triangle-pass-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "square-gate": {
+          "instruction": "Count the four corners together. Invite your child to compare the square with the triangle before choosing.",
+          "feedback": {
+            "complete": "The square matches. The gate opens onto a path beside the sea.",
+            "retry": "Look for four equal straight sides and four corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "square-gate-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "square-control.svg",
+              "label": "Touch the square picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "square-gate-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "square-gate-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "arch-cove": {
+          "instruction": "Compare the curved top with the square’s straight top. Invite your child to describe or trace the difference.",
+          "feedback": {
+            "complete": "The arch matches. Imani and the map reach the stepping stones.",
+            "retry": "Look for a curved top above two straight sides."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "arch-cove-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "arch-control.svg",
+              "label": "Touch the arch picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "arch-cove-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "arch-cove-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "stepping-shapes": {
+          "instruction": "Point along the row together from left to right. Invite your child to name, trace or point to each next shape.",
+          "feedback": {
+            "complete": "The three shapes are in order. The map can see the library’s roof.",
+            "retry": "Start on the left. Circle comes first, then triangle, then square."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "stepping-shapes-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "circle-control.svg",
+              "label": "Touch the circle picture first."
+            },
+            {
+              "action": "point",
+              "image": "stepping-shapes-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "stepping-shapes-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "homeward-trail": {
+          "instruction": "Notice the little pair that repeats. Show the first square and circle, then let your child lead through the second pair.",
+          "feedback": {
+            "complete": "The repeating trail is complete. The library door is waiting.",
+            "retry": "Look at the two shapes that repeat: square, circle, then square, circle."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "homeward-trail-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "square-control.svg",
+              "label": "Touch the square picture first."
+            },
+            {
+              "action": "point",
+              "image": "homeward-trail-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "homeward-trail-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "island-library": {
+          "instruction": "Read the ending together. Invite your child to remember a clue that helped the traveller.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "island-library.svg",
+              "label": "Look at the traveller’s final destination."
+            },
+            {
+              "action": "point",
+              "image": "homeward-trail.svg",
+              "label": "The last clue helped complete the journey."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "Where did the talking map belong?",
+          "answer": "In the island library.",
+          "sceneId": "island-library"
+        },
+        {
+          "type": "literal",
+          "question": "Which shape had no corners at the lagoon?",
+          "answer": "The circle had no corners.",
+          "sceneId": "round-lagoon"
+        },
+        {
+          "type": "feeling",
+          "question": "How might the map feel when it sees the library?",
+          "answer": "It might feel relieved, happy or safe. Another feeling is welcome too.",
+          "sceneId": "island-library"
+        },
+        {
+          "type": "personal",
+          "question": "Which shape would you put on a map of a place you like?",
+          "answer": "Choose any shape and tell or show what it could mean.",
+          "sceneId": "island-library"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "the-talking-map": {
+          "instruction": "Look at the traveller and the first destination.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "the-talking-map.svg",
+              "label": "Meet the traveller at the start."
+            },
+            {
+              "action": "point",
+              "image": "round-lagoon.svg",
+              "label": "The first clue starts a journey."
+            }
+          ]
+        },
+        "round-lagoon": {
+          "instruction": "Choose the circle that matches the lagoon clue.",
+          "feedback": {
+            "complete": "The circle matches. The map remembers the path toward the rocky pass.",
+            "retry": "Look for a smooth round edge with no corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "round-lagoon-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "circle-control.svg",
+              "label": "Touch the circle picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "round-lagoon-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            }
+          ]
+        },
+        "triangle-pass": {
+          "instruction": "Choose the triangle that matches the pass clue.",
+          "feedback": {
+            "complete": "The triangle matches. Through the pass, Imani can see a gate.",
+            "retry": "Look for three straight sides meeting at three corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "triangle-pass-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "triangle-control.svg",
+              "label": "Touch the triangle picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "triangle-pass-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            }
+          ]
+        },
+        "square-gate": {
+          "instruction": "Choose the square that matches the gate clue.",
+          "feedback": {
+            "complete": "The square matches. The gate opens onto a path beside the sea.",
+            "retry": "Look for four equal straight sides and four corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "square-gate-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "square-control.svg",
+              "label": "Touch the square picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "square-gate-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            }
+          ]
+        },
+        "arch-cove": {
+          "instruction": "Choose the arch that matches the cove clue.",
+          "feedback": {
+            "complete": "The arch matches. Imani and the map reach the stepping stones.",
+            "retry": "Look for a curved top above two straight sides."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "arch-cove-clue.svg",
+              "label": "Look at the shape of the clue."
+            },
+            {
+              "action": "select",
+              "image": "arch-control.svg",
+              "label": "Touch the arch picture that matches."
+            },
+            {
+              "action": "point",
+              "image": "arch-cove-demo.svg",
+              "label": "The same shape makes a match. Then check your answer."
+            }
+          ]
+        },
+        "stepping-shapes": {
+          "instruction": "Copy circle, triangle, square from left to right.",
+          "feedback": {
+            "complete": "The three shapes are in order. The map can see the library’s roof.",
+            "retry": "Start on the left. Circle comes first, then triangle, then square."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "stepping-shapes-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "circle-control.svg",
+              "label": "Touch the circle picture first."
+            },
+            {
+              "action": "point",
+              "image": "stepping-shapes-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "homeward-trail": {
+          "instruction": "Copy square, circle, square, circle from left to right.",
+          "feedback": {
+            "complete": "The repeating trail is complete. The library door is waiting.",
+            "retry": "Look at the two shapes that repeat: square, circle, then square, circle."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "homeward-trail-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "square-control.svg",
+              "label": "Touch the square picture first."
+            },
+            {
+              "action": "point",
+              "image": "homeward-trail-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "island-library": {
+          "instruction": "Look at the final destination and remember your favourite clue.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "island-library.svg",
+              "label": "Look at the traveller’s final destination."
+            },
+            {
+              "action": "point",
+              "image": "homeward-trail.svg",
+              "label": "The last clue helped complete the journey."
+            }
+          ]
+        }
+      },
+      "reflection": "Which shape would you like to notice again? You can show it with a picture."
+    }
+  },
+  "endings": {
+    "sceneId": "island-library",
+    "text": "Beyond the patterned trail stands the island library. Its roof has three sides, its windows have four, and its door curves like the cove. “Home!” says the map. Imani places it on a welcoming shelf. She has not needed to carry any shapes away: looking closely has helped a lost friend find its place.",
+    "variants": [],
+    "recap": []
+  },
+  "assets": [
+    {
+      "id": "circle-control",
+      "file": "circle-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 253,
+      "sha256": "5ed640a26563beed509691ef88cb4b18ca9e05b3ccb4d7a5b6a0745feea1526a"
+    },
+    {
+      "id": "triangle-control",
+      "file": "triangle-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 334,
+      "sha256": "a0f7e8f02a47a0c49716f356f31de632720edfa3d8c85cf6411a173c7880c6ad"
+    },
+    {
+      "id": "square-control",
+      "file": "square-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 276,
+      "sha256": "dee18bb550b6f14ad0724681634cfbef146101bbe512b8fe8239a0ea725a192d"
+    },
+    {
+      "id": "arch-control",
+      "file": "arch-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 354,
+      "sha256": "776c0046a060e7f1d974e8185c04dae7faedd44ffc08151019cdd0f9b5ee751e"
+    },
+    {
+      "id": "the-talking-map-background",
+      "file": "the-talking-map-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "db9a9a15bc38326a4c941612fe9bbe212a0768fdb869532f401abc9facb037e7"
+    },
+    {
+      "id": "the-talking-map-landmark",
+      "file": "the-talking-map-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 953,
+      "sha256": "83618b8427e40d7f1612887b86ad81caaeaeb6b688f9b062a8e352be6ecde017"
+    },
+    {
+      "id": "the-talking-map-character",
+      "file": "the-talking-map-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1775,
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873"
+    },
+    {
+      "id": "the-talking-map-wind",
+      "file": "the-talking-map-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "the-talking-map-foreground",
+      "file": "the-talking-map-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 250,
+      "sha256": "e367f13dc92723fe0ef25a79d7bc40fd8cd4d8ca47434f7e8828aeb94c8bb976"
+    },
+    {
+      "id": "the-talking-map",
+      "file": "the-talking-map.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4480,
+      "sha256": "dee2a1f14a5056bb92929e07156061a28940162f187de8e479c1233596273714"
+    },
+    {
+      "id": "round-lagoon-background",
+      "file": "round-lagoon-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "0fe66e34a5bf2a49f3361297cbb3070247ebbf5114af9b3694080ab58331d30c"
+    },
+    {
+      "id": "round-lagoon-landmark",
+      "file": "round-lagoon-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 309,
+      "sha256": "42839a512427dca06838a71a6c63508f722da3d7de023771eb911b9692f8c33d"
+    },
+    {
+      "id": "round-lagoon-character",
+      "file": "round-lagoon-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1774,
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186"
+    },
+    {
+      "id": "round-lagoon-companion",
+      "file": "round-lagoon-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006"
+    },
+    {
+      "id": "round-lagoon-wind",
+      "file": "round-lagoon-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "round-lagoon-foreground",
+      "file": "round-lagoon-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 628,
+      "sha256": "e5e5b5cb57e7728f9e57aeab7e57b01f52e5443013e50ad51b23f2b6f9adaca7"
+    },
+    {
+      "id": "round-lagoon-completed",
+      "file": "round-lagoon-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 318,
+      "sha256": "b72c486a9cb691ea543ab7df30d279ef93e21543a88654f87425836fd5c1f6b4"
+    },
+    {
+      "id": "round-lagoon",
+      "file": "round-lagoon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5072,
+      "sha256": "6ad488ea023ecd1d61647d599d3b34e51fdbf8ad843e9912e67c64b7587a4a95"
+    },
+    {
+      "id": "round-lagoon-clue",
+      "file": "round-lagoon-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 423,
+      "sha256": "88f0a875a6a89e24df5978c478dea80266a45c7343f11e7fa053b4e8ff0196ce"
+    },
+    {
+      "id": "round-lagoon-demo",
+      "file": "round-lagoon-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 423,
+      "sha256": "0a0ea447c82df6ffe84b0e8f8435b41ab54c5e876836e8a05c28af00100ff08e"
+    },
+    {
+      "id": "triangle-pass-background",
+      "file": "triangle-pass-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "37733f2087a255b9f7b6003158ed4cab7964fdf8a148a290412cc7cf1d76e899"
+    },
+    {
+      "id": "triangle-pass-landmark",
+      "file": "triangle-pass-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 536,
+      "sha256": "7cdf49437531a60cebae567e5b1148088d03bc8a49654da218f5aa59388366d3"
+    },
+    {
+      "id": "triangle-pass-character",
+      "file": "triangle-pass-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1775,
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873"
+    },
+    {
+      "id": "triangle-pass-companion",
+      "file": "triangle-pass-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006"
+    },
+    {
+      "id": "triangle-pass-wind",
+      "file": "triangle-pass-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "triangle-pass-foreground",
+      "file": "triangle-pass-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 711,
+      "sha256": "ab280b3fd5d72b18b270c35b46b267d0caefdc189204b081371262e11c01c201"
+    },
+    {
+      "id": "triangle-pass-completed",
+      "file": "triangle-pass-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 399,
+      "sha256": "e28fa04e79e0af3e4d39e0f805eefdeedd7761b1605bd80d89c959643cfee34c"
+    },
+    {
+      "id": "triangle-pass",
+      "file": "triangle-pass.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5383,
+      "sha256": "1ccb9f826cb7dae907ecc4dad6fd4485e212d88b082e9edfabac11c118807e40"
+    },
+    {
+      "id": "triangle-pass-clue",
+      "file": "triangle-pass-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 506,
+      "sha256": "da2a6aa432cffd773679a76c74bbd5e5a78d98534d6cd16148bf14122cd4efa2"
+    },
+    {
+      "id": "triangle-pass-demo",
+      "file": "triangle-pass-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 506,
+      "sha256": "0d625990c300fcac82234ab749e0ea35d9a7a53c833d55245588ab9db437d39f"
+    },
+    {
+      "id": "square-gate-background",
+      "file": "square-gate-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "578c813d2d01dafb367e964e463fb47a83d3e9b00a65d4f9748a434a53d51db3"
+    },
+    {
+      "id": "square-gate-landmark",
+      "file": "square-gate-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 353,
+      "sha256": "2b5e9b3c25e72be1f919e0f51377e4af28ab7a72b36b15e1ec3d8002f0ad6b23"
+    },
+    {
+      "id": "square-gate-character",
+      "file": "square-gate-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1774,
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186"
+    },
+    {
+      "id": "square-gate-companion",
+      "file": "square-gate-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006"
+    },
+    {
+      "id": "square-gate-wind",
+      "file": "square-gate-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "square-gate-foreground",
+      "file": "square-gate-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 651,
+      "sha256": "970e22ec7aeea3432e2d079d9efb5fea92f04409d2f3b0186506a926b126d63b"
+    },
+    {
+      "id": "square-gate-completed",
+      "file": "square-gate-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 341,
+      "sha256": "ffa5cf8bcd0e91bcc5080258a2a7b061c1d8bb9f0028349b3979fcfb421c1225"
+    },
+    {
+      "id": "square-gate",
+      "file": "square-gate.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5139,
+      "sha256": "ed8b6026d0df1a809691c930576a97ab2c19d7fb8ef8f1a98a3e58b0c44b20e4"
+    },
+    {
+      "id": "square-gate-clue",
+      "file": "square-gate-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 446,
+      "sha256": "9e142e669269587df107f6d085d2dbc51f6bb3f39b57ca3bb657e667a4714d2d"
+    },
+    {
+      "id": "square-gate-demo",
+      "file": "square-gate-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 446,
+      "sha256": "371d2853b0c47003274e545b08c02452bf8e1d99379823c3106aafd34c9ecce4"
+    },
+    {
+      "id": "arch-cove-background",
+      "file": "arch-cove-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "f6da3ce58a1bd8666bb31ac9a8145f462902e283590ecf2970e7b860c7cc31df"
+    },
+    {
+      "id": "arch-cove-landmark",
+      "file": "arch-cove-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 495,
+      "sha256": "97fddb45a4760e21f216147a510eaa508d0be47cc011952e99ea0b69b12a4fb3"
+    },
+    {
+      "id": "arch-cove-character",
+      "file": "arch-cove-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1775,
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873"
+    },
+    {
+      "id": "arch-cove-companion",
+      "file": "arch-cove-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006"
+    },
+    {
+      "id": "arch-cove-wind",
+      "file": "arch-cove-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "arch-cove-foreground",
+      "file": "arch-cove-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 727,
+      "sha256": "7efb3718f4f9375380bd7486365482b7d047869f1ebdb2e1820aa5eb88ad31dc"
+    },
+    {
+      "id": "arch-cove-completed",
+      "file": "arch-cove-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 419,
+      "sha256": "962c2fe83e0ec819481bf8b0d917bce7b3bb057bdeba2f6d63ea58ff5c32e74c"
+    },
+    {
+      "id": "arch-cove",
+      "file": "arch-cove.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5358,
+      "sha256": "ec10968e94ffe137cabf2743ca64c4d811b4e7dea67f32d3bd409ad71965e3b1"
+    },
+    {
+      "id": "arch-cove-clue",
+      "file": "arch-cove-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 522,
+      "sha256": "83a360d4b9d46aba5cff0966ff002dc1f33b12d09a9d848415487ef6aee03262"
+    },
+    {
+      "id": "arch-cove-demo",
+      "file": "arch-cove-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 522,
+      "sha256": "470d0ee3e3ed435b99086bed905f21e72ed763f8eac7e81338d883010fd4e7f9"
+    },
+    {
+      "id": "stepping-shapes-background",
+      "file": "stepping-shapes-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "c7a7a09a29d249bd6a095a0bd78f7fa40e0abcf001d5533487a56626a63e837e"
+    },
+    {
+      "id": "stepping-shapes-landmark",
+      "file": "stepping-shapes-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 658,
+      "sha256": "040b48df0cb4c3fa50ed20db7a80af1952fd08bce2bfd54931f28171b8d0f25b"
+    },
+    {
+      "id": "stepping-shapes-character",
+      "file": "stepping-shapes-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1774,
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186"
+    },
+    {
+      "id": "stepping-shapes-companion",
+      "file": "stepping-shapes-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006"
+    },
+    {
+      "id": "stepping-shapes-wind",
+      "file": "stepping-shapes-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "stepping-shapes-foreground",
+      "file": "stepping-shapes-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 988,
+      "sha256": "cd4c16195459a9cd76372b1aa239e6431b4310da8da14d2c9fa95585b9dd1f8a"
+    },
+    {
+      "id": "stepping-shapes-completed",
+      "file": "stepping-shapes-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 341,
+      "sha256": "ffa5cf8bcd0e91bcc5080258a2a7b061c1d8bb9f0028349b3979fcfb421c1225"
+    },
+    {
+      "id": "stepping-shapes",
+      "file": "stepping-shapes.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5781,
+      "sha256": "d23e9f7f6da0e593db3fcd01020c7c8bf92cd04dd10de26e6bdb7ecb6e6dad33"
+    },
+    {
+      "id": "stepping-shapes-clue",
+      "file": "stepping-shapes-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 781,
+      "sha256": "ba384b13c8883e9dbe5dd89e608d2f0d548c3ff6da7eee34605622a1b280cda9"
+    },
+    {
+      "id": "stepping-shapes-demo",
+      "file": "stepping-shapes-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 781,
+      "sha256": "7aa247f13968c4958ef1e8c988ae81d8c624051c9944f1ab76cd4ece0c9f1286"
+    },
+    {
+      "id": "homeward-trail-background",
+      "file": "homeward-trail-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "8157cc3fe274303f4218f4223e322145c8831c7cea5d072a4abb34d5599b309c"
+    },
+    {
+      "id": "homeward-trail-landmark",
+      "file": "homeward-trail-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 694,
+      "sha256": "d6e967a7f7ee63d7a8ca1913160dcccaa173ac77b06d4f2d234edd24e5a1b8fa"
+    },
+    {
+      "id": "homeward-trail-character",
+      "file": "homeward-trail-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1775,
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873"
+    },
+    {
+      "id": "homeward-trail-companion",
+      "file": "homeward-trail-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006"
+    },
+    {
+      "id": "homeward-trail-wind",
+      "file": "homeward-trail-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "homeward-trail-foreground",
+      "file": "homeward-trail-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1062,
+      "sha256": "565954bc73c549eb1ee2a85d4747bb8d57707f5b485d08e50a71600fe4a266ae"
+    },
+    {
+      "id": "homeward-trail-completed",
+      "file": "homeward-trail-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 318,
+      "sha256": "b72c486a9cb691ea543ab7df30d279ef93e21543a88654f87425836fd5c1f6b4"
+    },
+    {
+      "id": "homeward-trail",
+      "file": "homeward-trail.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5892,
+      "sha256": "11a9e5945376b393d977a0d791897d8a562bfe22534b90969e48f69b6e8a21a5"
+    },
+    {
+      "id": "homeward-trail-clue",
+      "file": "homeward-trail-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 854,
+      "sha256": "f7f2d40c648c0bb3734589c13842196bd3300818683728bdb16b7a2a3b718b8d"
+    },
+    {
+      "id": "homeward-trail-demo",
+      "file": "homeward-trail-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 854,
+      "sha256": "8d118420540cb6e6315db03f666217308edf970b1a1ea41055e409f20a910672"
+    },
+    {
+      "id": "island-library-background",
+      "file": "island-library-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1577,
+      "sha256": "14a491969506a31d906b9963fe7ee61c9253013575497ea3d61345011ed4d11b"
+    },
+    {
+      "id": "island-library-landmark",
+      "file": "island-library-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 877,
+      "sha256": "8a94143c2b43ad44a8073579bf3cf5651c9fdb7a5d7647d7aec9f48162874de8"
+    },
+    {
+      "id": "island-library-character",
+      "file": "island-library-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1774,
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186"
+    },
+    {
+      "id": "island-library-companion",
+      "file": "island-library-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 954,
+      "sha256": "ad09ff4e2ffb752eb650c178926203c69b77769993715f96e5e5ddd18268c000"
+    },
+    {
+      "id": "island-library-wind",
+      "file": "island-library-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 305,
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a"
+    },
+    {
+      "id": "island-library-foreground",
+      "file": "island-library-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 250,
+      "sha256": "e367f13dc92723fe0ef25a79d7bc40fd8cd4d8ca47434f7e8828aeb94c8bb976"
+    },
+    {
+      "id": "island-library",
+      "file": "island-library.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5262,
+      "sha256": "2774b1372a5c51476b242d94739694c53ae3511e2dad666961a89c42eb40bb09"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4480,
+      "sha256": "dee2a1f14a5056bb92929e07156061a28940162f187de8e479c1233596273714"
+    }
+  ]
+}

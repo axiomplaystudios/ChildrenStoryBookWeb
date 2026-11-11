@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "id": "imani-and-the-lost-shape-map",
+  "version": "v1",
+  "pairFile": "pair.json",
+  "files": [
+    {
+      "file": "pair.json",
+      "sha256": "c731d87472304f0e59e216503598b1200c1b6390d0d175a479d1866a5ff2b276",
+      "bytes": 65115,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "source.json",
+      "sha256": "9b95fc3d53841988db23c1a29c4b91a47fa1994d2ecc0d1b2660c929d9efa3c4",
+      "bytes": 438,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "visual-review.json",
+      "sha256": "39b9321cbe8491f00e001b16925e0ef8efcb5d8e2e05bc49d56210bb9fd68b1a",
+      "bytes": 7139,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "circle-control.svg",
+      "sha256": "5ed640a26563beed509691ef88cb4b18ca9e05b3ccb4d7a5b6a0745feea1526a",
+      "bytes": 253,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-control.svg",
+      "sha256": "a0f7e8f02a47a0c49716f356f31de632720edfa3d8c85cf6411a173c7880c6ad",
+      "bytes": 334,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-control.svg",
+      "sha256": "dee18bb550b6f14ad0724681634cfbef146101bbe512b8fe8239a0ea725a192d",
+      "bytes": 276,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-control.svg",
+      "sha256": "776c0046a060e7f1d974e8185c04dae7faedd44ffc08151019cdd0f9b5ee751e",
+      "bytes": 354,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "the-talking-map-background.svg",
+      "sha256": "db9a9a15bc38326a4c941612fe9bbe212a0768fdb869532f401abc9facb037e7",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "the-talking-map-landmark.svg",
+      "sha256": "83618b8427e40d7f1612887b86ad81caaeaeb6b688f9b062a8e352be6ecde017",
+      "bytes": 953,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "the-talking-map-character.svg",
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873",
+      "bytes": 1775,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "the-talking-map-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "the-talking-map-foreground.svg",
+      "sha256": "e367f13dc92723fe0ef25a79d7bc40fd8cd4d8ca47434f7e8828aeb94c8bb976",
+      "bytes": 250,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "the-talking-map.svg",
+      "sha256": "dee2a1f14a5056bb92929e07156061a28940162f187de8e479c1233596273714",
+      "bytes": 4480,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-background.svg",
+      "sha256": "0fe66e34a5bf2a49f3361297cbb3070247ebbf5114af9b3694080ab58331d30c",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-landmark.svg",
+      "sha256": "42839a512427dca06838a71a6c63508f722da3d7de023771eb911b9692f8c33d",
+      "bytes": 309,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-character.svg",
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186",
+      "bytes": 1774,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-companion.svg",
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-foreground.svg",
+      "sha256": "e5e5b5cb57e7728f9e57aeab7e57b01f52e5443013e50ad51b23f2b6f9adaca7",
+      "bytes": 628,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-completed.svg",
+      "sha256": "b72c486a9cb691ea543ab7df30d279ef93e21543a88654f87425836fd5c1f6b4",
+      "bytes": 318,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon.svg",
+      "sha256": "6ad488ea023ecd1d61647d599d3b34e51fdbf8ad843e9912e67c64b7587a4a95",
+      "bytes": 5072,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-clue.svg",
+      "sha256": "88f0a875a6a89e24df5978c478dea80266a45c7343f11e7fa053b4e8ff0196ce",
+      "bytes": 423,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "round-lagoon-demo.svg",
+      "sha256": "0a0ea447c82df6ffe84b0e8f8435b41ab54c5e876836e8a05c28af00100ff08e",
+      "bytes": 423,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-background.svg",
+      "sha256": "37733f2087a255b9f7b6003158ed4cab7964fdf8a148a290412cc7cf1d76e899",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-landmark.svg",
+      "sha256": "7cdf49437531a60cebae567e5b1148088d03bc8a49654da218f5aa59388366d3",
+      "bytes": 536,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-character.svg",
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873",
+      "bytes": 1775,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-companion.svg",
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-foreground.svg",
+      "sha256": "ab280b3fd5d72b18b270c35b46b267d0caefdc189204b081371262e11c01c201",
+      "bytes": 711,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-completed.svg",
+      "sha256": "e28fa04e79e0af3e4d39e0f805eefdeedd7761b1605bd80d89c959643cfee34c",
+      "bytes": 399,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass.svg",
+      "sha256": "1ccb9f826cb7dae907ecc4dad6fd4485e212d88b082e9edfabac11c118807e40",
+      "bytes": 5383,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-clue.svg",
+      "sha256": "da2a6aa432cffd773679a76c74bbd5e5a78d98534d6cd16148bf14122cd4efa2",
+      "bytes": 506,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-pass-demo.svg",
+      "sha256": "0d625990c300fcac82234ab749e0ea35d9a7a53c833d55245588ab9db437d39f",
+      "bytes": 506,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-background.svg",
+      "sha256": "578c813d2d01dafb367e964e463fb47a83d3e9b00a65d4f9748a434a53d51db3",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-landmark.svg",
+      "sha256": "2b5e9b3c25e72be1f919e0f51377e4af28ab7a72b36b15e1ec3d8002f0ad6b23",
+      "bytes": 353,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-character.svg",
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186",
+      "bytes": 1774,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-companion.svg",
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-foreground.svg",
+      "sha256": "970e22ec7aeea3432e2d079d9efb5fea92f04409d2f3b0186506a926b126d63b",
+      "bytes": 651,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-completed.svg",
+      "sha256": "ffa5cf8bcd0e91bcc5080258a2a7b061c1d8bb9f0028349b3979fcfb421c1225",
+      "bytes": 341,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate.svg",
+      "sha256": "ed8b6026d0df1a809691c930576a97ab2c19d7fb8ef8f1a98a3e58b0c44b20e4",
+      "bytes": 5139,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-clue.svg",
+      "sha256": "9e142e669269587df107f6d085d2dbc51f6bb3f39b57ca3bb657e667a4714d2d",
+      "bytes": 446,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-gate-demo.svg",
+      "sha256": "371d2853b0c47003274e545b08c02452bf8e1d99379823c3106aafd34c9ecce4",
+      "bytes": 446,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-background.svg",
+      "sha256": "f6da3ce58a1bd8666bb31ac9a8145f462902e283590ecf2970e7b860c7cc31df",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-landmark.svg",
+      "sha256": "97fddb45a4760e21f216147a510eaa508d0be47cc011952e99ea0b69b12a4fb3",
+      "bytes": 495,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-character.svg",
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873",
+      "bytes": 1775,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-companion.svg",
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-foreground.svg",
+      "sha256": "7efb3718f4f9375380bd7486365482b7d047869f1ebdb2e1820aa5eb88ad31dc",
+      "bytes": 727,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-completed.svg",
+      "sha256": "962c2fe83e0ec819481bf8b0d917bce7b3bb057bdeba2f6d63ea58ff5c32e74c",
+      "bytes": 419,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove.svg",
+      "sha256": "ec10968e94ffe137cabf2743ca64c4d811b4e7dea67f32d3bd409ad71965e3b1",
+      "bytes": 5358,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-clue.svg",
+      "sha256": "83a360d4b9d46aba5cff0966ff002dc1f33b12d09a9d848415487ef6aee03262",
+      "bytes": 522,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "arch-cove-demo.svg",
+      "sha256": "470d0ee3e3ed435b99086bed905f21e72ed763f8eac7e81338d883010fd4e7f9",
+      "bytes": 522,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-background.svg",
+      "sha256": "c7a7a09a29d249bd6a095a0bd78f7fa40e0abcf001d5533487a56626a63e837e",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-landmark.svg",
+      "sha256": "040b48df0cb4c3fa50ed20db7a80af1952fd08bce2bfd54931f28171b8d0f25b",
+      "bytes": 658,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-character.svg",
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186",
+      "bytes": 1774,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-companion.svg",
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-foreground.svg",
+      "sha256": "cd4c16195459a9cd76372b1aa239e6431b4310da8da14d2c9fa95585b9dd1f8a",
+      "bytes": 988,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-completed.svg",
+      "sha256": "ffa5cf8bcd0e91bcc5080258a2a7b061c1d8bb9f0028349b3979fcfb421c1225",
+      "bytes": 341,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes.svg",
+      "sha256": "d23e9f7f6da0e593db3fcd01020c7c8bf92cd04dd10de26e6bdb7ecb6e6dad33",
+      "bytes": 5781,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-clue.svg",
+      "sha256": "ba384b13c8883e9dbe5dd89e608d2f0d548c3ff6da7eee34605622a1b280cda9",
+      "bytes": 781,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "stepping-shapes-demo.svg",
+      "sha256": "7aa247f13968c4958ef1e8c988ae81d8c624051c9944f1ab76cd4ece0c9f1286",
+      "bytes": 781,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-background.svg",
+      "sha256": "8157cc3fe274303f4218f4223e322145c8831c7cea5d072a4abb34d5599b309c",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-landmark.svg",
+      "sha256": "d6e967a7f7ee63d7a8ca1913160dcccaa173ac77b06d4f2d234edd24e5a1b8fa",
+      "bytes": 694,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-character.svg",
+      "sha256": "8e75343b65166f0d259e2b48829d544973b6c86988062f486f77f5469d442873",
+      "bytes": 1775,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-companion.svg",
+      "sha256": "718ee22359dc95020ff3391274a0c5881ef7d1091748ace23cd7cdea48003006",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-foreground.svg",
+      "sha256": "565954bc73c549eb1ee2a85d4747bb8d57707f5b485d08e50a71600fe4a266ae",
+      "bytes": 1062,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-completed.svg",
+      "sha256": "b72c486a9cb691ea543ab7df30d279ef93e21543a88654f87425836fd5c1f6b4",
+      "bytes": 318,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail.svg",
+      "sha256": "11a9e5945376b393d977a0d791897d8a562bfe22534b90969e48f69b6e8a21a5",
+      "bytes": 5892,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-clue.svg",
+      "sha256": "f7f2d40c648c0bb3734589c13842196bd3300818683728bdb16b7a2a3b718b8d",
+      "bytes": 854,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "homeward-trail-demo.svg",
+      "sha256": "8d118420540cb6e6315db03f666217308edf970b1a1ea41055e409f20a910672",
+      "bytes": 854,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library-background.svg",
+      "sha256": "14a491969506a31d906b9963fe7ee61c9253013575497ea3d61345011ed4d11b",
+      "bytes": 1577,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library-landmark.svg",
+      "sha256": "8a94143c2b43ad44a8073579bf3cf5651c9fdb7a5d7647d7aec9f48162874de8",
+      "bytes": 877,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library-character.svg",
+      "sha256": "fda476cc36f8ae78ea621794f55bc9a7ce829e29f5d97e52b16af70ae7d6a186",
+      "bytes": 1774,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library-companion.svg",
+      "sha256": "ad09ff4e2ffb752eb650c178926203c69b77769993715f96e5e5ddd18268c000",
+      "bytes": 954,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library-wind.svg",
+      "sha256": "04a92f573e68a2f1b96ff83f8667a9628702478fc501a11dbb3113a3206b2a9a",
+      "bytes": 305,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library-foreground.svg",
+      "sha256": "e367f13dc92723fe0ef25a79d7bc40fd8cd4d8ca47434f7e8828aeb94c8bb976",
+      "bytes": 250,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "island-library.svg",
+      "sha256": "2774b1372a5c51476b242d94739694c53ae3511e2dad666961a89c42eb40bb09",
+      "bytes": 5262,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "cover.svg",
+      "sha256": "dee2a1f14a5056bb92929e07156061a28940162f187de8e479c1233596273714",
+      "bytes": 4480,
+      "mediaType": "image/svg+xml"
+    }
+  ]
+}

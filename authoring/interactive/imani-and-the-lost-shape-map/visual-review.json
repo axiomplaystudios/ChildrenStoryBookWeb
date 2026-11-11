@@ -1,0 +1,375 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "circle-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "the-talking-map-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "the-talking-map-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "the-talking-map-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "the-talking-map-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "the-talking-map-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "the-talking-map",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "round-lagoon-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-pass-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-gate-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "arch-cove-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "stepping-shapes-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-trail-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "island-library",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "the-talking-map",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "round-lagoon",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "triangle-pass",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "square-gate",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "arch-cove",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "stepping-shapes",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "homeward-trail",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "island-library",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}
