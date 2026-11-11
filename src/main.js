@@ -55,7 +55,7 @@ function closeInteractive() {
   interactiveRoot.hidden = true; interactiveRoot.replaceChildren(); interactiveActive = false;
 }
 async function openInteractive({summary,edition,store,version}) {
-  const token=++opening;
+  const token=++opening; interactiveActive=true;
   try {
     const bundle=await store.open(summary.id,version);
     if(token!==opening){bundle.dispose();return;}
@@ -72,6 +72,7 @@ async function openInteractive({summary,edition,store,version}) {
     } else begin();
   } catch {
     if(token!==opening)return;
+    interactiveActive=false;
     const message=el('p','interactive-open-error','For your adult: the saved story could not open. Download it again, then retry.');message.setAttribute('role','alert');interactiveShelf.element.prepend(message);
   }
 }
@@ -259,8 +260,9 @@ async function load() {
       if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(story.id)) throw Error('Invalid book ID');
       return validateStory(story);
     });
-    showShelf();
+    if (!session && !interactiveActive) showShelf();
   } catch {
+    if (session || interactiveActive) return;
     showShelf(); const error = el('section', 'error-screen'); error.append(el('h2', '', 'The original bookshelf needs a moment.'), el('p', '', 'We couldn’t open the original books. Check your connection, then try again.'), button('Try again', load)); main.append(error);
   }
 }

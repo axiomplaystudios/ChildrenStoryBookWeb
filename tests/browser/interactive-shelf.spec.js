@@ -132,3 +132,12 @@ test('interactive catalog remains available while legacy catalog is still pendin
   await page.goto('/');
   await expect(page.locator('.interactive-card')).toHaveCount(8);
 });
+
+test('late legacy catalog completion preserves an already-open interactive reader',async({page})=>{
+ let release;
+ await page.route('**/books/catalog.json',route=>{release=()=>route.continue();});
+ await page.goto('/');const card=page.locator('.interactive-card').first();await card.getByRole('button',{name:'Download story',exact:true}).click();await expect(card).toContainText('Ready offline');await card.getByRole('button',{name:'Play by Myself',exact:true}).click();
+ const response=page.waitForResponse('**/books/catalog.json');await release();await (await response).finished();
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ await expect(page.locator('.interactive-reader')).toBeVisible();await expect(page.getByRole('button',{name:'One bun, copy 1',exact:true})).toBeVisible();
+});

@@ -354,3 +354,9 @@ test('write-denied storage preserves the latest run across reader exits', async 
     page.getByRole('button', { name: 'Next scene', exact: true }),
   ).toBeEnabled();
 });
+
+test('reduced motion keeps authored visible outcomes opaque despite decorative fade starting poses',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');const card=page.locator('.interactive-card').nth(3);await card.getByRole('button',{name:'Download story',exact:true}).click();await expect(card).toContainText('Ready offline');await card.getByRole('button',{name:'Play by Myself',exact:true}).click();
+ await page.getByRole('button',{name:'One bun, copy 1',exact:true}).click();await page.getByRole('button',{name:'Box for one bun',exact:true}).click();await page.getByRole('button',{name:'Next scene',exact:true}).click();await page.getByRole('button',{name:'Gentle ramp',exact:true}).click();await page.getByRole('button',{name:'Near line',exact:true}).click();await page.getByRole('button',{name:'Test',exact:true}).click();await page.getByRole('button',{name:'Next scene',exact:true}).click();await page.getByRole('button',{name:'Open sky',exact:true}).click();
+ const layer=page.locator('[data-layer="result"]');await expect(layer).toHaveAttribute('opacity','1');await expect(layer).not.toHaveAttribute('transform',/.+/);await expect(layer).not.toHaveCSS('display','none');
+});

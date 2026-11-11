@@ -42,7 +42,8 @@ export async function prepareBundleFixtures({ pairs = 1 } = {}) {
             pair.scenes[0].activity.items[0].quantity = 2;
             pair.scenes[0].activity.targets[0].required = 2;
           }
-          if (index === 2) {
+          if (index === 3) { pair.scenes[2].scene.tracks[0].preset = 'fade-in'; pair.scenes[2].scene.tracks[0].parameters = {}; }
+        if (index === 2) {
             pair.scenes[3].activity.screen.mode = 'sequence';
             pair.scenes[3].activity.screen.answer = [
               'round',

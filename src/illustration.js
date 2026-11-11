@@ -32,6 +32,10 @@ export function createIllustration({ bookId, page, resolveAsset }) {
     render();
   }
   function render() {
+    if (reduced && layeredStill) {
+      for (const { part } of parts.values()) { part.removeAttribute('transform'); part.setAttribute('opacity', '1'); }
+      return;
+    }
     for (const track of scene?.tracks || []) {
       const { part, pivot } = parts.get(track.layer);
       const pose = sampleTrack(track, elapsed);
@@ -79,11 +83,11 @@ export function createIllustration({ bookId, page, resolveAsset }) {
     element, ready,
     // Explicit layer selection opts into the composed still under reduced motion.
     // Legacy books retain their existing static fallback image.
-    setLayerVisibility(ids) {
+    setLayerVisibility(ids = parts.keys()) {
       layeredStill = true;
       const visible = new Set(ids);
       for (const [id, { part }] of parts) part.style.display = visible.has(id) ? '' : 'none';
-      presentation();
+      render(); presentation();
     },
     setSpeed(value) { if ([0.5, 0.75, 1, 1.5, 2].includes(value)) { speed = value; element.dataset.speed = String(speed); } },
     activate: resume, resume,
