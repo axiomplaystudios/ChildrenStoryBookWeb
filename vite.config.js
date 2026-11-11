@@ -12,6 +12,9 @@ export default defineConfig({
     },
     workbox: {
       globPatterns: ['**/*.{js,css,html,svg,png,webp,jpg,json,webmanifest}'],
+      // Catalog summaries and small covers belong to the shell. Immutable
+      // pair versions are installed and verified by the bundle store on demand.
+      globIgnores: ['interactive/*/*/**/*'],
       maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       cleanupOutdatedCaches: true, clientsClaim: true,
       navigateFallback: 'index.html',
