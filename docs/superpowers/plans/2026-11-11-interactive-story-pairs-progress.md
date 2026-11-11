@@ -9,7 +9,7 @@ The user clarified on 2026-11-11: “I will read aloud. No need to complicate th
 
 Audio generation, narration engines, packaged audio, listening/review/start gates and playback controls are removed. Tasks 1 and 5 are superseded, not pending or blocked. The unused validator and its dedicated tests are removed. The audio spike in authoring/interactive/audio-review.md is historical evidence only, with a superseded header; none of its commands or gates govern current work.
 
-**Task 4 is in progress; Tasks 2 and 3 are complete and reviewed.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
+**Task 7 Bakery is in progress; Tasks 2–4 and 6 are complete and reviewed. Tasks1/5 superseded.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
 
 ## Preflight after scope amendment
 | Tasks | Shared contract / consistency | Finding |
@@ -37,10 +37,10 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - [x] Task 1: superseded by user clarification; abandoned tooling removed, not claimed as passed.
 - [x] Task 2: complete, reviewed; commits b3ba037, def05b1.
 - [x] Task 3: complete, reviewed; commit 2a713d5.
-- [ ] Task 4: in progress; /root/task4_bundles, base 2a713d5.
+- [x] Task 4: complete, reviewed; commit56a28fa.
 - [x] Task 5: superseded by user clarification; no narrator implementation needed.
-- [ ] Task 6: pending Tasks 2–4; includes replayable visual guidance.
-- [ ] Task 7: pending Task 6; parent-read Bakery vertical slice.
+- [x] Task 6: complete, reviewed; commits22c9dc5,53301cd,c44e6ac.
+- [ ] Task 7: in progress /root/task7_bakery basec44e6ac; actual art review required.
 - [ ] Task 8: pending working Bakery slice.
 - [ ] Task 9: pending shared content foundations.
 - [ ] Task 10: pending shared content foundations.
@@ -68,3 +68,9 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - Task 3: started (base def05b1); next implementer owns state/progress only.
 - Task 3: complete (commits def05b1..2a713d5, review clean). Reviewer /root/task3_review PASS/APPROVE. 14 focused,129 full unit tests pass. Report task-3-report.md. Runtime contract docs/interactive-story-authoring.md; use dispatch(run,pair,action).
 - Task 4 started (base 2a713d5); transactional bundle store and browser tests.
+- Task 4: complete (commits 2a713d5..56a28fa, review approved). 17 browser tests,129 unit tests,build pass. Reviewer /root/task4_review.
+- Task 4 integration limits: cross-tab fallback without Web Locks unsupported; same realm coordinated. Actual production nested BASE_URL+SW test still required Task12 (current explicit-base fixture verifies URL/storage scope).
+- Task 6 started (base 56a28fa); Task5 superseded. UI must guard late callbacks, show fallback/retry and retained old installed versions, preserve memory runs if storage denied.
+- Task 6: fix round1/5 (1 addressed,0 open — settings/disclosure touch targets; commits53301cd..c44e6ac). Scope review approved, targeted portrait/landscape regression passed.
+- Task 6: complete (commits56a28fa..c44e6ac, review clean). 49 browser checks +2 focused lifecycle/reduced fixes +1 target-size test;129 unit/build pass. Reviewer /root/task6_review. Full old-app SW upgrade,nested built UI,deferred reload remain Task12.
+- Task 7 started (basec44e6ac); first real Bakery pair with real visual inspection required before review flags true.
