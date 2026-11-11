@@ -1,6 +1,6 @@
 # Eight interactive story pairs
 
-Status: user approved the design and implementation on 2026-11-11, then clarified: “I will read aloud. No need to complicate this with audio generation and all”. This amended scope is authoritative; no new design approval is needed. Application implementation and deployment are not started.
+Status: user approved the design and implementation on 2026-11-11, then clarified: “I will read aloud. No need to complicate this with audio generation and all”. This amended scope is authoritative; no new design approval is needed. Implementation is recorded in the progress ledger and validation document. Deployment is not authorised.
 
 ## Intent and agreed scope
 The user wants curiosity, enjoyment, agency and understandable consequences for a four-year-old. They selected eight paired stories: two small-job stories, two prediction/experiment stories, two choices/consequences stories, and two real-world discovery stories. Each has Together and Play by Myself editions (16 experiences). They explicitly request considerable variety and no reuse of Mouse, Pip/Owl, Rabbit, Bear or the established cast. English continues from the existing collection.
@@ -10,7 +10,7 @@ Selected by user: eight paired stories with shared settings/art and distinct gui
 Implementation proposal: eight new shelf cards, each offering two clearly labelled editions. Avoid doubling the shelf with near-identical covers. Preserve the thirteen existing books unchanged. Shared assets and story definitions avoid duplicating art; progress records remain separate by edition.
 
 ## Proposed collection and creative decisions
-These titles/casts are proposals for approval. Every pair needs its own setting, palette, compositions, props and movement. Reusing technical primitives is acceptable; reskinning identical scenes is not.
+These titles/casts are the approved collection. Every pair needs its own setting, palette, compositions, props and movement. Reusing technical primitives is acceptable; reskinning identical scenes is not.
 
 | Pair | Category | Cast and setting | Story and actions |
 | --- | --- | --- | --- |

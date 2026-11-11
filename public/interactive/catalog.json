@@ -10,5 +10,89 @@
     "manifestSha256": "0093d69b76f48e648d7ca7c18468cf8208135c587db7b7cfd6d4c2a00a8babee",
     "manifestBytes": 14331,
     "totalBytes": 303899
+  },
+  {
+    "id": "bolt-and-the-toy-parade",
+    "version": "v1",
+    "title": "Bolt and the Toy Parade",
+    "category": "small-jobs",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/bolt-and-the-toy-parade--v1.svg",
+    "manifestUrl": "./bolt-and-the-toy-parade/v1/bundle.json",
+    "manifestSha256": "6555c5b52e2feea5436820c38de516e1ebe5249c9e0a3dc7a6ed7e777e3f14c2",
+    "manifestBytes": 17498,
+    "totalBytes": 222305
+  },
+  {
+    "id": "imani-and-the-lost-shape-map",
+    "version": "v1",
+    "title": "Imani and the Lost Shape Map",
+    "category": "discovery",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/imani-and-the-lost-shape-map--v1.svg",
+    "manifestUrl": "./imani-and-the-lost-shape-map/v1/bundle.json",
+    "manifestSha256": "2923b07e58d201aa8939e96c8399d4e3eaf84de945038e829385d2f88f29c8bb",
+    "manifestBytes": 15833,
+    "totalBytes": 191861
+  },
+  {
+    "id": "mina-and-the-shadow-stage",
+    "version": "v1",
+    "title": "Mina and the Shadow Stage",
+    "category": "experiments",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/mina-and-the-shadow-stage--v1.svg",
+    "manifestUrl": "./mina-and-the-shadow-stage/v1/bundle.json",
+    "manifestSha256": "d63a42f69e38ecd111b622f62fa4161555a6533afa92e44e32b4e87022395065",
+    "manifestBytes": 13270,
+    "totalBytes": 228405
+  },
+  {
+    "id": "noris-seaside-picnic",
+    "version": "v1",
+    "title": "Nori’s Seaside Picnic",
+    "category": "consequences",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/noris-seaside-picnic--v1.svg",
+    "manifestUrl": "./noris-seaside-picnic/v1/bundle.json",
+    "manifestSha256": "5ba3bbfbc1abdc4992a68315047e5f3a6ac231e47e0711e84f4719f7a508af9e",
+    "manifestBytes": 11594,
+    "totalBytes": 188340
+  },
+  {
+    "id": "tavis-dinosaur-ramp-rally",
+    "version": "v1",
+    "title": "Tavi’s Dinosaur Ramp Rally",
+    "category": "experiments",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/tavis-dinosaur-ramp-rally--v1.svg",
+    "manifestUrl": "./tavis-dinosaur-ramp-rally/v1/bundle.json",
+    "manifestSha256": "0d09ee5892a8f62bd9dfb74f3c49681633ccb6cf5d35e3688d88ce5e91760afc",
+    "manifestBytes": 13257,
+    "totalBytes": 255717
+  },
+  {
+    "id": "the-penguin-sound-post",
+    "version": "v1",
+    "title": "The Penguin Sound Post",
+    "category": "discovery",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/the-penguin-sound-post--v1.svg",
+    "manifestUrl": "./the-penguin-sound-post/v1/bundle.json",
+    "manifestSha256": "5ae8d47ebfe72d693ff6b080a304b0b57f55cccdbd377489f97d61bf4772c81d",
+    "manifestBytes": 15833,
+    "totalBytes": 185410
+  },
+  {
+    "id": "zuris-rooftop-garden",
+    "version": "v1",
+    "title": "Zuri’s Rooftop Garden",
+    "category": "consequences",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/zuris-rooftop-garden--v1.svg",
+    "manifestUrl": "./zuris-rooftop-garden/v1/bundle.json",
+    "manifestSha256": "4f6d3b30f4a82346735202862e190f58363cc37afceadd278c617adefe0e53c9",
+    "manifestBytes": 12016,
+    "totalBytes": 212816
   }
 ]

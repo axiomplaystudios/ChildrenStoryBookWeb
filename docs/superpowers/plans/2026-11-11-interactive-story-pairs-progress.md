@@ -9,7 +9,7 @@ The user clarified on 2026-11-11: “I will read aloud. No need to complicate th
 
 Audio generation, narration engines, packaged audio, listening/review/start gates and playback controls are removed. Tasks 1 and 5 are superseded, not pending or blocked. The unused validator and its dedicated tests are removed. The audio spike in authoring/interactive/audio-review.md is historical evidence only, with a superseded header; none of its commands or gates govern current work.
 
-**Tasks8/9/10 in progress concurrently with disjoint ownership; Tasks2–4,6,7 complete reviewed. Tasks1/5 superseded.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
+**Tasks2–4 and6–11 complete and independently reviewed. Tasks1/5 superseded. Task12 final regression and whole-branch review pending.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
 
 ## Preflight after scope amendment
 | Tasks | Shared contract / consistency | Finding |
@@ -41,11 +41,11 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - [x] Task 5: superseded by user clarification; no narrator implementation needed.
 - [x] Task 6: complete, reviewed; commits22c9dc5,53301cd,c44e6ac.
 - [x] Task7 complete d80323a reviewed.
-- [ ] Task8 in progress /root/task8_experiments, base d80323a.
-- [ ] Task9 in progress /root/task9_consequences, base d80323a.
-- [ ] Task10 in progress /root/task10_discovery, base d80323a.
-- [ ] Task 11: pending collection content.
-- [ ] Task 12: pending all current implementation tasks and final review.
+- [x] Task8 complete, including reviewed prediction-picture fix622634e.
+- [x] Task9 complete, commitsfa4e671/7a9684b, reviewed.
+- [x] Task10 complete, commit6ca1f08, reviewed.
+- [x] Task11 complete, commitd72b579, reviewed.
+- [ ] Task12 final regression, docs and whole-branch review in progress.
 
 ## Baseline and historical work
 - Baseline npm ci completed (pre-existing glob deprecation warning); npm test: 97 passed, 0 failed.
@@ -79,3 +79,37 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - Ruling: user explicitly authorized independent story delegation after framework/Bakery ready. Tasks8,9,10 run concurrently with disjoint story-specific generators/art/tests/packages; shared framework/catalog/tests remain controller coordinated. User execution instruction overrides default SDD serial-implementer guideline; each task still gets independent review.
 
 Concurrency: controller grants build/browser and commit windows (shared dist/git index); story agents own disjoint category helper+generator+assets+tests only. Public catalog rebuilt during reserved windows; controller owns integration.
+
+- Task10 implementation complete commit6ca1f08; independent reviewer /root/task10_review dispatched against edb6c62..6ca1f08. Both discovery pairs installed,159unit/12journeys/4phone/2fixture checks pass. Reference image phone sizing corrected and regression verified. Bundles191861/185410bytes. Review pending.
+- Task8 ramp correction confirmed same-length hinged ramp, fixed cart/surface/bottom; raised start changes height and tilt. Agent owns build/browser and next scoped commit window.
+- Task9 adds explicit garden insect visitors after controller spec check; refresh artwork evidence before flags/install. Shared build window follows Task8.
+
+- Task10 review /root/task10_review: spec PASS, quality Approved, no material findings. Reviewer inspected all16 rest/completed scenes and sampled guidance/motion/phone evidence. Catalog integration check confirms discovery ids present;13 legacy catalog entries and no legacy asset diff against a03e676. Whole21-card integration remains Task11/12.
+- Task10: complete (commits edb6c62..6ca1f08, review clean). Minor deferred: format compressed discovery generator/browser journey lines; final reviewer to triage.
+- Task11 started /root/task11_collection, base6ca1f08; disjoint Bolt scripts/assets and collection tests. Shared builds/commits controller coordinated.
+
+- Task8 implementation commits14eed4c/7c9b3a0 complete; reviewer /root/task8_review dispatched against6ca1f08..7c9b3a0. 160unit+12production browser passed; actual controller viewed refreshed scene/outcome sheets for both pairs. Bundles258820/231355bytes.
+- Task9 installed all consequence packages after insect correction;18browser journeys passed, sizes188340/212816bytes, commits/report in progress. Build window released to Task11.
+
+- Task9 commitsfa4e671/7a9684b complete; reviewer /root/task9_review dispatched against7c9b3a0..7a9684b.5source/18browser pass, both importer checks/install/build pass. All128ending combinations visually inspected by implementer; controller refreshed garden ending4 inspected.
+- Task8 review Important: prediction pictures depict a different full apparatus setup between SELECT and TEST. Fix round1 dispatched to original implementer; use setup-independent predicted-outcome pictures plus regression, regenerate/review/reinstall. Geometry/mechanics otherwise review verified. Minor deferred: compressed generator formatting.
+- Build/browser+commit windows Task11 currently; Task8 correction waits.
+
+- Task9: complete (commits7c9b3a0..7a9684b, review clean). Reviewer /root/task9_review PASS/Approved, all8 ending contact sheets+guidance inspected. Catalog includes both installed ids,13legacy entries unchanged; final21 check Task11/12. Minor deferred: compressed consequence generator/oracle formatting.
+- Task11 controller inspected initial bolt-evidence/scenes-0.5-motion.png; duck cap appears filled before repair and identical afterward. Implementer asked to correct empty dashed socket vs fitted cap and refresh evidence before flags.
+- Task12 /root/task12_integration dispatched base7a9684b to prepare independent docs/upgrade harness; final check waits Task8 fix+Task11 and reserved window. task12-handoff.md supplements brief.
+- Transient worker429 errors recurred; completed work preserved. Task8 original agent fix pending after RED added; Task11 cap correction+review pending; Task12 not yet progressed. Resume existing agents, never restart completed tasks or alter auth configuration.
+
+- Task8 fix round1 implementation622634e: only four prediction assets now setup-independent;8focused/165full unit/12browser pass, both check/install+build pass. Sizes255717/228405bytes. Actual new icon+guidance inspection complete. /root/task8_review scoped rereview dispatched diff7a9684b..622634e.
+- Task11 final Bolt installed;4collection unit and6production browser passed. Controller updated cap sheet verified dashed missing→solid fitted. Motion supplements/report/commit pending. Commit window Task11.
+- Task12 isolated upgrade development1/1 passed: actual releaseda03e676→current same-origin nested/ChildrenStoryBookWeb/, preferences, offline legacy, download503/retry, waitingSW deferred reader, shelf accept, catalog503 retention, offline decoded pair. Final stable rerun required.
+
+- Task8: fix round1/5 (1 addressed,0 open — setup-independent prediction imagery; commit622634e). Scoped reviewer /root/task8_review verified4icons/both refreshed guidance sheets, authored-installed metadata parity; spec PASS, quality Approved.
+- Task8: complete (commits6ca1f08..7c9b3a0 plus622634e, review clean). Final catalog all8ids installed; final full regression pendingTask12.
+
+- Task11 implementationd72b579 committed; reviewer /root/task11_review dispatched against622634e..d72b579.166full unit/5collection/6Bolt browser pass, all42collection motion contacts inspected.222305byte Bolt. No runtime or unrelated mutations.
+- Task12 final npm run check active:166unit+production build pass,174browser underway. All8importer and installed/source parity pass, legacy assets unchanged, total1788753bytes. Task12 owns index for verified scoped docs/harness commit.
+
+- Task11: complete (commits622634e..d72b579, review clean). /root/task11_review specPASS/qualityApproved, no findings. Actual composed scenes/allguidance/phone parade inspected; source-public parity confirmed. Controller catalog8ids/legacy13 confirmed; final174browser suite underway.
+
+- Task12 implementationa29928c: full npm run check166unit/174browser/build all pass, all8importers/parity/legacydiff pass. Preview http://localhost:4173/ session9300. Physical hardware unavailable, emulation only. Scoped /root/task12_review pending; final whole-branch review pending. Exact sizes in docs/interactive-story-validation.md.
