@@ -1,0 +1,11 @@
+{
+  "kind": "original",
+  "license": "All rights reserved. Original work for Axiom Play Studios.",
+  "creators": [
+    "Axiom Play Studios",
+    "OpenAI Codex"
+  ],
+  "changes": "Original text, new human siblings and layered code-native SVG theatre illustrations. Physics reference: https://spark.iop.org/shadows-and-rays-screen (retrieved 2026-11-11). Editorial geometry deduction for a point-like lamp x=120, fixed screen x=800 and tree centred at y=340: shadow height = 80*(800-120)/(puppetX-120). Puppet x=370 produces height217.6; x=600 produces height113.333. Straight upper/lower boundary rays pass through y=300/380 at the puppet and reach their corresponding shadow tips at the screen. Only puppet position changes; its size/orientation and lamp/screen remain fixed. Activity stays on screen and offers no child instruction to handle lamps. No source text or artwork copied.",
+  "title": "Mina and the Shadow Stage",
+  "reviewed": true
+}

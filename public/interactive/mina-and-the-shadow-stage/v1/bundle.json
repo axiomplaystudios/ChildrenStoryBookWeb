@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "id": "mina-and-the-shadow-stage",
+  "version": "v1",
+  "pairFile": "pair.json",
+  "files": [
+    {
+      "file": "pair.json",
+      "sha256": "55a11287411e2912d2dbd2ce8af766592c4583a7c214847bb7a85a26a5fc2b4c",
+      "bytes": 75802,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "source.json",
+      "sha256": "b939192b8a9e4eeff6859df5b61a31f74cf7c088c4d54ef50c40d402ee7eddc0",
+      "bytes": 947,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "visual-review.json",
+      "sha256": "929445b925faccde5530006482e430d414fefc7ae18025fa7444b50991da1c28",
+      "bytes": 6081,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "control-near-light.svg",
+      "sha256": "9b4547d7791661871c4647208795c7e548e0f3fe6297b447c268c55fc0790bf9",
+      "bytes": 1711,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "control-near-screen.svg",
+      "sha256": "de87722e6771ad8cddb385756e6d23e753e3e24c58865233827f89ea7238db06",
+      "bytes": 1712,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "prediction-large-shadow.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "prediction-small-shadow.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "opening-cast.svg",
+      "sha256": "10c1d5e1bf016c60d81798609fba91ff0ba8cde1e424851c75f1196a5b59465f",
+      "bytes": 2823,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "opening-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "opening-apparatus.svg",
+      "sha256": "357455a9cdc037bad951c9f76282c7bd87b3cba9ced18b08f176bdfe67fa6b18",
+      "bytes": 682,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "opening-story-prop.svg",
+      "sha256": "246ce355d34401abf8c3894a7eb00f3a7e0c356e1943148d3e295bc9bf40a7c2",
+      "bytes": 599,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "opening.svg",
+      "sha256": "4e48b71859fc08cba79ef6c0f8007337f8e074bf11410276bf0c37a306656154",
+      "bytes": 4926,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "opening-background.svg",
+      "sha256": "ed57fc0ef102104c9663dbc3c982996667d80609edef997c1fb59a4ee0839e95",
+      "bytes": 812,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-cast.svg",
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587",
+      "bytes": 2824,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-apparatus.svg",
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba",
+      "bytes": 1790,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-large.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-small.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-story-prop.svg",
+      "sha256": "92b6bee52912ec05eb4e9e7e43657fc8626d9df16ea6a51c159bfdd189732fed",
+      "bytes": 840,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest.svg",
+      "sha256": "30eeff0f64358487ce940e893fbf909e1d35d26e0af4ff7eb2c9c6220350ec1f",
+      "bytes": 6271,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "towering-forest-background.svg",
+      "sha256": "209acd0f106f0ae0a51930ac89c498566203237b97371c2def396736ef642e58",
+      "bytes": 807,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-cast.svg",
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587",
+      "bytes": 2824,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-apparatus.svg",
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba",
+      "bytes": 1790,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-large.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-small.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-story-prop.svg",
+      "sha256": "ad9d97eb403d70e17b0e882a549a7cae9642a79a3232cd487b721cbbb8e859c2",
+      "bytes": 598,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove.svg",
+      "sha256": "2355d4931a8341e2164fe4827ce061ede6f8b89922d8c6e2826a4a7b9add9d26",
+      "bytes": 6033,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "little-grove-background.svg",
+      "sha256": "92979f8e6dad9667b15ff2643bf8ed28f4a1c98bce8560fc948ca950f4cd7d82",
+      "bytes": 811,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-cast.svg",
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587",
+      "bytes": 2824,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-apparatus.svg",
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba",
+      "bytes": 1790,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-large.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-small.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-story-prop.svg",
+      "sha256": "92b6bee52912ec05eb4e9e7e43657fc8626d9df16ea6a51c159bfdd189732fed",
+      "bytes": 840,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again.svg",
+      "sha256": "f49a458d8f468debdc2a37d73e73241cedf00646356504af141ac83befd47c47",
+      "bytes": 6276,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "forest-again-background.svg",
+      "sha256": "0e3a962157cef4641b170a61c3e99d27327d6bc907385c4924ccf2dc0daccd77",
+      "bytes": 812,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-cast.svg",
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587",
+      "bytes": 2824,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-apparatus.svg",
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba",
+      "bytes": 1790,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-large.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-small.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-story-prop.svg",
+      "sha256": "72b41785ea5874c3377e298b763f2156a92b1c2318454eba982def1488628c19",
+      "bytes": 946,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook.svg",
+      "sha256": "a40880eb5647fe333fb07b43992a82f431ae1ada07c01a9b2da2103b39351440",
+      "bytes": 6381,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "shadow-notebook-background.svg",
+      "sha256": "cddfa987d5514a14635f65d19c70bb653438c185b00ac991d0fc223083328985",
+      "bytes": 811,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-cast.svg",
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587",
+      "bytes": 2824,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-apparatus.svg",
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba",
+      "bytes": 1790,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-large.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-small.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-story-prop.svg",
+      "sha256": "7059c2549686625c17a7ec83562597911e841706c2c0b4e5ad32e9deb84d5095",
+      "bytes": 837,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal.svg",
+      "sha256": "7cbadc559e93ae68b6c61e8f318ddf9604181910ba84d57581dba56f9ffefb54",
+      "bytes": 6274,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "grove-rehearsal-background.svg",
+      "sha256": "f3fbbc88681e6e97c8b11a8202ec488655a668b658d5ab2015ee660047cae81c",
+      "bytes": 813,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-cast.svg",
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587",
+      "bytes": 2824,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-apparatus.svg",
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba",
+      "bytes": 1790,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-large.svg",
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600",
+      "bytes": 2118,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-small.svg",
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d",
+      "bytes": 2159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-story-prop.svg",
+      "sha256": "8b4ca7b4371d2df9c9b0fa3c13a836282621bf05e30507cf2c9e40d1c0d0e977",
+      "bytes": 601,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check.svg",
+      "sha256": "30689c495bcd1c8fb0e779889042e355085aa1bde0a9ec76419166444ad8901e",
+      "bytes": 6035,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "curtain-check-background.svg",
+      "sha256": "ee4711905d4d33a63a250b53d3ddf4b83b6d8a78bd73af03c8db120ceace0acc",
+      "bytes": 810,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "ending-cast.svg",
+      "sha256": "10c1d5e1bf016c60d81798609fba91ff0ba8cde1e424851c75f1196a5b59465f",
+      "bytes": 2823,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "ending-decor.svg",
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717",
+      "bytes": 390,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "ending-apparatus.svg",
+      "sha256": "592047e59dc0dbabeeea156e4ce49bec5f4e4b907c3160adfa17afb72284720b",
+      "bytes": 685,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "ending-story-prop.svg",
+      "sha256": "2770df3491515ce3bac40479cd399fb522c095f270eae6a6cfd6b8b524a97641",
+      "bytes": 836,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "ending.svg",
+      "sha256": "ac89387ee58ab128261b079800fc89b08e4f0009ee580ad2beb231513bf4a99e",
+      "bytes": 5166,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "ending-background.svg",
+      "sha256": "52ba3983847076f4e3d773410d09db409edcdacc1dbe59e9e326ebd23302a77b",
+      "bytes": 812,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "cover.svg",
+      "sha256": "59a0b765956243d42da18ba0ac67aa9e18a8d073d7d8cc9c404146f7a316d494",
+      "bytes": 4127,
+      "mediaType": "image/svg+xml"
+    }
+  ]
+}
