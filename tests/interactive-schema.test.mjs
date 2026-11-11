@@ -40,3 +40,19 @@ test('discovery screen alternatives support bounded picture matching and visual 
 test('rejects non-JSON nested values and prototype keys before packages reach reducers',()=>{
  for(const mutate of [p=>{const params=new Date();params.amount=.02;p.scenes[0].scene.tracks[0].parameters=params;},p=>p.scenes[0].scene.layers[0].pivot.callback=()=>{},p=>p.scenes[0].id='constructor']){const p=pairFixture();mutate(p);assert.throws(()=>schema.validatePair(p),/Invalid/i);}
 });
+test('placement rejects targets that compete for the same single item',()=>{
+ const p=pairFixture(),a=p.scenes[0].activity;a.targets.push({...structuredClone(a.targets[0]),id:'second-box'});
+ assert.throws(()=>schema.validatePair(p),/allocation|supply/i);
+});
+test('placement rejects an overlapping acceptance subset shortage despite sufficient total supply',()=>{
+ const p=pairFixture(),a=p.scenes[0].activity,base=a.items[0],target=a.targets[0];
+ a.items=[base,{...base,id:'loaf',label:'One loaf'},{...base,id:'cake',label:'Two cakes',quantity:2}];
+ a.targets=[{...target,id:'mixed-box',accepts:['bun','loaf'],required:2},{...target,id:'extra-box',accepts:['bun','loaf'],required:1},{...target,id:'cake-box',accepts:['cake'],required:1}];
+ assert.throws(()=>schema.validatePair(p),/allocation|supply/i);
+});
+test('placement accepts feasible shared allocation by reserving scarce items for specific targets',()=>{
+ const p=pairFixture(),a=p.scenes[0].activity,base=a.items[0],target=a.targets[0];
+ a.items=[base,{...base,id:'loaf',label:'One loaf'}];
+ a.targets=[{...target,id:'flexible-box',accepts:['bun','loaf']},{...target,id:'bun-box',accepts:['bun']}];
+ assert.equal(schema.validatePair(p),p);
+});

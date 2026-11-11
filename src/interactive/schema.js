@@ -102,6 +102,20 @@ export function validatePair(pair) {
         ok(Number.isInteger(v.required) && v.required >= 1 && v.required <= 5, 'target required quantity');
         ok(a.items.filter(i => v.accepts.includes(i.id)).reduce((sum,i) => sum + (i.quantity ?? 1),0) >= v.required, 'target available quantity'); effects(v.effects);
       }
+      // At most 60 copies and 40 required slots. Augmenting-path matching can
+      // move a flexible allocation aside when a later slot needs a scarce item.
+      const copies = a.items.flatMap(v => Array(v.quantity ?? 1).fill(v.id));
+      const slots = a.targets.flatMap(v => Array(v.required).fill(v.accepts));
+      const assigned = Array(copies.length).fill(-1);
+      const allocate = (slot, seen) => {
+        for (let copy = 0; copy < copies.length; copy++) {
+          if (seen.has(copy) || !slots[slot].includes(copies[copy])) continue;
+          seen.add(copy);
+          if (assigned[copy] === -1 || allocate(assigned[copy], seen)) { assigned[copy] = slot; return true; }
+        }
+        return false;
+      };
+      ok(slots.every((_, slot) => allocate(slot, new Set())), 'placement shared supply allocation');
     } else if (a.kind === 'experiment') {
       object(a, 'kind id variable fixed controls predictions outcomes comparison', 'experiment activity');
       text(a.variable, 'experiment variable'); list(a.fixed, 1, 8, 'fixed conditions'); a.fixed.forEach(v => text(v, 'fixed condition'));
