@@ -1,4 +1,6 @@
-# Interactive narration feasibility — 2026-11-11
+# Historical, superseded: interactive narration feasibility — 2026-11-11
+
+> Superseded by the user’s 2026-11-11 clarification: “I will read aloud. No need to complicate this with audio generation and all”. The parent reads both editions. The following is historical evidence only; its gates, commands and requirements no longer apply. The unused validator and its tests have been removed. Resume implementation at Task 2 of the amended plan, with no audio blocker.
 
 **Task 1 is blocked at the listening/quality gate.** A free installed engine generated a small disposable sample; no actual audio-listening capability is exposed to this agent. No clip has been heard or approved. All seven real sample manifest entries remain `reviewed: false`. No production narration or independent edition is approved by this spike.
 
