@@ -1,0 +1,296 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "raised-beds-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "layout-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-raised-beds",
+      "reviewed": true
+    },
+    {
+      "assetId": "clustered-pots-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "layout-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-clustered-pots",
+      "reviewed": true
+    },
+    {
+      "assetId": "layout-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "layout-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "layout",
+      "reviewed": true
+    },
+    {
+      "assetId": "reading-bench-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "visitors-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-reading-bench",
+      "reviewed": true
+    },
+    {
+      "assetId": "family-table-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "visitors-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-family-table",
+      "reviewed": true
+    },
+    {
+      "assetId": "visitors-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "visitors-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "visitors",
+      "reviewed": true
+    },
+    {
+      "assetId": "bright-flowers-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "plants-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-bright-flowers",
+      "reviewed": true
+    },
+    {
+      "assetId": "herb-leaves-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "plants-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-herb-leaves",
+      "reviewed": true
+    },
+    {
+      "assetId": "plants-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "plants-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "plants",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade-cloth-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "shelter-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-shade-cloth",
+      "reviewed": true
+    },
+    {
+      "assetId": "sunny-corner-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "shelter-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-sunny-corner",
+      "reviewed": true
+    },
+    {
+      "assetId": "shelter-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "shelter-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "shelter",
+      "reviewed": true
+    },
+    {
+      "assetId": "loop-path-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "path-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-loop-path",
+      "reviewed": true
+    },
+    {
+      "assetId": "direct-path-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "path-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-direct-path",
+      "reviewed": true
+    },
+    {
+      "assetId": "path-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "path-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "path",
+      "reviewed": true
+    },
+    {
+      "assetId": "drip-water-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-drip-water",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering-can-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-watering-can",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering-repair",
+      "reviewed": true
+    },
+    {
+      "assetId": "watering",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-repair-parasol",
+      "reviewed": true
+    },
+    {
+      "assetId": "remember-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "remember-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "remember",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "layout",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "visitors",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "plants",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "shelter",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "path",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "watering",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "remember",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}
