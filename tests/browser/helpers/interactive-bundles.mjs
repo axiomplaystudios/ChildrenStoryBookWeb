@@ -19,6 +19,8 @@ export async function prepareBundleFixtures({ pairs = 1 } = {}) {
     summaries = [];
   try {
     await cp('public', publicDir, { recursive: true });
+    // Keep synthetic catalog counts independent of authored story releases.
+    await rm(join(publicDir, 'interactive'), { recursive: true, force: true });
     for (let index = 0; index < pairs; index++)
       for (const version of ['v1', 'v2']) {
         const pair = pairFixture();

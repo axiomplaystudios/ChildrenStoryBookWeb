@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "amaras-busy-bakery",
+    "version": "v1",
+    "title": "Amara’s Busy Bakery",
+    "category": "small-jobs",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/amaras-busy-bakery--v1.svg",
+    "manifestUrl": "./amaras-busy-bakery/v1/bundle.json",
+    "manifestSha256": "0093d69b76f48e648d7ca7c18468cf8208135c587db7b7cfd6d4c2a00a8babee",
+    "manifestBytes": 14331,
+    "totalBytes": 303899
+  }
+]
