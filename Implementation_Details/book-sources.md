@@ -1,6 +1,6 @@
 # Book sources and adaptations
 
-Verified 10 November 2026. All thirteen books and all their page images are local assets under `public/books/`; reading requires no remote image service.
+Legacy provenance verified 10 November 2026; interactive collection added 11 November 2026. The shelf contains 21 titles: thirteen legacy books (139 pages) under `public/books/` plus eight interactive pairs/sixteen editions under `public/interactive/`. All story images are local; interactive versions are downloaded explicitly before offline use. Reading requires no remote image service.
 
 ## Pip Finds a Friend
 
@@ -97,3 +97,13 @@ Each authoring package records `kind: original`, creators, a truthful licensing 
 Editorial calibration: [CDC four-year guidance](https://www.cdc.gov/act-early/milestones/4-years.html) was read for examples of shared conversation, familiar-object counting, colours and story prediction. This collection is not a developmental checklist or certified curriculum. Planet facts are checked against [NASA's planets overview](https://science.nasa.gov/solar-system/planets/) and individual planet pages recorded in the planet book's notes. Factual references are not story authorship credits.
 
 Illustrations, learning labels and all motion remain local. Static fallbacks preserve the same lesson. Counted sets and pattern sequences remain stable during animation; all authored moving layers loop, with short rests. Original packages and installed copies are checked for parity, independently expected learning sequences, actual image decoding and continued browser motion.
+
+## Original interactive pairs (11 November 2026)
+
+Amara’s Busy Bakery; Bolt and the Toy Parade; Tavi’s Dinosaur Ramp Rally; Mina and the Shadow Stage; Nori’s Seaside Picnic; Zuri’s Rooftop Garden; Imani and the Lost Shape Map; and The Penguin Sound Post are original connected stories and code-native layered SVG illustrations created for Axiom Play Studios with OpenAI Codex. New human, robot, dinosaur, elephant, rabbit and penguin casts/settings are credited in their own packages. They do not adapt external story text or artwork, reuse the legacy cast, or claim Book Dash attribution. Their source records state **All rights reserved. Original work for Axiom Play Studios.** No new project-wide or Creative Commons licence is granted.
+
+Each title provides Read Together and Play by Myself. The adult reads both editions aloud. Four optional Together questions, distinct edition guidance, visible picture demonstrations and local saved activities are part of the same paired package. There is no generated narration or microphone requirement; The Penguin Sound Post uses visual rhythm sequences, with optional adult/child-made sounds.
+
+Truthful provenance and exact image hashes live in `authoring/interactive/<id>/source.json` and `pair.json`; `visual-review.json` records the reviewed assets, scenes, outcomes and guidance. Installed immutable versions include those records and a complete `bundle.json`. Actual art/motion inspection and editorial corrections are recorded in per-task evidence; automatic image decoding alone is not a visual review. See [authoring](../docs/interactive-story-authoring.md) and [validation](../docs/interactive-story-validation.md).
+
+The experiment stories are explicitly illustrative models. Tavi changes the tilt/release height of one same-length hinged ramp while keeping cart, load, bottom hinge and surface fixed; the editorial inference uses [OpenStax’s gravitational potential energy explanation](https://openstax.org/books/college-physics-2e/pages/7-3-gravitational-potential-energy). Mina changes only a puppet’s position between a fixed lamp and screen; straight-ray geometry was checked against [Institute of Physics: Shadows and rays](https://spark.iop.org/shadows-and-rays-screen). Retrieval details and exact model assumptions are retained in each source record. These references support factual calibration, not story/art authorship or promises about every real-world experiment. No child instruction to handle lamps is required.

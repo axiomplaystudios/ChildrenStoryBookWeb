@@ -4,7 +4,7 @@ Use a coding AI with access to this project, a terminal and a browser. A chat-on
 
 ## Give it the right project
 
-Open the current local project folder in the other coding tool. If transferring to another machine, transfer the current working files, including uncommitted/untracked changes. A fresh clone of the remote repository may not contain the new importer, speed controls or example book. Do not include node_modules, dist, test-results or .superpowers; install dependencies on the destination.
+Open the current local project folder in the other coding tool. If transferring to another machine, transfer the current working files, including uncommitted/untracked changes. A fresh clone of the remote repository may not contain the new importer, speed controls or example book. Include the tracked approved planning documents under `docs/superpowers/`; omit node_modules, dist, test-results and local .superpowers scratch/evidence. Install dependencies on the destination.
 
 Confirm these exist:
 
@@ -17,6 +17,8 @@ Confirm these exist:
 Supply your PDF, ordered page images, or source URL. Include title/language and any source/permission information you have. For adaptations, the current importer requires real HTTPS source and licence links; the AI must not invent them for a private book. If that metadata is unavailable, it should explain the gap and prepare the draft without falsely marking source review complete.
 
 ## Master prompt — paste this first
+
+This prompt adds a legacy animated book. For a new interactive pair, use [Interactive pairs](#interactive-pairs).
 
 ```text
 Work in this existing Bedtime Bookshelf project. Add a new animated book using the assisted workflow already implemented here.
@@ -161,3 +163,41 @@ behavior and reduced-motion static fallbacks must still work.
 Use the explicit original-content mode described in `docs/assisted-book-workflow.md`, not an invented external source. Set `story.origin="original"`, `source.kind="original"`, truthful project/AI-assisted credits, a topic and `category="LEARN TOGETHER"`. Keep the source title matching. Do not claim Book Dash authorship or attach an unrequested Creative Commons licence. Check `scripts/learning/` for reusable art and package generation; author unique text and compositions appropriate to the topic.
 
 Include independent checks for educational content: exact visible quantities, A–Z ordering and correct letter examples, actual pattern order and spatial relations, accurate planet names/order and primary-source factual notes. Every moving layer must repeat and be visually inspected after later cycles. Keep countable targets and pattern symbols stable while other parts move. Never infer educational correctness solely from matching your generator's input to its output.
+
+## Interactive pairs
+
+Use this prompt for original interactive stories. Existing versions are immutable; preserve unrelated work and installed legacy assets.
+
+```text
+Create or extend an interactive story pair in this existing project.
+Read docs/interactive-story-authoring.md and docs/interactive-story-validation.md,
+the approved scope under docs/superpowers/, and the relevant existing pair.
+Preserve the 13 legacy books / 139 pages. One pair is one shelf title with
+two editions: together (Read Together), independent (Play by Myself).
+The adult reads BOTH editions aloud; add no narration, microphone, score or timer.
+
+Prepare original connected read-aloud scenes with consistent new characters,
+local layered pictures, short child-operated instructions, distinct adult
+scaffolds and replayable picture examples for both editions. Together has
+four optional questions. Both editions must complete entirely on screen.
+Optional household activities need adult help and a skip path without proof.
+Use only the bounded place, experiment, choice and discover schema.
+
+Build authoring/interactive/<id> with pair.json, source.json, visual-review.json
+and flat local images. Record truthful credits/licensing. Keep review flags false
+until the exact final art, every outcome, both editions and motion are inspected.
+Regeneration resets review flags. Do not mark review from hashes/decoding alone.
+For six-choice consequence stories independently enumerate all 64 routes,
+check repaired state, visible ending layers and all three recap passages.
+For experiments verify the single changing variable and record primary science
+references, fixed conditions and the limits of an illustrative model.
+
+Run prepare-pair.mjs check before install; use a new immutable version for any
+released change. Do not overwrite an installed version to bypass the importer.
+Check separate edition saves, explicit restart/change confirmation, offline
+download, failure/retry, reduced motion and existing speed/pause/replay controls.
+Run npm run check and the isolated legacy/nested-base upgrade regression.
+Update provenance and validation evidence with exact results and package bytes.
+State physical-device limitations honestly. Keep a local preview available.
+Do not push, merge or deploy without explicit instructions.
+```

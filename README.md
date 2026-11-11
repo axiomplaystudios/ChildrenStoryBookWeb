@@ -20,7 +20,7 @@ npm run build
 npm run preview
 ```
 
-Wait for “Ready for offline reading” before disconnecting. All thirteen complete books and their animation assets are cached together. Browser storage can be evicted, so offline availability is subject to browser/device storage rules. Use the HTTPS GitHub Pages address for home-screen installation. Physical iPad/Android installation and wake-lock behavior still need device checks.
+Wait for “Ready for offline reading” before disconnecting. All thirteen legacy books and their animation assets are cached together. Interactive stories have separate **Download story** controls: wait for **Ready offline** on each desired card. Browser storage can be evicted, so offline availability is subject to browser/device storage rules. Use the HTTPS GitHub Pages address for home-screen installation. Physical iPad/Android installation and wake-lock behavior still need device checks.
 
 ## What is included
 
@@ -37,6 +37,29 @@ Wait for “Ready for offline reading” before disconnecting. All thirteen comp
 - Offline support and an install manifest through `vite-plugin-pwa`. Updates are offered from the shelf instead of interrupting a story.
 
 See [book provenance and adaptations](Implementation_Details/book-sources.md). Book Dash content is CC BY 4.0; those licences and creator credits remain attached to the book. No licence for the rest of the project is implied.
+
+## Interactive stories
+
+The shelf contains **21 titles: thirteen legacy books (139 pages) and eight interactive pairs**. Each pair offers **Read Together** and **Play by Myself**, giving sixteen interactive experiences. **The adult reads both editions aloud.** Play by Myself gives the child short picture instructions and replayable **Show me** examples for operating the activities; it includes no generated narration or microphone requirement.
+
+| Story | Shared activity |
+| --- | --- |
+| Amara’s Busy Bakery | Count, match and pack welcoming orders |
+| Bolt and the Toy Parade | Match shapes and sizes to repair toys |
+| Tavi’s Dinosaur Ramp Rally | Predict, test and compare an illustrated ramp model |
+| Mina and the Shadow Stage | Change puppet position and compare shadows |
+| Nori’s Seaside Picnic | Six choices, consequences and opportunities to repair |
+| Zuri’s Rooftop Garden | Six choices that shape a shared garden |
+| Imani and the Lost Shape Map | Picture clues and optional adult-assisted shape searches |
+| The Penguin Sound Post | Visual rhythms; optional sounds made with your adult |
+
+Together adds adult scaffolding and four optional discussion questions. Both editions support screen-only completion. Choices, trials and completed pictures persist when returning to scenes. Consequence stories each have six binary choices (64 routes), readable endings and three recap passages reflecting earlier choices and repairs. No score, timer or proof of a real-world task is required.
+
+Download a pair once for both editions. A download becomes ready only after every file is verified. **Update bookshelf** refreshes the catalog and accepts a pending application update from the shelf; an open story keeps its current version and is not automatically reloaded. **Update download** installs new story content separately. Failed updates retain the saved version and offer retry. **Remove download** keeps saved activities; clearing browser site data removes local preferences, runs and downloads.
+
+Each edition saves separately in this browser. **Start edition again** replaces only that edition’s run; changing an earlier decision requires confirmation and clears its later activities. A damaged save or a different package version offers an explicit restart. Existing illustration speed, pause/replay, reduced motion and fullscreen controls are available; reduced motion preserves completed picture outcomes.
+
+See the [authoring contract](docs/interactive-story-authoring.md), [validation and maintenance guide](docs/interactive-story-validation.md), and [AI handoff](docs/another-ai-handoff.md#interactive-pairs).
 
 ## Learning stories
 
@@ -190,7 +213,7 @@ Book-package image validation and browser tests use installed Google Chrome at `
 
 ## Scope and device checks
 
-This implements the first-version reading experience with GitHub Pages deployment. Book provenance is included in this repository; local planning notes and diagnostic logs stay in the development workspace.
+This implements the local reading experience with GitHub Pages deployment support. Book provenance and approved implementation planning documents are tracked in this repository; scratch builds and diagnostic images stay in the development workspace.
 
 Still check on real hardware: iPad Safari page dragging, Android touch behavior, home-screen installation, wake-lock behavior after backgrounding, and text size at your usual reading distance. Small landscape phones may scroll vertically to keep text readable. All 139 pages include character or object motion. Story-specific tappable sounds remain future work.
 
