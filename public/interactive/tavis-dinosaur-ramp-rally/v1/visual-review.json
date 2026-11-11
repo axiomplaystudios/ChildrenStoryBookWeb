@@ -1,0 +1,323 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "control-low",
+      "reviewed": true
+    },
+    {
+      "assetId": "control-high",
+      "reviewed": true
+    },
+    {
+      "assetId": "prediction-near-stop",
+      "reviewed": true
+    },
+    {
+      "assetId": "prediction-far-stop",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-near",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-far",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel",
+      "reviewed": true
+    },
+    {
+      "assetId": "ferns-parcel-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-near",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-far",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel",
+      "reviewed": true
+    },
+    {
+      "assetId": "brontos-parcel-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-near",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-far",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern",
+      "reviewed": true
+    },
+    {
+      "assetId": "back-to-fern-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-near",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-far",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-stop-notebook-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-near",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-far",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal",
+      "reviewed": true
+    },
+    {
+      "assetId": "delivery-rehearsal-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-near",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-far",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route",
+      "reviewed": true
+    },
+    {
+      "assetId": "final-route-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "opening",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "ferns-parcel",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "brontos-parcel",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "back-to-fern",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "two-stop-notebook",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "delivery-rehearsal",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "final-route",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "ending",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}
