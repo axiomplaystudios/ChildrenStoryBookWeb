@@ -7,8 +7,8 @@ const svg = (tag, attrs = {}) => {
   return el;
 };
 
-export function createIllustration({ bookId, page }) {
-  const url = file => `./books/${bookId}/${file}`;
+export function createIllustration({ bookId, page, resolveAsset }) {
+  const url = resolveAsset ?? (file => `./books/${bookId}/${file}`);
   const element = document.createElement('div'); element.className = 'illustration';
   const original = document.createElement('img'); original.src = url(page.image); original.alt = page.alt; original.draggable = false;
   element.append(original); element.dataset.playing = 'false';
