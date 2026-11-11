@@ -127,7 +127,7 @@
               "angle": -7
             },
             "durationMs": 2300,
-            "restMs": 2300,
+            "restMs": 1800,
             "delayMs": 0,
             "playback": "repeat"
           },
@@ -224,7 +224,7 @@
               "angle": -5
             },
             "durationMs": 2100,
-            "restMs": 3500,
+            "restMs": 1800,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -361,7 +361,7 @@
               "angle": 16
             },
             "durationMs": 2100,
-            "restMs": 2200,
+            "restMs": 1800,
             "delayMs": 0,
             "playback": "repeat"
           },
@@ -374,7 +374,7 @@
               "angle": -4
             },
             "durationMs": 2700,
-            "restMs": 3000,
+            "restMs": 1800,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -699,7 +699,7 @@
             "durationMs": 2600,
             "restMs": 0,
             "delayMs": 100,
-            "playback": "once"
+            "playback": "repeat"
           }
         ]
       }

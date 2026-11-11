@@ -9,23 +9,23 @@ for(const [number,ids] of Object.entries(expected)) test(`Pip ${number} has auth
  for(const id of ids) assert.ok(scene.tracks.some(t=>t.layer===id),`Missing motion ${id}`);
  for(const asset of [scene.background,...scene.layers.map(l=>l.image)]) assert.match(await readFile(root+asset,'utf8'),/<svg/);
 });
-test('bush masks Pip, flight wings inherit body, handover has one ball and holds',async()=>{
+test('bush masks Pip, flight wings inherit body, handover has one ball and loops',async()=>{
  const bush=story.pages[4].scene; assert.ok(bush); assert.equal(bush.layers.at(-1).id,'bush-foreground'); assert.ok(!bush.tracks.some(t=>t.layer==='bush-foreground'));
- const flight=story.pages[5].scene; assert.equal(flight.layers.find(l=>l.id==='pip-wing-left').parent,'pip-body'); assert.equal(flight.tracks.find(t=>t.layer==='pip-body').playback,'once');
- const handover=story.pages[6].scene; assert.equal(handover.tracks.find(t=>t.layer==='red-ball').playback,'once');
+ const flight=story.pages[5].scene; assert.equal(flight.layers.find(l=>l.id==='pip-wing-left').parent,'pip-body'); assert.equal(flight.tracks.find(t=>t.layer==='pip-body').playback,'repeat');
+ const handover=story.pages[6].scene; assert.equal(handover.tracks.find(t=>t.layer==='red-ball').playback,'repeat');
  assert.ok(!(await readFile(root+handover.background,'utf8')).includes('fill="#d96c63"'));
  assert.equal(handover.layers.filter(l=>l.id==='red-ball').length,1);
 });
 
-test('flight arrives and handover settles without repeating the story event',async()=>{
+test('flight and handover travel out and back on each cycle',async()=>{
  const {sampleTrack}=await import('../src/scene-motion.js');
  const flight=story.pages[5].scene.tracks.find(t=>t.layer==='pip-body');
  const ball=story.pages[6].scene.tracks.find(t=>t.layer==='red-ball');
  assert.equal(sampleTrack(flight,0).y,56);
- assert.equal(sampleTrack(flight,flight.delayMs+flight.durationMs).y,0);
+ assert.equal(sampleTrack(flight,flight.delayMs+flight.durationMs/2).y,0);
  assert.equal(sampleTrack(ball,0).x,0);
- assert.equal(sampleTrack(ball,ball.delayMs+ball.durationMs).x,31);
- for(const track of [flight,ball])assert.deepEqual(sampleTrack(track,100000),sampleTrack(track,track.delayMs+track.durationMs));
+ assert.equal(sampleTrack(ball,ball.delayMs+ball.durationMs/2).x,31);
+ for(const track of [flight,ball])assert.deepEqual(sampleTrack(track,track.delayMs),sampleTrack(track,track.delayMs+track.durationMs+track.restMs));
 });
 test('extracted parts leave no stationary copies and retain original source coordinates',async()=>{
  const background2=await readFile(root+story.pages[1].scene.background,'utf8');

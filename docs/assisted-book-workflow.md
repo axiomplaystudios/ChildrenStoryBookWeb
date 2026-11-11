@@ -6,7 +6,7 @@ This is an **assisted authoring workflow**: give the coding assistant a book, an
 
 > Use docs/assisted-book-workflow.md to prepare this existing book for the bookshelf. Preserve the story, create new coherent illustrations with meaningful movement on every page, review the animation and add the finished book locally. Record the source and credits. Use the existing scene renderer and speed controls.
 
-Provide a local PDF, ordered images with text, or a source URL. If there is no input, ask the assistant to choose an openly licensed book. Writing stories from a short idea is outside this version.
+Provide a local PDF, ordered images with text, or a source URL. If there is no input, ask the assistant to choose an openly licensed book. The existing-book workflow preserves a supplied story. Original stories can also be authored explicitly with the original-content metadata below; there is no unattended idea-to-book service.
 
 ## 1. Extract and record the story
 
@@ -25,7 +25,7 @@ Create `authoring/<book-id>/source.json`:
 }
 ```
 
-Keep the original source or an extraction transcript beside this file, plus a checksum and extraction notes. These working references are not installed into the reading app. For a private/local source use a stable HTTPS provenance link supplied by the owner; the current installer requires a source and licence URL. It does not establish ownership or licence rights automatically.
+Keep the original source or an extraction transcript beside this file, plus a checksum and extraction notes. These working references are not installed into the reading app. For an adaptation of a private/local source use a stable HTTPS provenance link supplied by the owner; adapted-book packages require a source and licence URL. It does not establish ownership or licence rights automatically.
 
 ## 2. Plan the illustrations and motion
 
@@ -46,7 +46,7 @@ Follow `authoring/a-house-for-mouse/` as a complete worked example. Its generato
 Create `story.json` using the schema in `src/story.js` and `src/scene-schema.js`:
 
 - A stable lowercase hyphenated `id`, title, cover filename and visible attribution.
-- `sourceUrl` matching `source.json`, `licenseUrl`, and a publisher logo where appropriate.
+- For adapted books, `sourceUrl` matching `source.json`, `licenseUrl`, and a publisher logo where appropriate. Original stories use the [original-content mode](#original-learning-stories) below.
 - Every page has real `text`, descriptive `alt`, a static `image`, and a `scene`.
 - Each scene has dimensions, a stationary background, image layers, pivots and motion tracks. Use parent layers for attached moving parts.
 - Four discussion prompts: two literal, one feeling, one personal, with valid one-based hint pages. Answers must fit the supplied story.
@@ -80,3 +80,39 @@ The Mouse example is already installed, so repeating its install command intenti
 ## What is automated, and what remains assisted
 
 The scripts validate metadata, motion definitions, review coverage, asset files and packaging. The assistant does extraction, story interpretation, illustration generation, layer preparation and visual review. Those creative steps are not a general-purpose unattended engine. No upload UI, backend queue, external generation credentials or new runtime service is required.
+
+
+## Animation looping requirement
+
+Every moving part must continue looping while its page is visible. Set every authored track to `playback: "repeat"`; keep `restMs` at or below **1800 ms** (scene time, scaled by the reader speed). A short pause is allowed, but a motion that plays once and stops is not a finished page animation. The assisted importer rejects one-shot tracks and longer rests.
+
+For `settle`, `arrive` and `fade-in`, repeat mode travels out and back smoothly within `durationMs`; one duration includes both halves. Choose a gentle duration and inspect both directions. Use parent layers to keep attached parts together. Do not reset or teleport visible characters at a cycle boundary. Bee emergence is an introductory movement followed by continuously repeating flight.
+
+Add this requirement to any AI authoring prompt:
+
+```text
+Make every moving part repeat while the page is visible. Use playback="repeat"
+and restMs <= 1800. Review at least three full cycles at 0.5×, 1× and 2×,
+including the return movement and loop boundary. Confirm actual movement
+continues after one minute; a running animation timer alone is insufficient.
+Test all pages, not just a sample. Update asset generators as well as book
+metadata so regeneration cannot restore one-shot animation. Pause/hidden-tab
+behavior and reduced-motion static fallbacks must still work.
+```
+
+
+## Original learning stories
+
+For newly written project stories, set `story.origin` to `"original"`, give a truthful `credit`, and optionally set `category: "LEARN TOGETHER"` and a short `learningTopic`. Set `source.kind` to `"original"` and keep `source.title` identical to the story title. Record creators, changes, a truthful licensing statement and the review flag. Original packages do not require external source/licence URLs; do not invent these links or attribute new work to Book Dash. Adapted books still require their real source/licence links.
+
+The ten original learning books use `scripts/learning/art.mjs` and `scripts/learning/package.mjs` with three authoring generators:
+
+```sh
+node scripts/learning/literacy.mjs
+node scripts/learning/world.mjs
+node scripts/learning/concepts.mjs
+```
+
+These commands regenerate authoring packages and reset review flags to false. They do not replace installed books. Review regenerated artwork/content and update installed copies only through a deliberate reviewed edit; `install` still refuses overwrites.
+
+For educational content, inspect both words and pictures. A counting page must have exactly the stated number of clearly separated targets throughout the loop. Patterns must stay in order. Position words must match the visible placement. Verify facts against primary sources, record references in editorial notes, and provide correct letter/number labels in page text as well as artwork. These are shared-reading invitations, not mastery tests. Keep optional prompts gentle and accept children's own ideas on feelings/personal questions.

@@ -1,0 +1,1178 @@
+{
+  "id": "pips-alphabet-adventure",
+  "title": "Pip’s Alphabet Adventure",
+  "subtitle": "An A-to-Z party of things and pictures",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Alphabet recognition",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Pip wanted an alphabet party. “Let’s find a thing or a picture for every letter!”",
+      "alt": "Pip the owl and Mouse prepare an empty display board for their alphabet party.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-01-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              134,
+              511
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A a — apple. Pip found an apple for the feast.",
+      "alt": "Uppercase A, lowercase a, and a clearly pictured apple. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-02.svg",
+      "learning": {
+        "letter": "A",
+        "word": "apple"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-02-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "B b — ball. Mouse rolled a ball for their games.",
+      "alt": "Uppercase B, lowercase b, and a clearly pictured ball. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-03.svg",
+      "learning": {
+        "letter": "B",
+        "word": "ball"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-03-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "C c — cup. Pip chose a cup for a thirsty friend.",
+      "alt": "Uppercase C, lowercase c, and a clearly pictured cup. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-04.svg",
+      "learning": {
+        "letter": "C",
+        "word": "cup"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-04-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "D d — drum. A drum would call everyone together.",
+      "alt": "Uppercase D, lowercase d, and a clearly pictured drum. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-05.svg",
+      "learning": {
+        "letter": "D",
+        "word": "drum"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-05-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "E e — egg. Pip drew an egg on a little card.",
+      "alt": "Uppercase E, lowercase e, and a clearly pictured egg. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-06.svg",
+      "learning": {
+        "letter": "E",
+        "word": "egg"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-06-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "F f — fish. By the pond, Pip drew a fish.",
+      "alt": "Uppercase F, lowercase f, and a clearly pictured fish. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-07.svg",
+      "learning": {
+        "letter": "F",
+        "word": "fish"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-07-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "G g — gift. Mouse wrapped a gift for the guests.",
+      "alt": "Uppercase G, lowercase g, and a clearly pictured gift. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-08.svg",
+      "learning": {
+        "letter": "G",
+        "word": "gift"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-08-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "H h — hat. Pip borrowed a sunny yellow hat.",
+      "alt": "Uppercase H, lowercase h, and a clearly pictured hat. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-09.svg",
+      "learning": {
+        "letter": "H",
+        "word": "hat"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-09-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-09-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "I i — insect. An insect landed nearby. Pip drew its six legs.",
+      "alt": "Uppercase I, lowercase i, and a clearly pictured insect. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-10.svg",
+      "learning": {
+        "letter": "I",
+        "word": "insect"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-10-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-10-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "J j — jug. A jug would hold cool water.",
+      "alt": "Uppercase J, lowercase j, and a clearly pictured jug. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-11.svg",
+      "learning": {
+        "letter": "J",
+        "word": "jug"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-11-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-11-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "K k — kite. Pip chose a kite for the breezy field.",
+      "alt": "Uppercase K, lowercase k, and a clearly pictured kite. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-12.svg",
+      "learning": {
+        "letter": "K",
+        "word": "kite"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-12-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-12-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "L l — leaf. A leaf made a lovely table decoration.",
+      "alt": "Uppercase L, lowercase l, and a clearly pictured leaf. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-13.svg",
+      "learning": {
+        "letter": "L",
+        "word": "leaf"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-13-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-13-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "M m — moon. Pip made a moon picture for the evening.",
+      "alt": "Uppercase M, lowercase m, and a clearly pictured moon. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-14.svg",
+      "learning": {
+        "letter": "M",
+        "word": "moon"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-14-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-14-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "N n — nest. Pip drew a nest and left the real one safe.",
+      "alt": "Uppercase N, lowercase n, and a clearly pictured nest. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-15.svg",
+      "learning": {
+        "letter": "N",
+        "word": "nest"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-15-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-15-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "O o — orange. An orange joined the picnic food.",
+      "alt": "Uppercase O, lowercase o, and a clearly pictured orange. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-16.svg",
+      "learning": {
+        "letter": "O",
+        "word": "orange"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-16-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-16-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "P p — paintbrush. A paintbrush helped Pip finish the pictures.",
+      "alt": "Uppercase P, lowercase p, and a clearly pictured paintbrush. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-17.svg",
+      "learning": {
+        "letter": "P",
+        "word": "paintbrush"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-17-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-17-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Q q — quilt. Mouse brought a quilt for everyone to sit on.",
+      "alt": "Uppercase Q, lowercase q, and a clearly pictured quilt. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-18.svg",
+      "learning": {
+        "letter": "Q",
+        "word": "quilt"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-18-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-18-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "R r — rabbit. Rabbit came along to help.",
+      "alt": "Uppercase R, lowercase r, and a clearly pictured rabbit. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-19.svg",
+      "learning": {
+        "letter": "R",
+        "word": "rabbit"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-19-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-19-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "S s — sock. A clean sock became a silly puppet.",
+      "alt": "Uppercase S, lowercase s, and a clearly pictured sock. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-20.svg",
+      "learning": {
+        "letter": "S",
+        "word": "sock"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-20-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-20-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "T t — teddy. Mouse brought a teddy to join the fun.",
+      "alt": "Uppercase T, lowercase t, and a clearly pictured teddy. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-21.svg",
+      "learning": {
+        "letter": "T",
+        "word": "teddy"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-21-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-21-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "U u — umbrella. An umbrella would give a patch of shade.",
+      "alt": "Uppercase U, lowercase u, and a clearly pictured umbrella. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-22.svg",
+      "learning": {
+        "letter": "U",
+        "word": "umbrella"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-22-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-22-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "V v — vase. Pip found a vase for the table.",
+      "alt": "Uppercase V, lowercase v, and a clearly pictured vase. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-23.svg",
+      "learning": {
+        "letter": "V",
+        "word": "vase"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-23-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-23-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "W w — wagon. A wagon carried the party things.",
+      "alt": "Uppercase W, lowercase w, and a clearly pictured wagon. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-24.svg",
+      "learning": {
+        "letter": "W",
+        "word": "wagon"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-24-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-24-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "X x — x-ray. Mouse brought an x-ray picture showing bones.",
+      "alt": "Uppercase X, lowercase x, and a clearly pictured x-ray. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-25.svg",
+      "learning": {
+        "letter": "X",
+        "word": "x-ray"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-25-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-25-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Y y — yarn. Yarn tied the picture cards together.",
+      "alt": "Uppercase Y, lowercase y, and a clearly pictured yarn. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-26.svg",
+      "learning": {
+        "letter": "Y",
+        "word": "yarn"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-26-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-26-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Z z — zip. Pip closed the bag with its zip.",
+      "alt": "Uppercase Z, lowercase z, and a clearly pictured zip. Pip collects things and picture cards for the alphabet party.",
+      "image": "page-27.svg",
+      "learning": {
+        "letter": "Z",
+        "word": "zip"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-27-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-27-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              109,
+              516
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The alphabet party was ready, from A to Z. “We can visit our favourite letters again,” said Pip.",
+      "alt": "Pip, Mouse and Rabbit celebrate under alphabet bunting, with a quilt, food and the picture cards.",
+      "image": "page-28.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-28-background.svg",
+        "layers": [
+          {
+            "id": "pip-wing",
+            "image": "page-28-pip-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              129,
+              475
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pip-wing",
+            "preset": "flap",
+            "parameters": {
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 500,
+            "delayMs": 200,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What was Pip getting ready for?",
+      "a": "An alphabet party.",
+      "hintPage": 1
+    },
+    {
+      "type": "literal",
+      "q": "What carried the party things?",
+      "a": "A wagon carried the party things.",
+      "hintPage": 24
+    },
+    {
+      "type": "feeling",
+      "q": "How might Pip feel when the party is ready?",
+      "a": "Pip might feel happy, proud or excited. Other ideas are welcome.",
+      "hintPage": 28
+    },
+    {
+      "type": "personal",
+      "q": "Which thing or picture would you bring to an alphabet party?",
+      "a": "Any idea is welcome. You can name its first letter together if you like.",
+      "hintPage": 28
+    }
+  ]
+}

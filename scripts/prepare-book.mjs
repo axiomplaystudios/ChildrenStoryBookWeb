@@ -73,11 +73,22 @@ export async function checkPackage(folder){
  requireValue(typeof story.id==='string'&&slug.test(story.id),'Invalid book ID');
  requireValue(source&&nonempty(source.title)&&nonempty(source.license)&&Array.isArray(source.creators)&&source.creators.length>0&&source.creators.every(nonempty)&&nonempty(source.changes),'Missing source provenance: title, license, creators or changes');
  requireValue(source.reviewed===true,'Source license and extraction must be reviewed');
- requireValue(nonempty(story.sourceUrl)&&source.url===story.sourceUrl&&new URL(source.url).protocol==='https:','Source URL must match story sourceUrl');
- requireValue(nonempty(story.licenseUrl),'Missing source licenseUrl');
+ requireValue(source.title===story.title,'Source title must match story title');
+ if(story.origin==='original'){
+  requireValue(source.kind==='original','Original story needs explicit original provenance');
+  requireValue(!source.url&&!story.sourceUrl||source.url===story.sourceUrl,'Original source URL must match when supplied');
+ }else{
+  requireValue(source.kind!=='original','Original provenance requires story origin original');
+  requireValue(nonempty(story.sourceUrl)&&source.url===story.sourceUrl&&new URL(source.url).protocol==='https:','Source URL must match story sourceUrl');
+  requireValue(nonempty(story.licenseUrl),'Missing source licenseUrl');
+ }
  requireValue(Array.isArray(plan?.pages)&&plan.pages.length===story.pages.length,'Animation plan must cover every page');
  for(const [i,page]of story.pages.entries()){
   requireValue(page.scene,`Page ${i+1} needs an animation scene`);
+  for(const track of page.scene.tracks){
+   requireValue(track.playback==='repeat',`Page ${i+1} ${track.layer} must repeat: every authored motion must loop`);
+   requireValue(track.restMs<=1800,`Page ${i+1} ${track.layer} rest must be at most 1800 ms`);
+  }
   const item=plan.pages[i];requireValue(item?.page===i+1&&nonempty(item.action),`Animation plan page ${i+1} needs an action in page order`);
   requireValue(item.reviewed===true,`Animation plan page ${i+1} must be visually reviewed`);
  }

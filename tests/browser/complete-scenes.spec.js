@@ -1,6 +1,8 @@
+import {readFileSync} from 'node:fs';
+const bookTitles=JSON.parse(readFileSync('public/books/catalog.json','utf8')).map(book=>book.title);
 import {test,expect} from '@playwright/test';
 const current='.book-frame > :not([hidden]) .story-page:not([aria-hidden="true"])';
-for(const title of ['Pip Finds a Friend','Sleepy Mr Sloth','A House for Mouse']) test(`${title}: every scene animates its named parts offline with stationary text`,async({page,context})=>{
+for(const title of bookTitles) test(`${title}: every scene animates its named parts offline with stationary text`,async({page,context})=>{
  test.setTimeout(90000);
  await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'no-preference'});await page.goto('/');
  const books=await page.evaluate(()=>fetch('./books/catalog.json').then(r=>r.json()));const book=books.find(b=>b.title===title);

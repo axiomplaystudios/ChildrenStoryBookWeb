@@ -1,0 +1,443 @@
+{
+  "id": "pattern-parade",
+  "title": "The Pattern Parade",
+  "subtitle": "What comes next in our celebration?",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Repeating patterns",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "The friends planned a parade. Mouse wanted a repeating pattern for the decorations.",
+      "alt": "Mouse and Rabbit prepare a parade arch with an undecorated ribbon and two blue buckets.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-01-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              175,
+              610
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Red, blue, red, blue. Mouse made a row of round badges.",
+      "alt": "A left-to-right pattern: red circle, blue circle, red circle, blue circle. Mouse watches without moving the sequence.",
+      "image": "page-02.svg",
+      "learning": {
+        "pattern": [
+          "red",
+          "blue",
+          "red",
+          "blue"
+        ],
+        "unit": [
+          "red",
+          "blue"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-02-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Yellow, green, yellow, green. Rabbit made another repeating row.",
+      "alt": "A left-to-right pattern: yellow square, green square, yellow square, green square. Mouse watches without moving the sequence.",
+      "image": "page-03.svg",
+      "learning": {
+        "pattern": [
+          "yellow",
+          "green",
+          "yellow",
+          "green"
+        ],
+        "unit": [
+          "yellow",
+          "green"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-03-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              170,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Circle, triangle, circle, triangle. This pattern changed shape, not colour.",
+      "alt": "A left-to-right pattern: blue circle, blue triangle, blue circle, blue triangle. Mouse watches without moving the sequence.",
+      "image": "page-04.svg",
+      "learning": {
+        "pattern": [
+          "circle",
+          "triangle",
+          "circle",
+          "triangle"
+        ],
+        "unit": [
+          "circle",
+          "triangle"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-04-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Red, red, blue. Red, red, blue. Bear tried a longer repeating bit.",
+      "alt": "A left-to-right pattern: red circle, red circle, blue circle, red circle, red circle, blue circle. Mouse watches without moving the sequence.",
+      "image": "page-05.svg",
+      "learning": {
+        "pattern": [
+          "red",
+          "red",
+          "blue",
+          "red",
+          "red",
+          "blue"
+        ],
+        "unit": [
+          "red",
+          "red",
+          "blue"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-05-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Yellow, yellow, green. Yellow, yellow, green. The next row was ready too.",
+      "alt": "A left-to-right pattern: yellow triangle, yellow triangle, green triangle, yellow triangle, yellow triangle, green triangle. Mouse watches without moving the sequence.",
+      "image": "page-06.svg",
+      "learning": {
+        "pattern": [
+          "yellow",
+          "yellow",
+          "green",
+          "yellow",
+          "yellow",
+          "green"
+        ],
+        "unit": [
+          "yellow",
+          "yellow",
+          "green"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-06-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              170,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Red, blue, red, blue, red… One badge was missing. What could come next?",
+      "alt": "A left-to-right pattern: red circle, blue circle, red circle, blue circle, red circle. Mouse watches without moving the sequence.",
+      "image": "page-07.svg",
+      "learning": {
+        "pattern": [
+          "red",
+          "blue",
+          "red",
+          "blue",
+          "red"
+        ],
+        "unit": [
+          "red",
+          "blue"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-07-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "A blue badge! The pattern was ready. The friends marched past their colourful rows.",
+      "alt": "The completed red-blue pattern shows six stationary badges above Mouse, Rabbit and Bear in the parade.",
+      "image": "page-08.svg",
+      "learning": {
+        "pattern": [
+          "red",
+          "blue",
+          "red",
+          "blue",
+          "red",
+          "blue"
+        ],
+        "unit": [
+          "red",
+          "blue"
+        ]
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-08-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              375,
+              640
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What came after red in Mouse’s first row?",
+      "a": "Blue came after red.",
+      "hintPage": 2
+    },
+    {
+      "type": "literal",
+      "q": "Which badge filled the empty place?",
+      "a": "A blue badge filled the empty place.",
+      "hintPage": 8
+    },
+    {
+      "type": "feeling",
+      "q": "How might the friends feel when the parade is ready?",
+      "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+      "hintPage": 8
+    },
+    {
+      "type": "personal",
+      "q": "What repeating pattern would you make?",
+      "a": "Any answer is welcome. Invite your child to tell you more.",
+      "hintPage": 8
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Book sources and adaptations
 
-Verified 10 November 2026. All three books and all their page images are local assets under `public/books/`; reading requires no remote image service.
+Verified 10 November 2026. All thirteen books and all their page images are local assets under `public/books/`; reading requires no remote image service.
 
 ## Pip Finds a Friend
 
@@ -86,3 +86,14 @@ Original logo: https://bookdash.github.io/bookdash-books/sleepy-mr-sloth/en/imag
 - All illustrations are newly authored vector artwork for this adaptation, with separate character/object layers. They do not reproduce or claim to preserve the original illustrator's drawings. New motion and four discussion questions are added.
 - The authoring package records source, changes and per-page animation review. The source HTML snapshot and SHA-256 record remain under `authoring/a-house-for-mouse/` for reproducibility; only finished local artwork and metadata are installed in `public/books/a-house-for-mouse/`.
 - Attribution, a source link, the CC BY link and Book Dash logo remain visible in the book credits. No endorsement is claimed.
+
+
+## Original learning collection (11 November 2026)
+
+Ten new books—Pip’s Alphabet Adventure, Mouse’s Counting Picnic, Rabbit’s Rainbow Garden, The Little Shape Builders, Pip’s Planet Journey, Big Bear, Little Mouse, Where Is Teddy?, The Weather Window, The Pattern Parade and A Day of Feelings—were written and illustrated for this project with AI assistance. No external story text or illustrator's artwork was adapted for these books. They contain 108 pages and reuse locally authored character components for visual continuity.
+
+Each authoring package records `kind: original`, creators, a truthful licensing statement, the educational topic, per-page review records and editorial notes. Original content has no fabricated publisher/source/licence URL and is not labelled Book Dash. No new project-wide or Creative Commons licence is granted by this addition.
+
+Editorial calibration: [CDC four-year guidance](https://www.cdc.gov/act-early/milestones/4-years.html) was read for examples of shared conversation, familiar-object counting, colours and story prediction. This collection is not a developmental checklist or certified curriculum. Planet facts are checked against [NASA's planets overview](https://science.nasa.gov/solar-system/planets/) and individual planet pages recorded in the planet book's notes. Factual references are not story authorship credits.
+
+Illustrations, learning labels and all motion remain local. Static fallbacks preserve the same lesson. Counted sets and pattern sequences remain stable during animation; all authored moving layers loop, with short rests. Original packages and installed copies are checked for parity, independently expected learning sequences, actual image decoding and continued browser motion.

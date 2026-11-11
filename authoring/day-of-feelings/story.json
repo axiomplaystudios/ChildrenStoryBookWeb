@@ -1,0 +1,368 @@
+{
+  "id": "day-of-feelings",
+  "title": "A Day of Feelings",
+  "subtitle": "Bear finds words for a changing day",
+  "origin": "original",
+  "category": "LEARN TOGETHER",
+  "learningTopic": "Feelings",
+  "cover": "cover.svg",
+  "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
+  "pages": [
+    {
+      "text": "Bear came to play with Mouse. So many things could happen in one day.",
+      "alt": "Bear arrives in the playroom with Mouse and a blue bucket.",
+      "image": "page-01.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-01-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-01-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              685,
+              515
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "“I feel happy,” said Bear. Mouse had saved some blocks for him.",
+      "alt": "Bear smiles beside Mouse and a neat tower of colourful blocks.",
+      "image": "page-02.svg",
+      "learning": {
+        "feeling": "happy"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-02-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-02-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              700,
+              515
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The tower fell. “I feel sad,” said Bear. Mouse sat with him.",
+      "alt": "Bear has a downturned mouth and a tear beside fallen blocks; Mouse stays nearby.",
+      "image": "page-03.svg",
+      "learning": {
+        "feeling": "sad"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-03-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-03-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              710,
+              515
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The blocks would not balance. “I feel angry!” Bear put them down and took a slow breath.",
+      "alt": "Bear’s eyebrows angle inward and his mouth is tight; the blocks rest safely on the floor.",
+      "image": "page-04.svg",
+      "learning": {
+        "feeling": "angry"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-04-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-04-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              260,
+              505
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "“I feel worried it will fall again,” said Bear. “Can you help me?”",
+      "alt": "Bear’s raised inner eyebrows and wavy mouth accompany his request for help; Mouse stands by the fallen blocks.",
+      "image": "page-05.svg",
+      "learning": {
+        "feeling": "worried"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-05-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-05-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              265,
+              505
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Together, they made a wide base. “I feel excited to try!” said Bear.",
+      "alt": "Bear has an open joyful mouth and raised eyebrows; a wide base supports their rebuilt tower.",
+      "image": "page-06.svg",
+      "learning": {
+        "feeling": "excited"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-06-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-06-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              710,
+              515
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "The tower stood. Bear rested beside Mouse. “Now I feel calm.”",
+      "alt": "Bear rests with softly closed eyes and a small relaxed smile beside Mouse and the standing tower.",
+      "image": "page-07.svg",
+      "learning": {
+        "feeling": "calm"
+      },
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-07-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-07-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              710,
+              515
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "text": "“All my feelings could come and go,” said Bear. “I could tell you.” Mouse stayed close.",
+      "alt": "Bear and Mouse sit close together on the rug, with the finished tower beside them.",
+      "image": "page-08.svg",
+      "scene": {
+        "width": 900,
+        "height": 720,
+        "background": "page-08-background.svg",
+        "layers": [
+          {
+            "id": "friend",
+            "image": "page-08-friend.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              535,
+              525
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "friend",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": -5,
+              "angle": 1
+            },
+            "durationMs": 3000,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "literal",
+      "q": "What happened to Bear’s first tower?",
+      "a": "The tower fell.",
+      "hintPage": 3
+    },
+    {
+      "type": "literal",
+      "q": "Who helped Bear try again?",
+      "a": "Mouse helped Bear.",
+      "hintPage": 6
+    },
+    {
+      "type": "feeling",
+      "q": "How might Bear feel when Mouse stays close?",
+      "a": "There can be different feelings. Listen to the feeling your child notices and why.",
+      "hintPage": 8
+    },
+    {
+      "type": "personal",
+      "q": "Who can you talk to about your feelings?",
+      "a": "Any answer is welcome. Invite your child to tell you more.",
+      "hintPage": 8
+    }
+  ]
+}

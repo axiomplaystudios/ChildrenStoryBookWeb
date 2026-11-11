@@ -94,6 +94,7 @@ test('page-turn library failure keeps a readable tap fallback', async ({ page })
 });
 
 test('every story fits small phone pages without clipping text', async ({ page }) => {
+  test.setTimeout(120000);
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 320, height: 568 });
   await page.goto('/');
