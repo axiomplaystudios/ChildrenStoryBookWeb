@@ -1,0 +1,415 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "large-circle-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "small-circle-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "square-cap-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "triangle-wing-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-rectangle-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-banner-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "bolt-detail",
+      "reviewed": true
+    },
+    {
+      "assetId": "toys-detail",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-detail",
+      "reviewed": true
+    },
+    {
+      "assetId": "workshop-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "workshop-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "workshop-toys",
+      "reviewed": true
+    },
+    {
+      "assetId": "workshop-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "workshop",
+      "reviewed": true
+    },
+    {
+      "assetId": "workshop-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-target",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-toy",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-fitted",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-label",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-wheel-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-target",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-toy",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-fitted",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-label",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap",
+      "reviewed": true
+    },
+    {
+      "assetId": "duck-cap-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-target",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-toy",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-fitted",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-label",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-wing-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-target",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-toy",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-fitted",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-label",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key",
+      "reviewed": true
+    },
+    {
+      "assetId": "butterfly-key-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-target",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-toy",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-fitted",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-label",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-drum-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-target",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-toy",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-fitted",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-label",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner",
+      "reviewed": true
+    },
+    {
+      "assetId": "train-banner-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-bolt",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-antenna",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-toys",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-duck-wheel",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-duck-cap",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-butterfly-wing",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-butterfly-key",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-train-drum",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-train-banner",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-pennant",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade",
+      "reviewed": true
+    },
+    {
+      "assetId": "parade-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "workshop",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "duck-wheel",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "duck-cap",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "butterfly-wing",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "butterfly-key",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "train-drum",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "train-banner",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "parade",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}

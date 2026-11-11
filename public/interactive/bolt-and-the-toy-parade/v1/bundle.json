@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "id": "bolt-and-the-toy-parade",
+  "version": "v1",
+  "pairFile": "pair.json",
+  "files": [
+    {
+      "file": "pair.json",
+      "sha256": "6bd3a3732f24b47634f5c23c19bea0d893a8b1166a8bf5fdd24c380abda9857d",
+      "bytes": 68487,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "source.json",
+      "sha256": "fd403d77dd38ba27d2ec5aaa77da81dd00c6eeebce1fdfcbb608856493f6495d",
+      "bytes": 401,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "visual-review.json",
+      "sha256": "2c0bb2928566452dc55dcfeb61a234e82438dfe9a870ab43aeaefad1432e734b",
+      "bytes": 7603,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "large-circle-control.svg",
+      "sha256": "f3b617450915d9b8d4348bc2cffb236bcca462dc4eb950b05464bd615ee5fa72",
+      "bytes": 517,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "small-circle-control.svg",
+      "sha256": "9a884eef0d2d7d9ddfdfe71ace898ab8d0df2c3f5a65f5256bab273282cffed2",
+      "bytes": 517,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "square-cap-control.svg",
+      "sha256": "318467ed22f30f97f263426f7ff37002552227d3f7a04ed0f9b4ffc9d01938bb",
+      "bytes": 441,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "triangle-wing-control.svg",
+      "sha256": "c56d62c2a62528a6d7d3f113ff40c96c06f5744e9a3920edf28b9a6d8ffe54a7",
+      "bytes": 494,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "long-rectangle-control.svg",
+      "sha256": "a6986ed3cd7d5a7449818b173bcaee77dd462fed5532f3b0379c6f3b6bc8159a",
+      "bytes": 492,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-banner-control.svg",
+      "sha256": "0454c67c596c4005bfee19fbc119a863c991a322b528e2968c615070df78b67f",
+      "bytes": 408,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "bolt-detail.svg",
+      "sha256": "5964887bd2dffad66859cf9bb6d7b8d734fa9e2437f2ad94d90ec1587be749cd",
+      "bytes": 1655,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "toys-detail.svg",
+      "sha256": "3346d9648efcd5fd30d0e99e8d79d0f7f352509d45fe8e627da0f8cc2b186324",
+      "bytes": 3990,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-detail.svg",
+      "sha256": "1dfbe45a6ab72c41729e3243880b4ceecef99964235ba00dd09d6db57c984551",
+      "bytes": 4628,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "workshop-bolt.svg",
+      "sha256": "ea11862bcd226942593a6d0e4259d5eeecaec2282cb92ea3219b40251cbe7faa",
+      "bytes": 1588,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "workshop-antenna.svg",
+      "sha256": "3d51416b8a75092bfd98227e329f3f3eb274f6275f814cf2b39104d8a3db7f72",
+      "bytes": 144,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "workshop-toys.svg",
+      "sha256": "40aea89fad0d6c81da476d1871ebc5870c2439dcad6b81f00cae9d8d4e48b3d7",
+      "bytes": 3924,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "workshop-pennant.svg",
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "workshop.svg",
+      "sha256": "959c0c78c75f4edda0380c057811467ded506e39b01022727d208175a559ce31",
+      "bytes": 7247,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "workshop-background.svg",
+      "sha256": "a06b23062b3f8cabd06229fd64d33cc60ae361436de5f7c49b65df6393614b3f",
+      "bytes": 1733,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-target.svg",
+      "sha256": "69eeb6963ac3a26c4bc8eb12a9354b126bac545428c385c72bfbed38b211f0f9",
+      "bytes": 344,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-demo.svg",
+      "sha256": "7e68e5d3aff620b02bfa9a90e90e8a6d47a6150e623bb86be1dd1f58985a3e2a",
+      "bytes": 1107,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-bolt.svg",
+      "sha256": "3c6871666931e06a68ea9c7ee71363dfb87e6656d9a5be0ba77ecc2ccc4e7015",
+      "bytes": 1591,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-antenna.svg",
+      "sha256": "87975150a8f4fa94e808aa268686748f7189b49bef259fb840b2f628777e33f8",
+      "bytes": 146,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-toy.svg",
+      "sha256": "a857c994f30cf18c2ac6a1b5c2abd2016b5fff4f0e18e67c4a774c980e0d0715",
+      "bytes": 1273,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-fitted.svg",
+      "sha256": "e6cdb324fabd9b8df89eb3b5620f0267c1cc16d551306378ef5dbfe7326aa013",
+      "bytes": 423,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-label.svg",
+      "sha256": "eadadc39c604d250fe0ba78afd37e6002d1bbd5da5679282c9c2f49acf75b95a",
+      "bytes": 292,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-pennant.svg",
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel.svg",
+      "sha256": "8568c1e04f50dd37965c118a5183df58d4000c3e7ab4b85bf1d5bd149138e3f3",
+      "bytes": 4936,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-wheel-background.svg",
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0",
+      "bytes": 1873,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-target.svg",
+      "sha256": "9a8093e8c0de834d7f6aff04baa38649663f68cff83bad34070686889b2aab4e",
+      "bytes": 367,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-demo.svg",
+      "sha256": "ec2e6e99dc35dd8a0bf675c4aa52d4cf6d9934e563e5e5d95ea87bd6fabe9bed",
+      "bytes": 978,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-bolt.svg",
+      "sha256": "04e799f455f387bdccb4422884b4e20b0048bc11c330272ea27bcdce46fa68e1",
+      "bytes": 1588,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-antenna.svg",
+      "sha256": "99670ccda8db23f6ec45709cee10ddcaaaaa121caf1c21679175bbe72e2d48a4",
+      "bytes": 144,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-toy.svg",
+      "sha256": "a27bab7ca60e4f56a414321e651d97d64cbc5d5e17c351e4f69b98c94744d1bb",
+      "bytes": 1446,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-fitted.svg",
+      "sha256": "faa81faf5089f3e2540b5a1759046ce4ac7ec6e20eba603c0fa30917d50cf873",
+      "bytes": 346,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-label.svg",
+      "sha256": "b9127d2f180d40f65cbb0e0eab46ab510dfaad4aa6c14c7b5361805446a3cb5b",
+      "bytes": 290,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-pennant.svg",
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap.svg",
+      "sha256": "9e843aadab0396cf979970eb225ee3233bf3b43797a4cac152a215a546c050f1",
+      "bytes": 5104,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "duck-cap-background.svg",
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0",
+      "bytes": 1873,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-target.svg",
+      "sha256": "e6f986b63024bf283b13fd3203f037c7809ca9a2d41c686fa40a5d41a7f37c93",
+      "bytes": 392,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-demo.svg",
+      "sha256": "b5cf5ec7c1c29471b583cb514a3f124912e3cc6f5059a79383b5b1a29cf7c5ca",
+      "bytes": 1109,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-bolt.svg",
+      "sha256": "24c523f367ac8d09a8ac9c140c209e89ad167f016619f9a8d20574fdc92fc1d1",
+      "bytes": 1591,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-antenna.svg",
+      "sha256": "81abd9bad751dc5086cc8d4d0f215a7e4918216e899f423e94bc2febfbfe7d85",
+      "bytes": 159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-toy.svg",
+      "sha256": "30a988316a50b50ac7ebce5a85f2c55ef4c9cf026ac298b53c465070174d40e8",
+      "bytes": 1297,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-fitted.svg",
+      "sha256": "e3f82252c3cda8a1fbefa191307d3d9680c5cffcc85e58d75cf9c77f82c2fbbe",
+      "bytes": 400,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-label.svg",
+      "sha256": "fa00a3685728e7f075b38468a3f122e0071ed763a3a958b5cb62c1e0f1b3926f",
+      "bytes": 290,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-pennant.svg",
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing.svg",
+      "sha256": "64f83587ab4df2e18efc47949b1624a29c81c0c8d2998e8d02d3c4676f9e3be2",
+      "bytes": 4958,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-wing-background.svg",
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0",
+      "bytes": 1873,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-target.svg",
+      "sha256": "7bf5fd8a772744c7a812d67c5884775c021cb1a371641a2da2d740466be37718",
+      "bytes": 344,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-demo.svg",
+      "sha256": "ca8a7e184991b976ae17c538bbfb5bd62be0aa160d71e049baf803607291e90d",
+      "bytes": 1107,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-bolt.svg",
+      "sha256": "4e327596e151285bf870bbff466bb599ec2ffe4e5d1e16e6b766d53259ad5592",
+      "bytes": 1591,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-antenna.svg",
+      "sha256": "3737af89119d5cecfdf12de8aed11b458a985e0dba8fae694baea3ae3c12c53e",
+      "bytes": 146,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-toy.svg",
+      "sha256": "0865443e308d58a87d4848029ac04fcf29f4139d587add6b2cd68facfb5dec05",
+      "bytes": 1399,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-fitted.svg",
+      "sha256": "991234da34c2fca72396d2cad02e326d01616a9b5538da0010e7d5ddb59c2431",
+      "bytes": 422,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-label.svg",
+      "sha256": "4dfe2867362104b54964e2203195abdadefcb5d21d42d58cf421e9954785faea",
+      "bytes": 298,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-pennant.svg",
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key.svg",
+      "sha256": "303b7ccae1128bee1c56800d3aedd8a50ec9546ddea5fde087bea8a3b6773de6",
+      "bytes": 5068,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "butterfly-key-background.svg",
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0",
+      "bytes": 1873,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-target.svg",
+      "sha256": "122bf2a150a20f89f7d02b2d5669f71474c8320094f3c77b99cc57324e2d7e2b",
+      "bytes": 368,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-demo.svg",
+      "sha256": "1e145c195d26dbc7c697b2abfbf8373f1aefdac9d1f6b10febae02ea980e3e43",
+      "bytes": 1081,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-bolt.svg",
+      "sha256": "8ec159a2e7b474e09f04a0db9d6c93fa73142012dc54b537b087c40f766a1085",
+      "bytes": 1591,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-antenna.svg",
+      "sha256": "539f2bd435715f5c526955983e15117019b1c70ba212b051b69185a1be6dc3c2",
+      "bytes": 146,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-toy.svg",
+      "sha256": "502ce2f80ba526fd9317876c03192c7eb8b0831519c4424d95e7be675651c31a",
+      "bytes": 1546,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-fitted.svg",
+      "sha256": "6df149e51fe037a5cf10d105d4bd84472534ebe029c3b115b2d29052f06dc3c6",
+      "bytes": 401,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-label.svg",
+      "sha256": "0d751149b9d353efee15b62be8e31b2d60c99e49f439cf2c89bc750d710be47f",
+      "bytes": 302,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-pennant.svg",
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum.svg",
+      "sha256": "212ce598609b6c301209a48bd276c6ca9b6b31f7cd884c362fe838151b2f3952",
+      "bytes": 5219,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-drum-background.svg",
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0",
+      "bytes": 1873,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-target.svg",
+      "sha256": "4034352a0b822908e7e84be9427ad416affefa0c2518bca9e440c8d6b6cee7ca",
+      "bytes": 430,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-demo.svg",
+      "sha256": "28995fd55682f0a2b1a282dc211d7305417000258ccf0f1fc8d978bb3dfa91a6",
+      "bytes": 975,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-bolt.svg",
+      "sha256": "bc5e0b52212084fecf6980a9149c61dd7c503a37ba33abb44bd9f704d8b84a6e",
+      "bytes": 1588,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-antenna.svg",
+      "sha256": "c91a2e92ce920b70085857bd5da7d484eafe5c7bbbfcb178916f9d682c0e841d",
+      "bytes": 144,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-toy.svg",
+      "sha256": "a0d57fff963a49f175f3014c87582934aad2d0c887a67215c5dea0cdea668b1e",
+      "bytes": 1670,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-fitted.svg",
+      "sha256": "4011941ffcc91d1861f0f4492b623774a27ad935ecb59f197ab8f41bce80fb57",
+      "bytes": 317,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-label.svg",
+      "sha256": "a5fbaa6c34a94fdd78f1f6d602de2a92385705fddd56dd84b3532f8581692b02",
+      "bytes": 292,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-pennant.svg",
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner.svg",
+      "sha256": "8aac4d55ed34488550017b1d498a11d0a8148024f4761a527ec00a08b43a5ef3",
+      "bytes": 5330,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "train-banner-background.svg",
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0",
+      "bytes": 1873,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-bolt.svg",
+      "sha256": "b17e38c179d7730cd75c03638b18e0ad0ec603a3ea5694eabbd8d3b860ab2e58",
+      "bytes": 1591,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-antenna.svg",
+      "sha256": "146c2f2479f4c789ca3a5133c301480ac04dc41d8bdf9ba3910f43cd0846c569",
+      "bytes": 159,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-toys.svg",
+      "sha256": "643a799d0ae69b2553843e95ca378a76b4178477852318a14774a3a94885d804",
+      "bytes": 3924,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-duck-wheel.svg",
+      "sha256": "806b3676acde5fb4905ae6dec59e35c6a43a25d8540fd833633260285fd992c6",
+      "bytes": 421,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-duck-cap.svg",
+      "sha256": "1ee1ab488ef15700317e5fc4d8e59816b70a7d7830fddfee59ee302d3ace5d37",
+      "bytes": 343,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-butterfly-wing.svg",
+      "sha256": "ed56298efb27d299fb574f50cfa7c2d52936f162b05a430de579753c792edc76",
+      "bytes": 400,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-butterfly-key.svg",
+      "sha256": "b4e28ec4db58eac90a8839c6200698460bde404064bce7121d37a77ddf99db0f",
+      "bytes": 421,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-train-drum.svg",
+      "sha256": "48079626d9a17dce7eb9fc9fb78e2c5eb95c0d2dabd2e618a29c71fc451b7c60",
+      "bytes": 401,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-train-banner.svg",
+      "sha256": "02df34b048ffd3933f26a032700dd89d2a3f2f0de0608b7a0758a2f56332d416",
+      "bytes": 317,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-pennant.svg",
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748",
+      "bytes": 287,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade.svg",
+      "sha256": "20d7bea21bbfc740bcf947c6946c77506e830032d60ff50ab0700cb6de98edb2",
+      "bytes": 7250,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "parade-background.svg",
+      "sha256": "a06b23062b3f8cabd06229fd64d33cc60ae361436de5f7c49b65df6393614b3f",
+      "bytes": 1733,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "cover.svg",
+      "sha256": "75cab386b0abcfbfc07f8537e442f372e6a282ca47eebfad46933f2f8757ee78",
+      "bytes": 7698,
+      "mediaType": "image/svg+xml"
+    }
+  ]
+}
