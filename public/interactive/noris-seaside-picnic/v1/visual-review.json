@@ -1,0 +1,288 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "wide-mat-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "packing-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-wide-mat",
+      "reviewed": true
+    },
+    {
+      "assetId": "small-mat-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "packing-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-small-mat",
+      "reviewed": true
+    },
+    {
+      "assetId": "packing-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "packing-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "packing",
+      "reviewed": true
+    },
+    {
+      "assetId": "dune-shelter-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "place-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-dune-shelter",
+      "reviewed": true
+    },
+    {
+      "assetId": "cove-view-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "place-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-cove-view",
+      "reviewed": true
+    },
+    {
+      "assetId": "place-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "place-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "place",
+      "reviewed": true
+    },
+    {
+      "assetId": "fruit-tray-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "sharing-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-fruit-tray",
+      "reviewed": true
+    },
+    {
+      "assetId": "fruit-bowls-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "sharing-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-fruit-bowls",
+      "reviewed": true
+    },
+    {
+      "assetId": "sharing-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "sharing-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "sharing",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade-sail-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-shade-sail",
+      "reviewed": true
+    },
+    {
+      "assetId": "open-sky-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-open-sky",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "shade",
+      "reviewed": true
+    },
+    {
+      "assetId": "sorted-boxes-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "cleanup-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-sorted-boxes",
+      "reviewed": true
+    },
+    {
+      "assetId": "carry-pouch-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "cleanup-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-carry-pouch",
+      "reviewed": true
+    },
+    {
+      "assetId": "cleanup-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "cleanup-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "cleanup",
+      "reviewed": true
+    },
+    {
+      "assetId": "loaded-cart-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-0",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-loaded-cart",
+      "reviewed": true
+    },
+    {
+      "assetId": "carried-basket-picture",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-1",
+      "reviewed": true
+    },
+    {
+      "assetId": "result-carried-basket",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "homeward",
+      "reviewed": true
+    },
+    {
+      "assetId": "remember-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "remember-moving",
+      "reviewed": true
+    },
+    {
+      "assetId": "remember",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "packing",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "place",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "sharing",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "shade",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "cleanup",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "homeward",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "remember",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}
