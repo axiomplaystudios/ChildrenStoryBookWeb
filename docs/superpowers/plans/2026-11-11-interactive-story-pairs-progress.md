@@ -9,7 +9,7 @@ The user clarified on 2026-11-11: “I will read aloud. No need to complicate th
 
 Audio generation, narration engines, packaged audio, listening/review/start gates and playback controls are removed. Tasks 1 and 5 are superseded, not pending or blocked. The unused validator and its dedicated tests are removed. The audio spike in authoring/interactive/audio-review.md is historical evidence only, with a superseded header; none of its commands or gates govern current work.
 
-**Task 7 Bakery is in progress; Tasks 2–4 and 6 are complete and reviewed. Tasks1/5 superseded.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
+**Tasks8/9/10 in progress concurrently with disjoint ownership; Tasks2–4,6,7 complete reviewed. Tasks1/5 superseded.** Preserve eight pairs / sixteen experiences, distinct layered art, deterministic reducers, edition-specific saved runs, versioned verified offline downloads, accessibility, all consequence paths, physics checks and all thirteen legacy books. The Penguin Sound Post works through visual rhythms; parent-made sounds are optional. No new approval is required to continue the already authorized implementation. No push, merge or deployment is authorized.
 
 ## Preflight after scope amendment
 | Tasks | Shared contract / consistency | Finding |
@@ -40,10 +40,10 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - [x] Task 4: complete, reviewed; commit56a28fa.
 - [x] Task 5: superseded by user clarification; no narrator implementation needed.
 - [x] Task 6: complete, reviewed; commits22c9dc5,53301cd,c44e6ac.
-- [ ] Task 7: in progress /root/task7_bakery basec44e6ac; actual art review required.
-- [ ] Task 8: pending working Bakery slice.
-- [ ] Task 9: pending shared content foundations.
-- [ ] Task 10: pending shared content foundations.
+- [x] Task7 complete d80323a reviewed.
+- [ ] Task8 in progress /root/task8_experiments, base d80323a.
+- [ ] Task9 in progress /root/task9_consequences, base d80323a.
+- [ ] Task10 in progress /root/task10_discovery, base d80323a.
 - [ ] Task 11: pending collection content.
 - [ ] Task 12: pending all current implementation tasks and final review.
 
@@ -74,3 +74,8 @@ Audio generation, narration engines, packaged audio, listening/review/start gate
 - Task 6: fix round1/5 (1 addressed,0 open — settings/disclosure touch targets; commits53301cd..c44e6ac). Scope review approved, targeted portrait/landscape regression passed.
 - Task 6: complete (commits56a28fa..c44e6ac, review clean). 49 browser checks +2 focused lifecycle/reduced fixes +1 target-size test;129 unit/build pass. Reviewer /root/task6_review. Full old-app SW upgrade,nested built UI,deferred reload remain Task12.
 - Task 7 started (basec44e6ac); first real Bakery pair with real visual inspection required before review flags true.
+- Task7 implementation d80323a ready for review /root/task7_review, base87b14c6; source/public Bakery8scenes/2editions,303899bytes,70SVG. 132unit+125full browser pass. Real controller/implementer image inspection recorded in task-7-report.md and bakery-evidence/. Corrections complete, flags attested after inspection.
+- Task7: complete (commitd80323a, review /root/task7_review PASS/approved). Reviewer directly inspected completed/phone artwork, no material findings.
+- Ruling: user explicitly authorized independent story delegation after framework/Bakery ready. Tasks8,9,10 run concurrently with disjoint story-specific generators/art/tests/packages; shared framework/catalog/tests remain controller coordinated. User execution instruction overrides default SDD serial-implementer guideline; each task still gets independent review.
+
+Concurrency: controller grants build/browser and commit windows (shared dist/git index); story agents own disjoint category helper+generator+assets+tests only. Public catalog rebuilt during reserved windows; controller owns integration.
