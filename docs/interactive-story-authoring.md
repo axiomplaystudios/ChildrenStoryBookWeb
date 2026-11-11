@@ -78,3 +78,39 @@ node scripts/interactive/catalog.mjs
 The generated `bundle.json` is `{schemaVersion:1,id,version,pairFile:'pair.json',files:[{file,sha256,bytes,mediaType}]}`. It lists `pair.json`, both review/provenance records and every image. It excludes itself to avoid a self-hash. Bundle consumers verify the catalog's manifest hash/length, then every listed file, before declaring readiness. JSON files use `application/json`; image records use matching image media types. `files` returned by `checkPair` contains validated metadata and assets but not `bundle.json`.
 
 The public catalog contains one latest version summary per pair: `{id,version,title,category,credit,cover,manifestUrl,manifestSha256,manifestBytes,totalBytes}`. Natural version sorting selects increasing `v1`, `v2`, etc. URLs resolve relative to the catalog URL (including nested application base paths). `totalBytes` includes the manifest and all its files, and is measured from actual bytes. Covers under `covers/<id>--<version>.<ext>` are at most 64 KiB: small originals are copied; larger images are reduced to at most 320 pixels and encoded as WebP. Catalogs contain no scenes or activity art manifest. Missing initial content produces an empty catalog, allowing dev/build before any real story exists. Dev/build scripts generate both catalogs; interactive offline caching and runtime download behavior belong to the later bundle-store task.
+
+## Runtime actions and saved runs
+
+The runtime exports `createRun(pair, edition)`, `dispatch(run, pair, action)`, `deriveScene(pair, run, sceneId = run.sceneId)`, `deriveEnding(pair, run)` and `validateRun(pair, value)`. Validate authored pairs before use; `createRun` also validates. Runs contain exactly `{schemaVersion:1,pairId,pairVersion,edition,sceneId,actions}`. Only accepted canonical actions are stored; state, quantities, trials and visibility are recomputed. No clocks, randomness, audio or correctness score participate.
+
+`dispatch` returns `{run,accepted,effects,reason?}` without changing either input. Rejections preserve the input run. Effect descriptors ask the reader to show a confirmation or announce a rewind/restart; the reducer never touches the DOM or storage. Actions have exactly the fields below; IDs must reference the current activity and its authored controls. Unknown fields, getters, sparse arrays, duplicate actions and stale indices are rejected.
+
+| Action | Required fields in addition to `type` | Behavior |
+| --- | --- | --- |
+| `NAVIGATE` | `sceneId` | Visit a reading scene or resolved earlier scene. Every activity before the destination must be complete; navigation supplies no answers. |
+| `PLACE` | `activityId,itemId,copyIndex,targetId` | Place the identified copy. `copyIndex` is zero based and less than `quantity` (default 1). A second tap with the same copy cannot consume another. A placement that strands scarce pieces is rejected with `reason:'save-that-piece'`; show the child a plain explanation to save that piece for its other target. |
+| `SELECT` | `activityId,controlId,trialIndex` | Select an experiment configuration independently of its prediction. |
+| `PREDICT` | `activityId,predictionId,trialIndex` | Select a prediction independently of configuration. |
+| `TEST` | `activityId,trialIndex` | Requires both configuration and prediction; append exactly one deterministic authored outcome. |
+| `RETRY` | `activityId,trialIndex` | After a test, retain all trials and the configuration, clear the prediction, increment the trial index and reopen the activity. |
+| `CHOOSE` | `activityId,optionId` | Record the original decision identity and apply effects. A differing recorded choice requests confirmation. |
+| `CONFIRM_CHANGE` | `activityId,optionId,token` | Confirm the requested earlier choice change using the returned token. Clear its original action and the entire later suffix, store the replacement choice and rewind to that scene. |
+| `ANSWER` | `activityId,optionIds` | Submit one match ID or 1–12 ordered sequence IDs. A valid but unmatched answer records an attempt and leaves the activity open; no score is assigned. |
+| `PHYSICAL` | `activityId` | Complete the optional adult-assisted physical path without proof or device permissions. |
+| `SKIP` | `activityId` | Complete the distinct skip path. |
+| `RESTART` | none | Return a new empty run for this pair and edition. |
+
+All experiment actions use the current zero-based `trialIndex`, initially 0; the reader must use the derived value after RETRY. A tested trial rejects another TEST until RETRY. Repeated selections and answers that would add no new information are rejected. Discovery completion paths are `answer`, `physical` and `skip`, stored separately; completion effects apply once.
+
+When `CHOOSE` requests an edit, the result has `accepted:false`, `reason:'confirmation-required'` and `effects:[{type:'confirm-choice-edit',activityId,optionId,token}]`. Keep the existing run while asking the adult/child. Send `CONFIRM_CHANGE` only after approval with those same fields. The deterministic token fingerprints the run and requested choice; any intervening run change expires it. A confirmed change emits `{type:'rewound',sceneId}`. RESTART emits `{type:'restarted'}`. Confirmation and restart commands are normalized away from canonical action history. Navigating back alone never clears or reapplies decisions.
+
+`deriveScene` returns `{sceneId,scene,activity,state,visibility,guidance,ending}` as detached data. `visibility` maps this scene's layer IDs to booleans, including applicable ending/recap variants on the final scene. `state` contains repairable values plus immutable `choice.<activityId>` identities. `guidance` belongs to the selected edition. `activity` is null for reading scenes; otherwise it includes `kind` and `complete`, with the following details:
+
+- Placement: `placements`, `remainingCopies:[{itemId,copyIndex}]`, and `targets:[{targetId,placed,required,complete}]`.
+- Experiment: `controlId`, `predictionId`, `trialIndex`, `phase:'configure'|'tested'`, and `trials:[{trialIndex,controlId,predictionId,observation,image}]`. RETRY leaves trials available for comparison and requires another prediction before completion.
+- Choice: `optionId` (null until chosen); the authored scene supplies feedback and option pictures.
+- Discovery: `path` (null until complete), `attempts` and `lastAnswer`; use the authored complete/retry guidance and screen pictures without asking for proof of the physical task.
+
+`deriveEnding` returns `{complete,text,recap,variant}`. Until every activity is complete, it returns `complete:false,text:null,recap:[],variant:null`; it cannot invent an unanswered route. On completion each recap entry is `{text,variant,decisions}` using the authored first-match rule, so a repair can change final state while the recap still explains earlier decisions.
+
+Persistence exports `progressKey(pairId, edition)`, `loadRun(storage,pair,edition)` and `saveRun(storage,run)` for a localStorage-shaped object. Keys are `interactive-run:<pairId>:<edition>`; a version change under the same key safely offers restart. Load returns `{run,status,reason?}` where status is `new`, `loaded`, `restart` (invalid/obsolete save), or `memory` (storage denied). It checks exact run fields, edition/version, cursor and every saved action by replaying the same reducer rules, rejecting forged completion, duplicate copies and impossible navigation. Logs are bounded to 2,000 actions and saved text to 600,000 characters. Saving returns `{run,status:'saved'|'memory',reason?}` and always retains the supplied in-memory run on storage failure. Save only the current edition after RESTART; other edition keys are untouched. An invalid saved value remains available until the reader explicitly saves/restarts.
