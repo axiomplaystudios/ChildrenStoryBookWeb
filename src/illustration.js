@@ -14,7 +14,7 @@ export function createIllustration({ bookId, page, resolveAsset }) {
   element.append(original); element.dataset.playing = 'false';
   const scene = page.scene;
   let stage, loaded = false, disposed = false, reduced = false, wanted = false;
-  let speed = 1;
+  let speed = 1, layeredStill = false;
   let elapsed = 0, lastTime = null, request = null;
   const parts = new Map();
   if (scene) {
@@ -60,7 +60,7 @@ export function createIllustration({ bookId, page, resolveAsset }) {
   }
   function presentation() {
     if (!stage) return;
-    const show = loaded && !reduced && !disposed;
+    const show = loaded && (!reduced || layeredStill) && !disposed;
     original.hidden = show; stage.toggleAttribute('hidden', !show);
   }
   const ready = scene ? Promise.all([...new Set([scene.background, ...scene.layers.map(l => l.image)])].map(file => new Promise((resolve, reject) => {
@@ -77,12 +77,20 @@ export function createIllustration({ bookId, page, resolveAsset }) {
 
   return {
     element, ready,
+    // Explicit layer selection opts into the composed still under reduced motion.
+    // Legacy books retain their existing static fallback image.
+    setLayerVisibility(ids) {
+      layeredStill = true;
+      const visible = new Set(ids);
+      for (const [id, { part }] of parts) part.style.display = visible.has(id) ? '' : 'none';
+      presentation();
+    },
     setSpeed(value) { if ([0.5, 0.75, 1, 1.5, 2].includes(value)) { speed = value; element.dataset.speed = String(speed); } },
     activate: resume, resume,
     pause() { wanted = false; stop(); },
     freezeForTurn() { wanted = false; stop(); },
     reset() { elapsed = 0; lastTime = null; render(); },
-    setReducedMotion(value) { reduced = value; if (reduced) stop(); presentation(); if (!reduced && wanted) resume(); },
+    setReducedMotion(value) { reduced = value; if (reduced) { stop(); if (layeredStill) { elapsed = 0; render(); } } presentation(); if (!reduced && wanted) resume(); },
     destroy() { disposed = true; wanted = false; stop(); },
   };
 }

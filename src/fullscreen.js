@@ -1,7 +1,7 @@
 // A native request must run directly from the user's tap. Unsupported or denied
 // requests still provide a viewport-filling reader, without claiming to hide browser UI.
 export function createFullscreen({ element, button, status, onChange }) {
-  let wanted = false;
+  let wanted = false, disposed = false;
   let nativeActive = false;
   let generation = 0;
   let exiting;
@@ -61,11 +61,11 @@ export function createFullscreen({ element, button, status, onChange }) {
     render('normal');
     await exitNative();
     nativeActive = current() === element;
-    if (nativeActive && !element.hidden) {
+    if (nativeActive && !element.hidden && !disposed) {
       wanted = true;
       render('native');
     }
-    if (restoreFocus && !element.hidden) button.focus({ preventScroll: true });
+    if (restoreFocus && !element.hidden && !disposed) button.focus({ preventScroll: true });
   }
 
   function nativeChanged() {
@@ -83,7 +83,8 @@ export function createFullscreen({ element, button, status, onChange }) {
   }
   document.addEventListener('fullscreenchange', nativeChanged);
   document.addEventListener('webkitfullscreenchange', nativeChanged);
-  button.addEventListener('click', () => { void (wanted ? exit() : enter()); });
+  const toggle = () => { void (wanted ? exit() : enter()); };
+  button.addEventListener('click', toggle);
   render('normal');
-  return { exit, isExpanded: () => wanted };
+  return { exit, isExpanded: () => wanted, destroy() { if(disposed)return; void exit({ restoreFocus: false }); disposed=true; document.removeEventListener('fullscreenchange', nativeChanged); document.removeEventListener('webkitfullscreenchange', nativeChanged); button.removeEventListener('click', toggle); } };
 }
