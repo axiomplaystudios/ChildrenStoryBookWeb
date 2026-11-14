@@ -24,6 +24,7 @@ export function createReader({ frame, onPage, onNext, onBack, speedForPage = () 
       const text = document.createElement('p'); text.textContent = entry.text;
       const number = document.createElement('span'); number.className = 'page-number'; number.textContent = index + 1;
       const content = document.createElement('div'); content.className = 'page-content';
+      if (entry.scene) content.style.setProperty('--picture-ratio', `${entry.scene.width} / ${entry.scene.height}`);
       content.append(illustration.element, text, number); el.append(content); return el;
     });
   }
@@ -73,7 +74,10 @@ export function createReader({ frame, onPage, onNext, onBack, speedForPage = () 
     if (!active || !book) return;
     const { w, h, key } = dimensions();
     frame.style.setProperty('--page-height', `${h}px`);
-    if (flip && key !== layoutKey) {
+    // PageFlip must measure a visible container when returning from fallback.
+    const revealing = curled.hidden && !fallback();
+    if (revealing) curled.hidden = false;
+    if (flip && (key !== layoutKey || revealing)) {
       layoutKey = key;
       const desired = page;
       finishTurn();

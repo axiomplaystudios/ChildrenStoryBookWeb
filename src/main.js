@@ -162,8 +162,13 @@ function showShelf() {
   hero.append(copy, moon);
   const shelf = el('section', 'shelf-section');
   const shelfHeading = el('div', 'section-heading'); shelfHeading.append(el('h2', '', 'Tonight’s bookshelf'), el('span', '', `${books.length} little adventures`));
+  shelf.append(shelfHeading);
+  for (const [heading, learning] of [['Bedtime stories', false], ['Learn together', true]]) {
+  const group = el('section', 'shelf-group');
+  group.append(el('h2', 'shelf-group-title', heading));
   const grid = el('div', 'book-grid');
-  books.forEach(story => {
+  books.filter(story => (story.category === 'LEARN TOGETHER') === learning)
+    .sort((a, b) => a.title.localeCompare(b.title)).forEach(story => {
     const complete = preferences.completed.includes(story.id);
     const card = el('article', 'book-card');
     const cover = button('', () => startBook(story), 'cover-button');
@@ -175,7 +180,8 @@ function showShelf() {
     card.append(cover, el('p', 'book-category', story.origin === 'original' ? (story.category || 'ORIGINAL STORY') : story.sample ? 'OUR LITTLE SAMPLE STORY' : 'FROM BOOK DASH'), el('h3', '', story.title), el('p', 'book-description', story.subtitle || 'A story to read and wonder about together.'));
     card.append(el('p', 'book-meta', `${story.pages.length} pages  ·  4 things to wonder about`), creditPanel(story)); grid.append(card);
   });
-  shelf.append(shelfHeading, grid);
+  group.append(grid); shelf.append(group);
+  }
   const ritual = el('section', 'ritual-note'); ritual.append(el('span', 'ritual-icon', '☾'), el('div'));
   ritual.lastChild.append(el('h2', '', 'No rush. Just the two of you.'), el('p', '', 'You read the story. Your little one brings the wonder. A few gentle questions come at the end.'));
   const install = el('details', 'install-note'); install.append(el('summary', '', 'Keep your bookshelf close'), el('p', '', 'On iPad: open in Safari, tap Share, then Add to Home Screen. On Android: use your browser’s Install app or Add to Home screen option. Installation and offline reading need HTTPS or localhost.'));

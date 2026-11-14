@@ -113,6 +113,28 @@ node scripts/learning/world.mjs
 node scripts/learning/concepts.mjs
 ```
 
-These commands regenerate authoring packages and reset review flags to false. They do not replace installed books. Review regenerated artwork/content and update installed copies only through a deliberate reviewed edit; `install` still refuses overwrites.
+These commands regenerate authoring packages and reset review flags to false. They do not replace installed books. Review regenerated artwork/content and use `scripts/learning/reinstall.mjs` for validated replacement; `install` still refuses overwrites.
 
 For educational content, inspect both words and pictures. A counting page must have exactly the stated number of clearly separated targets throughout the loop. Patterns must stay in order. Position words must match the visible placement. Verify facts against primary sources, record references in editorial notes, and provide correct letter/number labels in page text as well as artwork. These are shared-reading invitations, not mastery tests. Keep optional prompts gentle and accept children's own ideas on feelings/personal questions.
+
+
+### Learning picture generation and review
+
+The learning art kit lives in `scripts/learning/art.mjs`, `cast.mjs`, `scenery.mjs` and `props.mjs`. The three book generators (`literacy.mjs`, `concepts.mjs`, `world.mjs`) assemble scenes with `package.mjs`; `book-data.mjs` preserves the story text, learning metadata, questions and source notes independently of illustration changes.
+
+Lettering inside the learning-book pictures is drawn from Andika, SIL Open Font License 1.1, converted to outlines. `opentype.js` and `@fontsource/andika` are development-only dependencies; readers download SVG paths, not fonts. Each book has a separate title cover. Static fallback pictures omit blinking eyelids, and counted sets, patterns, shape examples and position examples remain still.
+
+After regeneration, create visual review sheets:
+
+```sh
+node scripts/learning/review.mjs /tmp/book-review mouses-counting-picnic
+```
+
+Inspect every page and its motion sheet, plus the real reader at phone/tablet sizes and different speeds. Only after review, set the source and every animation-plan page's `reviewed` flag to true. Replace an existing installed learning book with:
+
+```sh
+node scripts/learning/reinstall.mjs mouses-counting-picnic
+npm run check
+```
+
+The replacement command validates the reviewed bytes, stages them, uses the same per-book import lock as the importer, and restores the previous folder if the final rename fails. It never grants review approval. Regenerating resets review flags again. A production rebuild updates the full offline cache; wait for the offline-ready message before disconnecting.

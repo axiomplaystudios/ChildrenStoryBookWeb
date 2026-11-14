@@ -18,29 +18,126 @@
         "background": "page-01-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-01-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-01-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              240,
-              610
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-01-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-01-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              544.8
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "rabbit",
+            "image": "page-01-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-01-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-01-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -60,29 +157,114 @@
         "background": "page-02-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-02-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-02-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              185,
-              615
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-02-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-02-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              544.8
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-02-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-02-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -102,29 +284,114 @@
         "background": "page-03-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-03-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-03-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              205,
-              620
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-03-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-03-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              544.8
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-03-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-03-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -144,29 +411,114 @@
         "background": "page-04-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-04-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-04-mouse-tail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              242.93894153077414,
+              641.8091102581188
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-04-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
               190,
-              640
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-04-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              264.4238429800703,
+              558.045639641662
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-04-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-04-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -186,29 +538,114 @@
         "background": "page-05-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-05-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-05-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              180,
-              615
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-05-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-05-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              544.8
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-05-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-05-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -216,7 +653,7 @@
       }
     },
     {
-      "text": "Now Teddy was beside the box. Mouse could see all of him.",
+      "text": "Now Teddy was beside the box, where Mouse could see all of him.",
       "alt": "The entire teddy sits to the right of the box with a clear gap between them.",
       "image": "page-06.svg",
       "learning": {
@@ -228,29 +665,114 @@
         "background": "page-06-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-06-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-06-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              155,
-              630
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-06-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-06-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              544.8
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-06-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-06-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -267,29 +789,148 @@
         "background": "page-07-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-07-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-07-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              170,
-              620
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-07-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-07-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              544.8
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-07-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "rabbit",
+            "image": "page-07-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-07-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-07-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -297,7 +938,7 @@
       }
     },
     {
-      "text": "“Under the table!” Mouse found Teddy and gave him a cuddle. Now Mouse could hide him.",
+      "text": "“Under the table!” Mouse found Teddy and cuddled him close. Now it was Mouse’s turn to hide him.",
       "alt": "Mouse cuddles Teddy after finding him beneath the table; Rabbit waits for a new round.",
       "image": "page-08.svg",
       "scene": {
@@ -306,29 +947,148 @@
         "background": "page-08-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-08-friend.svg",
+            "id": "mouse-tail",
+            "image": "page-08-mouse-tail.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              485,
-              617
+              238,
+              631.2
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-08-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ]
+          },
+          {
+            "id": "mouse-arm",
+            "image": "page-08-mouse-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              241.6,
+              566.4
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-08-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              190,
+              660
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "rabbit",
+            "image": "page-08-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-08-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "pendulum",
+            "image": "page-08-pendulum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              365,
+              180
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
+            "layer": "mouse-tail",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 1
+              "y": 0,
+              "angle": 8
             },
-            "durationMs": 3000,
-            "restMs": 600,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pendulum",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 5
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }

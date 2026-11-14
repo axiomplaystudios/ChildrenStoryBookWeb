@@ -18,28 +18,135 @@
         "background": "page-01-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-01-pip-wing.svg",
+            "id": "pip",
+            "image": "page-01-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              134,
-              511
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-01-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-01-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-01-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              730,
+              630
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-01-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              730,
+              630
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "cloud",
+            "image": "page-01-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -47,7 +154,7 @@
     },
     {
       "text": "A a — apple. Pip found an apple for the feast.",
-      "alt": "Uppercase A, lowercase a, and a clearly pictured apple. Pip collects things and picture cards for the alphabet party.",
+      "alt": "A a and apple on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-02.svg",
       "learning": {
         "letter": "A",
@@ -59,28 +166,101 @@
         "background": "page-02-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-02-pip-wing.svg",
+            "id": "pip",
+            "image": "page-02-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-02-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-02-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-02-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -88,7 +268,7 @@
     },
     {
       "text": "B b — ball. Mouse rolled a ball for their games.",
-      "alt": "Uppercase B, lowercase b, and a clearly pictured ball. Pip collects things and picture cards for the alphabet party.",
+      "alt": "B b and ball on a large card and plaque. Pip stands beside the learning object, with Mouse nearby.",
       "image": "page-03.svg",
       "learning": {
         "letter": "B",
@@ -100,36 +280,143 @@
         "background": "page-03-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-03-pip-wing.svg",
+            "id": "pip",
+            "image": "page-03-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-03-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-03-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-03-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-03-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "cloud",
+            "image": "page-03-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
       }
     },
     {
-      "text": "C c — cup. Pip chose a cup for a thirsty friend.",
-      "alt": "Uppercase C, lowercase c, and a clearly pictured cup. Pip collects things and picture cards for the alphabet party.",
+      "text": "C c — cup. Pip chose a cup for a thirsty guest.",
+      "alt": "C c and cup on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-04.svg",
       "learning": {
         "letter": "C",
@@ -141,28 +428,101 @@
         "background": "page-04-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-04-pip-wing.svg",
+            "id": "pip",
+            "image": "page-04-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-04-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-04-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-04-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -170,7 +530,7 @@
     },
     {
       "text": "D d — drum. A drum would call everyone together.",
-      "alt": "Uppercase D, lowercase d, and a clearly pictured drum. Pip collects things and picture cards for the alphabet party.",
+      "alt": "D d and drum on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-05.svg",
       "learning": {
         "letter": "D",
@@ -182,28 +542,101 @@
         "background": "page-05-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-05-pip-wing.svg",
+            "id": "pip",
+            "image": "page-05-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-05-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-05-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-05-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -211,7 +644,7 @@
     },
     {
       "text": "E e — egg. Pip drew an egg on a little card.",
-      "alt": "Uppercase E, lowercase e, and a clearly pictured egg. Pip collects things and picture cards for the alphabet party.",
+      "alt": "E e and egg on a large card and plaque. Pip shows a drawn picture.",
       "image": "page-06.svg",
       "learning": {
         "letter": "E",
@@ -223,28 +656,101 @@
         "background": "page-06-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-06-pip-wing.svg",
+            "id": "pip",
+            "image": "page-06-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-06-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-06-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-06-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -252,7 +758,7 @@
     },
     {
       "text": "F f — fish. By the pond, Pip drew a fish.",
-      "alt": "Uppercase F, lowercase f, and a clearly pictured fish. Pip collects things and picture cards for the alphabet party.",
+      "alt": "F f and fish on a large card and plaque. Pip shows a drawn picture.",
       "image": "page-07.svg",
       "learning": {
         "letter": "F",
@@ -264,28 +770,101 @@
         "background": "page-07-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-07-pip-wing.svg",
+            "id": "pip",
+            "image": "page-07-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-07-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-07-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-07-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -293,7 +872,7 @@
     },
     {
       "text": "G g — gift. Mouse wrapped a gift for the guests.",
-      "alt": "Uppercase G, lowercase g, and a clearly pictured gift. Pip collects things and picture cards for the alphabet party.",
+      "alt": "G g and gift on a large card and plaque. Pip stands beside the learning object, with Mouse nearby.",
       "image": "page-08.svg",
       "learning": {
         "letter": "G",
@@ -305,28 +884,135 @@
         "background": "page-08-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-08-pip-wing.svg",
+            "id": "pip",
+            "image": "page-08-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-08-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-08-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-08-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-08-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-08-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -334,7 +1020,7 @@
     },
     {
       "text": "H h — hat. Pip borrowed a sunny yellow hat.",
-      "alt": "Uppercase H, lowercase h, and a clearly pictured hat. Pip collects things and picture cards for the alphabet party.",
+      "alt": "H h and hat on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-09.svg",
       "learning": {
         "letter": "H",
@@ -346,28 +1032,101 @@
         "background": "page-09-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-09-pip-wing.svg",
+            "id": "pip",
+            "image": "page-09-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-09-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-09-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-09-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -375,7 +1134,7 @@
     },
     {
       "text": "I i — insect. An insect landed nearby. Pip drew its six legs.",
-      "alt": "Uppercase I, lowercase i, and a clearly pictured insect. Pip collects things and picture cards for the alphabet party.",
+      "alt": "I i and insect on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-10.svg",
       "learning": {
         "letter": "I",
@@ -387,28 +1146,101 @@
         "background": "page-10-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-10-pip-wing.svg",
+            "id": "pip",
+            "image": "page-10-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-10-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-10-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-10-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -416,7 +1248,7 @@
     },
     {
       "text": "J j — jug. A jug would hold cool water.",
-      "alt": "Uppercase J, lowercase j, and a clearly pictured jug. Pip collects things and picture cards for the alphabet party.",
+      "alt": "J j and jug on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-11.svg",
       "learning": {
         "letter": "J",
@@ -428,28 +1260,101 @@
         "background": "page-11-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-11-pip-wing.svg",
+            "id": "pip",
+            "image": "page-11-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-11-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-11-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-11-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -457,7 +1362,7 @@
     },
     {
       "text": "K k — kite. Pip chose a kite for the breezy field.",
-      "alt": "Uppercase K, lowercase k, and a clearly pictured kite. Pip collects things and picture cards for the alphabet party.",
+      "alt": "K k and kite on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-12.svg",
       "learning": {
         "letter": "K",
@@ -469,36 +1374,109 @@
         "background": "page-12-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-12-pip-wing.svg",
+            "id": "pip",
+            "image": "page-12-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-12-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-12-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-12-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
       }
     },
     {
-      "text": "L l — leaf. A leaf made a lovely table decoration.",
-      "alt": "Uppercase L, lowercase l, and a clearly pictured leaf. Pip collects things and picture cards for the alphabet party.",
+      "text": "L l — leaf. A leaf would look lovely on the party table.",
+      "alt": "L l and leaf on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-13.svg",
       "learning": {
         "letter": "L",
@@ -510,28 +1488,101 @@
         "background": "page-13-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-13-pip-wing.svg",
+            "id": "pip",
+            "image": "page-13-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-13-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-13-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-13-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -539,7 +1590,7 @@
     },
     {
       "text": "M m — moon. Pip made a moon picture for the evening.",
-      "alt": "Uppercase M, lowercase m, and a clearly pictured moon. Pip collects things and picture cards for the alphabet party.",
+      "alt": "M m and moon on a large card and plaque. Pip shows a drawn picture.",
       "image": "page-14.svg",
       "learning": {
         "letter": "M",
@@ -551,28 +1602,101 @@
         "background": "page-14-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-14-pip-wing.svg",
+            "id": "pip",
+            "image": "page-14-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-14-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-14-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-14-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -580,7 +1704,7 @@
     },
     {
       "text": "N n — nest. Pip drew a nest and left the real one safe.",
-      "alt": "Uppercase N, lowercase n, and a clearly pictured nest. Pip collects things and picture cards for the alphabet party.",
+      "alt": "N n and nest on a large card and plaque. Pip shows a drawn picture.",
       "image": "page-15.svg",
       "learning": {
         "letter": "N",
@@ -592,28 +1716,101 @@
         "background": "page-15-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-15-pip-wing.svg",
+            "id": "pip",
+            "image": "page-15-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-15-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-15-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-15-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -621,7 +1818,7 @@
     },
     {
       "text": "O o — orange. An orange joined the picnic food.",
-      "alt": "Uppercase O, lowercase o, and a clearly pictured orange. Pip collects things and picture cards for the alphabet party.",
+      "alt": "O o and orange on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-16.svg",
       "learning": {
         "letter": "O",
@@ -633,28 +1830,101 @@
         "background": "page-16-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-16-pip-wing.svg",
+            "id": "pip",
+            "image": "page-16-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-16-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-16-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-16-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -662,7 +1932,7 @@
     },
     {
       "text": "P p — paintbrush. A paintbrush helped Pip finish the pictures.",
-      "alt": "Uppercase P, lowercase p, and a clearly pictured paintbrush. Pip collects things and picture cards for the alphabet party.",
+      "alt": "P p and paintbrush on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-17.svg",
       "learning": {
         "letter": "P",
@@ -674,28 +1944,101 @@
         "background": "page-17-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-17-pip-wing.svg",
+            "id": "pip",
+            "image": "page-17-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-17-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-17-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-17-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -703,7 +2046,7 @@
     },
     {
       "text": "Q q — quilt. Mouse brought a quilt for everyone to sit on.",
-      "alt": "Uppercase Q, lowercase q, and a clearly pictured quilt. Pip collects things and picture cards for the alphabet party.",
+      "alt": "Q q and quilt on a large card and plaque. Pip stands beside the learning object, with Mouse nearby.",
       "image": "page-18.svg",
       "learning": {
         "letter": "Q",
@@ -715,28 +2058,135 @@
         "background": "page-18-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-18-pip-wing.svg",
+            "id": "pip",
+            "image": "page-18-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-18-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-18-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-18-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-18-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-18-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -744,7 +2194,7 @@
     },
     {
       "text": "R r — rabbit. Rabbit came along to help.",
-      "alt": "Uppercase R, lowercase r, and a clearly pictured rabbit. Pip collects things and picture cards for the alphabet party.",
+      "alt": "R r and rabbit on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-19.svg",
       "learning": {
         "letter": "R",
@@ -756,28 +2206,101 @@
         "background": "page-19-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-19-pip-wing.svg",
+            "id": "pip",
+            "image": "page-19-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-19-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-19-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-19-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -785,7 +2308,7 @@
     },
     {
       "text": "S s — sock. A clean sock became a silly puppet.",
-      "alt": "Uppercase S, lowercase s, and a clearly pictured sock. Pip collects things and picture cards for the alphabet party.",
+      "alt": "S s and sock on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-20.svg",
       "learning": {
         "letter": "S",
@@ -797,28 +2320,101 @@
         "background": "page-20-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-20-pip-wing.svg",
+            "id": "pip",
+            "image": "page-20-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-20-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-20-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-20-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -826,7 +2422,7 @@
     },
     {
       "text": "T t — teddy. Mouse brought a teddy to join the fun.",
-      "alt": "Uppercase T, lowercase t, and a clearly pictured teddy. Pip collects things and picture cards for the alphabet party.",
+      "alt": "T t and teddy on a large card and plaque. Pip stands beside the learning object, with Mouse nearby.",
       "image": "page-21.svg",
       "learning": {
         "letter": "T",
@@ -838,28 +2434,135 @@
         "background": "page-21-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-21-pip-wing.svg",
+            "id": "pip",
+            "image": "page-21-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-21-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-21-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-21-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-21-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-21-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -867,7 +2570,7 @@
     },
     {
       "text": "U u — umbrella. An umbrella would give a patch of shade.",
-      "alt": "Uppercase U, lowercase u, and a clearly pictured umbrella. Pip collects things and picture cards for the alphabet party.",
+      "alt": "U u and umbrella on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-22.svg",
       "learning": {
         "letter": "U",
@@ -879,28 +2582,101 @@
         "background": "page-22-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-22-pip-wing.svg",
+            "id": "pip",
+            "image": "page-22-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-22-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-22-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-22-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -908,7 +2684,7 @@
     },
     {
       "text": "V v — vase. Pip found a vase for the table.",
-      "alt": "Uppercase V, lowercase v, and a clearly pictured vase. Pip collects things and picture cards for the alphabet party.",
+      "alt": "V v and vase on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-23.svg",
       "learning": {
         "letter": "V",
@@ -920,28 +2696,101 @@
         "background": "page-23-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-23-pip-wing.svg",
+            "id": "pip",
+            "image": "page-23-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-23-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-23-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-23-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -949,7 +2798,7 @@
     },
     {
       "text": "W w — wagon. A wagon carried the party things.",
-      "alt": "Uppercase W, lowercase w, and a clearly pictured wagon. Pip collects things and picture cards for the alphabet party.",
+      "alt": "W w and wagon on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-24.svg",
       "learning": {
         "letter": "W",
@@ -961,28 +2810,101 @@
         "background": "page-24-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-24-pip-wing.svg",
+            "id": "pip",
+            "image": "page-24-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-24-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-24-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-24-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -990,7 +2912,7 @@
     },
     {
       "text": "X x — x-ray. Mouse brought an x-ray picture showing bones.",
-      "alt": "Uppercase X, lowercase x, and a clearly pictured x-ray. Pip collects things and picture cards for the alphabet party.",
+      "alt": "X x and x-ray on a large card and plaque. Pip stands beside the learning object, with Mouse nearby.",
       "image": "page-25.svg",
       "learning": {
         "letter": "X",
@@ -1002,28 +2924,135 @@
         "background": "page-25-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-25-pip-wing.svg",
+            "id": "pip",
+            "image": "page-25-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-25-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-25-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-25-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-25-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              790,
+              640
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "cloud",
+            "image": "page-25-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -1031,7 +3060,7 @@
     },
     {
       "text": "Y y — yarn. Yarn tied the picture cards together.",
-      "alt": "Uppercase Y, lowercase y, and a clearly pictured yarn. Pip collects things and picture cards for the alphabet party.",
+      "alt": "Y y and yarn on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-26.svg",
       "learning": {
         "letter": "Y",
@@ -1043,28 +3072,101 @@
         "background": "page-26-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-26-pip-wing.svg",
+            "id": "pip",
+            "image": "page-26-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-26-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-26-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "cloud",
+            "image": "page-26-cloud.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "cloud",
+            "preset": "gesture",
+            "parameters": {
+              "x": 25,
+              "y": 0,
+              "angle": 0
+            },
+            "durationMs": 9000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -1072,7 +3174,7 @@
     },
     {
       "text": "Z z — zip. Pip closed the bag with its zip.",
-      "alt": "Uppercase Z, lowercase z, and a clearly pictured zip. Pip collects things and picture cards for the alphabet party.",
+      "alt": "Z z and zip on a large card and plaque. Pip stands beside the learning object.",
       "image": "page-27.svg",
       "learning": {
         "letter": "Z",
@@ -1084,28 +3186,101 @@
         "background": "page-27-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-27-pip-wing.svg",
+            "id": "pip",
+            "image": "page-27-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              109,
-              516
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-27-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-27-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-27-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -1121,28 +3296,135 @@
         "background": "page-28-background.svg",
         "layers": [
           {
-            "id": "pip-wing",
-            "image": "page-28-pip-wing.svg",
+            "id": "pip",
+            "image": "page-28-pip.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              129,
-              475
+              180,
+              640
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-28-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              233.75,
+              520
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "pip-lids",
+            "image": "page-28-pip-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              640
+            ],
+            "parent": "pip"
+          },
+          {
+            "id": "mouse",
+            "image": "page-28-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              730,
+              630
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-28-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              730,
+              630
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-28-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              825,
+              210
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "pip-wing",
-            "preset": "flap",
+            "layer": "pip",
+            "preset": "breathe",
             "parameters": {
-              "angle": 12
+              "amount": 0.025
+            },
+            "durationMs": 3000,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
             },
             "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
             "restMs": 500,
-            "delayMs": 200,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]

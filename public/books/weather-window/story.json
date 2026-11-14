@@ -9,7 +9,7 @@
   "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
   "pages": [
     {
-      "text": "Mouse finds a pretend travel window. “Let us look at weather in faraway places!”",
+      "text": "Mouse finds a pretend travel window. “Let’s look at weather in faraway places!”",
       "alt": "Mouse and Pip face a golden pretend window with a winding path through green hills.",
       "image": "page-01.svg",
       "scene": {
@@ -18,8 +18,8 @@
         "background": "page-01-background.svg",
         "layers": [
           {
-            "id": "pip",
-            "image": "page-01-pip.svg",
+            "id": "frame",
+            "image": "page-01-frame.svg",
             "x": 0,
             "y": 0,
             "width": 900,
@@ -30,27 +30,76 @@
             ]
           },
           {
-            "id": "wing",
-            "image": "page-01-wing.svg",
+            "id": "mouse",
+            "image": "page-01-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              576.8,
-              575
+              90,
+              700
             ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-01-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pip",
+            "image": "page-01-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              810,
+              700
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-01-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "wing",
-            "preset": "flap",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
             "parameters": {
-              "angle": 16
+              "x": 0,
+              "y": 0,
+              "angle": 12
             },
             "durationMs": 2400,
-            "restMs": 500,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -70,29 +119,113 @@
         "background": "page-02-background.svg",
         "layers": [
           {
-            "id": "weather",
-            "image": "page-02-weather.svg",
+            "id": "sun-rays",
+            "image": "page-02-sun-rays.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              575,
-              270
+              610,
+              230
             ]
+          },
+          {
+            "id": "frame",
+            "image": "page-02-frame.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-02-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-02-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pip",
+            "image": "page-02-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              810,
+              700
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-02-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "weather",
+            "layer": "sun-rays",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -8,
-              "angle": 5
+              "x": 0,
+              "y": 0,
+              "angle": 12
             },
-            "durationMs": 3200,
-            "restMs": 350,
+            "durationMs": 8000,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -112,29 +245,111 @@
         "background": "page-03-background.svg",
         "layers": [
           {
-            "id": "weather",
-            "image": "page-03-weather.svg",
+            "id": "rain",
+            "image": "page-03-rain.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              575,
-              270
+              450,
+              360
             ]
+          },
+          {
+            "id": "frame",
+            "image": "page-03-frame.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-03-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-03-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pip",
+            "image": "page-03-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              810,
+              700
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-03-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "weather",
+            "layer": "rain",
+            "preset": "tear-fall",
+            "parameters": {
+              "distanceY": 80
+            },
+            "durationMs": 6500,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
             "preset": "gesture",
             "parameters": {
-              "x": -5,
-              "y": 19,
-              "angle": 0
+              "x": 0,
+              "y": 0,
+              "angle": 12
             },
-            "durationMs": 3200,
-            "restMs": 350,
+            "durationMs": 2400,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -154,29 +369,113 @@
         "background": "page-04-background.svg",
         "layers": [
           {
-            "id": "weather",
-            "image": "page-04-weather.svg",
+            "id": "kite",
+            "image": "page-04-kite.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              575,
-              270
+              470,
+              350
             ]
+          },
+          {
+            "id": "frame",
+            "image": "page-04-frame.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-04-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-04-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pip",
+            "image": "page-04-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              810,
+              700
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-04-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "weather",
+            "layer": "kite",
             "preset": "gesture",
             "parameters": {
-              "x": 17,
-              "y": -8,
+              "x": 0,
+              "y": 0,
               "angle": 7
             },
-            "durationMs": 3200,
-            "restMs": 350,
+            "durationMs": 8000,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -196,29 +495,113 @@
         "background": "page-05-background.svg",
         "layers": [
           {
-            "id": "weather",
-            "image": "page-05-weather.svg",
+            "id": "clouds",
+            "image": "page-05-clouds.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              575,
-              270
+              450,
+              360
             ]
+          },
+          {
+            "id": "frame",
+            "image": "page-05-frame.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-05-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-05-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pip",
+            "image": "page-05-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              810,
+              700
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-05-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "weather",
+            "layer": "clouds",
             "preset": "gesture",
             "parameters": {
-              "x": 22,
+              "x": 35,
               "y": 0,
               "angle": 0
             },
-            "durationMs": 3200,
-            "restMs": 350,
+            "durationMs": 9000,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": 12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -238,29 +621,111 @@
         "background": "page-06-background.svg",
         "layers": [
           {
-            "id": "weather",
-            "image": "page-06-weather.svg",
+            "id": "snow",
+            "image": "page-06-snow.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              575,
-              270
+              450,
+              360
             ]
+          },
+          {
+            "id": "frame",
+            "image": "page-06-frame.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              360
+            ]
+          },
+          {
+            "id": "mouse",
+            "image": "page-06-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-06-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "pip",
+            "image": "page-06-pip.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              810,
+              700
+            ]
+          },
+          {
+            "id": "pip-arm",
+            "image": "page-06-pip-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "weather",
+            "layer": "snow",
+            "preset": "tear-fall",
+            "parameters": {
+              "distanceY": 70
+            },
+            "durationMs": 9000,
+            "restMs": 500,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
             "preset": "gesture",
             "parameters": {
-              "x": 8,
-              "y": 16,
-              "angle": 0
+              "x": 0,
+              "y": 0,
+              "angle": 12
             },
-            "durationMs": 3200,
-            "restMs": 350,
+            "durationMs": 2400,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -277,6 +742,31 @@
         "background": "page-07-background.svg",
         "layers": [
           {
+            "id": "mouse",
+            "image": "page-07-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-07-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
             "id": "pip",
             "image": "page-07-pip.svg",
             "x": 0,
@@ -284,32 +774,44 @@
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              810,
+              700
             ]
           },
           {
-            "id": "wing",
-            "image": "page-07-wing.svg",
+            "id": "pip-arm",
+            "image": "page-07-pip-arm.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              104.9,
-              583.75
-            ]
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "wing",
-            "preset": "flap",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
             "parameters": {
-              "angle": 16
+              "x": 0,
+              "y": 0,
+              "angle": 12
             },
             "durationMs": 2400,
-            "restMs": 500,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -317,7 +819,7 @@
       }
     },
     {
-      "text": "They close the pretend window and look outside. “What weather is here?” asks Mouse.",
+      "text": "They close the pretend window and look outside. “What is the weather like here?” asks Mouse.",
       "alt": "Mouse and Pip sit by their real small window looking at pale sky and a cloud, with coat, boots and hat ready nearby.",
       "image": "page-08.svg",
       "scene": {
@@ -326,6 +828,31 @@
         "background": "page-08-background.svg",
         "layers": [
           {
+            "id": "mouse",
+            "image": "page-08-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-08-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              700
+            ],
+            "parent": "mouse"
+          },
+          {
             "id": "pip",
             "image": "page-08-pip.svg",
             "x": 0,
@@ -333,32 +860,44 @@
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              810,
+              700
             ]
           },
           {
-            "id": "wing",
-            "image": "page-08-wing.svg",
+            "id": "pip-arm",
+            "image": "page-08-pip-arm.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              436.4,
-              532.5
-            ]
+              775.6,
+              623.2
+            ],
+            "parent": "pip"
           }
         ],
         "tracks": [
           {
-            "layer": "wing",
-            "preset": "flap",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "pip-arm",
+            "preset": "gesture",
             "parameters": {
-              "angle": 16
+              "x": 0,
+              "y": 0,
+              "angle": 12
             },
             "durationMs": 2400,
-            "restMs": 500,
+            "restMs": 400,
             "delayMs": 0,
             "playback": "repeat"
           }
