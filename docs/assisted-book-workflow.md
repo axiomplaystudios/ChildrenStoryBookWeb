@@ -1,5 +1,7 @@
 # Turn an existing book into an animated bookshelf book
 
+For an interactive pair, use the separate [interactive authoring contract](interactive-story-authoring.md) and [validation guide](interactive-story-validation.md). Its package is `authoring/interactive/<id>/pair.json`, installed with `scripts/interactive/prepare-pair.mjs`; do not send it through the legacy `story.json` importer below. The adult reads **both** editions aloud. The approved collection adds eight pairs/sixteen experiences to the thirteen existing books, retaining their 139 pages.
+
 This is an **assisted authoring workflow**: give the coding assistant a book, and it prepares the story, artwork, moving parts and review package. The included command validates and installs that prepared package. It does not automatically turn an arbitrary PDF into finished animation, and it does not call a paid image service.
 
 ## Ask the assistant

@@ -1,3 +1,8 @@
+import './interactive/style.css';
+import {createInteractiveShelf} from './interactive/shelf.js';
+import {mountInteractiveReader} from './interactive/reader.js';
+import {loadRun,saveRun,progressKey,progressBase} from './interactive/progress.js';
+import {createRun} from './interactive/state.js';
 import './style.css';
 import { animationSpeeds, loadAnimationSettings, saveAnimationSettings, resolveSpeed, setSpeed } from './animation-settings.js';
 import { registerSW } from 'virtual:pwa-register';
@@ -39,6 +44,82 @@ document.querySelector('#warm-toggle').addEventListener('click', () => { prefere
 document.querySelector('#sound-toggle').addEventListener('click', () => { preferences.sound = !preferences.sound; syncPreferences(); persist(); services.sound('chime', preferences.sound); });
 document.querySelector('.brand').addEventListener('click', event => { event.preventDefault(); showShelf(); });
 syncPreferences();
+
+const interactiveRoot = el('section'); interactiveRoot.hidden = true; interactiveRoot.id = 'interactive-reader'; readerView.after(interactiveRoot);
+let interactiveReader = null, interactiveBundle = null, opening = 0, interactiveActive = false;
+const memoryRuns = new Map();
+const interactiveBase = progressBase();
+const interactiveShelf = createInteractiveShelf({storage,onOpen:openInteractive});
+function closeInteractive() {
+  ++opening; interactiveReader?.destroy(); interactiveReader = null;
+  interactiveBundle?.dispose(); interactiveBundle = null;
+  interactiveRoot.hidden = true; interactiveRoot.replaceChildren(); interactiveActive = false;
+}
+async function openInteractive({summary, edition, store, version}) {
+  const token = ++opening;
+  interactiveActive = true;
+  try {
+    const bundle = await store.open(summary.id, version);
+    if (token !== opening) { bundle.dispose(); return; }
+    interactiveShelf.detach();
+    session = null;
+    reader.close();
+    void fullscreen.exit({restoreFocus:false});
+    interactiveBundle = bundle;
+    interactiveActive = true;
+    main.hidden = true;
+    readerView.hidden = true;
+    interactiveRoot.hidden = false;
+    document.body.classList.add('reading');
+    void services.setReading(true);
+    const key = progressKey(bundle.pair.id, edition, interactiveBase);
+    const loaded = loadRun(storage, bundle.pair, edition, interactiveBase);
+    const memory = memoryRuns.get(key);
+    if (memory && memory.pairVersion === bundle.pair.version) {
+      loaded.run = memory;
+      loaded.status = 'loaded';
+    }
+    const begin = () => {
+      if (token !== opening) return;
+      interactiveRoot.replaceChildren();
+      interactiveReader = mountInteractiveReader({
+        root:interactiveRoot, pair:bundle.pair, bundle, run:loaded.run, storage,
+        animationSettings,
+        speedForPage:(id,index) => resolveSpeed(animationSettings,id,index),
+        onSave:run => {
+          memoryRuns.set(key, run);
+          saveRun(storage, run, interactiveBase);
+        },
+        onExit:showShelf,
+      });
+    };
+    if (loaded.status === 'loaded' || loaded.status === 'restart') {
+      interactiveRoot.replaceChildren(
+        el('h1', '', bundle.pair.title),
+        el('p', '', loaded.status === 'restart'
+          ? 'For your adult: this saved edition is damaged or belongs to an older version. Restart to replace it.'
+          : 'Your saved story is waiting.'),
+      );
+      if (loaded.status === 'loaded') interactiveRoot.append(button('Resume story', begin));
+      interactiveRoot.append(
+        button('Start edition again', () => {
+          if (token !== opening) return;
+          loaded.run = createRun(bundle.pair, edition);
+          memoryRuns.set(key, loaded.run);
+          saveRun(storage, loaded.run, interactiveBase);
+          begin();
+        }),
+        button('Bookshelf', showShelf),
+      );
+    } else begin();
+  } catch {
+    if (token !== opening) return;
+    interactiveActive = false;
+    const message = el('p', 'interactive-open-error', 'For your adult: the saved story could not open. Download it again, then retry.');
+    message.setAttribute('role', 'alert');
+    interactiveShelf.element.prepend(message);
+  }
+}
 
 // The reader DOM stays mounted so PageFlip can reuse its single render loop.
 const readerBar = el('div', 'reader-bar');
@@ -118,6 +199,7 @@ function updatePage(page, spread) {
   if (changed) services.sound('turn', preferences.sound);
 }
 function startBook(story) {
+  closeInteractive(); interactiveShelf.detach();
   session = createSession(story);
   illustrationsPaused = false; syncPause();
   main.hidden = true; readerView.hidden = false; document.body.classList.add('reading');
@@ -135,6 +217,7 @@ function turn(direction) {
 window.addEventListener('keydown', event => {
   if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest('input, textarea, select')) return;
   if (session?.view === 'reader' && ['ArrowRight', 'ArrowLeft'].includes(event.key)) { event.preventDefault(); turn(event.key === 'ArrowRight' ? 1 : -1); }
+  if (interactiveActive && event.key === 'Escape' && !document.fullscreenElement && !interactiveRoot.classList.contains('is-expanded')) { showShelf(); return; }
   if (session && event.key === 'Escape') {
     if (fullscreen.isExpanded()) { event.preventDefault(); void fullscreen.exit(); }
     else showShelf();
@@ -151,6 +234,7 @@ function creditPanel(story, open = false) {
   return details;
 }
 function showShelf() {
+  closeInteractive();
   session = null; reader.close(); void fullscreen.exit({ restoreFocus: false }); void services.setReading(false);
   readerView.hidden = true; main.hidden = false; document.body.classList.remove('reading');
   main.replaceChildren();
@@ -186,8 +270,8 @@ function showShelf() {
   ritual.lastChild.append(el('h2', '', 'No rush. Just the two of you.'), el('p', '', 'You read the story. Your little one brings the wonder. A few gentle questions come at the end.'));
   const install = el('details', 'install-note'); install.append(el('summary', '', 'Keep your bookshelf close'), el('p', '', 'On iPad: open in Safari, tap Share, then Add to Home Screen. On Android: use your browser’s Install app or Add to Home screen option. Installation and offline reading need HTTPS or localhost.'));
   if (installPrompt) install.append(button('Install bookshelf', async () => { await installPrompt.prompt(); installPrompt = null; showShelf(); }));
-  if (updateAvailable) install.append(button('Update bookshelf', () => updateSW?.(true)));
-  main.append(hero, shelf, ritual, install);
+  const updateButton = button('Update bookshelf', () => { void interactiveShelf.refresh(); if(updateAvailable&&!interactiveActive&&!session)void updateSW?.(true); });
+  main.append(hero, updateButton); interactiveShelf.attach(main); main.append(shelf, ritual, install);
   focusHeading();
 }
 function showQuestion() {
@@ -226,18 +310,20 @@ async function load() {
       if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(story.id)) throw Error('Invalid book ID');
       return validateStory(story);
     });
-    showShelf();
+    if (!session && !interactiveActive) showShelf();
   } catch {
-    const error = el('section', 'error-screen'); error.append(el('h1', '', 'The bookshelf needs a moment.'), el('p', '', 'We couldn’t open the books. Check your connection, then try again.'), button('Try again', load)); main.replaceChildren(error);
+    if (session || interactiveActive) return;
+    showShelf(); const error = el('section', 'error-screen'); error.append(el('h2', '', 'The original bookshelf needs a moment.'), el('p', '', 'We couldn’t open the original books. Check your connection, then try again.'), button('Try again', load)); main.append(error);
   }
 }
-window.addEventListener('beforeinstallprompt', event => { event.preventDefault(); installPrompt = event; if (!session && books.length) showShelf(); });
+window.addEventListener('beforeinstallprompt', event => { event.preventDefault(); installPrompt = event; if (!session && !interactiveActive && books.length) showShelf(); });
 window.addEventListener('pagehide', () => { void services.setReading(false); });
 if ('serviceWorker' in navigator) {
   updateSW = registerSW({
     onOfflineReady() { document.querySelector('#offline-status').textContent = '✓ Ready for offline reading'; },
-    onNeedRefresh() { updateAvailable = true; document.querySelector('#offline-status').textContent = 'A bookshelf update is ready'; if (!session && books.length) showShelf(); },
+    onNeedRefresh() { updateAvailable = true; document.querySelector('#offline-status').textContent = 'A bookshelf update is ready'; if (!session && !interactiveActive && books.length) showShelf(); },
     onRegisterError() { document.querySelector('#offline-status').textContent = 'Offline saving unavailable'; },
   });
 }
+showShelf();
 void load();

@@ -1,0 +1,2030 @@
+{
+  "schemaVersion": 1,
+  "id": "the-penguin-sound-post",
+  "version": "v1",
+  "title": "The Penguin Sound Post",
+  "category": "discovery",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {},
+  "scenes": [
+    {
+      "id": "morning-post",
+      "narrative": "At the snowy coast post house, Pico the penguin sorts six letters. Each address is a row of pictures: a dot, a long dash, or two pause bars. These visual messages work without any sound. “The neighbours are waiting for news,” says Pico. “I can follow each pictured pattern along the shore.”",
+      "alt": "Pico, a small dark penguin in an orange scarf, carries an envelope outside a copper-coloured post house beneath snowy mountain peaks.",
+      "image": "morning-post.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "morning-post-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "morning-post-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "morning-post-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "morning-post-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "morning-post-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "morning-post-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pebble-message",
+      "narrative": "The first letter belongs to the two pebble posts. Its address shows dot, dot. Pico notices two small round marks, with room between them. He follows the row from left to right. When the same two pictures are ready, he can tuck the letter into the first neighbour’s post.",
+      "alt": "Pico the penguin courier at the pebble message posts. Two low stone posts bear envelopes, with two round dots on the message card. A large separate card shows dot, dot from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "pebble-message.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "pebble-message-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "pebble-message-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "pebble-message-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "pebble-message-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "pebble-message-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "pebble-message-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "pebble-message-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-pebble-message",
+        "physicalPrompt": "Optional: your adult may make two soft fingertip taps while you point to dot, dot. Staying silent and pointing together works too.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.",
+          "image": "pebble-message-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "dot",
+              "label": "Dot",
+              "image": "dot-control.svg"
+            },
+            {
+              "id": "dash",
+              "label": "Long dash",
+              "image": "dash-control.svg"
+            },
+            {
+              "id": "pause",
+              "label": "Pause bars",
+              "image": "pause-control.svg"
+            }
+          ],
+          "answer": [
+            "dot",
+            "dot"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "pebble-message",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "long-ice-bridge",
+      "narrative": "The next letter goes beyond the long ice bridge. Its address begins with a long dash and ends with one little dot. “A long shape, then a small shape,” Pico says. He compares them with his eyes. Copying both in order will bring the news to the bridge keeper.",
+      "alt": "Pico the penguin courier at the long ice bridge. A long pale bridge spans the water; the address card shows a long dash followed by a dot. A large separate card shows dash, dot from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "long-ice-bridge.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "long-ice-bridge-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "long-ice-bridge-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "long-ice-bridge-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "long-ice-bridge-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "long-ice-bridge-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "long-ice-bridge-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "long-ice-bridge-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-long-ice-bridge",
+        "physicalPrompt": "Optional: your adult may hum softly for the long dash, then make one soft tap for the dot. You may both trace and point silently instead.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.",
+          "image": "long-ice-bridge-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "dot",
+              "label": "Dot",
+              "image": "dot-control.svg"
+            },
+            {
+              "id": "dash",
+              "label": "Long dash",
+              "image": "dash-control.svg"
+            },
+            {
+              "id": "pause",
+              "label": "Pause bars",
+              "image": "pause-control.svg"
+            }
+          ],
+          "answer": [
+            "dash",
+            "dot"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "long-ice-bridge",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lantern-bay",
+      "narrative": "Three lanterns shine above the next bay. Pico’s third letter shows dot, long dash, dot. The small pictures at the ends match, while the middle picture stretches wide. He follows all three marks. The lantern tender will be glad to hear from a friend far along the coast.",
+      "alt": "Pico the penguin courier at the lantern bay. Three warm lanterns overlook the bay, with a small-long-small pictured message. A large separate card shows dot, dash, dot from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "lantern-bay.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "lantern-bay-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "lantern-bay-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "lantern-bay-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "lantern-bay-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "lantern-bay-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "lantern-bay-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "lantern-bay-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-lantern-bay",
+        "physicalPrompt": "Optional: your adult may gently clap once, softly hum, then gently clap once while you point to the pictures. Silent pointing is equally welcome.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.",
+          "image": "lantern-bay-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "dot",
+              "label": "Dot",
+              "image": "dot-control.svg"
+            },
+            {
+              "id": "dash",
+              "label": "Long dash",
+              "image": "dash-control.svg"
+            },
+            {
+              "id": "pause",
+              "label": "Pause bars",
+              "image": "pause-control.svg"
+            }
+          ],
+          "answer": [
+            "dot",
+            "dash",
+            "dot"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "lantern-bay",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quiet-inlet",
+      "narrative": "At the quiet inlet, young penguins are resting. The address shows dot, two pause bars, dot. “These bars are a picture for a quiet space,” says Pico. There is no clock to beat. He can look as long as he likes, then copy the three pictures without disturbing anyone.",
+      "alt": "Pico the penguin courier at the quiet inlet. Three snowy markers overlook a quiet inlet; two pause bars separate the two pictured dots. A large separate card shows dot, two pause bars, dot from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "quiet-inlet.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "quiet-inlet-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "quiet-inlet-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "quiet-inlet-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "quiet-inlet-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "quiet-inlet-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "quiet-inlet-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "quiet-inlet-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-quiet-inlet",
+        "physicalPrompt": "Optional: your adult may make a soft tap, share a quiet moment, then make a soft tap. There is no timed wait; pointing silently works too.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.",
+          "image": "quiet-inlet-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "dot",
+              "label": "Dot",
+              "image": "dot-control.svg"
+            },
+            {
+              "id": "dash",
+              "label": "Long dash",
+              "image": "dash-control.svg"
+            },
+            {
+              "id": "pause",
+              "label": "Pause bars",
+              "image": "pause-control.svg"
+            }
+          ],
+          "answer": [
+            "dot",
+            "pause",
+            "dot"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "quiet-inlet",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "twin-towers",
+      "narrative": "Two tall post towers stand together at the bend. Pico’s fifth address shows long dash, long dash, dot. “The first two pictures are alike,” he notices. The last one is different. Following the whole row will place a letter from a sister into the tower keeper’s waiting box.",
+      "alt": "Pico the penguin courier at the twin post towers. Two tall post towers hold letters above the snow; the row contains two long dashes and one dot. A large separate card shows dash, dash, dot from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "twin-towers.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "twin-towers-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "twin-towers-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "twin-towers-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "twin-towers-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "twin-towers-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "twin-towers-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "twin-towers-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-twin-towers",
+        "physicalPrompt": "Optional: your adult may make two soft humming sounds and one fingertip tap while you point along the row. Trace the pictures silently if you prefer.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.",
+          "image": "twin-towers-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "dot",
+              "label": "Dot",
+              "image": "dot-control.svg"
+            },
+            {
+              "id": "dash",
+              "label": "Long dash",
+              "image": "dash-control.svg"
+            },
+            {
+              "id": "pause",
+              "label": "Pause bars",
+              "image": "pause-control.svg"
+            }
+          ],
+          "answer": [
+            "dash",
+            "dash",
+            "dot"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "twin-towers",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "welcome-harbour",
+      "narrative": "One letter remains, for the harbour boat. Its address repeats a pair: dot, long dash, dot, long dash. Pico sees the same little pattern twice. He follows it toward the dock. This letter invites the boat keeper to share supper at the post house, and Pico’s own journey is nearly home.",
+      "alt": "Pico the penguin courier at the welcome harbour. A moored copper-coloured mail boat waits at a snowy dock; the card alternates dots and long dashes. A large separate card shows dot, dash, dot, dash from left to right; the completed discovery appears only after an activity path is finished.",
+      "image": "welcome-harbour.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "welcome-harbour-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "welcome-harbour-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "welcome-harbour-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "welcome-harbour-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "welcome-harbour-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "welcome-harbour-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "welcome-harbour-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "discover",
+        "id": "discover-welcome-harbour",
+        "physicalPrompt": "Optional: your adult may gently clap, softly hum, gently clap, softly hum while you point to the four pictures. The repeating pattern also works in silence.",
+        "adultHelp": "Adult: read this optional invitation aloud. Stay seated together; no materials are needed. Keep any sound soft and optional. The whole message works silently on screen, or skip with the same story ending.",
+        "screen": {
+          "label": "Copy the visible message from left to right. A dot, a long dash, and two pause bars are different pictures; no sound is needed.",
+          "image": "welcome-harbour-clue.svg",
+          "mode": "sequence",
+          "options": [
+            {
+              "id": "dot",
+              "label": "Dot",
+              "image": "dot-control.svg"
+            },
+            {
+              "id": "dash",
+              "label": "Long dash",
+              "image": "dash-control.svg"
+            },
+            {
+              "id": "pause",
+              "label": "Pause bars",
+              "image": "pause-control.svg"
+            }
+          ],
+          "answer": [
+            "dot",
+            "dash",
+            "dot",
+            "dash"
+          ]
+        },
+        "effects": [
+          {
+            "type": "show",
+            "sceneId": "welcome-harbour",
+            "layerId": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "letters-home",
+      "narrative": "Pico returns to the harbour post house as the sky turns pearl and violet. Every letter has reached a neighbour: across the bridge, beside the lanterns, and along the quiet inlet. A friend brings one last envelope, addressed to Pico. Inside is a picture of a warm welcome. Silent pictures have carried a coast full of news.",
+      "alt": "Pico and a neighbour gather at the snowy harbour post house, with warm windows and delivered letters.",
+      "image": "letters-home.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "letters-home-background.svg",
+        "layers": [
+          {
+            "id": "landmark",
+            "image": "letters-home-landmark.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "character",
+            "image": "letters-home-character.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "companion",
+            "image": "letters-home-companion.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          },
+          {
+            "id": "wind",
+            "image": "letters-home-wind.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              884,
+              113
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "letters-home-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              400
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "wind",
+            "preset": "gesture",
+            "parameters": {
+              "x": 12,
+              "y": 5,
+              "angle": 14
+            },
+            "durationMs": 4600,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "morning-post": {
+          "instruction": "Read the opening together. Pause for your child to point at the traveller and imagine the journey.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "morning-post.svg",
+              "label": "Meet the traveller at the start."
+            },
+            {
+              "action": "point",
+              "image": "pebble-message.svg",
+              "label": "The first clue starts a journey."
+            }
+          ]
+        },
+        "pebble-message": {
+          "instruction": "Read the visible row together. Point to each separate dot; your child can copy the two pictures silently.",
+          "feedback": {
+            "complete": "Dot, dot: the first neighbour’s letter is delivered.",
+            "retry": "Look at the two separate round dots. Touch Dot twice."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "pebble-message-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "pebble-message-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "pebble-message-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "long-ice-bridge": {
+          "instruction": "Compare the long dash with the small dot. Invite your child to point to the first picture before copying the row.",
+          "feedback": {
+            "complete": "Long dash, dot: the bridge keeper has the second letter.",
+            "retry": "The long dash comes first. The small dot comes after it."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "long-ice-bridge-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dash-control.svg",
+              "label": "Touch the dash picture first."
+            },
+            {
+              "action": "point",
+              "image": "long-ice-bridge-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "long-ice-bridge-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "lantern-bay": {
+          "instruction": "Notice the matching pictures at both ends. Invite your child to show which picture belongs in the middle.",
+          "feedback": {
+            "complete": "Dot, long dash, dot: warm news reaches Lantern Bay.",
+            "retry": "Start with a dot, put the long dash in the middle, and finish with a dot."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "lantern-bay-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "lantern-bay-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "lantern-bay-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "quiet-inlet": {
+          "instruction": "Read the pause bars as a pictured quiet space. Point to all three symbols without adding a timed waiting rule.",
+          "feedback": {
+            "complete": "Dot, pause bars, dot: the quiet inlet receives its letter peacefully.",
+            "retry": "The middle picture has two pause bars. Put one dot on each side."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "quiet-inlet-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "quiet-inlet-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "quiet-inlet-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "twin-towers": {
+          "instruction": "Look for the two pictures that match. Ask your child to show where the different final picture belongs.",
+          "feedback": {
+            "complete": "Two long dashes and a dot: the tower keeper’s news has arrived.",
+            "retry": "Copy the two long dashes first. Finish with one small dot."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "twin-towers-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dash-control.svg",
+              "label": "Touch the dash picture first."
+            },
+            {
+              "action": "point",
+              "image": "twin-towers-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "twin-towers-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "welcome-harbour": {
+          "instruction": "Point to the first dot and dash as a pair. Invite your child to lead the same pair again to complete the row.",
+          "feedback": {
+            "complete": "The repeating pair reaches the boat keeper. All six letters have found their neighbours.",
+            "retry": "The little pair repeats: dot, long dash, then dot, long dash again."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "welcome-harbour-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "welcome-harbour-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            },
+            {
+              "action": "point",
+              "image": "welcome-harbour-clue.svg",
+              "label": "Pause to talk about what the pictures helped you notice."
+            }
+          ]
+        },
+        "letters-home": {
+          "instruction": "Read the ending together. Invite your child to remember a clue that helped the traveller.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "letters-home.svg",
+              "label": "Look at the traveller’s final destination."
+            },
+            {
+              "action": "point",
+              "image": "welcome-harbour.svg",
+              "label": "The last clue helped complete the journey."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "What did Pico carry along the coast?",
+          "answer": "Six letters for the neighbours.",
+          "sceneId": "letters-home"
+        },
+        {
+          "type": "literal",
+          "question": "Which picture showed a quiet space?",
+          "answer": "The two pause bars showed a quiet space.",
+          "sceneId": "quiet-inlet"
+        },
+        {
+          "type": "feeling",
+          "question": "How might Pico feel when a letter arrives for him?",
+          "answer": "He might feel surprised, happy or included. Other ideas are welcome.",
+          "sceneId": "letters-home"
+        },
+        {
+          "type": "personal",
+          "question": "What pictured message would you send to someone you like?",
+          "answer": "Make up a picture or pattern of your own. You may show it silently.",
+          "sceneId": "letters-home"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "morning-post": {
+          "instruction": "Look at the traveller and the first destination.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "morning-post.svg",
+              "label": "Meet the traveller at the start."
+            },
+            {
+              "action": "point",
+              "image": "pebble-message.svg",
+              "label": "The first clue starts a journey."
+            }
+          ]
+        },
+        "pebble-message": {
+          "instruction": "Copy dot, dot from left to right.",
+          "feedback": {
+            "complete": "Dot, dot: the first neighbour’s letter is delivered.",
+            "retry": "Look at the two separate round dots. Touch Dot twice."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "pebble-message-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "pebble-message-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "long-ice-bridge": {
+          "instruction": "Copy long dash, dot from left to right.",
+          "feedback": {
+            "complete": "Long dash, dot: the bridge keeper has the second letter.",
+            "retry": "The long dash comes first. The small dot comes after it."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "long-ice-bridge-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dash-control.svg",
+              "label": "Touch the dash picture first."
+            },
+            {
+              "action": "point",
+              "image": "long-ice-bridge-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "lantern-bay": {
+          "instruction": "Copy dot, long dash, dot from left to right.",
+          "feedback": {
+            "complete": "Dot, long dash, dot: warm news reaches Lantern Bay.",
+            "retry": "Start with a dot, put the long dash in the middle, and finish with a dot."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "lantern-bay-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "lantern-bay-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "quiet-inlet": {
+          "instruction": "Copy dot, pause bars, dot from left to right.",
+          "feedback": {
+            "complete": "Dot, pause bars, dot: the quiet inlet receives its letter peacefully.",
+            "retry": "The middle picture has two pause bars. Put one dot on each side."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "quiet-inlet-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "quiet-inlet-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "twin-towers": {
+          "instruction": "Copy long dash, long dash, dot from left to right.",
+          "feedback": {
+            "complete": "Two long dashes and a dot: the tower keeper’s news has arrived.",
+            "retry": "Copy the two long dashes first. Finish with one small dot."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "twin-towers-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dash-control.svg",
+              "label": "Touch the dash picture first."
+            },
+            {
+              "action": "point",
+              "image": "twin-towers-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "welcome-harbour": {
+          "instruction": "Copy dot, long dash, dot, long dash from left to right.",
+          "feedback": {
+            "complete": "The repeating pair reaches the boat keeper. All six letters have found their neighbours.",
+            "retry": "The little pair repeats: dot, long dash, then dot, long dash again."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "welcome-harbour-clue.svg",
+              "label": "Begin at the left of the pictured row."
+            },
+            {
+              "action": "select",
+              "image": "dot-control.svg",
+              "label": "Touch the dot picture first."
+            },
+            {
+              "action": "point",
+              "image": "welcome-harbour-demo.svg",
+              "label": "Keep following each picture in order. Then check your answer."
+            }
+          ]
+        },
+        "letters-home": {
+          "instruction": "Look at the final destination and remember your favourite clue.",
+          "feedback": {
+            "complete": "Every way of joining in belongs in this story.",
+            "retry": "Take your time looking at the scene."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "letters-home.svg",
+              "label": "Look at the traveller’s final destination."
+            },
+            {
+              "action": "point",
+              "image": "welcome-harbour.svg",
+              "label": "The last clue helped complete the journey."
+            }
+          ]
+        }
+      },
+      "reflection": "Which pictured message would you like to send again? You can show it silently."
+    }
+  },
+  "endings": {
+    "sceneId": "letters-home",
+    "text": "Pico returns to the harbour post house as the sky turns pearl and violet. Every letter has reached a neighbour: across the bridge, beside the lanterns, and along the quiet inlet. A friend brings one last envelope, addressed to Pico. Inside is a picture of a warm welcome. Silent pictures have carried a coast full of news.",
+    "variants": [],
+    "recap": []
+  },
+  "assets": [
+    {
+      "id": "dot-control",
+      "file": "dot-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 253,
+      "sha256": "5a5bf0134d07e6b64f667d6a3b0950bf3f393da96e97246f954ecf39acf1d75c"
+    },
+    {
+      "id": "dash-control",
+      "file": "dash-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 277,
+      "sha256": "2090c8666ddf1c5c54de48c976f298a32e57f08cedc90f73c133b619305ef685"
+    },
+    {
+      "id": "pause-control",
+      "file": "pause-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 340,
+      "sha256": "4d76304c9edeeb13896f222f6f79dbfa998112cfff43bffa2b79463d33ac5004"
+    },
+    {
+      "id": "morning-post-background",
+      "file": "morning-post-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "fc6bf34e086debedc6fa0c00122621b3a50644f596a0d58d0f5472b5748299f3"
+    },
+    {
+      "id": "morning-post-landmark",
+      "file": "morning-post-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 892,
+      "sha256": "f413d6d657da6c78176810ccb5b692c7081bdd99b0e016192211d9f3fadbc2f1"
+    },
+    {
+      "id": "morning-post-character",
+      "file": "morning-post-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1421,
+      "sha256": "c49efab1ebfeac17dc352fdec99a7c2e42b34cf805338be58b9be9bbea776b10"
+    },
+    {
+      "id": "morning-post-companion",
+      "file": "morning-post-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "morning-post-wind",
+      "file": "morning-post-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "morning-post-foreground",
+      "file": "morning-post-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 250,
+      "sha256": "37aacc5fd05a94ab14e03b0d415bc806a6b9552f058b98c3bee4bd1b5538c3c8"
+    },
+    {
+      "id": "morning-post",
+      "file": "morning-post.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3964,
+      "sha256": "ccba5046ac00577a772aca26ea8b834cf791945ea6fe6a293189a35146136b94"
+    },
+    {
+      "id": "pebble-message-background",
+      "file": "pebble-message-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "78e1e9173091a741ec7b75e867db391617150baa26432c587b3daa2c8f09d158"
+    },
+    {
+      "id": "pebble-message-landmark",
+      "file": "pebble-message-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1202,
+      "sha256": "7a76b0f7fed308a62c65e774e2ebaf1356491c8806fdf614bb4456ebb1c5c494"
+    },
+    {
+      "id": "pebble-message-character",
+      "file": "pebble-message-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1419,
+      "sha256": "8545f65e5b73c48d2ae1aecc21b7629d64fc3d1c43cec5d609be457380d75219"
+    },
+    {
+      "id": "pebble-message-companion",
+      "file": "pebble-message-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "pebble-message-wind",
+      "file": "pebble-message-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "pebble-message-foreground",
+      "file": "pebble-message-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 778,
+      "sha256": "68334d00b8692e5c43f5870777ff4cedb41b4ab9cc825228e96fbebf85a40642"
+    },
+    {
+      "id": "pebble-message-completed",
+      "file": "pebble-message-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 606,
+      "sha256": "9424d0f32ce4772b80c951212f85c5673705bcff7b4a6ca1c42b58d57259f27b"
+    },
+    {
+      "id": "pebble-message",
+      "file": "pebble-message.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4800,
+      "sha256": "128b993cc0d62991f47434447ea28fc292e5078225f825ed862226f523e4222b"
+    },
+    {
+      "id": "pebble-message-clue",
+      "file": "pebble-message-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 572,
+      "sha256": "354a9db50a7d0804f31af265d1b581b2c8c253b7d59b10141242b0b918525118"
+    },
+    {
+      "id": "pebble-message-demo",
+      "file": "pebble-message-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 572,
+      "sha256": "ca37967076c2514c2949e937a1754676786bee3ad1424981c8f58e3e1beecfd0"
+    },
+    {
+      "id": "long-ice-bridge-background",
+      "file": "long-ice-bridge-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "2d76e22b4592b03747f01f794895e4ce7560b5211a448a3f1046ed78f9d3cace"
+    },
+    {
+      "id": "long-ice-bridge-landmark",
+      "file": "long-ice-bridge-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 444,
+      "sha256": "28242ca0dd60827920fc5015feff696c117691568e3bfee6b4a43e0adae8de96"
+    },
+    {
+      "id": "long-ice-bridge-character",
+      "file": "long-ice-bridge-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1421,
+      "sha256": "c49efab1ebfeac17dc352fdec99a7c2e42b34cf805338be58b9be9bbea776b10"
+    },
+    {
+      "id": "long-ice-bridge-companion",
+      "file": "long-ice-bridge-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "long-ice-bridge-wind",
+      "file": "long-ice-bridge-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "long-ice-bridge-foreground",
+      "file": "long-ice-bridge-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 803,
+      "sha256": "9925c0eb85dcd380424291486f8e6a784619db6d0ec0089fde47c951e9968fa9"
+    },
+    {
+      "id": "long-ice-bridge-completed",
+      "file": "long-ice-bridge-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 606,
+      "sha256": "9424d0f32ce4772b80c951212f85c5673705bcff7b4a6ca1c42b58d57259f27b"
+    },
+    {
+      "id": "long-ice-bridge",
+      "file": "long-ice-bridge.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4069,
+      "sha256": "8dee88c2118e82162ea36f3a4178674200deccec2c1c5e7d3c514608db959283"
+    },
+    {
+      "id": "long-ice-bridge-clue",
+      "file": "long-ice-bridge-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 597,
+      "sha256": "de6007d43a8b657524ba7710a3610b964e9d9be7eecb1f917677c202e5aaf215"
+    },
+    {
+      "id": "long-ice-bridge-demo",
+      "file": "long-ice-bridge-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 597,
+      "sha256": "f15e6f04cb4bfdde3771f493f2fea8ba5f1f123b2dc1b86ba97f647d863ec0db"
+    },
+    {
+      "id": "lantern-bay-background",
+      "file": "lantern-bay-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "25db7cd72b990e77ad7a4088199cb9d4689c47926f1b99baeb85aded5a52e89a"
+    },
+    {
+      "id": "lantern-bay-landmark",
+      "file": "lantern-bay-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1268,
+      "sha256": "b8e135362c7fceaa4729d051214af295a635d696a76a555397a59554d9258e0e"
+    },
+    {
+      "id": "lantern-bay-character",
+      "file": "lantern-bay-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1419,
+      "sha256": "8545f65e5b73c48d2ae1aecc21b7629d64fc3d1c43cec5d609be457380d75219"
+    },
+    {
+      "id": "lantern-bay-companion",
+      "file": "lantern-bay-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "lantern-bay-wind",
+      "file": "lantern-bay-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "lantern-bay-foreground",
+      "file": "lantern-bay-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 898,
+      "sha256": "a95eb7d7e0f0ad766dc34efd7f6fdb4ced6a42dda964a8a1794b6d5f5dbb7819"
+    },
+    {
+      "id": "lantern-bay-completed",
+      "file": "lantern-bay-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 606,
+      "sha256": "9424d0f32ce4772b80c951212f85c5673705bcff7b4a6ca1c42b58d57259f27b"
+    },
+    {
+      "id": "lantern-bay",
+      "file": "lantern-bay.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4986,
+      "sha256": "ac85f7e751050d0122c8b20bd2ad3780c296c20ec4b547f9850ca46a3a2fc08e"
+    },
+    {
+      "id": "lantern-bay-clue",
+      "file": "lantern-bay-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 691,
+      "sha256": "bae312fc19e71f901dd5aeb56f4905ea206e7536f4036594449a62e54650e4b3"
+    },
+    {
+      "id": "lantern-bay-demo",
+      "file": "lantern-bay-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 691,
+      "sha256": "d2395d1157f4845984f3e8deb9bcefa18fbc08713797c5f85ddbb9cba3a9c644"
+    },
+    {
+      "id": "quiet-inlet-background",
+      "file": "quiet-inlet-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "e464a2ee0982908ab5d7c4ee2fff4ab9dd0bbce478fca2402181b13c8dfec539"
+    },
+    {
+      "id": "quiet-inlet-landmark",
+      "file": "quiet-inlet-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1048,
+      "sha256": "1e1ef7c9c0c23204d4545e07421b4ed6c58a01765b82e68a0ce12dd5cc1b811b"
+    },
+    {
+      "id": "quiet-inlet-character",
+      "file": "quiet-inlet-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1421,
+      "sha256": "c49efab1ebfeac17dc352fdec99a7c2e42b34cf805338be58b9be9bbea776b10"
+    },
+    {
+      "id": "quiet-inlet-companion",
+      "file": "quiet-inlet-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "quiet-inlet-wind",
+      "file": "quiet-inlet-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "quiet-inlet-foreground",
+      "file": "quiet-inlet-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 962,
+      "sha256": "9d4e6f4dc49e7b2d909cb5e0f4c33d184f98c74faf12595c842acbd00b68a4e4"
+    },
+    {
+      "id": "quiet-inlet-completed",
+      "file": "quiet-inlet-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 606,
+      "sha256": "9424d0f32ce4772b80c951212f85c5673705bcff7b4a6ca1c42b58d57259f27b"
+    },
+    {
+      "id": "quiet-inlet",
+      "file": "quiet-inlet.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4832,
+      "sha256": "b9082db59ef96a344d6e45134b2d8d12d987d39b5c45fc7f002cd582e01088f3"
+    },
+    {
+      "id": "quiet-inlet-clue",
+      "file": "quiet-inlet-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 755,
+      "sha256": "b4821ba2815016edb8f92b030133fa68f4a00257daeefe66da1f282e6f010879"
+    },
+    {
+      "id": "quiet-inlet-demo",
+      "file": "quiet-inlet-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 755,
+      "sha256": "9ba6c3826e2e92f2bef7a46cf576dfcc1a753ade64591f5af1dcae6713408049"
+    },
+    {
+      "id": "twin-towers-background",
+      "file": "twin-towers-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "7d8dd5217a836faca827b4507c81510d5402c968558daf49338df3801e0ecbc8"
+    },
+    {
+      "id": "twin-towers-landmark",
+      "file": "twin-towers-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1301,
+      "sha256": "e4580c6c79483ab0631fdb096231fc956a4750aef7726d8b114d788d8d3bcfc2"
+    },
+    {
+      "id": "twin-towers-character",
+      "file": "twin-towers-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1419,
+      "sha256": "8545f65e5b73c48d2ae1aecc21b7629d64fc3d1c43cec5d609be457380d75219"
+    },
+    {
+      "id": "twin-towers-companion",
+      "file": "twin-towers-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "twin-towers-wind",
+      "file": "twin-towers-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "twin-towers-foreground",
+      "file": "twin-towers-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 923,
+      "sha256": "29889ffa85c42152f5843623410cc7c0231d7b7b4434c0a0abebd3ce26262bfd"
+    },
+    {
+      "id": "twin-towers-completed",
+      "file": "twin-towers-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 606,
+      "sha256": "9424d0f32ce4772b80c951212f85c5673705bcff7b4a6ca1c42b58d57259f27b"
+    },
+    {
+      "id": "twin-towers",
+      "file": "twin-towers.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5044,
+      "sha256": "d16b0ea734c74ff053bd1bf676ff695d5de26b82eaf0bdfc8373da5f0f35f7e8"
+    },
+    {
+      "id": "twin-towers-clue",
+      "file": "twin-towers-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 716,
+      "sha256": "5c4c412df0f7a707f588935636e7e0403cb47906963c5154c3077db0cb3faee9"
+    },
+    {
+      "id": "twin-towers-demo",
+      "file": "twin-towers-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 716,
+      "sha256": "d92f5977bd16af282302948213508058704462dd40bcdb65ddb2e91b5859bbb6"
+    },
+    {
+      "id": "welcome-harbour-background",
+      "file": "welcome-harbour-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "33823a37e280795b8f769e2ce1606ea3f2bc1e27ef84b597238070763dfe1f63"
+    },
+    {
+      "id": "welcome-harbour-landmark",
+      "file": "welcome-harbour-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1046,
+      "sha256": "51d50c273b9224cb8313c07533759c96ad4351a83d2307295e65240b20d6ff00"
+    },
+    {
+      "id": "welcome-harbour-character",
+      "file": "welcome-harbour-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1421,
+      "sha256": "c49efab1ebfeac17dc352fdec99a7c2e42b34cf805338be58b9be9bbea776b10"
+    },
+    {
+      "id": "welcome-harbour-companion",
+      "file": "welcome-harbour-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 427,
+      "sha256": "3b2b9ec49852886120e52da316161bfdc78f8698f1cad6912d7119dbcc44cd2f"
+    },
+    {
+      "id": "welcome-harbour-wind",
+      "file": "welcome-harbour-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "welcome-harbour-foreground",
+      "file": "welcome-harbour-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1054,
+      "sha256": "549e0c84a478770ac04760275477f0855fff74cc30ff5fb3caceab9e82d8cc85"
+    },
+    {
+      "id": "welcome-harbour-completed",
+      "file": "welcome-harbour-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 606,
+      "sha256": "9424d0f32ce4772b80c951212f85c5673705bcff7b4a6ca1c42b58d57259f27b"
+    },
+    {
+      "id": "welcome-harbour",
+      "file": "welcome-harbour.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4922,
+      "sha256": "cb50b41a6f85782fc80922e9f71406050232a2b57d16cfc0c98863e6e6a067c7"
+    },
+    {
+      "id": "welcome-harbour-clue",
+      "file": "welcome-harbour-clue.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 846,
+      "sha256": "97505778055eaf3ef42a9b7ab5107ecff38b7a597fdd6c2a12e2d4a547fb845d"
+    },
+    {
+      "id": "welcome-harbour-demo",
+      "file": "welcome-harbour-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 846,
+      "sha256": "727d8e4b1520274237d32427da9c868765271386ac15d775418490279cd6304f"
+    },
+    {
+      "id": "letters-home-background",
+      "file": "letters-home-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1149,
+      "sha256": "e6a458dc7049905bacd57d2dd6eedeca8338af20fea9379dba50db2ef65dd3f9"
+    },
+    {
+      "id": "letters-home-landmark",
+      "file": "letters-home-landmark.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2216,
+      "sha256": "d09f64338f88aba2209b73c94942df5a9b230c3e632b7807f79f9c0946a2f15e"
+    },
+    {
+      "id": "letters-home-character",
+      "file": "letters-home-character.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1419,
+      "sha256": "8545f65e5b73c48d2ae1aecc21b7629d64fc3d1c43cec5d609be457380d75219"
+    },
+    {
+      "id": "letters-home-companion",
+      "file": "letters-home-companion.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 428,
+      "sha256": "8ae2d3342258470fade07525aafadd65e3a25a77da16e6ad148fbcb5f6974672"
+    },
+    {
+      "id": "letters-home-wind",
+      "file": "letters-home-wind.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 300,
+      "sha256": "a1abb48dde6082c31c871a6450fef1cd79d6c234f61a66fcd0e399d24ccb0856"
+    },
+    {
+      "id": "letters-home-foreground",
+      "file": "letters-home-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 250,
+      "sha256": "37aacc5fd05a94ab14e03b0d415bc806a6b9552f058b98c3bee4bd1b5538c3c8"
+    },
+    {
+      "id": "letters-home",
+      "file": "letters-home.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5287,
+      "sha256": "da275bc309ab2f2a1a43aa9c6adae7097b32654f634bd87209b3f5001e4fca55"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3964,
+      "sha256": "ccba5046ac00577a772aca26ea8b834cf791945ea6fe6a293189a35146136b94"
+    }
+  ]
+}

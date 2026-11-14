@@ -1,0 +1,1845 @@
+{
+  "schemaVersion": 1,
+  "id": "amaras-busy-bakery",
+  "version": "v1",
+  "title": "Amara’s Busy Bakery",
+  "category": "small-jobs",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {},
+  "scenes": [
+    {
+      "id": "welcome",
+      "narrative": "Sunshine reaches the little street bakery. Amara and Grandpa are getting ready for a welcome breakfast: a new family has moved in next door. “You can help with the picture orders,” says Grandpa. “We’ll make room for every neighbour.”",
+      "alt": "Amara and Grandpa outside their sunny striped-awning bakery. A chalk sign invites neighbours to breakfast.",
+      "image": "welcome.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "welcome-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "welcome-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              655,
+              238
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "welcome-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              342,
+              293
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "welcome-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              297.9,
+              299.3
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "welcome-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-plate",
+      "narrative": "“Let’s save the first place for you, Grandpa,” says Amara. He puts a small plate on the counter. The picture asks for one soft bun. Amara can fill this little order while he unfolds the tablecloth.",
+      "alt": "First welcome plate: Amara helps prepare 1 bun for Grandpa’s tasting place. A separate picture order shows the needed group; the empty container waits.",
+      "image": "first-plate.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "first-plate-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "first-plate-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              770,
+              169
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "first-plate-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              313,
+              188
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "first-plate-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              262.6,
+              195.2
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "first-plate-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "first-plate-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              510,
+              530
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "fill-first-plate",
+        "items": [
+          {
+            "id": "bun",
+            "label": "Soft bun",
+            "image": "bun-control.svg",
+            "quantity": 1
+          }
+        ],
+        "targets": [
+          {
+            "id": "plate",
+            "label": "Grandpa’s plate for one bun",
+            "image": "first-plate-order.svg",
+            "accepts": [
+              "bun"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "show",
+                "sceneId": "first-plate",
+                "layerId": "completed"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "two-for-the-door",
+      "narrative": "A bicycle bell rings outside. Two neighbours have come early to help carry chairs. “A little basket for our helpers,” says Grandpa. Amara looks at the two buns drawn on their order card. There will be one for each helper.",
+      "alt": "Two buns for the doorway: Amara helps prepare 2 buns for the neighbours arriving first. A separate picture order shows the needed group; the empty container waits.",
+      "image": "two-for-the-door.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "two-for-the-door-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "two-for-the-door-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              451,
+              138
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "two-for-the-door-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              746,
+              189
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "two-for-the-door-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              695.6,
+              196.2
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "two-for-the-door-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "two-for-the-door-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              270,
+              535
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "fill-two-for-the-door",
+        "items": [
+          {
+            "id": "bun",
+            "label": "Soft bun",
+            "image": "bun-control.svg",
+            "quantity": 2
+          }
+        ],
+        "targets": [
+          {
+            "id": "basket",
+            "label": "Basket for two buns",
+            "image": "two-for-the-door-order.svg",
+            "accepts": [
+              "bun"
+            ],
+            "required": 2,
+            "effects": [
+              {
+                "type": "show",
+                "sceneId": "two-for-the-door",
+                "layerId": "completed"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "star-place",
+      "narrative": "The new neighbour’s child has made a star-shaped place card. “That looks like the biscuits we made earlier,” says Amara. Grandpa brings a round bun and a star biscuit to choose from. Which shape belongs beside the star card?",
+      "alt": "A matching star biscuit: Amara helps prepare 1 star biscuit for a new neighbour who likes stars. A separate picture order shows the needed group; the empty container waits.",
+      "image": "star-place.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "star-place-background.svg",
+        "layers": [
+          {
+            "id": "amara",
+            "image": "star-place-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              800,
+              220
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "star-place-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              752.96,
+              226.72
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "star-place-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "star-place-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              491,
+              505
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "fill-star-place",
+        "items": [
+          {
+            "id": "star",
+            "label": "Star biscuit",
+            "image": "star-control.svg",
+            "quantity": 1
+          },
+          {
+            "id": "bun",
+            "label": "Round bun",
+            "image": "bun-control.svg",
+            "quantity": 1
+          }
+        ],
+        "targets": [
+          {
+            "id": "star-plate",
+            "label": "Plate beside the star card",
+            "image": "star-place-order.svg",
+            "accepts": [
+              "star"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "show",
+                "sceneId": "star-place",
+                "layerId": "completed"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "three-for-the-bench",
+      "narrative": "Three gardeners are finishing the little street garden. They cannot leave their seedlings just yet. “We can take breakfast to their bench,” says Grandpa. Amara opens a paper box. The picture on its lid shows three buns to pack.",
+      "alt": "A box for the bench: Amara helps prepare 3 buns for three gardeners on the street bench. A separate picture order shows the needed group; the empty container waits.",
+      "image": "three-for-the-bench.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "three-for-the-bench-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "three-for-the-bench-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              104,
+              239
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "three-for-the-bench-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              817,
+              137
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "three-for-the-bench-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              762.4,
+              144.8
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "three-for-the-bench-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "three-for-the-bench-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              430,
+              490
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "fill-three-for-the-bench",
+        "items": [
+          {
+            "id": "bun",
+            "label": "Soft bun",
+            "image": "bun-control.svg",
+            "quantity": 3
+          }
+        ],
+        "targets": [
+          {
+            "id": "box",
+            "label": "Open box for three buns",
+            "image": "three-for-the-bench-order.svg",
+            "accepts": [
+              "bun"
+            ],
+            "required": 3,
+            "effects": [
+              {
+                "type": "show",
+                "sceneId": "three-for-the-bench",
+                "layerId": "completed"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "four-for-friends",
+      "narrative": "At the doorway, four children bring small flowers for the breakfast table. Amara waves them in. The sharing tray has room for four star biscuits. “They helped make our table bright,” she says. “Let’s make a place for every helper.”",
+      "alt": "Four stars to share: Amara helps prepare 4 star biscuits for four children helping with flowers. A separate picture order shows the needed group; the empty container waits.",
+      "image": "four-for-friends.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "four-for-friends-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "four-for-friends-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              743,
+              227
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "four-for-friends-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              300,
+              289
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "four-for-friends-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              255.06,
+              295.42
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "four-for-friends-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "four-for-friends-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              516,
+              533
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "fill-four-for-friends",
+        "items": [
+          {
+            "id": "star",
+            "label": "Star biscuit",
+            "image": "star-control.svg",
+            "quantity": 4
+          }
+        ],
+        "targets": [
+          {
+            "id": "tray",
+            "label": "Sharing tray for four stars",
+            "image": "four-for-friends-order.svg",
+            "accepts": [
+              "star"
+            ],
+            "required": 4,
+            "effects": [
+              {
+                "type": "show",
+                "sceneId": "four-for-friends",
+                "layerId": "completed"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "five-for-the-table",
+      "narrative": "The long table is nearly ready. Five more neighbours pull up chairs, including the family who moved in yesterday. Amara checks the last picture order: five buns for their sharing plate. Grandpa spreads the cloth while she fills it.",
+      "alt": "Five at the long table: Amara helps prepare 5 buns for five more neighbours at the long table. A separate picture order shows the needed group; the empty container waits.",
+      "image": "five-for-the-table.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "five-for-the-table-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "five-for-the-table-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              847,
+              196
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "five-for-the-table-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              146,
+              213
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "five-for-the-table-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              91.4,
+              220.8
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "five-for-the-table-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          },
+          {
+            "id": "completed",
+            "image": "five-for-the-table-completed.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              508,
+              489
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "completed"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "fill-five-for-the-table",
+        "items": [
+          {
+            "id": "bun",
+            "label": "Soft bun",
+            "image": "bun-control.svg",
+            "quantity": 5
+          }
+        ],
+        "targets": [
+          {
+            "id": "table",
+            "label": "Sharing plate for five buns",
+            "image": "five-for-the-table-order.svg",
+            "accepts": [
+              "bun"
+            ],
+            "required": 5,
+            "effects": [
+              {
+                "type": "show",
+                "sceneId": "five-for-the-table",
+                "layerId": "completed"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "breakfast",
+      "narrative": "Chairs scrape softly and the street fills with friendly voices. The helpers have their basket, the gardeners have their box, and the flower helpers share the stars. At the long table, the new family smiles. Amara sits beside Grandpa. Their small jobs have made a big welcome.",
+      "alt": "Amara, Grandpa, a new neighbour and their child gather at a garden table with five buns on a sharing plate.",
+      "image": "breakfast.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "breakfast-background.svg",
+        "layers": [
+          {
+            "id": "grandpa",
+            "image": "breakfast-grandpa.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              733,
+              144
+            ]
+          },
+          {
+            "id": "amara",
+            "image": "breakfast-amara.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              284,
+              177
+            ]
+          },
+          {
+            "id": "ribbon",
+            "image": "breakfast-ribbon.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              242,
+              183
+            ]
+          },
+          {
+            "id": "foreground",
+            "image": "breakfast-foreground.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              500
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "ribbon",
+            "preset": "flap",
+            "parameters": {
+              "angle": 7
+            },
+            "durationMs": 4200,
+            "restMs": 550,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "welcome": {
+          "instruction": "Look at the people and the places together. Who is this breakfast for?",
+          "feedback": {
+            "complete": "A welcome can begin with one small job.",
+            "retry": "Take your time looking at the picture."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "welcome-detail.svg",
+              "label": "Amara and Grandpa are making a welcome breakfast."
+            },
+            {
+              "action": "point",
+              "image": "welcome-table.svg",
+              "label": "Look for the neighbours’ places at the table."
+            }
+          ]
+        },
+        "first-plate": {
+          "instruction": "Look at Grandpa’s picture order together. Where would you put the one bun on his plate?",
+          "feedback": {
+            "complete": "One bun rests on Grandpa’s plate. The first place is ready.",
+            "retry": "Choose the bun picture, then touch the plate picture."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "first-plate-order.svg",
+              "label": "Look at the picture asking for 1 bun.",
+              "targetId": "plate"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "first-plate-demo.svg",
+              "label": "Then touch the plate. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "plate"
+            },
+            {
+              "action": "point",
+              "image": "first-plate-order.svg",
+              "label": "Pause and talk about how the group could be arranged."
+            }
+          ]
+        },
+        "two-for-the-door": {
+          "instruction": "Count the buns on the order card. Would you arrange the two buns side by side or one above the other?",
+          "feedback": {
+            "complete": "Two buns fill the helpers’ basket, one for each neighbour.",
+            "retry": "Touch a bun, then the basket. Use a fresh bun picture for the next one."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "two-for-the-door-order.svg",
+              "label": "Look at the picture asking for 2 buns.",
+              "targetId": "basket"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "two-for-the-door-demo.svg",
+              "label": "Then touch the basket. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "basket"
+            },
+            {
+              "action": "point",
+              "image": "two-for-the-door-order.svg",
+              "label": "Pause and talk about how the group could be arranged."
+            }
+          ]
+        },
+        "star-place": {
+          "instruction": "Trace the star’s points in the air together. Which snack has the same shape? Talk about how the round bun differs.",
+          "feedback": {
+            "complete": "The star biscuit matches the star place card. This new neighbour has a place.",
+            "retry": "Look for the biscuit with points like the star card."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "star-place-order.svg",
+              "label": "Look at the picture asking for 1 star biscuit.",
+              "targetId": "star-plate"
+            },
+            {
+              "action": "select",
+              "image": "star-control.svg",
+              "label": "Touch one star biscuit picture.",
+              "itemId": "star"
+            },
+            {
+              "action": "place",
+              "image": "star-place-demo.svg",
+              "label": "Then touch the star plate. Repeat for each pictured piece.",
+              "itemId": "star",
+              "targetId": "star-plate"
+            },
+            {
+              "action": "point",
+              "image": "star-place-order.svg",
+              "label": "Pause and talk about how the group could be arranged."
+            }
+          ]
+        },
+        "three-for-the-bench": {
+          "instruction": "Count three on the lid. How could the buns fit without sitting on top of each other? Invite your child to show a plan.",
+          "feedback": {
+            "complete": "Three buns are packed for the gardeners. Grandpa will carry the box.",
+            "retry": "Choose each bun picture, then touch the open box."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "three-for-the-bench-order.svg",
+              "label": "Look at the picture asking for 3 buns.",
+              "targetId": "box"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "three-for-the-bench-demo.svg",
+              "label": "Then touch the box. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "box"
+            },
+            {
+              "action": "point",
+              "image": "three-for-the-bench-order.svg",
+              "label": "Pause and talk about how the group could be arranged."
+            }
+          ]
+        },
+        "four-for-friends": {
+          "instruction": "Look at the four stars in the tray picture. How might you share them so each flower helper has one?",
+          "feedback": {
+            "complete": "Four star biscuits wait on the tray, one for each flower helper.",
+            "retry": "Touch a star biscuit picture, then the tray. Keep going until the group matches."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "four-for-friends-order.svg",
+              "label": "Look at the picture asking for 4 star biscuits.",
+              "targetId": "tray"
+            },
+            {
+              "action": "select",
+              "image": "star-control.svg",
+              "label": "Touch one star biscuit picture.",
+              "itemId": "star"
+            },
+            {
+              "action": "place",
+              "image": "four-for-friends-demo.svg",
+              "label": "Then touch the tray. Repeat for each pictured piece.",
+              "itemId": "star",
+              "targetId": "tray"
+            },
+            {
+              "action": "point",
+              "image": "four-for-friends-order.svg",
+              "label": "Pause and talk about how the group could be arranged."
+            }
+          ]
+        },
+        "five-for-the-table": {
+          "instruction": "Count the five buns on the picture order. Could you see a group of three and a group of two? Talk about another arrangement.",
+          "feedback": {
+            "complete": "Five buns fill the sharing plate. Everyone at the long table can reach one.",
+            "retry": "Choose one bun picture at a time, then touch the sharing plate."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "five-for-the-table-order.svg",
+              "label": "Look at the picture asking for 5 buns.",
+              "targetId": "table"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "five-for-the-table-demo.svg",
+              "label": "Then touch the sharing plate. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "table"
+            },
+            {
+              "action": "point",
+              "image": "five-for-the-table-order.svg",
+              "label": "Pause and talk about how the group could be arranged."
+            }
+          ]
+        },
+        "breakfast": {
+          "instruction": "Look back together at the breakfast jobs. Which small job helped someone feel welcome?",
+          "feedback": {
+            "complete": "A welcome can begin with one small job.",
+            "retry": "Take your time looking at the picture."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "welcome-table.svg",
+              "label": "A table has room for neighbours to meet."
+            },
+            {
+              "action": "point",
+              "image": "five-for-the-table-order.svg",
+              "label": "Five buns became a sharing plate."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "Who was the first plate for?",
+          "answer": "Grandpa. Amara put one bun on his plate.",
+          "sceneId": "first-plate"
+        },
+        {
+          "type": "literal",
+          "question": "What shape matched the new neighbour’s place card?",
+          "answer": "The star biscuit matched the star-shaped card.",
+          "sceneId": "star-place"
+        },
+        {
+          "type": "feeling",
+          "question": "How might the new family feel at the breakfast table?",
+          "answer": "They might feel welcome, shy, pleased, or something else. Talk about what you notice.",
+          "sceneId": "breakfast"
+        },
+        {
+          "type": "personal",
+          "question": "What small job would you like to do to welcome someone?",
+          "answer": "Your own idea belongs here. You might help set a place, share food, or say hello.",
+          "sceneId": "breakfast"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "welcome": {
+          "instruction": "Look at Amara and Grandpa’s welcome breakfast.",
+          "feedback": {
+            "complete": "A welcome can begin with one small job.",
+            "retry": "Take your time looking at the picture."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "welcome-detail.svg",
+              "label": "Amara and Grandpa are making a welcome breakfast."
+            },
+            {
+              "action": "point",
+              "image": "welcome-table.svg",
+              "label": "Look for the neighbours’ places at the table."
+            }
+          ]
+        },
+        "first-plate": {
+          "instruction": "Put one bun on Grandpa’s plate.",
+          "feedback": {
+            "complete": "One bun rests on Grandpa’s plate. The first place is ready.",
+            "retry": "Choose the bun picture, then touch the plate picture."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "first-plate-order.svg",
+              "label": "Look at the picture asking for 1 bun.",
+              "targetId": "plate"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "first-plate-demo.svg",
+              "label": "Then touch the plate. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "plate"
+            }
+          ]
+        },
+        "two-for-the-door": {
+          "instruction": "Put two buns in the helpers’ basket.",
+          "feedback": {
+            "complete": "Two buns fill the helpers’ basket, one for each neighbour.",
+            "retry": "Touch a bun, then the basket. Use a fresh bun picture for the next one."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "two-for-the-door-order.svg",
+              "label": "Look at the picture asking for 2 buns.",
+              "targetId": "basket"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "two-for-the-door-demo.svg",
+              "label": "Then touch the basket. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "basket"
+            }
+          ]
+        },
+        "star-place": {
+          "instruction": "Match the star biscuit to the star plate.",
+          "feedback": {
+            "complete": "The star biscuit matches the star place card. This new neighbour has a place.",
+            "retry": "Look for the biscuit with points like the star card."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "star-place-order.svg",
+              "label": "Look at the picture asking for 1 star biscuit.",
+              "targetId": "star-plate"
+            },
+            {
+              "action": "select",
+              "image": "star-control.svg",
+              "label": "Touch one star biscuit picture.",
+              "itemId": "star"
+            },
+            {
+              "action": "place",
+              "image": "star-place-demo.svg",
+              "label": "Then touch the star plate. Repeat for each pictured piece.",
+              "itemId": "star",
+              "targetId": "star-plate"
+            }
+          ]
+        },
+        "three-for-the-bench": {
+          "instruction": "Pack three buns in the gardeners’ box.",
+          "feedback": {
+            "complete": "Three buns are packed for the gardeners. Grandpa will carry the box.",
+            "retry": "Choose each bun picture, then touch the open box."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "three-for-the-bench-order.svg",
+              "label": "Look at the picture asking for 3 buns.",
+              "targetId": "box"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "three-for-the-bench-demo.svg",
+              "label": "Then touch the box. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "box"
+            }
+          ]
+        },
+        "four-for-friends": {
+          "instruction": "Put four star biscuits on the sharing tray.",
+          "feedback": {
+            "complete": "Four star biscuits wait on the tray, one for each flower helper.",
+            "retry": "Touch a star biscuit picture, then the tray. Keep going until the group matches."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "four-for-friends-order.svg",
+              "label": "Look at the picture asking for 4 star biscuits.",
+              "targetId": "tray"
+            },
+            {
+              "action": "select",
+              "image": "star-control.svg",
+              "label": "Touch one star biscuit picture.",
+              "itemId": "star"
+            },
+            {
+              "action": "place",
+              "image": "four-for-friends-demo.svg",
+              "label": "Then touch the tray. Repeat for each pictured piece.",
+              "itemId": "star",
+              "targetId": "tray"
+            }
+          ]
+        },
+        "five-for-the-table": {
+          "instruction": "Put five buns on the long table’s plate.",
+          "feedback": {
+            "complete": "Five buns fill the sharing plate. Everyone at the long table can reach one.",
+            "retry": "Choose one bun picture at a time, then touch the sharing plate."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "five-for-the-table-order.svg",
+              "label": "Look at the picture asking for 5 buns.",
+              "targetId": "table"
+            },
+            {
+              "action": "select",
+              "image": "bun-control.svg",
+              "label": "Touch one bun picture.",
+              "itemId": "bun"
+            },
+            {
+              "action": "place",
+              "image": "five-for-the-table-demo.svg",
+              "label": "Then touch the sharing plate. Repeat for each pictured piece.",
+              "itemId": "bun",
+              "targetId": "table"
+            }
+          ]
+        },
+        "breakfast": {
+          "instruction": "Look at the neighbours sharing breakfast.",
+          "feedback": {
+            "complete": "A welcome can begin with one small job.",
+            "retry": "Take your time looking at the picture."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "welcome-table.svg",
+              "label": "A table has room for neighbours to meet."
+            },
+            {
+              "action": "point",
+              "image": "five-for-the-table-order.svg",
+              "label": "Five buns became a sharing plate."
+            }
+          ]
+        }
+      },
+      "reflection": "You helped with one small job at a time. Which group would you like to make or arrange again?"
+    }
+  },
+  "endings": {
+    "sceneId": "breakfast",
+    "text": "Chairs scrape softly and the street fills with friendly voices. The helpers have their basket, the gardeners have their box, and the flower helpers share the stars. At the long table, the new family smiles. Amara sits beside Grandpa. Their small jobs have made a big welcome.",
+    "variants": [],
+    "recap": []
+  },
+  "assets": [
+    {
+      "id": "bun-control",
+      "file": "bun-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 761,
+      "sha256": "1bd204ea3522b4bd33c5d911ff0cf802c3c8935e3a429967e29f1f84adfb09a4"
+    },
+    {
+      "id": "star-control",
+      "file": "star-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 780,
+      "sha256": "d0752942d9ee7fcbebde34e314a67db6277bd8d4b1a4da3d7c5d74de29975154"
+    },
+    {
+      "id": "welcome-detail",
+      "file": "welcome-detail.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4676,
+      "sha256": "bd42b07522127394a14b46318152f4896e6a6c92837b998c00cd2b6b8db8fd79"
+    },
+    {
+      "id": "welcome-table",
+      "file": "welcome-table.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1517,
+      "sha256": "45e00fc928e69c5bfd9608223908b02f32469c1c50e887d6f64ea3fa04521fdd"
+    },
+    {
+      "id": "welcome-grandpa",
+      "file": "welcome-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2435,
+      "sha256": "e2bceda1c0007b84897df157be34b18b0c9afcea1d9f2168e097406533eeb4d9"
+    },
+    {
+      "id": "welcome-amara",
+      "file": "welcome-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2277,
+      "sha256": "00a7412c96a5dfc2ed5d1835f94c3289c24bcaed3d29c6130b5c71b9a5dc9d29"
+    },
+    {
+      "id": "welcome-ribbon",
+      "file": "welcome-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 490,
+      "sha256": "651f10e6a19b32b8741838664eadc5aee7ce423fd3cadc2a23c987faae15d9d4"
+    },
+    {
+      "id": "welcome-foreground",
+      "file": "welcome-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 95,
+      "sha256": "aadeb473134f7ca8f7d678d792687c788eafb02fe965cdf47bb04c19156b717f"
+    },
+    {
+      "id": "welcome-background",
+      "file": "welcome-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3204,
+      "sha256": "bb19e075e66dbb16f2beaba1540abc870f10a8cac86c1109b6fb246e549bf520"
+    },
+    {
+      "id": "welcome",
+      "file": "welcome.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 8121,
+      "sha256": "cde75d18c2ca49d2a261c93036de14eb9448e80fbe246bcdc8a7945c791fafb5"
+    },
+    {
+      "id": "first-plate-order",
+      "file": "first-plate-order.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1115,
+      "sha256": "0c62d6fefa2d3730d8dece403dfafd5477ab5edc9d306244af87d2a1a0842015"
+    },
+    {
+      "id": "first-plate-demo",
+      "file": "first-plate-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1793,
+      "sha256": "85270c0fb1026716b81e266221468691fe082a210fdb7f82f345715433b88736"
+    },
+    {
+      "id": "first-plate-grandpa",
+      "file": "first-plate-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2435,
+      "sha256": "b2378b76fda5265a1853f09eef118bf5dc1e6a905d30de16245eb452eb54653f"
+    },
+    {
+      "id": "first-plate-amara",
+      "file": "first-plate-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2285,
+      "sha256": "7a94d8450282c40cfc945ae15a9ea7415c9299d1423a68c9fdf1ba2cd6a9bf0c"
+    },
+    {
+      "id": "first-plate-ribbon",
+      "file": "first-plate-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 489,
+      "sha256": "6b016a3f9583ee858003288b13736a12a652bb4909331f03f515ae5e54629121"
+    },
+    {
+      "id": "first-plate-foreground",
+      "file": "first-plate-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1452,
+      "sha256": "9a10680326aba51a08a29d17c0b35c6b5857bf8ee76611722bada16143af65ab"
+    },
+    {
+      "id": "first-plate-completed",
+      "file": "first-plate-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 745,
+      "sha256": "058405fd9f090045eca9f485ec5c3b6567ef3756ff35f7b181b606cfa465a1bb"
+    },
+    {
+      "id": "first-plate-background",
+      "file": "first-plate-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2699,
+      "sha256": "c96c54ad1c9ab51506ccfba92e2cac2eed8a95554ac9168188761872a872bf61"
+    },
+    {
+      "id": "first-plate",
+      "file": "first-plate.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 8980,
+      "sha256": "818201a90e03e66660f7fd30c6420abc0a5d820e0ee6f80470804d063e270c4b"
+    },
+    {
+      "id": "two-for-the-door-order",
+      "file": "two-for-the-door-order.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1969,
+      "sha256": "38e0f2815e733ced199a4ea309a4ce92ab53a938627ac16d4e2ecaf913815391"
+    },
+    {
+      "id": "two-for-the-door-demo",
+      "file": "two-for-the-door-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2651,
+      "sha256": "fb66da25cabe9f0152286286d103f938b5ffd8faaa42b740fdc900282ae5b301"
+    },
+    {
+      "id": "two-for-the-door-grandpa",
+      "file": "two-for-the-door-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2434,
+      "sha256": "242b8977968bdb55aaf37bedcbef72ff34da7e0a63f7d50976e656ede9186c65"
+    },
+    {
+      "id": "two-for-the-door-amara",
+      "file": "two-for-the-door-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2293,
+      "sha256": "b9475ca957633f28b8bc5e208826497b207a1f857459add8906e2fea780f096e"
+    },
+    {
+      "id": "two-for-the-door-ribbon",
+      "file": "two-for-the-door-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 489,
+      "sha256": "88153d0514d6a49c8f0f368f8d18dcfe51a7cc14530f21f9c2434494cafc5d44"
+    },
+    {
+      "id": "two-for-the-door-foreground",
+      "file": "two-for-the-door-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2312,
+      "sha256": "889b4768a4e7ea08474cc63dc7966f762767a3367596c9973cbc37c44a83d105"
+    },
+    {
+      "id": "two-for-the-door-completed",
+      "file": "two-for-the-door-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1340,
+      "sha256": "70fee205f40ce60b164eacc7aa159bea0e8caa4fe1befad6cb515a4f9c1d2824"
+    },
+    {
+      "id": "two-for-the-door-background",
+      "file": "two-for-the-door-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2699,
+      "sha256": "c96c54ad1c9ab51506ccfba92e2cac2eed8a95554ac9168188761872a872bf61"
+    },
+    {
+      "id": "two-for-the-door",
+      "file": "two-for-the-door.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 9847,
+      "sha256": "395e5b7345cf857cdc04696b353f08b717a76845676857266c91b2bce4c4781b"
+    },
+    {
+      "id": "star-place-order",
+      "file": "star-place-order.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1137,
+      "sha256": "248da4e2fcb66a51736a2dab1221e68babd2fef47ddc6f502f3d13b6103706ee"
+    },
+    {
+      "id": "star-place-demo",
+      "file": "star-place-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1837,
+      "sha256": "e1abaf57596c03e85381f7dec44c7b5434822f810843cb98397a4d563c828e0a"
+    },
+    {
+      "id": "star-place-amara",
+      "file": "star-place-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2295,
+      "sha256": "bc2be2c98f733c9fc7106e8784b6f8c3b740e12b97f21695b7c2117dd48c81f8"
+    },
+    {
+      "id": "star-place-ribbon",
+      "file": "star-place-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 492,
+      "sha256": "a3617c1292e68fdd421231a6d1f458f8bf73d3f8c05dc3507e8ca62e2f8653f7"
+    },
+    {
+      "id": "star-place-foreground",
+      "file": "star-place-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1331,
+      "sha256": "f03e791527c5c8f84820f14eab023f535cf4bcfb7be5d749289ceba0a2d5c594"
+    },
+    {
+      "id": "star-place-completed",
+      "file": "star-place-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 753,
+      "sha256": "896203861f43fa53776ae6a9876d9a6866d30409275d00bba769d65c7ec9f273"
+    },
+    {
+      "id": "star-place-background",
+      "file": "star-place-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3656,
+      "sha256": "401668d07abd1ae297059826c4e4b2503deec93175f5e50d5c7abac0bf008737"
+    },
+    {
+      "id": "star-place",
+      "file": "star-place.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7489,
+      "sha256": "7f207077febcf104c0f636753e1d1af82129bdef429d2e3d6c9c2fc5f54d614e"
+    },
+    {
+      "id": "three-for-the-bench-order",
+      "file": "three-for-the-bench-order.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2637,
+      "sha256": "a7e87b0455c4423cce7f939a749bb3fd7154fc34c1f63945e9edd3ccdcc3234f"
+    },
+    {
+      "id": "three-for-the-bench-demo",
+      "file": "three-for-the-bench-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3315,
+      "sha256": "fff4fea9ee5ef0e54d74c204e57724328b1a196f766dad388016c3cfb4132f3d"
+    },
+    {
+      "id": "three-for-the-bench-grandpa",
+      "file": "three-for-the-bench-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2435,
+      "sha256": "980403930c3c14d76a0447d7da58fe4bb03de64369d64f0bdb0459ace3e2ae64"
+    },
+    {
+      "id": "three-for-the-bench-amara",
+      "file": "three-for-the-bench-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2293,
+      "sha256": "0fa3837334b656e7dec0080a76d80a6ba67107e9adf035dfd1a7924f5dfb2184"
+    },
+    {
+      "id": "three-for-the-bench-ribbon",
+      "file": "three-for-the-bench-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 489,
+      "sha256": "b2fef645fe0189616d9fb328999d8379a9be6b3e9bc8285428f18efcd0a2535b"
+    },
+    {
+      "id": "three-for-the-bench-foreground",
+      "file": "three-for-the-bench-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2840,
+      "sha256": "46f23ce281be76ad6be17893f48e756f792e5e75c11a71ce29491b35ee4832a7"
+    },
+    {
+      "id": "three-for-the-bench-completed",
+      "file": "three-for-the-bench-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1906,
+      "sha256": "5ffcb1e8561d87f20c27e468ac7cb3b3f8eb35376ef3c4c208c504afcdf7a6c3"
+    },
+    {
+      "id": "three-for-the-bench-background",
+      "file": "three-for-the-bench-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3216,
+      "sha256": "96e21a43f9a316e6f1504079dea9a1f39a1f90de91df915ea654ec73789bdd1b"
+    },
+    {
+      "id": "three-for-the-bench",
+      "file": "three-for-the-bench.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 10893,
+      "sha256": "725b9e1cb7cd4e94bf23e1ece6fa654babf74ee568702e2216e244eb594a508a"
+    },
+    {
+      "id": "four-for-friends-order",
+      "file": "four-for-friends-order.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3071,
+      "sha256": "58a7bfea91e2959f1a3beb1f627df3cff792286c6cb2cabec262b175dbf286ce"
+    },
+    {
+      "id": "four-for-friends-demo",
+      "file": "four-for-friends-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3770,
+      "sha256": "c75a2970657efe943fafe9503e07a44ab41221373f4ef5a67970ad9a7345eaa8"
+    },
+    {
+      "id": "four-for-friends-grandpa",
+      "file": "four-for-friends-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2432,
+      "sha256": "c32a6f65d44062a27686cc136221ae1a81c62a83a0023c90a83edd6608852fee"
+    },
+    {
+      "id": "four-for-friends-amara",
+      "file": "four-for-friends-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2286,
+      "sha256": "50d8c017032edd90f481cffbfe6aa0612c24507d5d1abb20f66fef21e5c75917"
+    },
+    {
+      "id": "four-for-friends-ribbon",
+      "file": "four-for-friends-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 492,
+      "sha256": "7fa81274cb91d04277b3f6b9896a3ff36ee846feeb243696a45d4a2ec3c67f79"
+    },
+    {
+      "id": "four-for-friends-foreground",
+      "file": "four-for-friends-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3419,
+      "sha256": "cc38758d189c59e79e7a155a2cd41883625d79a3743a9a317461fc81a8c9ce70"
+    },
+    {
+      "id": "four-for-friends-completed",
+      "file": "four-for-friends-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2584,
+      "sha256": "363a1854a4a9ce268f2a4bc1ed3fba7bff1f7955c410747e820c51be05101c55"
+    },
+    {
+      "id": "four-for-friends-background",
+      "file": "four-for-friends-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3204,
+      "sha256": "bb19e075e66dbb16f2beaba1540abc870f10a8cac86c1109b6fb246e549bf520"
+    },
+    {
+      "id": "four-for-friends",
+      "file": "four-for-friends.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 11453,
+      "sha256": "45b8fee7cda69c63dc4a0e5a7c92384acdd83c093011286f17775020f2f1f627"
+    },
+    {
+      "id": "five-for-the-table-order",
+      "file": "five-for-the-table-order.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3467,
+      "sha256": "056f3a61d74dda71e3391ca86bf830d55a403d51522545aeefa5085a88db973f"
+    },
+    {
+      "id": "five-for-the-table-demo",
+      "file": "five-for-the-table-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4148,
+      "sha256": "ae992bec4f4eddfaf771330ddac811a517ee3dc02759d1735b4b272bc4cc370e"
+    },
+    {
+      "id": "five-for-the-table-grandpa",
+      "file": "five-for-the-table-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2435,
+      "sha256": "5eceb55073880245b50f9c87fac255dc3a3b7ff42fbb62481e8b99e2114d223b"
+    },
+    {
+      "id": "five-for-the-table-amara",
+      "file": "five-for-the-table-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2293,
+      "sha256": "3be08d45ace3fda9c9e00ff36af338ee7f6ea8e0e6d512c5d761b1713023291f"
+    },
+    {
+      "id": "five-for-the-table-ribbon",
+      "file": "five-for-the-table-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 488,
+      "sha256": "acf7bda8a4dcb55726c304337914d9e6ee4d2d02ff874cd833d5296bf1312faf"
+    },
+    {
+      "id": "five-for-the-table-foreground",
+      "file": "five-for-the-table-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3681,
+      "sha256": "43e7b74dcf97660f3c807bb95719fa248a0c7d6f80df9c0610042f76b609e88c"
+    },
+    {
+      "id": "five-for-the-table-completed",
+      "file": "five-for-the-table-completed.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3086,
+      "sha256": "38cff9fb1782bba9aa465398ae0dfd8bdc95b4cd4d4febe2b3cabf289edf22da"
+    },
+    {
+      "id": "five-for-the-table-background",
+      "file": "five-for-the-table-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2699,
+      "sha256": "2c3ea034f88dfbfb4f4526c8173a029a851c399eecef727d187df91073fb8688"
+    },
+    {
+      "id": "five-for-the-table",
+      "file": "five-for-the-table.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 11216,
+      "sha256": "4f4251db2f55bb514d74233244eaf17737803249e252227c31f8f90aeb1eb1a8"
+    },
+    {
+      "id": "breakfast-grandpa",
+      "file": "breakfast-grandpa.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2432,
+      "sha256": "e6771384c334325246bfc9f78fdbb4a107310bcb6e8d8588987ca38bd3de1cf0"
+    },
+    {
+      "id": "breakfast-amara",
+      "file": "breakfast-amara.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2274,
+      "sha256": "6ee91696f7ad9056581a77a32d215c6ab2ddcdcfbaa75e5e27010518715da160"
+    },
+    {
+      "id": "breakfast-ribbon",
+      "file": "breakfast-ribbon.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 483,
+      "sha256": "31f4259553268b5951fa66f9fa72445711d300a10c89fe3094bb1fb13ceb64c8"
+    },
+    {
+      "id": "breakfast-foreground",
+      "file": "breakfast-foreground.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6999,
+      "sha256": "ee3cedb809f7afdf0edd02ec317d731b315248bae94f475b6f19664660d9eb9c"
+    },
+    {
+      "id": "breakfast-background",
+      "file": "breakfast-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2699,
+      "sha256": "2c3ea034f88dfbfb4f4526c8173a029a851c399eecef727d187df91073fb8688"
+    },
+    {
+      "id": "breakfast",
+      "file": "breakfast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 14507,
+      "sha256": "da38023f3a644a15886c1f1c7564161da0c6e3dc6ebdd3bfc0e192869cb7ddb8"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 8117,
+      "sha256": "b244cff236ff1fe69bea06a65d7b6908bc326f207165fdc0794a5978d93daa51"
+    }
+  ]
+}

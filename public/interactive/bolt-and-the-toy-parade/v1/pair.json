@@ -1,0 +1,2220 @@
+{
+  "schemaVersion": 1,
+  "id": "bolt-and-the-toy-parade",
+  "version": "v1",
+  "title": "Bolt and the Toy Parade",
+  "category": "small-jobs",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {
+    "duck-wheel": false,
+    "duck-cap": false,
+    "butterfly-wing": false,
+    "butterfly-key": false,
+    "train-drum": false,
+    "train-banner": false
+  },
+  "scenes": [
+    {
+      "id": "workshop",
+      "narrative": "Inside a workshop shaped like a giant spool, Bolt hears a little rattle. Three wind-up toys are waiting for the afternoon toy parade, but each has two missing parts. “We can help one toy at a time,” says Bolt. The parts are pretend workshop pieces: choose a picture, then touch its matching space.",
+      "alt": "Bolt, a small turquoise robot with warm yellow eyes, welcomes a duck wagon, a wind-up butterfly and a drum train into a spool-shaped purple workshop.",
+      "image": "workshop.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "workshop-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "workshop-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              286,
+              285
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "workshop-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              286,
+              243
+            ]
+          },
+          {
+            "id": "toys",
+            "image": "workshop-toys.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "workshop-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              450,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duck-wheel",
+      "narrative": "The duck wagon waits beside the low repair bench. One wheel has rolled away, and the wagon tips to one side. Bolt finds two round wheels, one large and one small. The empty space beside the other large wheel shows which size will keep the duck level.",
+      "alt": "Large round wheel: Bolt helps the duck at a low purple bench. A dashed large circle outline shows the missing piece; picture controls offer two differently shaped or sized parts.",
+      "image": "duck-wheel.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "duck-wheel-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "duck-wheel-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              166,
+              290
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "duck-wheel-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              166,
+              245.9
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "duck-wheel-toy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fitted",
+            "image": "duck-wheel-fitted.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "label",
+            "image": "duck-wheel-label.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "duck-wheel-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              860,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "fitted"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "repair-duck-wheel",
+        "items": [
+          {
+            "id": "large-circle",
+            "label": "Large round wheel",
+            "image": "large-circle-control.svg"
+          },
+          {
+            "id": "small-circle",
+            "label": "Small round winding key",
+            "image": "small-circle-control.svg"
+          }
+        ],
+        "targets": [
+          {
+            "id": "wheel",
+            "label": "Duck’s large round wheel space",
+            "image": "duck-wheel-target.svg",
+            "accepts": [
+              "large-circle"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "set",
+                "key": "duck-wheel",
+                "value": true
+              },
+              {
+                "type": "show",
+                "sceneId": "duck-wheel",
+                "layerId": "fitted"
+              },
+              {
+                "type": "show",
+                "sceneId": "parade",
+                "layerId": "duck-wheel"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "duck-cap",
+      "narrative": "The duck wagon stands level now, but a little axle cover is missing. Bolt turns the wagon toward the light. There is a square socket in its side. A square cap will close it without sticking out. The triangle belongs in another toy’s tray.",
+      "alt": "Square axle cap: Bolt helps the duck at a low purple bench. A dashed square cap outline shows the missing piece; picture controls offer two differently shaped or sized parts.",
+      "image": "duck-cap.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "duck-cap-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "duck-cap-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              790,
+              284
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "duck-cap-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              790,
+              242
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "duck-cap-toy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fitted",
+            "image": "duck-cap-fitted.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "label",
+            "image": "duck-cap-label.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "duck-cap-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              450,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "fitted"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "repair-duck-cap",
+        "items": [
+          {
+            "id": "square-cap",
+            "label": "Square axle cap",
+            "image": "square-cap-control.svg"
+          },
+          {
+            "id": "triangle-wing",
+            "label": "Triangular wing",
+            "image": "triangle-wing-control.svg"
+          }
+        ],
+        "targets": [
+          {
+            "id": "cap",
+            "label": "Duck’s square axle socket",
+            "image": "duck-cap-target.svg",
+            "accepts": [
+              "square-cap"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "set",
+                "key": "duck-cap",
+                "value": true
+              },
+              {
+                "type": "show",
+                "sceneId": "duck-cap",
+                "layerId": "fitted"
+              },
+              {
+                "type": "show",
+                "sceneId": "parade",
+                "layerId": "duck-cap"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "butterfly-wing",
+      "narrative": "A wind-up butterfly waits on the purple bench. Its left wing is bright, but the right wing is missing. Bolt holds up a square panel and a triangular wing. The three-sided space beside the butterfly’s body points outward, just like the wing on the other side.",
+      "alt": "Triangular wing: Bolt helps the butterfly at a low purple bench. A dashed triangle wing outline shows the missing piece; picture controls offer two differently shaped or sized parts.",
+      "image": "butterfly-wing.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "butterfly-wing-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "butterfly-wing-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              202,
+              221
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "butterfly-wing-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              202,
+              173.95999999999998
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "butterfly-wing-toy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fitted",
+            "image": "butterfly-wing-fitted.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "label",
+            "image": "butterfly-wing-label.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "butterfly-wing-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              860,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "fitted"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "repair-butterfly-wing",
+        "items": [
+          {
+            "id": "triangle-wing",
+            "label": "Triangular wing",
+            "image": "triangle-wing-control.svg"
+          },
+          {
+            "id": "square-cap",
+            "label": "Square axle cap",
+            "image": "square-cap-control.svg"
+          }
+        ],
+        "targets": [
+          {
+            "id": "wing",
+            "label": "Butterfly’s triangular wing space",
+            "image": "butterfly-wing-target.svg",
+            "accepts": [
+              "triangle-wing"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "set",
+                "key": "butterfly-wing",
+                "value": true
+              },
+              {
+                "type": "show",
+                "sceneId": "butterfly-wing",
+                "layerId": "fitted"
+              },
+              {
+                "type": "show",
+                "sceneId": "parade",
+                "layerId": "butterfly-wing"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "butterfly-key",
+      "narrative": "The butterfly’s wings are balanced, but its pretend winding key is missing. Its round socket is much smaller than the duck’s wheel space. Bolt brings a small round key and a large wheel. Only the small circle will fit inside this little ring.",
+      "alt": "Small round winding key: Bolt helps the butterfly at a low purple bench. A dashed small circle outline shows the missing piece; picture controls offer two differently shaped or sized parts.",
+      "image": "butterfly-key.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "butterfly-key-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "butterfly-key-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              782,
+              253
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "butterfly-key-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              782,
+              208.9
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "butterfly-key-toy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fitted",
+            "image": "butterfly-key-fitted.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "label",
+            "image": "butterfly-key-label.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "butterfly-key-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              450,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "fitted"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "repair-butterfly-key",
+        "items": [
+          {
+            "id": "small-circle",
+            "label": "Small round winding key",
+            "image": "small-circle-control.svg"
+          },
+          {
+            "id": "large-circle",
+            "label": "Large round wheel",
+            "image": "large-circle-control.svg"
+          }
+        ],
+        "targets": [
+          {
+            "id": "key",
+            "label": "Butterfly’s small round winding socket",
+            "image": "butterfly-key-target.svg",
+            "accepts": [
+              "small-circle"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "set",
+                "key": "butterfly-key",
+                "value": true
+              },
+              {
+                "type": "show",
+                "sceneId": "butterfly-key",
+                "layerId": "fitted"
+              },
+              {
+                "type": "show",
+                "sceneId": "parade",
+                "layerId": "butterfly-key"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "train-drum",
+      "narrative": "The drum train has arrived last. Its wheels are fine, but the drum’s front panel is missing. Bolt finds a square and a long rectangle. The opening is wider than it is tall. The long panel reaches all the way from one end of the opening to the other.",
+      "alt": "Long rectangular drum panel: Bolt helps the train at a low purple bench. A dashed long rectangle outline shows the missing piece; picture controls offer two differently shaped or sized parts.",
+      "image": "train-drum.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "train-drum-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "train-drum-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              164,
+              274
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "train-drum-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              164,
+              229.9
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "train-drum-toy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fitted",
+            "image": "train-drum-fitted.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "label",
+            "image": "train-drum-label.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "train-drum-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              860,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "fitted"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "repair-train-drum",
+        "items": [
+          {
+            "id": "long-rectangle",
+            "label": "Long rectangular drum panel",
+            "image": "long-rectangle-control.svg"
+          },
+          {
+            "id": "square-cap",
+            "label": "Square axle cap",
+            "image": "square-cap-control.svg"
+          }
+        ],
+        "targets": [
+          {
+            "id": "drum",
+            "label": "Train’s long rectangular drum space",
+            "image": "train-drum-target.svg",
+            "accepts": [
+              "long-rectangle"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "set",
+                "key": "train-drum",
+                "value": true
+              },
+              {
+                "type": "show",
+                "sceneId": "train-drum",
+                "layerId": "fitted"
+              },
+              {
+                "type": "show",
+                "sceneId": "parade",
+                "layerId": "train-drum"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "train-banner",
+      "narrative": "The drum train’s little banner still has an empty star in its middle. “One last match,” says Bolt. The triangle has three points, but the banner needs a five-pointed star. When the star badge fits, all three toys will be ready to parade across the workshop floor.",
+      "alt": "Star parade badge: Bolt helps the train at a low purple bench. A dashed star banner outline shows the missing piece; picture controls offer two differently shaped or sized parts.",
+      "image": "train-banner.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "train-banner-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "train-banner-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              788,
+              290
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "train-banner-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              788,
+              248
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "train-banner-toy.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fitted",
+            "image": "train-banner-fitted.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "label",
+            "image": "train-banner-label.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "train-banner-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              450,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "fitted"
+      ],
+      "activity": {
+        "kind": "place",
+        "id": "repair-train-banner",
+        "items": [
+          {
+            "id": "star-banner",
+            "label": "Star parade badge",
+            "image": "star-banner-control.svg"
+          },
+          {
+            "id": "triangle-wing",
+            "label": "Triangular wing",
+            "image": "triangle-wing-control.svg"
+          }
+        ],
+        "targets": [
+          {
+            "id": "banner",
+            "label": "Train’s star-shaped banner space",
+            "image": "train-banner-target.svg",
+            "accepts": [
+              "star-banner"
+            ],
+            "required": 1,
+            "effects": [
+              {
+                "type": "set",
+                "key": "train-banner",
+                "value": true
+              },
+              {
+                "type": "show",
+                "sceneId": "train-banner",
+                "layerId": "fitted"
+              },
+              {
+                "type": "show",
+                "sceneId": "parade",
+                "layerId": "train-banner"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "parade",
+      "narrative": "Bolt welcomes the toys onto the workshop floor. The duck rolls out level on its matching wheels, with its square cap secure. The butterfly follows with two triangular wings and its little round key. Behind them comes the drum train, wearing its long striped panel and shining star badge. Six small repairs have made room for three friends in the toy parade.",
+      "alt": "Bolt watches three repaired toys parade across the workshop floor: a duck wagon, a triangular-winged butterfly and a striped drum train with a star banner.",
+      "image": "parade.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "parade-background.svg",
+        "layers": [
+          {
+            "id": "bolt",
+            "image": "parade-bolt.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              142
+            ]
+          },
+          {
+            "id": "antenna",
+            "image": "parade-antenna.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              106.30000000000001
+            ]
+          },
+          {
+            "id": "toys",
+            "image": "parade-toys.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "duck-wheel",
+            "image": "parade-duck-wheel.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "duck-cap",
+            "image": "parade-duck-cap.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "butterfly-wing",
+            "image": "parade-butterfly-wing.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "butterfly-key",
+            "image": "parade-butterfly-key.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "train-drum",
+            "image": "parade-train-drum.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "train-banner",
+            "image": "parade-train-banner.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "pennant",
+            "image": "parade-pennant.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              860,
+              52
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "pennant",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 3800,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "duck-wheel",
+        "duck-cap",
+        "butterfly-wing",
+        "butterfly-key",
+        "train-drum",
+        "train-banner"
+      ]
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "workshop": {
+          "instruction": "Look at the waiting toys together. Ask which toy your child notices first.",
+          "feedback": {
+            "complete": "Three toys are waiting for Bolt’s help.",
+            "retry": "Take your time looking at the toys and their missing pieces."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "toys-detail.svg",
+              "label": "The duck, butterfly and train each need two fitted pieces."
+            },
+            {
+              "action": "point",
+              "image": "bolt-detail.svg",
+              "label": "Bolt helps one toy at a time, with time to stop and look."
+            }
+          ]
+        },
+        "duck-wheel": {
+          "instruction": "Compare both round wheels with the wheel still on the duck. What would happen if one side were smaller?",
+          "feedback": {
+            "complete": "The large wheel fits. Both sides of the duck wagon are the same height.",
+            "retry": "Both pieces are round. Look for the larger circle, like the wheel already on the duck."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "duck-wheel-target.svg",
+              "label": "Look at the outline in duck’s large round wheel space.",
+              "targetId": "wheel"
+            },
+            {
+              "action": "select",
+              "image": "large-circle-control.svg",
+              "label": "Touch the large round wheel picture.",
+              "itemId": "large-circle"
+            },
+            {
+              "action": "place",
+              "image": "duck-wheel-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "large-circle",
+              "targetId": "wheel"
+            },
+            {
+              "action": "point",
+              "image": "duck-wheel-target.svg",
+              "label": "Pause together and describe the size or shape that made the match."
+            }
+          ]
+        },
+        "duck-cap": {
+          "instruction": "Trace the socket’s four sides together. Which loose piece has the same outline?",
+          "feedback": {
+            "complete": "The square cap sits flush. The duck wagon is ready for the parade.",
+            "retry": "Look for four straight sides and four corners, like the socket."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "duck-cap-target.svg",
+              "label": "Look at the outline in duck’s square axle socket.",
+              "targetId": "cap"
+            },
+            {
+              "action": "select",
+              "image": "square-cap-control.svg",
+              "label": "Touch the square axle cap picture.",
+              "itemId": "square-cap"
+            },
+            {
+              "action": "place",
+              "image": "duck-cap-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "square-cap",
+              "targetId": "cap"
+            },
+            {
+              "action": "point",
+              "image": "duck-cap-target.svg",
+              "label": "Pause together and describe the size or shape that made the match."
+            }
+          ]
+        },
+        "butterfly-wing": {
+          "instruction": "Look from the complete wing to the empty side. How many corners can you find on the matching piece?",
+          "feedback": {
+            "complete": "The triangular wing fills the space. The butterfly has a wing on each side.",
+            "retry": "The empty wing has three corners. Choose the piece with three corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "butterfly-wing-target.svg",
+              "label": "Look at the outline in butterfly’s triangular wing space.",
+              "targetId": "wing"
+            },
+            {
+              "action": "select",
+              "image": "triangle-wing-control.svg",
+              "label": "Touch the triangular wing picture.",
+              "itemId": "triangle-wing"
+            },
+            {
+              "action": "place",
+              "image": "butterfly-wing-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "triangle-wing",
+              "targetId": "wing"
+            },
+            {
+              "action": "point",
+              "image": "butterfly-wing-target.svg",
+              "label": "Pause together and describe the size or shape that made the match."
+            }
+          ]
+        },
+        "butterfly-key": {
+          "instruction": "Both pieces are circles. Compare their sizes with this little socket before choosing.",
+          "feedback": {
+            "complete": "The small key fits inside the ring. The butterfly can join the duck.",
+            "retry": "Choose the small circle. The large wheel would cover the little socket."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "butterfly-key-target.svg",
+              "label": "Look at the outline in butterfly’s small round winding socket.",
+              "targetId": "key"
+            },
+            {
+              "action": "select",
+              "image": "small-circle-control.svg",
+              "label": "Touch the small round winding key picture.",
+              "itemId": "small-circle"
+            },
+            {
+              "action": "place",
+              "image": "butterfly-key-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "small-circle",
+              "targetId": "key"
+            },
+            {
+              "action": "point",
+              "image": "butterfly-key-target.svg",
+              "label": "Pause together and describe the size or shape that made the match."
+            }
+          ]
+        },
+        "train-drum": {
+          "instruction": "Compare the width and height of the opening. Which piece reaches both ends?",
+          "feedback": {
+            "complete": "The long rectangular panel closes the drum. Its painted stripes line up.",
+            "retry": "Look for the long piece with two long sides and two short sides."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "train-drum-target.svg",
+              "label": "Look at the outline in train’s long rectangular drum space.",
+              "targetId": "drum"
+            },
+            {
+              "action": "select",
+              "image": "long-rectangle-control.svg",
+              "label": "Touch the long rectangular drum panel picture.",
+              "itemId": "long-rectangle"
+            },
+            {
+              "action": "place",
+              "image": "train-drum-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "long-rectangle",
+              "targetId": "drum"
+            },
+            {
+              "action": "point",
+              "image": "train-drum-target.svg",
+              "label": "Pause together and describe the size or shape that made the match."
+            }
+          ]
+        },
+        "train-banner": {
+          "instruction": "Follow the banner’s points with your eyes. How does its outline differ from the triangle?",
+          "feedback": {
+            "complete": "The star badge fills the banner. All three repaired toys are ready.",
+            "retry": "Look for the five-pointed star, like the empty shape in the banner."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "train-banner-target.svg",
+              "label": "Look at the outline in train’s star-shaped banner space.",
+              "targetId": "banner"
+            },
+            {
+              "action": "select",
+              "image": "star-banner-control.svg",
+              "label": "Touch the star parade badge picture.",
+              "itemId": "star-banner"
+            },
+            {
+              "action": "place",
+              "image": "train-banner-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "star-banner",
+              "targetId": "banner"
+            },
+            {
+              "action": "point",
+              "image": "train-banner-target.svg",
+              "label": "Pause together and describe the size or shape that made the match."
+            }
+          ]
+        },
+        "parade": {
+          "instruction": "Find each repair together in the parade. Which clues helped you decide where a piece belonged?",
+          "feedback": {
+            "complete": "All three friends have a place in the parade.",
+            "retry": "Take your time looking at the toys and their missing pieces."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "parade-detail.svg",
+              "label": "The duck, butterfly and train now have all six fitted pieces."
+            },
+            {
+              "action": "point",
+              "image": "bolt-detail.svg",
+              "label": "Bolt helps one toy at a time, with time to stop and look."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "Why did the duck need the large wheel?",
+          "answer": "It matched the wheel on the other side and kept the wagon level.",
+          "sceneId": "duck-wheel"
+        },
+        {
+          "type": "literal",
+          "question": "Which piece fitted the butterfly’s little socket?",
+          "answer": "The small round winding key fitted the little round socket.",
+          "sceneId": "butterfly-key"
+        },
+        {
+          "type": "feeling",
+          "question": "How might the toys feel as the parade begins?",
+          "answer": "They might feel pleased, excited, relieved or something else. Look at their faces together.",
+          "sceneId": "parade"
+        },
+        {
+          "type": "personal",
+          "question": "What would you like to make room for in a toy parade?",
+          "answer": "Your own idea belongs here. Imagine a toy, a decoration or a helpful job.",
+          "sceneId": "parade"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "workshop": {
+          "instruction": "Look at Bolt and the three waiting toys.",
+          "feedback": {
+            "complete": "Three toys are waiting for Bolt’s help.",
+            "retry": "Take your time looking at the toys and their missing pieces."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "toys-detail.svg",
+              "label": "The duck, butterfly and train each need two fitted pieces."
+            },
+            {
+              "action": "point",
+              "image": "bolt-detail.svg",
+              "label": "Bolt helps one toy at a time, with time to stop and look."
+            }
+          ]
+        },
+        "duck-wheel": {
+          "instruction": "Fit the large round wheel to the duck.",
+          "feedback": {
+            "complete": "The large wheel fits. Both sides of the duck wagon are the same height.",
+            "retry": "Both pieces are round. Look for the larger circle, like the wheel already on the duck."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "duck-wheel-target.svg",
+              "label": "Look at the outline in duck’s large round wheel space.",
+              "targetId": "wheel"
+            },
+            {
+              "action": "select",
+              "image": "large-circle-control.svg",
+              "label": "Touch the large round wheel picture.",
+              "itemId": "large-circle"
+            },
+            {
+              "action": "place",
+              "image": "duck-wheel-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "large-circle",
+              "targetId": "wheel"
+            }
+          ]
+        },
+        "duck-cap": {
+          "instruction": "Match the square cap to the square socket.",
+          "feedback": {
+            "complete": "The square cap sits flush. The duck wagon is ready for the parade.",
+            "retry": "Look for four straight sides and four corners, like the socket."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "duck-cap-target.svg",
+              "label": "Look at the outline in duck’s square axle socket.",
+              "targetId": "cap"
+            },
+            {
+              "action": "select",
+              "image": "square-cap-control.svg",
+              "label": "Touch the square axle cap picture.",
+              "itemId": "square-cap"
+            },
+            {
+              "action": "place",
+              "image": "duck-cap-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "square-cap",
+              "targetId": "cap"
+            }
+          ]
+        },
+        "butterfly-wing": {
+          "instruction": "Fit the triangular wing to the butterfly.",
+          "feedback": {
+            "complete": "The triangular wing fills the space. The butterfly has a wing on each side.",
+            "retry": "The empty wing has three corners. Choose the piece with three corners."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "butterfly-wing-target.svg",
+              "label": "Look at the outline in butterfly’s triangular wing space.",
+              "targetId": "wing"
+            },
+            {
+              "action": "select",
+              "image": "triangle-wing-control.svg",
+              "label": "Touch the triangular wing picture.",
+              "itemId": "triangle-wing"
+            },
+            {
+              "action": "place",
+              "image": "butterfly-wing-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "triangle-wing",
+              "targetId": "wing"
+            }
+          ]
+        },
+        "butterfly-key": {
+          "instruction": "Fit the small round key to the butterfly.",
+          "feedback": {
+            "complete": "The small key fits inside the ring. The butterfly can join the duck.",
+            "retry": "Choose the small circle. The large wheel would cover the little socket."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "butterfly-key-target.svg",
+              "label": "Look at the outline in butterfly’s small round winding socket.",
+              "targetId": "key"
+            },
+            {
+              "action": "select",
+              "image": "small-circle-control.svg",
+              "label": "Touch the small round winding key picture.",
+              "itemId": "small-circle"
+            },
+            {
+              "action": "place",
+              "image": "butterfly-key-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "small-circle",
+              "targetId": "key"
+            }
+          ]
+        },
+        "train-drum": {
+          "instruction": "Fit the long rectangle to the train’s drum.",
+          "feedback": {
+            "complete": "The long rectangular panel closes the drum. Its painted stripes line up.",
+            "retry": "Look for the long piece with two long sides and two short sides."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "train-drum-target.svg",
+              "label": "Look at the outline in train’s long rectangular drum space.",
+              "targetId": "drum"
+            },
+            {
+              "action": "select",
+              "image": "long-rectangle-control.svg",
+              "label": "Touch the long rectangular drum panel picture.",
+              "itemId": "long-rectangle"
+            },
+            {
+              "action": "place",
+              "image": "train-drum-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "long-rectangle",
+              "targetId": "drum"
+            }
+          ]
+        },
+        "train-banner": {
+          "instruction": "Match the star badge to the train’s banner.",
+          "feedback": {
+            "complete": "The star badge fills the banner. All three repaired toys are ready.",
+            "retry": "Look for the five-pointed star, like the empty shape in the banner."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "train-banner-target.svg",
+              "label": "Look at the outline in train’s star-shaped banner space.",
+              "targetId": "banner"
+            },
+            {
+              "action": "select",
+              "image": "star-banner-control.svg",
+              "label": "Touch the star parade badge picture.",
+              "itemId": "star-banner"
+            },
+            {
+              "action": "place",
+              "image": "train-banner-demo.svg",
+              "label": "Then touch the matching space. The picture shows where the piece fits.",
+              "itemId": "star-banner",
+              "targetId": "banner"
+            }
+          ]
+        },
+        "parade": {
+          "instruction": "Look for the six fitted pieces in the toy parade.",
+          "feedback": {
+            "complete": "All three friends have a place in the parade.",
+            "retry": "Take your time looking at the toys and their missing pieces."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "parade-detail.svg",
+              "label": "The duck, butterfly and train now have all six fitted pieces."
+            },
+            {
+              "action": "point",
+              "image": "bolt-detail.svg",
+              "label": "Bolt helps one toy at a time, with time to stop and look."
+            }
+          ]
+        }
+      },
+      "reflection": "You helped three toys by noticing shapes and sizes. Which missing piece would you like to look at again?"
+    }
+  },
+  "endings": {
+    "sceneId": "parade",
+    "text": "Bolt welcomes the toys onto the workshop floor. The duck rolls out level on its matching wheels, with its square cap secure. The butterfly follows with two triangular wings and its little round key. Behind them comes the drum train, wearing its long striped panel and shining star badge. Six small repairs have made room for three friends in the toy parade.",
+    "variants": [],
+    "recap": []
+  },
+  "assets": [
+    {
+      "id": "large-circle-control",
+      "file": "large-circle-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 517,
+      "sha256": "f3b617450915d9b8d4348bc2cffb236bcca462dc4eb950b05464bd615ee5fa72"
+    },
+    {
+      "id": "small-circle-control",
+      "file": "small-circle-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 517,
+      "sha256": "9a884eef0d2d7d9ddfdfe71ace898ab8d0df2c3f5a65f5256bab273282cffed2"
+    },
+    {
+      "id": "square-cap-control",
+      "file": "square-cap-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 441,
+      "sha256": "318467ed22f30f97f263426f7ff37002552227d3f7a04ed0f9b4ffc9d01938bb"
+    },
+    {
+      "id": "triangle-wing-control",
+      "file": "triangle-wing-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 494,
+      "sha256": "c56d62c2a62528a6d7d3f113ff40c96c06f5744e9a3920edf28b9a6d8ffe54a7"
+    },
+    {
+      "id": "long-rectangle-control",
+      "file": "long-rectangle-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 492,
+      "sha256": "a6986ed3cd7d5a7449818b173bcaee77dd462fed5532f3b0379c6f3b6bc8159a"
+    },
+    {
+      "id": "star-banner-control",
+      "file": "star-banner-control.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 408,
+      "sha256": "0454c67c596c4005bfee19fbc119a863c991a322b528e2968c615070df78b67f"
+    },
+    {
+      "id": "bolt-detail",
+      "file": "bolt-detail.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1655,
+      "sha256": "5964887bd2dffad66859cf9bb6d7b8d734fa9e2437f2ad94d90ec1587be749cd"
+    },
+    {
+      "id": "toys-detail",
+      "file": "toys-detail.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3990,
+      "sha256": "3346d9648efcd5fd30d0e99e8d79d0f7f352509d45fe8e627da0f8cc2b186324"
+    },
+    {
+      "id": "parade-detail",
+      "file": "parade-detail.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4628,
+      "sha256": "1dfbe45a6ab72c41729e3243880b4ceecef99964235ba00dd09d6db57c984551"
+    },
+    {
+      "id": "workshop-bolt",
+      "file": "workshop-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1588,
+      "sha256": "ea11862bcd226942593a6d0e4259d5eeecaec2282cb92ea3219b40251cbe7faa"
+    },
+    {
+      "id": "workshop-antenna",
+      "file": "workshop-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 144,
+      "sha256": "3d51416b8a75092bfd98227e329f3f3eb274f6275f814cf2b39104d8a3db7f72"
+    },
+    {
+      "id": "workshop-toys",
+      "file": "workshop-toys.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3924,
+      "sha256": "40aea89fad0d6c81da476d1871ebc5870c2439dcad6b81f00cae9d8d4e48b3d7"
+    },
+    {
+      "id": "workshop-pennant",
+      "file": "workshop-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82"
+    },
+    {
+      "id": "workshop",
+      "file": "workshop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7247,
+      "sha256": "959c0c78c75f4edda0380c057811467ded506e39b01022727d208175a559ce31"
+    },
+    {
+      "id": "workshop-background",
+      "file": "workshop-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1733,
+      "sha256": "a06b23062b3f8cabd06229fd64d33cc60ae361436de5f7c49b65df6393614b3f"
+    },
+    {
+      "id": "duck-wheel-target",
+      "file": "duck-wheel-target.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 344,
+      "sha256": "69eeb6963ac3a26c4bc8eb12a9354b126bac545428c385c72bfbed38b211f0f9"
+    },
+    {
+      "id": "duck-wheel-demo",
+      "file": "duck-wheel-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1107,
+      "sha256": "7e68e5d3aff620b02bfa9a90e90e8a6d47a6150e623bb86be1dd1f58985a3e2a"
+    },
+    {
+      "id": "duck-wheel-bolt",
+      "file": "duck-wheel-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1591,
+      "sha256": "3c6871666931e06a68ea9c7ee71363dfb87e6656d9a5be0ba77ecc2ccc4e7015"
+    },
+    {
+      "id": "duck-wheel-antenna",
+      "file": "duck-wheel-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 146,
+      "sha256": "87975150a8f4fa94e808aa268686748f7189b49bef259fb840b2f628777e33f8"
+    },
+    {
+      "id": "duck-wheel-toy",
+      "file": "duck-wheel-toy.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1273,
+      "sha256": "a857c994f30cf18c2ac6a1b5c2abd2016b5fff4f0e18e67c4a774c980e0d0715"
+    },
+    {
+      "id": "duck-wheel-fitted",
+      "file": "duck-wheel-fitted.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 423,
+      "sha256": "e6cdb324fabd9b8df89eb3b5620f0267c1cc16d551306378ef5dbfe7326aa013"
+    },
+    {
+      "id": "duck-wheel-label",
+      "file": "duck-wheel-label.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 292,
+      "sha256": "eadadc39c604d250fe0ba78afd37e6002d1bbd5da5679282c9c2f49acf75b95a"
+    },
+    {
+      "id": "duck-wheel-pennant",
+      "file": "duck-wheel-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748"
+    },
+    {
+      "id": "duck-wheel",
+      "file": "duck-wheel.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4936,
+      "sha256": "8568c1e04f50dd37965c118a5183df58d4000c3e7ab4b85bf1d5bd149138e3f3"
+    },
+    {
+      "id": "duck-wheel-background",
+      "file": "duck-wheel-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1873,
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0"
+    },
+    {
+      "id": "duck-cap-target",
+      "file": "duck-cap-target.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 367,
+      "sha256": "9a8093e8c0de834d7f6aff04baa38649663f68cff83bad34070686889b2aab4e"
+    },
+    {
+      "id": "duck-cap-demo",
+      "file": "duck-cap-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 978,
+      "sha256": "ec2e6e99dc35dd8a0bf675c4aa52d4cf6d9934e563e5e5d95ea87bd6fabe9bed"
+    },
+    {
+      "id": "duck-cap-bolt",
+      "file": "duck-cap-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1588,
+      "sha256": "04e799f455f387bdccb4422884b4e20b0048bc11c330272ea27bcdce46fa68e1"
+    },
+    {
+      "id": "duck-cap-antenna",
+      "file": "duck-cap-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 144,
+      "sha256": "99670ccda8db23f6ec45709cee10ddcaaaaa121caf1c21679175bbe72e2d48a4"
+    },
+    {
+      "id": "duck-cap-toy",
+      "file": "duck-cap-toy.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1446,
+      "sha256": "a27bab7ca60e4f56a414321e651d97d64cbc5d5e17c351e4f69b98c94744d1bb"
+    },
+    {
+      "id": "duck-cap-fitted",
+      "file": "duck-cap-fitted.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 346,
+      "sha256": "faa81faf5089f3e2540b5a1759046ce4ac7ec6e20eba603c0fa30917d50cf873"
+    },
+    {
+      "id": "duck-cap-label",
+      "file": "duck-cap-label.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 290,
+      "sha256": "b9127d2f180d40f65cbb0e0eab46ab510dfaad4aa6c14c7b5361805446a3cb5b"
+    },
+    {
+      "id": "duck-cap-pennant",
+      "file": "duck-cap-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82"
+    },
+    {
+      "id": "duck-cap",
+      "file": "duck-cap.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5104,
+      "sha256": "9e843aadab0396cf979970eb225ee3233bf3b43797a4cac152a215a546c050f1"
+    },
+    {
+      "id": "duck-cap-background",
+      "file": "duck-cap-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1873,
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0"
+    },
+    {
+      "id": "butterfly-wing-target",
+      "file": "butterfly-wing-target.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 392,
+      "sha256": "e6f986b63024bf283b13fd3203f037c7809ca9a2d41c686fa40a5d41a7f37c93"
+    },
+    {
+      "id": "butterfly-wing-demo",
+      "file": "butterfly-wing-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1109,
+      "sha256": "b5cf5ec7c1c29471b583cb514a3f124912e3cc6f5059a79383b5b1a29cf7c5ca"
+    },
+    {
+      "id": "butterfly-wing-bolt",
+      "file": "butterfly-wing-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1591,
+      "sha256": "24c523f367ac8d09a8ac9c140c209e89ad167f016619f9a8d20574fdc92fc1d1"
+    },
+    {
+      "id": "butterfly-wing-antenna",
+      "file": "butterfly-wing-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 159,
+      "sha256": "81abd9bad751dc5086cc8d4d0f215a7e4918216e899f423e94bc2febfbfe7d85"
+    },
+    {
+      "id": "butterfly-wing-toy",
+      "file": "butterfly-wing-toy.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1297,
+      "sha256": "30a988316a50b50ac7ebce5a85f2c55ef4c9cf026ac298b53c465070174d40e8"
+    },
+    {
+      "id": "butterfly-wing-fitted",
+      "file": "butterfly-wing-fitted.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 400,
+      "sha256": "e3f82252c3cda8a1fbefa191307d3d9680c5cffcc85e58d75cf9c77f82c2fbbe"
+    },
+    {
+      "id": "butterfly-wing-label",
+      "file": "butterfly-wing-label.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 290,
+      "sha256": "fa00a3685728e7f075b38468a3f122e0071ed763a3a958b5cb62c1e0f1b3926f"
+    },
+    {
+      "id": "butterfly-wing-pennant",
+      "file": "butterfly-wing-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748"
+    },
+    {
+      "id": "butterfly-wing",
+      "file": "butterfly-wing.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4958,
+      "sha256": "64f83587ab4df2e18efc47949b1624a29c81c0c8d2998e8d02d3c4676f9e3be2"
+    },
+    {
+      "id": "butterfly-wing-background",
+      "file": "butterfly-wing-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1873,
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0"
+    },
+    {
+      "id": "butterfly-key-target",
+      "file": "butterfly-key-target.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 344,
+      "sha256": "7bf5fd8a772744c7a812d67c5884775c021cb1a371641a2da2d740466be37718"
+    },
+    {
+      "id": "butterfly-key-demo",
+      "file": "butterfly-key-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1107,
+      "sha256": "ca8a7e184991b976ae17c538bbfb5bd62be0aa160d71e049baf803607291e90d"
+    },
+    {
+      "id": "butterfly-key-bolt",
+      "file": "butterfly-key-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1591,
+      "sha256": "4e327596e151285bf870bbff466bb599ec2ffe4e5d1e16e6b766d53259ad5592"
+    },
+    {
+      "id": "butterfly-key-antenna",
+      "file": "butterfly-key-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 146,
+      "sha256": "3737af89119d5cecfdf12de8aed11b458a985e0dba8fae694baea3ae3c12c53e"
+    },
+    {
+      "id": "butterfly-key-toy",
+      "file": "butterfly-key-toy.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1399,
+      "sha256": "0865443e308d58a87d4848029ac04fcf29f4139d587add6b2cd68facfb5dec05"
+    },
+    {
+      "id": "butterfly-key-fitted",
+      "file": "butterfly-key-fitted.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 422,
+      "sha256": "991234da34c2fca72396d2cad02e326d01616a9b5538da0010e7d5ddb59c2431"
+    },
+    {
+      "id": "butterfly-key-label",
+      "file": "butterfly-key-label.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 298,
+      "sha256": "4dfe2867362104b54964e2203195abdadefcb5d21d42d58cf421e9954785faea"
+    },
+    {
+      "id": "butterfly-key-pennant",
+      "file": "butterfly-key-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82"
+    },
+    {
+      "id": "butterfly-key",
+      "file": "butterfly-key.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5068,
+      "sha256": "303b7ccae1128bee1c56800d3aedd8a50ec9546ddea5fde087bea8a3b6773de6"
+    },
+    {
+      "id": "butterfly-key-background",
+      "file": "butterfly-key-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1873,
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0"
+    },
+    {
+      "id": "train-drum-target",
+      "file": "train-drum-target.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 368,
+      "sha256": "122bf2a150a20f89f7d02b2d5669f71474c8320094f3c77b99cc57324e2d7e2b"
+    },
+    {
+      "id": "train-drum-demo",
+      "file": "train-drum-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1081,
+      "sha256": "1e145c195d26dbc7c697b2abfbf8373f1aefdac9d1f6b10febae02ea980e3e43"
+    },
+    {
+      "id": "train-drum-bolt",
+      "file": "train-drum-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1591,
+      "sha256": "8ec159a2e7b474e09f04a0db9d6c93fa73142012dc54b537b087c40f766a1085"
+    },
+    {
+      "id": "train-drum-antenna",
+      "file": "train-drum-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 146,
+      "sha256": "539f2bd435715f5c526955983e15117019b1c70ba212b051b69185a1be6dc3c2"
+    },
+    {
+      "id": "train-drum-toy",
+      "file": "train-drum-toy.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1546,
+      "sha256": "502ce2f80ba526fd9317876c03192c7eb8b0831519c4424d95e7be675651c31a"
+    },
+    {
+      "id": "train-drum-fitted",
+      "file": "train-drum-fitted.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 401,
+      "sha256": "6df149e51fe037a5cf10d105d4bd84472534ebe029c3b115b2d29052f06dc3c6"
+    },
+    {
+      "id": "train-drum-label",
+      "file": "train-drum-label.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 302,
+      "sha256": "0d751149b9d353efee15b62be8e31b2d60c99e49f439cf2c89bc750d710be47f"
+    },
+    {
+      "id": "train-drum-pennant",
+      "file": "train-drum-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748"
+    },
+    {
+      "id": "train-drum",
+      "file": "train-drum.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5219,
+      "sha256": "212ce598609b6c301209a48bd276c6ca9b6b31f7cd884c362fe838151b2f3952"
+    },
+    {
+      "id": "train-drum-background",
+      "file": "train-drum-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1873,
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0"
+    },
+    {
+      "id": "train-banner-target",
+      "file": "train-banner-target.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 430,
+      "sha256": "4034352a0b822908e7e84be9427ad416affefa0c2518bca9e440c8d6b6cee7ca"
+    },
+    {
+      "id": "train-banner-demo",
+      "file": "train-banner-demo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 975,
+      "sha256": "28995fd55682f0a2b1a282dc211d7305417000258ccf0f1fc8d978bb3dfa91a6"
+    },
+    {
+      "id": "train-banner-bolt",
+      "file": "train-banner-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1588,
+      "sha256": "bc5e0b52212084fecf6980a9149c61dd7c503a37ba33abb44bd9f704d8b84a6e"
+    },
+    {
+      "id": "train-banner-antenna",
+      "file": "train-banner-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 144,
+      "sha256": "c91a2e92ce920b70085857bd5da7d484eafe5c7bbbfcb178916f9d682c0e841d"
+    },
+    {
+      "id": "train-banner-toy",
+      "file": "train-banner-toy.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1670,
+      "sha256": "a0d57fff963a49f175f3014c87582934aad2d0c887a67215c5dea0cdea668b1e"
+    },
+    {
+      "id": "train-banner-fitted",
+      "file": "train-banner-fitted.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 317,
+      "sha256": "4011941ffcc91d1861f0f4492b623774a27ad935ecb59f197ab8f41bce80fb57"
+    },
+    {
+      "id": "train-banner-label",
+      "file": "train-banner-label.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 292,
+      "sha256": "a5fbaa6c34a94fdd78f1f6d602de2a92385705fddd56dd84b3532f8581692b02"
+    },
+    {
+      "id": "train-banner-pennant",
+      "file": "train-banner-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "83a269c67fc0671d2ac0da8bdd148c3b528e460348b10533347346c6674a8c82"
+    },
+    {
+      "id": "train-banner",
+      "file": "train-banner.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5330,
+      "sha256": "8aac4d55ed34488550017b1d498a11d0a8148024f4761a527ec00a08b43a5ef3"
+    },
+    {
+      "id": "train-banner-background",
+      "file": "train-banner-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1873,
+      "sha256": "08be28ba2fd57d895c44102520891431dd77af99f11027829aa18558edfadaf0"
+    },
+    {
+      "id": "parade-bolt",
+      "file": "parade-bolt.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1591,
+      "sha256": "b17e38c179d7730cd75c03638b18e0ad0ec603a3ea5694eabbd8d3b860ab2e58"
+    },
+    {
+      "id": "parade-antenna",
+      "file": "parade-antenna.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 159,
+      "sha256": "146c2f2479f4c789ca3a5133c301480ac04dc41d8bdf9ba3910f43cd0846c569"
+    },
+    {
+      "id": "parade-toys",
+      "file": "parade-toys.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3924,
+      "sha256": "643a799d0ae69b2553843e95ca378a76b4178477852318a14774a3a94885d804"
+    },
+    {
+      "id": "parade-duck-wheel",
+      "file": "parade-duck-wheel.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 421,
+      "sha256": "806b3676acde5fb4905ae6dec59e35c6a43a25d8540fd833633260285fd992c6"
+    },
+    {
+      "id": "parade-duck-cap",
+      "file": "parade-duck-cap.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 343,
+      "sha256": "1ee1ab488ef15700317e5fc4d8e59816b70a7d7830fddfee59ee302d3ace5d37"
+    },
+    {
+      "id": "parade-butterfly-wing",
+      "file": "parade-butterfly-wing.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 400,
+      "sha256": "ed56298efb27d299fb574f50cfa7c2d52936f162b05a430de579753c792edc76"
+    },
+    {
+      "id": "parade-butterfly-key",
+      "file": "parade-butterfly-key.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 421,
+      "sha256": "b4e28ec4db58eac90a8839c6200698460bde404064bce7121d37a77ddf99db0f"
+    },
+    {
+      "id": "parade-train-drum",
+      "file": "parade-train-drum.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 401,
+      "sha256": "48079626d9a17dce7eb9fc9fb78e2c5eb95c0d2dabd2e618a29c71fc451b7c60"
+    },
+    {
+      "id": "parade-train-banner",
+      "file": "parade-train-banner.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 317,
+      "sha256": "02df34b048ffd3933f26a032700dd89d2a3f2f0de0608b7a0758a2f56332d416"
+    },
+    {
+      "id": "parade-pennant",
+      "file": "parade-pennant.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 287,
+      "sha256": "c54b78d10492ce45e31e41b5e841a5629be971056cf36ec0f82493509f343748"
+    },
+    {
+      "id": "parade",
+      "file": "parade.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7250,
+      "sha256": "20d7bea21bbfc740bcf947c6946c77506e830032d60ff50ab0700cb6de98edb2"
+    },
+    {
+      "id": "parade-background",
+      "file": "parade-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1733,
+      "sha256": "a06b23062b3f8cabd06229fd64d33cc60ae361436de5f7c49b65df6393614b3f"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7698,
+      "sha256": "75cab386b0abcfbfc07f8537e442f372e6a282ca47eebfad46933f2f8757ee78"
+    }
+  ]
+}

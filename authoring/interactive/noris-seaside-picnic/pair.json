@@ -1,0 +1,2050 @@
+{
+  "schemaVersion": 1,
+  "id": "noris-seaside-picnic",
+  "version": "v1",
+  "title": "Nori’s Seaside Picnic",
+  "category": "consequences",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {
+    "packing": "waiting",
+    "place": "waiting",
+    "sharing": "waiting",
+    "shade": "waiting",
+    "cleanup": "waiting",
+    "homeward": "waiting",
+    "air": "waiting"
+  },
+  "scenes": [
+    {
+      "id": "packing",
+      "narrative": "Nori the little elephant peers through the porch door. The sea is calm, and a gentle breeze lifts Mum’s scarf. They will picnic well above the water with Mum nearby. Two clean mats wait by the basket. “The wide one has room to spread out,” says Mum. “The small one rolls into a lighter bundle.” Nori can choose their first piece of the day.",
+      "alt": "A small elephant in a straw hat and an adult elephant prepare on a wooden seaside porch. A clear sandy space waits for the chosen mat.",
+      "image": "packing.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "packing-background.svg",
+        "layers": [
+          {
+            "id": "breeze",
+            "image": "packing-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              683,
+              150
+            ]
+          },
+          {
+            "id": "effect-0",
+            "image": "packing-0.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "effect-1",
+            "image": "packing-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 4300,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "effect-0",
+        "effect-1"
+      ],
+      "activity": {
+        "kind": "choice",
+        "id": "packing",
+        "options": [
+          {
+            "id": "wide",
+            "label": "Wide mat with spreading room",
+            "image": "wide-mat-picture.svg",
+            "feedback": "The wide mat unrolls into a roomy picnic place. Mum helps carry its bigger bundle.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "packing",
+                "value": "wide"
+              },
+              {
+                "type": "show",
+                "sceneId": "packing",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "hide",
+                "sceneId": "packing",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "wide-mat"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "small-mat"
+              }
+            ]
+          },
+          {
+            "id": "small",
+            "label": "Small mat with a light bundle",
+            "image": "small-mat-picture.svg",
+            "feedback": "The small mat makes a light bundle. The family will sit close and keep the basket beside it.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "packing",
+                "value": "small"
+              },
+              {
+                "type": "show",
+                "sceneId": "packing",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "hide",
+                "sceneId": "packing",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "small-mat"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "wide-mat"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "place",
+      "narrative": "At the top of the safe beach path, Mum points to two dry places far from the water. Behind the grassy dune, the air feels still. At the open cove, they can see more of the bright sea and feel the mild breeze. Both places are ready for a picnic. Which view will Nori carry into the story?",
+      "alt": "The elephant family pauses above a calm sea. A grassy dune and a broad cove are visible beyond the dry picnic ground.",
+      "image": "place.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "place-background.svg",
+        "layers": [
+          {
+            "id": "breeze",
+            "image": "place-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              683,
+              150
+            ]
+          },
+          {
+            "id": "effect-0",
+            "image": "place-0.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "effect-1",
+            "image": "place-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 4300,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "effect-0",
+        "effect-1"
+      ],
+      "activity": {
+        "kind": "choice",
+        "id": "place",
+        "options": [
+          {
+            "id": "dune",
+            "label": "Still air behind the dune",
+            "image": "dune-shelter-picture.svg",
+            "feedback": "The dune blocks the gentle breeze. Grasses frame the family’s sheltered view.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "place",
+                "value": "dune"
+              },
+              {
+                "type": "show",
+                "sceneId": "place",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "hide",
+                "sceneId": "place",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "dune-shelter"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "cove-view"
+              },
+              {
+                "type": "set",
+                "key": "air",
+                "value": "still"
+              }
+            ]
+          },
+          {
+            "id": "cove",
+            "label": "Sea view at the open cove",
+            "image": "cove-view-picture.svg",
+            "feedback": "The open cove gives the family a broad sea view. The mild breeze reaches the mat.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "place",
+                "value": "cove"
+              },
+              {
+                "type": "show",
+                "sceneId": "place",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "hide",
+                "sceneId": "place",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "cove-view"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "dune-shelter"
+              },
+              {
+                "type": "set",
+                "key": "air",
+                "value": "breezy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sharing",
+      "narrative": "Mum washes their hands with the water they brought, then opens the fruit box. Nori’s cousin Luma has come to join them. “A tray in the middle lets us choose together,” says Nori. “Or we can each hold a bowl.” There is enough fruit either way. How will they make it easy to reach?",
+      "alt": "Nori and Mum make space for fruit on the dry beach. A tray or three small bowls can hold the prepared fruit.",
+      "image": "sharing.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "sharing-background.svg",
+        "layers": [
+          {
+            "id": "breeze",
+            "image": "sharing-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              683,
+              150
+            ]
+          },
+          {
+            "id": "effect-0",
+            "image": "sharing-0.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "effect-1",
+            "image": "sharing-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 4300,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "effect-0",
+        "effect-1"
+      ],
+      "activity": {
+        "kind": "choice",
+        "id": "sharing",
+        "options": [
+          {
+            "id": "tray",
+            "label": "One fruit tray in the middle",
+            "image": "fruit-tray-picture.svg",
+            "feedback": "One tray sits in the middle. Everyone can reach in and choose a piece of fruit.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "sharing",
+                "value": "tray"
+              },
+              {
+                "type": "show",
+                "sceneId": "sharing",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "hide",
+                "sceneId": "sharing",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "fruit-tray"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "fruit-bowls"
+              }
+            ]
+          },
+          {
+            "id": "bowls",
+            "label": "Three separate fruit bowls",
+            "image": "fruit-bowls-picture.svg",
+            "feedback": "Three bowls give everyone fruit to hold. The family can pass extra pieces between bowls.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "sharing",
+                "value": "bowls"
+              },
+              {
+                "type": "show",
+                "sceneId": "sharing",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "hide",
+                "sceneId": "sharing",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "fruit-bowls"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "fruit-tray"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "shade",
+      "narrative": "After eating, Luma opens a picture book. A soft patch of cloud drifts across the sun; the weather stays gentle. Mum has brought a little shade sail. It can make a sheltered reading nook, even if Nori chose the open cove earlier. Or they can keep the open sky and look at clouds between pages. Mum will help with the poles.",
+      "alt": "A calm coastal reading place has room for an adult-set shade sail. The elephants wait beside the mat beneath a bright mild sky.",
+      "image": "shade.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "shade-background.svg",
+        "layers": [
+          {
+            "id": "breeze",
+            "image": "shade-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              683,
+              150
+            ]
+          },
+          {
+            "id": "effect-0",
+            "image": "shade-0.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "effect-1",
+            "image": "shade-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 4300,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "effect-0",
+        "effect-1"
+      ],
+      "activity": {
+        "kind": "choice",
+        "id": "shade",
+        "options": [
+          {
+            "id": "sail",
+            "label": "Put up the shade sail",
+            "image": "shade-sail-picture.svg",
+            "feedback": "Mum puts up the sail. It gives the readers a sheltered patch; at the open cove it also softens the breeze.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "shade",
+                "value": "sail"
+              },
+              {
+                "type": "show",
+                "sceneId": "shade",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "hide",
+                "sceneId": "shade",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "shade-sail"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "open-sky"
+              },
+              {
+                "type": "set",
+                "key": "air",
+                "value": "sheltered"
+              }
+            ]
+          },
+          {
+            "id": "sky",
+            "label": "Keep the sky open",
+            "image": "open-sky-picture.svg",
+            "feedback": "The poles stay packed. The family reads under the mild sky and pauses to look for cloud shapes.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "shade",
+                "value": "sky"
+              },
+              {
+                "type": "show",
+                "sceneId": "shade",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "hide",
+                "sceneId": "shade",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "open-sky"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "shade-sail"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cleanup",
+      "narrative": "The last page ends. “Let’s take everything home,” says Mum. There are empty boxes, bowls and a cloth to pack; no food or rubbish will stay on the beach. Nori can stack the boxes in their own places now, or tuck everything into the roomy carry pouch and sort it at home. Both plans leave the sand clear.",
+      "alt": "The empty picnic dishes wait on dry sand beside the elephants. A sorted stack and a roomy closed carry pouch offer two ways to take everything home.",
+      "image": "cleanup.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "cleanup-background.svg",
+        "layers": [
+          {
+            "id": "breeze",
+            "image": "cleanup-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              683,
+              150
+            ]
+          },
+          {
+            "id": "effect-0",
+            "image": "cleanup-0.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "effect-1",
+            "image": "cleanup-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 4300,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "effect-0",
+        "effect-1"
+      ],
+      "activity": {
+        "kind": "choice",
+        "id": "cleanup",
+        "options": [
+          {
+            "id": "sort",
+            "label": "Sort and stack the boxes here",
+            "image": "sorted-boxes-picture.svg",
+            "feedback": "Nori sorts the boxes now. They stack neatly, ready to go straight onto the shelf at home.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "cleanup",
+                "value": "sort"
+              },
+              {
+                "type": "show",
+                "sceneId": "cleanup",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "hide",
+                "sceneId": "cleanup",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "sorted-boxes"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "carry-pouch"
+              }
+            ]
+          },
+          {
+            "id": "pouch",
+            "label": "Pack the carry pouch for home",
+            "image": "carry-pouch-picture.svg",
+            "feedback": "The dishes go into the carry pouch together. There will be a small sorting job at home.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "cleanup",
+                "value": "pouch"
+              },
+              {
+                "type": "show",
+                "sceneId": "cleanup",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "hide",
+                "sceneId": "cleanup",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "carry-pouch"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "sorted-boxes"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "homeward",
+      "narrative": "Mum checks their dry picnic spot one last time. Nothing is left behind. The level path home has room for the little cart they brought folded in the basket. Nori could pull it with Mum beside them, or Mum could carry the basket while Nori carries the rolled mat. “Either way, we go together,” she says.",
+      "alt": "The elephant family stands on a wide level beach path. A small cart and a handled basket are ready for the journey home.",
+      "image": "homeward.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "homeward-background.svg",
+        "layers": [
+          {
+            "id": "breeze",
+            "image": "homeward-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              683,
+              150
+            ]
+          },
+          {
+            "id": "effect-0",
+            "image": "homeward-0.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "effect-1",
+            "image": "homeward-1.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 6
+            },
+            "durationMs": 4300,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "effect-0",
+        "effect-1"
+      ],
+      "activity": {
+        "kind": "choice",
+        "id": "homeward",
+        "options": [
+          {
+            "id": "cart",
+            "label": "Pull the small cart together",
+            "image": "loaded-cart-picture.svg",
+            "feedback": "Mum opens the little cart. The packed things ride together while Nori pulls beside her.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "homeward",
+                "value": "cart"
+              },
+              {
+                "type": "show",
+                "sceneId": "homeward",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "hide",
+                "sceneId": "homeward",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "loaded-cart"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "carried-basket"
+              }
+            ]
+          },
+          {
+            "id": "hands",
+            "label": "Carry basket and rolled mat",
+            "image": "carried-basket-picture.svg",
+            "feedback": "Mum carries the basket and Nori carries the mat. They walk side by side with their hands full.",
+            "effects": [
+              {
+                "type": "set",
+                "key": "homeward",
+                "value": "hands"
+              },
+              {
+                "type": "show",
+                "sceneId": "homeward",
+                "layerId": "effect-1"
+              },
+              {
+                "type": "hide",
+                "sceneId": "homeward",
+                "layerId": "effect-0"
+              },
+              {
+                "type": "show",
+                "sceneId": "remember",
+                "layerId": "carried-basket"
+              },
+              {
+                "type": "hide",
+                "sceneId": "remember",
+                "layerId": "loaded-cart"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "remember",
+      "narrative": "On the path home, Nori remembers a picnic they helped make. The picture keeps their mat, place, sharing plan, reading nook and packing choices together. “We could try another plan another day,” says Mum. For now, the family has a whole seaside afternoon to remember.",
+      "alt": "An elephant family’s dry seaside picnic shows the chosen mat, sheltered dune or cove view, fruit sharing arrangement, reading shade, packed dishes and way to carry them home. These are memories of the day together.",
+      "image": "remember.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "remember-background.svg",
+        "layers": [
+          {
+            "id": "wide-mat",
+            "image": "result-wide-mat.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small-mat",
+            "image": "result-small-mat.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "dune-shelter",
+            "image": "result-dune-shelter.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cove-view",
+            "image": "result-cove-view.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fruit-tray",
+            "image": "result-fruit-tray.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "fruit-bowls",
+            "image": "result-fruit-bowls.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "shade-sail",
+            "image": "result-shade-sail.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "open-sky",
+            "image": "result-open-sky.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "sorted-boxes",
+            "image": "result-sorted-boxes.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "carry-pouch",
+            "image": "result-carry-pouch.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "loaded-cart",
+            "image": "result-loaded-cart.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "carried-basket",
+            "image": "result-carried-basket.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "breeze",
+            "image": "remember-moving.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              736,
+              135
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "breeze",
+            "preset": "flap",
+            "parameters": {
+              "angle": 5
+            },
+            "durationMs": 4700,
+            "restMs": 650,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "wide-mat",
+        "small-mat",
+        "dune-shelter",
+        "cove-view",
+        "fruit-tray",
+        "fruit-bowls",
+        "shade-sail",
+        "open-sky",
+        "sorted-boxes",
+        "carry-pouch",
+        "loaded-cart",
+        "carried-basket"
+      ]
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "packing": {
+          "instruction": "Compare the room on each mat and the bundle to carry. Invite your child to choose a picnic plan.",
+          "feedback": {
+            "complete": "Your mat is packed. Its size will stay part of the picnic.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "wide-mat-picture.svg",
+              "label": "Talk about this plan: wide mat with spreading room."
+            },
+            {
+              "action": "point",
+              "image": "small-mat-picture.svg",
+              "label": "Compare it with small mat with a light bundle. What changes?"
+            },
+            {
+              "action": "select",
+              "image": "wide-mat-picture.svg",
+              "label": "Invite your child to choose. This example does not make the choice for you."
+            }
+          ]
+        },
+        "place": {
+          "instruction": "Imagine how the air and view differ in the two places. Which place would your child like?",
+          "feedback": {
+            "complete": "You have chosen a place. Later you can add shelter if you want it.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "dune-shelter-picture.svg",
+              "label": "Talk about this plan: still air behind the dune."
+            },
+            {
+              "action": "point",
+              "image": "cove-view-picture.svg",
+              "label": "Compare it with sea view at the open cove. What changes?"
+            },
+            {
+              "action": "select",
+              "image": "dune-shelter-picture.svg",
+              "label": "Invite your child to choose. This example does not make the choice for you."
+            }
+          ]
+        },
+        "sharing": {
+          "instruction": "Talk about reaching a shared tray and holding a bowl. Let your child arrange their imagined picnic.",
+          "feedback": {
+            "complete": "The fruit has a place. Everyone has enough.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "fruit-tray-picture.svg",
+              "label": "Talk about this plan: one fruit tray in the middle."
+            },
+            {
+              "action": "point",
+              "image": "fruit-bowls-picture.svg",
+              "label": "Compare it with three separate fruit bowls. What changes?"
+            },
+            {
+              "action": "select",
+              "image": "fruit-tray-picture.svg",
+              "label": "Invite your child to choose. This example does not make the choice for you."
+            }
+          ]
+        },
+        "shade": {
+          "instruction": "Remember the earlier place. Would a sail change its air or light? Choose how to read together.",
+          "feedback": {
+            "complete": "Your reading nook is ready. The earlier place remains part of your memory.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "shade-sail-picture.svg",
+              "label": "Talk about this plan: put up the shade sail."
+            },
+            {
+              "action": "point",
+              "image": "open-sky-picture.svg",
+              "label": "Compare it with keep the sky open. What changes?"
+            },
+            {
+              "action": "select",
+              "image": "shade-sail-picture.svg",
+              "label": "Invite your child to choose. This example does not make the choice for you."
+            }
+          ]
+        },
+        "cleanup": {
+          "instruction": "Compare doing the sorting here with doing it later at home. What would help your family pack?",
+          "feedback": {
+            "complete": "Everything is coming home. The sand is clear.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "sorted-boxes-picture.svg",
+              "label": "Talk about this plan: sort and stack the boxes here."
+            },
+            {
+              "action": "point",
+              "image": "carry-pouch-picture.svg",
+              "label": "Compare it with pack the carry pouch for home. What changes?"
+            },
+            {
+              "action": "select",
+              "image": "sorted-boxes-picture.svg",
+              "label": "Invite your child to choose. This example does not make the choice for you."
+            }
+          ]
+        },
+        "homeward": {
+          "instruction": "Look back at the mat and packing choices. Imagine what would fit in the cart or basket.",
+          "feedback": {
+            "complete": "The family is ready to head home together.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "loaded-cart-picture.svg",
+              "label": "Talk about this plan: pull the small cart together."
+            },
+            {
+              "action": "point",
+              "image": "carried-basket-picture.svg",
+              "label": "Compare it with carry basket and rolled mat. What changes?"
+            },
+            {
+              "action": "select",
+              "image": "loaded-cart-picture.svg",
+              "label": "Invite your child to choose. This example does not make the choice for you."
+            }
+          ]
+        },
+        "remember": {
+          "instruction": "Look for each remembered choice in the picture. Read the three memories aloud, including anything you changed later.",
+          "feedback": {
+            "complete": "Every earlier choice has a place in this picture and in the three memories below.",
+            "retry": "Look at one part of your finished picture at a time."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "cover.svg",
+              "label": "This is an example ending. Compare it with the ending you made."
+            },
+            {
+              "action": "point",
+              "image": "loaded-cart-picture.svg",
+              "label": "Talk about the final choice and how the story changed."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "Who helped with the shade poles?",
+          "answer": "Mum helped put up the sail when that plan was chosen.",
+          "sceneId": "shade"
+        },
+        {
+          "type": "literal",
+          "question": "What stayed on the sand after packing?",
+          "answer": "Nothing from their picnic. Both packing plans took everything home.",
+          "sceneId": "cleanup"
+        },
+        {
+          "type": "feeling",
+          "question": "How might Nori feel remembering their own picnic plan?",
+          "answer": "Nori might feel pleased, curious, calm, or something else. Your idea can be different.",
+          "sceneId": "remember"
+        },
+        {
+          "type": "personal",
+          "question": "Would you rather share from a tray or hold a bowl?",
+          "answer": "Either can work. Tell someone what you like about your choice.",
+          "sceneId": "sharing"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "packing": {
+          "instruction": "Choose a mat to pack.",
+          "feedback": {
+            "complete": "Your mat is packed. Its size will stay part of the picnic.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "wide-mat-picture.svg",
+              "label": "One plan: wide mat with spreading room."
+            },
+            {
+              "action": "point",
+              "image": "small-mat-picture.svg",
+              "label": "Another plan: small mat with a light bundle."
+            }
+          ]
+        },
+        "place": {
+          "instruction": "Choose your picnic place.",
+          "feedback": {
+            "complete": "You have chosen a place. Later you can add shelter if you want it.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "dune-shelter-picture.svg",
+              "label": "One plan: still air behind the dune."
+            },
+            {
+              "action": "point",
+              "image": "cove-view-picture.svg",
+              "label": "Another plan: sea view at the open cove."
+            }
+          ]
+        },
+        "sharing": {
+          "instruction": "Choose how to share the fruit.",
+          "feedback": {
+            "complete": "The fruit has a place. Everyone has enough.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "fruit-tray-picture.svg",
+              "label": "One plan: one fruit tray in the middle."
+            },
+            {
+              "action": "point",
+              "image": "fruit-bowls-picture.svg",
+              "label": "Another plan: three separate fruit bowls."
+            }
+          ]
+        },
+        "shade": {
+          "instruction": "Choose a reading nook.",
+          "feedback": {
+            "complete": "Your reading nook is ready. The earlier place remains part of your memory.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "shade-sail-picture.svg",
+              "label": "One plan: put up the shade sail."
+            },
+            {
+              "action": "point",
+              "image": "open-sky-picture.svg",
+              "label": "Another plan: keep the sky open."
+            }
+          ]
+        },
+        "cleanup": {
+          "instruction": "Choose how to pack everything away.",
+          "feedback": {
+            "complete": "Everything is coming home. The sand is clear.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "sorted-boxes-picture.svg",
+              "label": "One plan: sort and stack the boxes here."
+            },
+            {
+              "action": "point",
+              "image": "carry-pouch-picture.svg",
+              "label": "Another plan: pack the carry pouch for home."
+            }
+          ]
+        },
+        "homeward": {
+          "instruction": "Choose how to carry your picnic home.",
+          "feedback": {
+            "complete": "The family is ready to head home together.",
+            "retry": "Either picture is a possible plan. Choose the one you want to try."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "loaded-cart-picture.svg",
+              "label": "One plan: pull the small cart together."
+            },
+            {
+              "action": "point",
+              "image": "carried-basket-picture.svg",
+              "label": "Another plan: carry basket and rolled mat."
+            }
+          ]
+        },
+        "remember": {
+          "instruction": "Look at the picnic you helped make.",
+          "feedback": {
+            "complete": "Every earlier choice has a place in this picture and in the three memories below.",
+            "retry": "Look at one part of your finished picture at a time."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "cover.svg",
+              "label": "Look at this example ending."
+            },
+            {
+              "action": "point",
+              "image": "loaded-cart-picture.svg",
+              "label": "Remember the last choice."
+            }
+          ]
+        }
+      },
+      "reflection": "Which part would you keep for another picnic? Which part would you change?"
+    }
+  },
+  "endings": {
+    "sceneId": "remember",
+    "text": "On the path home, Nori remembers a picnic they helped make. The picture keeps their mat, place, sharing plan, reading nook and packing choices together. “We could try another plan another day,” says Mum. For now, the family has a whole seaside afternoon to remember.",
+    "variants": [],
+    "recap": [
+      {
+        "decisions": [
+          "packing",
+          "sharing"
+        ],
+        "text": "Nori packed the wide mat, making a roomy place to spread out. They shared fruit from one tray in the middle.",
+        "variants": [
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.packing",
+                  "value": "wide"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.sharing",
+                  "value": "tray"
+                }
+              ]
+            },
+            "text": "Nori packed the wide mat, making a roomy place to spread out. They shared fruit from one tray in the middle."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.packing",
+                  "value": "wide"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.sharing",
+                  "value": "bowls"
+                }
+              ]
+            },
+            "text": "Nori packed the wide mat, making a roomy place to spread out. They held separate bowls and passed extra fruit between them."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.packing",
+                  "value": "small"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.sharing",
+                  "value": "tray"
+                }
+              ]
+            },
+            "text": "Nori packed the small mat, carrying less and sitting close together. They shared fruit from one tray in the middle."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.packing",
+                  "value": "small"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.sharing",
+                  "value": "bowls"
+                }
+              ]
+            },
+            "text": "Nori packed the small mat, carrying less and sitting close together. They held separate bowls and passed extra fruit between them."
+          }
+        ]
+      },
+      {
+        "decisions": [
+          "place",
+          "shade"
+        ],
+        "text": "They sat behind the dune, where grasses softened the breeze. Mum put up the sail, giving the readers a sheltered patch.",
+        "variants": [
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.place",
+                  "value": "dune"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.shade",
+                  "value": "sail"
+                }
+              ]
+            },
+            "text": "They sat behind the dune, where grasses softened the breeze. Mum put up the sail, giving the readers a sheltered patch."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.place",
+                  "value": "dune"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.shade",
+                  "value": "sky"
+                }
+              ]
+            },
+            "text": "They sat behind the dune, where grasses softened the breeze. They kept the sky open and looked for cloud shapes between pages."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.place",
+                  "value": "cove"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.shade",
+                  "value": "sail"
+                }
+              ]
+            },
+            "text": "They chose the open cove for its sea view. Mum later put up the sail, softening the breeze without losing that view."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.place",
+                  "value": "cove"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.shade",
+                  "value": "sky"
+                }
+              ]
+            },
+            "text": "They chose the open cove, with a broad sea view and a mild breeze. They kept the sky open and looked for cloud shapes between pages."
+          }
+        ]
+      },
+      {
+        "decisions": [
+          "cleanup",
+          "homeward"
+        ],
+        "text": "Nori sorted the boxes on the beach, leaving less sorting for home. Nori pulled the cart beside Mum, with the packed things riding together.",
+        "variants": [
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.cleanup",
+                  "value": "sort"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.homeward",
+                  "value": "cart"
+                }
+              ]
+            },
+            "text": "Nori sorted the boxes on the beach, leaving less sorting for home. Nori pulled the cart beside Mum, with the packed things riding together."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.cleanup",
+                  "value": "sort"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.homeward",
+                  "value": "hands"
+                }
+              ]
+            },
+            "text": "Nori sorted the boxes on the beach, leaving less sorting for home. Mum carried the basket while Nori carried the rolled mat beside her."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.cleanup",
+                  "value": "pouch"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.homeward",
+                  "value": "cart"
+                }
+              ]
+            },
+            "text": "Nori packed the carry pouch, saving the sorting job for home. Nori pulled the cart beside Mum, with the packed things riding together."
+          },
+          {
+            "when": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "equals",
+                  "key": "choice.cleanup",
+                  "value": "pouch"
+                },
+                {
+                  "op": "equals",
+                  "key": "choice.homeward",
+                  "value": "hands"
+                }
+              ]
+            },
+            "text": "Nori packed the carry pouch, saving the sorting job for home. Mum carried the basket while Nori carried the rolled mat beside her."
+          }
+        ]
+      }
+    ]
+  },
+  "assets": [
+    {
+      "id": "wide-mat-picture",
+      "file": "wide-mat-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 563,
+      "sha256": "58630e964f89dd1dcb50f71f2be4967a6527adbc8e2a68ff22f81e4b3d4f0526"
+    },
+    {
+      "id": "packing-0",
+      "file": "packing-0.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 498,
+      "sha256": "7bbff8a3de08d92a6ea83878e6201a0e7d33ecca5043307896cd5f48b611ffd7"
+    },
+    {
+      "id": "result-wide-mat",
+      "file": "result-wide-mat.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 499,
+      "sha256": "dc758b388fa6a3fb47236db1ee1f100d2a9c318a250a56a65af1f6ec55f907e7"
+    },
+    {
+      "id": "small-mat-picture",
+      "file": "small-mat-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 411,
+      "sha256": "d7d51fd453d6a7ea88525d851d58b1068263498486c49b9399194181a0f65669"
+    },
+    {
+      "id": "packing-1",
+      "file": "packing-1.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 346,
+      "sha256": "f466af7bfbb14afdf0abc44f77a49fd815fb50139fe157e336b3b08917a428c8"
+    },
+    {
+      "id": "result-small-mat",
+      "file": "result-small-mat.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 347,
+      "sha256": "aeef01869b81ae42308554548ea19290c8e565448e40ae20b9545eb20360a6af"
+    },
+    {
+      "id": "packing-background",
+      "file": "packing-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4483,
+      "sha256": "c19895f01c2b860f82fb01b7f6d921e25c9170e27ac97c6fdd670614544a7e62"
+    },
+    {
+      "id": "packing-moving",
+      "file": "packing-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 280,
+      "sha256": "8c6be589b7eb57d9b898e8e8829898705332d29dceeec48a08969eb383b6b348"
+    },
+    {
+      "id": "packing",
+      "file": "packing.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4483,
+      "sha256": "c19895f01c2b860f82fb01b7f6d921e25c9170e27ac97c6fdd670614544a7e62"
+    },
+    {
+      "id": "dune-shelter-picture",
+      "file": "dune-shelter-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1254,
+      "sha256": "ab6c32a0b89ba6684efd1807dac20e13d164fb72ab4214c6686ee078a0978cf7"
+    },
+    {
+      "id": "place-0",
+      "file": "place-0.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1189,
+      "sha256": "ee85a058e0da80a8cf6c5aa599c1b6f1f86dc4b31115f01639313f99cecebd13"
+    },
+    {
+      "id": "result-dune-shelter",
+      "file": "result-dune-shelter.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1190,
+      "sha256": "cbcdd482cf16e45a3abcb83432b18ea87f00fa366fc8b30f254d4a0fd557dd0b"
+    },
+    {
+      "id": "cove-view-picture",
+      "file": "cove-view-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 631,
+      "sha256": "b9a4f79b2c29bc4d8b85dabfa85b3c81f79c7ab63f30e0bcb4f53209d121dfd9"
+    },
+    {
+      "id": "place-1",
+      "file": "place-1.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 566,
+      "sha256": "38006be55e463937b0c51f32119aa661d30b771dc0408f4540b3aa8e339ea760"
+    },
+    {
+      "id": "result-cove-view",
+      "file": "result-cove-view.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 567,
+      "sha256": "ffe5f59acf6d04141f1565f231751e69eb231cc5c3516c465a5e46c1c46e7207"
+    },
+    {
+      "id": "place-background",
+      "file": "place-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4273,
+      "sha256": "04c88dca54e67f82328c3a1ea2da8495734cf1875be670ddbdfdebe0d0745bae"
+    },
+    {
+      "id": "place-moving",
+      "file": "place-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 280,
+      "sha256": "8c6be589b7eb57d9b898e8e8829898705332d29dceeec48a08969eb383b6b348"
+    },
+    {
+      "id": "place",
+      "file": "place.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4273,
+      "sha256": "04c88dca54e67f82328c3a1ea2da8495734cf1875be670ddbdfdebe0d0745bae"
+    },
+    {
+      "id": "fruit-tray-picture",
+      "file": "fruit-tray-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 834,
+      "sha256": "b5946ee06c6fa4cda343d6feec5e12c656c89dbac0b7a21fc1fa3f9412f4924a"
+    },
+    {
+      "id": "sharing-0",
+      "file": "sharing-0.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 769,
+      "sha256": "20c80e138993a81a760b9090da1361c5c67bdec333518652b2e32b14aae28299"
+    },
+    {
+      "id": "result-fruit-tray",
+      "file": "result-fruit-tray.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 770,
+      "sha256": "1816310c6923faf48ea428eb2aa04a7c6e0fe0206c7daa4f10ebf8b2972dd1a7"
+    },
+    {
+      "id": "fruit-bowls-picture",
+      "file": "fruit-bowls-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 941,
+      "sha256": "68e8d3c66dbb1fee511b18b0e61a2d2c69a048500dd46fa552b6d3bcfb86f30f"
+    },
+    {
+      "id": "sharing-1",
+      "file": "sharing-1.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 876,
+      "sha256": "a7086fd88e0ef192174e5adbd5a4b6f49339e572ea5611cb63a23789df5de580"
+    },
+    {
+      "id": "result-fruit-bowls",
+      "file": "result-fruit-bowls.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 877,
+      "sha256": "4cc4778d02de3ac514236de6aa310a7b5dd64a49d9ec613bc2ec209101081428"
+    },
+    {
+      "id": "sharing-background",
+      "file": "sharing-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "sharing-moving",
+      "file": "sharing-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 280,
+      "sha256": "8c6be589b7eb57d9b898e8e8829898705332d29dceeec48a08969eb383b6b348"
+    },
+    {
+      "id": "sharing",
+      "file": "sharing.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "shade-sail-picture",
+      "file": "shade-sail-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 499,
+      "sha256": "a4b9c5f1714d774ce1249821ccbca19338f478b64e9a778fc23b2156d01f2532"
+    },
+    {
+      "id": "shade-0",
+      "file": "shade-0.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 434,
+      "sha256": "41522d80efa9b14400f2efea778fffc667b9fcc7ecbabe6e3f3a021a22756a8f"
+    },
+    {
+      "id": "result-shade-sail",
+      "file": "result-shade-sail.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 434,
+      "sha256": "7800467fd77d34cb574207d5c127cb81190655299e591f092eb414e508b61295"
+    },
+    {
+      "id": "open-sky-picture",
+      "file": "open-sky-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 404,
+      "sha256": "7b39e5665e3af682a44160b2808750d091df7c23da6760095097359537a34ec4"
+    },
+    {
+      "id": "shade-1",
+      "file": "shade-1.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 340,
+      "sha256": "8ec6865cbc5731fdab02040efca41de8b41eeeea4fd0befe75e3789e690afa83"
+    },
+    {
+      "id": "result-open-sky",
+      "file": "result-open-sky.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 340,
+      "sha256": "cb232321f6ee646b78313425c6bb315bd943811b78699f1bddad770bac94cb46"
+    },
+    {
+      "id": "shade-background",
+      "file": "shade-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "shade-moving",
+      "file": "shade-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 280,
+      "sha256": "8c6be589b7eb57d9b898e8e8829898705332d29dceeec48a08969eb383b6b348"
+    },
+    {
+      "id": "shade",
+      "file": "shade.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "sorted-boxes-picture",
+      "file": "sorted-boxes-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 479,
+      "sha256": "6379ee50942b1d57c7a8573faf772a45f2a40e0106b2fc39747fb96595313d5d"
+    },
+    {
+      "id": "cleanup-0",
+      "file": "cleanup-0.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 414,
+      "sha256": "70a4be9dbb3be845de025557c97364e3556d3f1764c274d90e4b97690e05c653"
+    },
+    {
+      "id": "result-sorted-boxes",
+      "file": "result-sorted-boxes.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 415,
+      "sha256": "ee9a32bd033c419b61f48847d77263cbdf4a6803ceddda49a9d5279c9525c490"
+    },
+    {
+      "id": "carry-pouch-picture",
+      "file": "carry-pouch-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 541,
+      "sha256": "d4f48c4b47ba9f3cbbc030a921b285d2f39c2a68baa00afe64c173f1f63777f0"
+    },
+    {
+      "id": "cleanup-1",
+      "file": "cleanup-1.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 476,
+      "sha256": "5ee3ab5fa91072632c56d60b4548ed7cee647cc9529899e7b0f31de9cf19bb56"
+    },
+    {
+      "id": "result-carry-pouch",
+      "file": "result-carry-pouch.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 477,
+      "sha256": "952b5e9e6aac2c7cace29c42803bc16bd7c552d6d901d23488ed26980fe71d9e"
+    },
+    {
+      "id": "cleanup-background",
+      "file": "cleanup-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "cleanup-moving",
+      "file": "cleanup-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 280,
+      "sha256": "8c6be589b7eb57d9b898e8e8829898705332d29dceeec48a08969eb383b6b348"
+    },
+    {
+      "id": "cleanup",
+      "file": "cleanup.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "loaded-cart-picture",
+      "file": "loaded-cart-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 656,
+      "sha256": "3a23c3a2e3fc05cc2ff0664f0e41c42f6155172c330bfebc997e1e5beab29b31"
+    },
+    {
+      "id": "homeward-0",
+      "file": "homeward-0.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 591,
+      "sha256": "1cdd35e988ef9cab64e772f168b733953f8c5d47cbf55b60b41d1a117b10c0da"
+    },
+    {
+      "id": "result-loaded-cart",
+      "file": "result-loaded-cart.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 591,
+      "sha256": "69658ab42dc993cc1ebc18ae479c82cf886e5169b439dc24aaa893f2e8ec2a2b"
+    },
+    {
+      "id": "carried-basket-picture",
+      "file": "carried-basket-picture.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 598,
+      "sha256": "2a48e135394aaf1183aaa6a3b37651b606dc40de58890a44a359e24bbd5eda46"
+    },
+    {
+      "id": "homeward-1",
+      "file": "homeward-1.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 533,
+      "sha256": "f1eff6e1c630e24505f056436d42dd7f98c2cdcdbe4f8b5c31fe307c692d9573"
+    },
+    {
+      "id": "result-carried-basket",
+      "file": "result-carried-basket.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 533,
+      "sha256": "6910001b984ee9fb7685b965f2323ed8ed3ce017ad4a64973fb7a3078cd6a98a"
+    },
+    {
+      "id": "homeward-background",
+      "file": "homeward-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "homeward-moving",
+      "file": "homeward-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 280,
+      "sha256": "8c6be589b7eb57d9b898e8e8829898705332d29dceeec48a08969eb383b6b348"
+    },
+    {
+      "id": "homeward",
+      "file": "homeward.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5477,
+      "sha256": "0dc6b3f2839cdb0b5fbba070e695b8a6d2d0416f0fd200e1b1a31cba49a4b2d5"
+    },
+    {
+      "id": "remember-background",
+      "file": "remember-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5418,
+      "sha256": "cd461e9d977fee3b38addced0c07b5f9dbc9714eeb089f8266c27fe587b357f8"
+    },
+    {
+      "id": "remember-moving",
+      "file": "remember-moving.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 278,
+      "sha256": "1e239757b5243be1510ae3e16affcbb965595e563c29fd5e4947abf9cfa8f8a2"
+    },
+    {
+      "id": "remember",
+      "file": "remember.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 8747,
+      "sha256": "6a812d5fccfc4e3e531b860a9dd4cbd1c9498b31581158b9bb8ba65be65bc3e9"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 8747,
+      "sha256": "6a812d5fccfc4e3e531b860a9dd4cbd1c9498b31581158b9bb8ba65be65bc3e9"
+    }
+  ]
+}

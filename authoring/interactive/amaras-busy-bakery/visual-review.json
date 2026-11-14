@@ -1,0 +1,343 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "bun-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-detail",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-table",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-order",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "first-plate",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-order",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "two-for-the-door",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-order",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "star-place",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-order",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "three-for-the-bench",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-order",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "four-for-friends",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-order",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "five-for-the-table",
+      "reviewed": true
+    },
+    {
+      "assetId": "breakfast-grandpa",
+      "reviewed": true
+    },
+    {
+      "assetId": "breakfast-amara",
+      "reviewed": true
+    },
+    {
+      "assetId": "breakfast-ribbon",
+      "reviewed": true
+    },
+    {
+      "assetId": "breakfast-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "breakfast-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "breakfast",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "welcome",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "first-plate",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "two-for-the-door",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "star-place",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "three-for-the-bench",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "four-for-friends",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "five-for-the-table",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "breakfast",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}

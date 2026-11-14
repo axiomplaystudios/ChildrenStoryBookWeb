@@ -7,14 +7,14 @@ const svg = (tag, attrs = {}) => {
   return el;
 };
 
-export function createIllustration({ bookId, page }) {
-  const url = file => `./books/${bookId}/${file}`;
+export function createIllustration({ bookId, page, resolveAsset }) {
+  const url = resolveAsset ?? (file => `./books/${bookId}/${file}`);
   const element = document.createElement('div'); element.className = 'illustration';
   const original = document.createElement('img'); original.src = url(page.image); original.alt = page.alt; original.draggable = false;
   element.append(original); element.dataset.playing = 'false';
   const scene = page.scene;
   let stage, loaded = false, disposed = false, reduced = false, wanted = false;
-  let speed = 1;
+  let speed = 1, layeredStill = false;
   let elapsed = 0, lastTime = null, request = null;
   const parts = new Map();
   if (scene) {
@@ -32,6 +32,10 @@ export function createIllustration({ bookId, page }) {
     render();
   }
   function render() {
+    if (reduced && layeredStill) {
+      for (const { part } of parts.values()) { part.removeAttribute('transform'); part.setAttribute('opacity', '1'); }
+      return;
+    }
     for (const track of scene?.tracks || []) {
       const { part, pivot } = parts.get(track.layer);
       const pose = sampleTrack(track, elapsed);
@@ -60,7 +64,7 @@ export function createIllustration({ bookId, page }) {
   }
   function presentation() {
     if (!stage) return;
-    const show = loaded && !reduced && !disposed;
+    const show = loaded && (!reduced || layeredStill) && !disposed;
     original.hidden = show; stage.toggleAttribute('hidden', !show);
   }
   const ready = scene ? Promise.all([...new Set([scene.background, ...scene.layers.map(l => l.image)])].map(file => new Promise((resolve, reject) => {
@@ -77,12 +81,20 @@ export function createIllustration({ bookId, page }) {
 
   return {
     element, ready,
+    // Explicit layer selection opts into the composed still under reduced motion.
+    // Legacy books retain their existing static fallback image.
+    setLayerVisibility(ids = parts.keys()) {
+      layeredStill = true;
+      const visible = new Set(ids);
+      for (const [id, { part }] of parts) part.style.display = visible.has(id) ? '' : 'none';
+      render(); presentation();
+    },
     setSpeed(value) { if ([0.5, 0.75, 1, 1.5, 2].includes(value)) { speed = value; element.dataset.speed = String(speed); } },
     activate: resume, resume,
     pause() { wanted = false; stop(); },
     freezeForTurn() { wanted = false; stop(); },
     reset() { elapsed = 0; lastTime = null; render(); },
-    setReducedMotion(value) { reduced = value; if (reduced) stop(); presentation(); if (!reduced && wanted) resume(); },
+    setReducedMotion(value) { reduced = value; if (reduced) { stop(); if (layeredStill) { elapsed = 0; render(); } } presentation(); if (!reduced && wanted) resume(); },
     destroy() { disposed = true; wanted = false; stop(); },
   };
 }

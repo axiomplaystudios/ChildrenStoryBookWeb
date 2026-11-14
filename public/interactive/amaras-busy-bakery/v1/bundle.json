@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 1,
+  "id": "amaras-busy-bakery",
+  "version": "v1",
+  "pairFile": "pair.json",
+  "files": [
+    {
+      "file": "pair.json",
+      "sha256": "7334c52d0d0631b3b440068e940be19647c48ac0c73147ae9df3f67aba781b65",
+      "bytes": 57473,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "source.json",
+      "sha256": "6bff063e9e902ffe81d362d6ac8f28b61c8e9efd2ce38cc6220a2fd87dea831a",
+      "bytes": 411,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "visual-review.json",
+      "sha256": "7fa7eba2abb37ad863dc790b301616f431da668e420e0f9168a867aac6d70a7e",
+      "bytes": 6552,
+      "mediaType": "application/json"
+    },
+    {
+      "file": "bun-control.svg",
+      "sha256": "1bd204ea3522b4bd33c5d911ff0cf802c3c8935e3a429967e29f1f84adfb09a4",
+      "bytes": 761,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-control.svg",
+      "sha256": "d0752942d9ee7fcbebde34e314a67db6277bd8d4b1a4da3d7c5d74de29975154",
+      "bytes": 780,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-detail.svg",
+      "sha256": "bd42b07522127394a14b46318152f4896e6a6c92837b998c00cd2b6b8db8fd79",
+      "bytes": 4676,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-table.svg",
+      "sha256": "45e00fc928e69c5bfd9608223908b02f32469c1c50e887d6f64ea3fa04521fdd",
+      "bytes": 1517,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-grandpa.svg",
+      "sha256": "e2bceda1c0007b84897df157be34b18b0c9afcea1d9f2168e097406533eeb4d9",
+      "bytes": 2435,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-amara.svg",
+      "sha256": "00a7412c96a5dfc2ed5d1835f94c3289c24bcaed3d29c6130b5c71b9a5dc9d29",
+      "bytes": 2277,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-ribbon.svg",
+      "sha256": "651f10e6a19b32b8741838664eadc5aee7ce423fd3cadc2a23c987faae15d9d4",
+      "bytes": 490,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-foreground.svg",
+      "sha256": "aadeb473134f7ca8f7d678d792687c788eafb02fe965cdf47bb04c19156b717f",
+      "bytes": 95,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome-background.svg",
+      "sha256": "bb19e075e66dbb16f2beaba1540abc870f10a8cac86c1109b6fb246e549bf520",
+      "bytes": 3204,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "welcome.svg",
+      "sha256": "cde75d18c2ca49d2a261c93036de14eb9448e80fbe246bcdc8a7945c791fafb5",
+      "bytes": 8121,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-order.svg",
+      "sha256": "0c62d6fefa2d3730d8dece403dfafd5477ab5edc9d306244af87d2a1a0842015",
+      "bytes": 1115,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-demo.svg",
+      "sha256": "85270c0fb1026716b81e266221468691fe082a210fdb7f82f345715433b88736",
+      "bytes": 1793,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-grandpa.svg",
+      "sha256": "b2378b76fda5265a1853f09eef118bf5dc1e6a905d30de16245eb452eb54653f",
+      "bytes": 2435,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-amara.svg",
+      "sha256": "7a94d8450282c40cfc945ae15a9ea7415c9299d1423a68c9fdf1ba2cd6a9bf0c",
+      "bytes": 2285,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-ribbon.svg",
+      "sha256": "6b016a3f9583ee858003288b13736a12a652bb4909331f03f515ae5e54629121",
+      "bytes": 489,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-foreground.svg",
+      "sha256": "9a10680326aba51a08a29d17c0b35c6b5857bf8ee76611722bada16143af65ab",
+      "bytes": 1452,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-completed.svg",
+      "sha256": "058405fd9f090045eca9f485ec5c3b6567ef3756ff35f7b181b606cfa465a1bb",
+      "bytes": 745,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate-background.svg",
+      "sha256": "c96c54ad1c9ab51506ccfba92e2cac2eed8a95554ac9168188761872a872bf61",
+      "bytes": 2699,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "first-plate.svg",
+      "sha256": "818201a90e03e66660f7fd30c6420abc0a5d820e0ee6f80470804d063e270c4b",
+      "bytes": 8980,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-order.svg",
+      "sha256": "38e0f2815e733ced199a4ea309a4ce92ab53a938627ac16d4e2ecaf913815391",
+      "bytes": 1969,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-demo.svg",
+      "sha256": "fb66da25cabe9f0152286286d103f938b5ffd8faaa42b740fdc900282ae5b301",
+      "bytes": 2651,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-grandpa.svg",
+      "sha256": "242b8977968bdb55aaf37bedcbef72ff34da7e0a63f7d50976e656ede9186c65",
+      "bytes": 2434,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-amara.svg",
+      "sha256": "b9475ca957633f28b8bc5e208826497b207a1f857459add8906e2fea780f096e",
+      "bytes": 2293,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-ribbon.svg",
+      "sha256": "88153d0514d6a49c8f0f368f8d18dcfe51a7cc14530f21f9c2434494cafc5d44",
+      "bytes": 489,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-foreground.svg",
+      "sha256": "889b4768a4e7ea08474cc63dc7966f762767a3367596c9973cbc37c44a83d105",
+      "bytes": 2312,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-completed.svg",
+      "sha256": "70fee205f40ce60b164eacc7aa159bea0e8caa4fe1befad6cb515a4f9c1d2824",
+      "bytes": 1340,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door-background.svg",
+      "sha256": "c96c54ad1c9ab51506ccfba92e2cac2eed8a95554ac9168188761872a872bf61",
+      "bytes": 2699,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "two-for-the-door.svg",
+      "sha256": "395e5b7345cf857cdc04696b353f08b717a76845676857266c91b2bce4c4781b",
+      "bytes": 9847,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-order.svg",
+      "sha256": "248da4e2fcb66a51736a2dab1221e68babd2fef47ddc6f502f3d13b6103706ee",
+      "bytes": 1137,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-demo.svg",
+      "sha256": "e1abaf57596c03e85381f7dec44c7b5434822f810843cb98397a4d563c828e0a",
+      "bytes": 1837,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-amara.svg",
+      "sha256": "bc2be2c98f733c9fc7106e8784b6f8c3b740e12b97f21695b7c2117dd48c81f8",
+      "bytes": 2295,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-ribbon.svg",
+      "sha256": "a3617c1292e68fdd421231a6d1f458f8bf73d3f8c05dc3507e8ca62e2f8653f7",
+      "bytes": 492,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-foreground.svg",
+      "sha256": "f03e791527c5c8f84820f14eab023f535cf4bcfb7be5d749289ceba0a2d5c594",
+      "bytes": 1331,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-completed.svg",
+      "sha256": "896203861f43fa53776ae6a9876d9a6866d30409275d00bba769d65c7ec9f273",
+      "bytes": 753,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place-background.svg",
+      "sha256": "401668d07abd1ae297059826c4e4b2503deec93175f5e50d5c7abac0bf008737",
+      "bytes": 3656,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "star-place.svg",
+      "sha256": "7f207077febcf104c0f636753e1d1af82129bdef429d2e3d6c9c2fc5f54d614e",
+      "bytes": 7489,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-order.svg",
+      "sha256": "a7e87b0455c4423cce7f939a749bb3fd7154fc34c1f63945e9edd3ccdcc3234f",
+      "bytes": 2637,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-demo.svg",
+      "sha256": "fff4fea9ee5ef0e54d74c204e57724328b1a196f766dad388016c3cfb4132f3d",
+      "bytes": 3315,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-grandpa.svg",
+      "sha256": "980403930c3c14d76a0447d7da58fe4bb03de64369d64f0bdb0459ace3e2ae64",
+      "bytes": 2435,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-amara.svg",
+      "sha256": "0fa3837334b656e7dec0080a76d80a6ba67107e9adf035dfd1a7924f5dfb2184",
+      "bytes": 2293,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-ribbon.svg",
+      "sha256": "b2fef645fe0189616d9fb328999d8379a9be6b3e9bc8285428f18efcd0a2535b",
+      "bytes": 489,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-foreground.svg",
+      "sha256": "46f23ce281be76ad6be17893f48e756f792e5e75c11a71ce29491b35ee4832a7",
+      "bytes": 2840,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-completed.svg",
+      "sha256": "5ffcb1e8561d87f20c27e468ac7cb3b3f8eb35376ef3c4c208c504afcdf7a6c3",
+      "bytes": 1906,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench-background.svg",
+      "sha256": "96e21a43f9a316e6f1504079dea9a1f39a1f90de91df915ea654ec73789bdd1b",
+      "bytes": 3216,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "three-for-the-bench.svg",
+      "sha256": "725b9e1cb7cd4e94bf23e1ece6fa654babf74ee568702e2216e244eb594a508a",
+      "bytes": 10893,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-order.svg",
+      "sha256": "58a7bfea91e2959f1a3beb1f627df3cff792286c6cb2cabec262b175dbf286ce",
+      "bytes": 3071,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-demo.svg",
+      "sha256": "c75a2970657efe943fafe9503e07a44ab41221373f4ef5a67970ad9a7345eaa8",
+      "bytes": 3770,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-grandpa.svg",
+      "sha256": "c32a6f65d44062a27686cc136221ae1a81c62a83a0023c90a83edd6608852fee",
+      "bytes": 2432,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-amara.svg",
+      "sha256": "50d8c017032edd90f481cffbfe6aa0612c24507d5d1abb20f66fef21e5c75917",
+      "bytes": 2286,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-ribbon.svg",
+      "sha256": "7fa81274cb91d04277b3f6b9896a3ff36ee846feeb243696a45d4a2ec3c67f79",
+      "bytes": 492,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-foreground.svg",
+      "sha256": "cc38758d189c59e79e7a155a2cd41883625d79a3743a9a317461fc81a8c9ce70",
+      "bytes": 3419,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-completed.svg",
+      "sha256": "363a1854a4a9ce268f2a4bc1ed3fba7bff1f7955c410747e820c51be05101c55",
+      "bytes": 2584,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends-background.svg",
+      "sha256": "bb19e075e66dbb16f2beaba1540abc870f10a8cac86c1109b6fb246e549bf520",
+      "bytes": 3204,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "four-for-friends.svg",
+      "sha256": "45b8fee7cda69c63dc4a0e5a7c92384acdd83c093011286f17775020f2f1f627",
+      "bytes": 11453,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-order.svg",
+      "sha256": "056f3a61d74dda71e3391ca86bf830d55a403d51522545aeefa5085a88db973f",
+      "bytes": 3467,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-demo.svg",
+      "sha256": "ae992bec4f4eddfaf771330ddac811a517ee3dc02759d1735b4b272bc4cc370e",
+      "bytes": 4148,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-grandpa.svg",
+      "sha256": "5eceb55073880245b50f9c87fac255dc3a3b7ff42fbb62481e8b99e2114d223b",
+      "bytes": 2435,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-amara.svg",
+      "sha256": "3be08d45ace3fda9c9e00ff36af338ee7f6ea8e0e6d512c5d761b1713023291f",
+      "bytes": 2293,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-ribbon.svg",
+      "sha256": "acf7bda8a4dcb55726c304337914d9e6ee4d2d02ff874cd833d5296bf1312faf",
+      "bytes": 488,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-foreground.svg",
+      "sha256": "43e7b74dcf97660f3c807bb95719fa248a0c7d6f80df9c0610042f76b609e88c",
+      "bytes": 3681,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-completed.svg",
+      "sha256": "38cff9fb1782bba9aa465398ae0dfd8bdc95b4cd4d4febe2b3cabf289edf22da",
+      "bytes": 3086,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table-background.svg",
+      "sha256": "2c3ea034f88dfbfb4f4526c8173a029a851c399eecef727d187df91073fb8688",
+      "bytes": 2699,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "five-for-the-table.svg",
+      "sha256": "4f4251db2f55bb514d74233244eaf17737803249e252227c31f8f90aeb1eb1a8",
+      "bytes": 11216,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "breakfast-grandpa.svg",
+      "sha256": "e6771384c334325246bfc9f78fdbb4a107310bcb6e8d8588987ca38bd3de1cf0",
+      "bytes": 2432,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "breakfast-amara.svg",
+      "sha256": "6ee91696f7ad9056581a77a32d215c6ab2ddcdcfbaa75e5e27010518715da160",
+      "bytes": 2274,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "breakfast-ribbon.svg",
+      "sha256": "31f4259553268b5951fa66f9fa72445711d300a10c89fe3094bb1fb13ceb64c8",
+      "bytes": 483,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "breakfast-foreground.svg",
+      "sha256": "ee3cedb809f7afdf0edd02ec317d731b315248bae94f475b6f19664660d9eb9c",
+      "bytes": 6999,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "breakfast-background.svg",
+      "sha256": "2c3ea034f88dfbfb4f4526c8173a029a851c399eecef727d187df91073fb8688",
+      "bytes": 2699,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "breakfast.svg",
+      "sha256": "da38023f3a644a15886c1f1c7564161da0c6e3dc6ebdd3bfc0e192869cb7ddb8",
+      "bytes": 14507,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "file": "cover.svg",
+      "sha256": "b244cff236ff1fe69bea06a65d7b6908bc326f207165fdc0794a5978d93daa51",
+      "bytes": 8117,
+      "mediaType": "image/svg+xml"
+    }
+  ]
+}

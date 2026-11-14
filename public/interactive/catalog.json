@@ -1,0 +1,98 @@
+[
+  {
+    "id": "amaras-busy-bakery",
+    "version": "v1",
+    "title": "Amara’s Busy Bakery",
+    "category": "small-jobs",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/amaras-busy-bakery--v1.svg",
+    "manifestUrl": "./amaras-busy-bakery/v1/bundle.json",
+    "manifestSha256": "0093d69b76f48e648d7ca7c18468cf8208135c587db7b7cfd6d4c2a00a8babee",
+    "manifestBytes": 14331,
+    "totalBytes": 303899
+  },
+  {
+    "id": "bolt-and-the-toy-parade",
+    "version": "v1",
+    "title": "Bolt and the Toy Parade",
+    "category": "small-jobs",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/bolt-and-the-toy-parade--v1.svg",
+    "manifestUrl": "./bolt-and-the-toy-parade/v1/bundle.json",
+    "manifestSha256": "6555c5b52e2feea5436820c38de516e1ebe5249c9e0a3dc7a6ed7e777e3f14c2",
+    "manifestBytes": 17498,
+    "totalBytes": 222305
+  },
+  {
+    "id": "imani-and-the-lost-shape-map",
+    "version": "v1",
+    "title": "Imani and the Lost Shape Map",
+    "category": "discovery",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/imani-and-the-lost-shape-map--v1.svg",
+    "manifestUrl": "./imani-and-the-lost-shape-map/v1/bundle.json",
+    "manifestSha256": "aca09fc6f2f0526cb9e5e15f6773d87fe357073ccfe15970626bb9b3c306343c",
+    "manifestBytes": 15833,
+    "totalBytes": 192080
+  },
+  {
+    "id": "mina-and-the-shadow-stage",
+    "version": "v1",
+    "title": "Mina and the Shadow Stage",
+    "category": "experiments",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/mina-and-the-shadow-stage--v1.svg",
+    "manifestUrl": "./mina-and-the-shadow-stage/v1/bundle.json",
+    "manifestSha256": "73aa4b7032d9a665f0534aea2c00ad43122f5f9837ffd9c23e39de5afab1d1f0",
+    "manifestBytes": 13270,
+    "totalBytes": 228408
+  },
+  {
+    "id": "noris-seaside-picnic",
+    "version": "v1",
+    "title": "Nori’s Seaside Picnic",
+    "category": "consequences",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/noris-seaside-picnic--v1.svg",
+    "manifestUrl": "./noris-seaside-picnic/v1/bundle.json",
+    "manifestSha256": "5ba3bbfbc1abdc4992a68315047e5f3a6ac231e47e0711e84f4719f7a508af9e",
+    "manifestBytes": 11594,
+    "totalBytes": 188340
+  },
+  {
+    "id": "tavis-dinosaur-ramp-rally",
+    "version": "v1",
+    "title": "Tavi’s Dinosaur Ramp Rally",
+    "category": "experiments",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/tavis-dinosaur-ramp-rally--v1.svg",
+    "manifestUrl": "./tavis-dinosaur-ramp-rally/v1/bundle.json",
+    "manifestSha256": "b452fa1f2a2a05ce30485dddf206525fbcc394b227d2f6b323b9c763c115eca7",
+    "manifestBytes": 13257,
+    "totalBytes": 255681
+  },
+  {
+    "id": "the-penguin-sound-post",
+    "version": "v1",
+    "title": "The Penguin Sound Post",
+    "category": "discovery",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/the-penguin-sound-post--v1.svg",
+    "manifestUrl": "./the-penguin-sound-post/v1/bundle.json",
+    "manifestSha256": "5ae8d47ebfe72d693ff6b080a304b0b57f55cccdbd377489f97d61bf4772c81d",
+    "manifestBytes": 15833,
+    "totalBytes": 185410
+  },
+  {
+    "id": "zuris-rooftop-garden",
+    "version": "v1",
+    "title": "Zuri’s Rooftop Garden",
+    "category": "consequences",
+    "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+    "cover": "./covers/zuris-rooftop-garden--v1.svg",
+    "manifestUrl": "./zuris-rooftop-garden/v1/bundle.json",
+    "manifestSha256": "4f6d3b30f4a82346735202862e190f58363cc37afceadd278c617adefe0e53c9",
+    "manifestBytes": 12016,
+    "totalBytes": 212816
+  }
+]

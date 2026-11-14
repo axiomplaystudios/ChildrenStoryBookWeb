@@ -1,0 +1,11 @@
+{
+  "kind": "original",
+  "license": "All rights reserved. Original work for Axiom Play Studios.",
+  "creators": [
+    "Axiom Play Studios",
+    "OpenAI Codex"
+  ],
+  "changes": "Original text, triceratops characters and layered code-native SVG track illustrations. Physics reference: https://openstax.org/books/college-physics-2e/pages/7-3-gravitational-potential-energy (retrieved 2026-11-11). Editorial inference: gravitational potential energy depends on height. We vary ramp tilt and starting height together on ONE same-length hinged ramp, holding cart, load, ramp length, bottom hinge and surface fixed. The authored deterministic higher-release/farther-roll model assumes fixed rollout resistance, is explicitly illustrative, and makes no claim that equal-height steeper routes always go farther. No external text or art copied.",
+  "title": "Tavi’s Dinosaur Ramp Rally",
+  "reviewed": true
+}

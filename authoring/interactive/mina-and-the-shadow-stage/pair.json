@@ -1,0 +1,2218 @@
+{
+  "schemaVersion": 1,
+  "id": "mina-and-the-shadow-stage",
+  "version": "v1",
+  "title": "Mina and the Shadow Stage",
+  "category": "experiments",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {},
+  "scenes": [
+    {
+      "id": "opening",
+      "narrative": "Mina and her younger brother Arun are making a pocket forest show. They have one paper tree puppet, a little story lamp and a fixed screen, all inside this on-screen stage. “How can one tree look tall, then small?” asks Arun. Mina leaves the lamp and screen in place. The puppet can move between them in our illustrative picture model.",
+      "alt": "Mina, a girl with a long dark braid and coral shirt, and her younger brother Arun in turquoise stand at a purple curtain theatre. A paper tree silhouette waits on their little theatre screen.",
+      "image": "opening.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "opening-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "opening-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "opening-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "opening-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "opening-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "towering-forest",
+      "narrative": "The first part of the show needs a tree that seems tall enough to touch the curtain. Mina holds the paper tree upright. Arun points at the two places where it could stand. Choose one position, then predict the shadow’s size before testing. The little light and the pale screen will not move.",
+      "alt": "The fixed lamp at left faces the fixed screen at right. One upright tree puppet can stand at the near-light or near-screen marker.",
+      "image": "towering-forest.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "towering-forest-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "towering-forest-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "towering-forest-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "towering-forest-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "large",
+            "image": "towering-forest-large.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small",
+            "image": "towering-forest-small.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "towering-forest-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "large",
+        "small"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-towering-forest",
+        "variable": "Puppet position between the fixed light and screen",
+        "fixed": [
+          "Same fixed light position",
+          "Same fixed screen position",
+          "Same upright paper tree puppet and size"
+        ],
+        "controls": [
+          {
+            "id": "near-light",
+            "label": "Puppet nearer the fixed light",
+            "image": "control-near-light.svg"
+          },
+          {
+            "id": "near-screen",
+            "label": "Puppet nearer the fixed screen",
+            "image": "control-near-screen.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "large-shadow",
+            "label": "I predict a larger shadow",
+            "image": "prediction-large-shadow.svg"
+          },
+          {
+            "id": "small-shadow",
+            "label": "I predict a smaller shadow",
+            "image": "prediction-small-shadow.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "near-light",
+            "observation": "Nearer the fixed light, the same tree puppet makes a larger shadow on the screen.",
+            "image": "towering-forest-large.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "towering-forest",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "towering-forest",
+                "layerId": "large"
+              },
+              {
+                "type": "hide",
+                "sceneId": "towering-forest",
+                "layerId": "small"
+              }
+            ]
+          },
+          {
+            "controlId": "near-screen",
+            "observation": "Nearer the fixed screen, the same tree puppet makes a smaller shadow on the screen.",
+            "image": "towering-forest-small.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "towering-forest",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "towering-forest",
+                "layerId": "small"
+              },
+              {
+                "type": "hide",
+                "sceneId": "towering-forest",
+                "layerId": "large"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare the saved trials: where was the puppet, and how large was its shadow? Only the puppet position changes. With this point-like light and fixed screen, moving the same puppet toward the light enlarges the shadow; moving it toward the screen makes it smaller. The ray diagram is an illustrative model."
+      }
+    },
+    {
+      "id": "little-grove",
+      "narrative": "Now the story visits a tiny grove far away. The paper tree itself will stay the same size. “Could its shadow look smaller?” Arun asks. Mina can move only the puppet. Try one of the two positions and choose a prediction. The screen will keep the observed shadow still so you can look closely.",
+      "alt": "Mina and Arun consider a small tree shadow for the grove. The same upright puppet stands between an unmoved lamp and screen.",
+      "image": "little-grove.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "little-grove-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "little-grove-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "little-grove-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "little-grove-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "large",
+            "image": "little-grove-large.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small",
+            "image": "little-grove-small.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "little-grove-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "large",
+        "small"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-little-grove",
+        "variable": "Puppet position between the fixed light and screen",
+        "fixed": [
+          "Same fixed light position",
+          "Same fixed screen position",
+          "Same upright paper tree puppet and size"
+        ],
+        "controls": [
+          {
+            "id": "near-light",
+            "label": "Puppet nearer the fixed light",
+            "image": "control-near-light.svg"
+          },
+          {
+            "id": "near-screen",
+            "label": "Puppet nearer the fixed screen",
+            "image": "control-near-screen.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "large-shadow",
+            "label": "I predict a larger shadow",
+            "image": "prediction-large-shadow.svg"
+          },
+          {
+            "id": "small-shadow",
+            "label": "I predict a smaller shadow",
+            "image": "prediction-small-shadow.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "near-light",
+            "observation": "Nearer the fixed light, the same tree puppet makes a larger shadow on the screen.",
+            "image": "little-grove-large.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "little-grove",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "little-grove",
+                "layerId": "large"
+              },
+              {
+                "type": "hide",
+                "sceneId": "little-grove",
+                "layerId": "small"
+              }
+            ]
+          },
+          {
+            "controlId": "near-screen",
+            "observation": "Nearer the fixed screen, the same tree puppet makes a smaller shadow on the screen.",
+            "image": "little-grove-small.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "little-grove",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "little-grove",
+                "layerId": "small"
+              },
+              {
+                "type": "hide",
+                "sceneId": "little-grove",
+                "layerId": "large"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare the saved trials: where was the puppet, and how large was its shadow? Only the puppet position changes. With this point-like light and fixed screen, moving the same puppet toward the light enlarges the shadow; moving it toward the screen makes it smaller. The ray diagram is an illustrative model."
+      }
+    },
+    {
+      "id": "forest-again",
+      "narrative": "Arun asks to see the towering forest once more. Mina brings the same paper tree back between the fixed lamp and screen. A repeated trial can help them check what they noticed. Choose a position and predict again. You can use Try again to keep both observations and compare them.",
+      "alt": "The siblings repeat a tree-shadow trial using the same paper tree, fixed lamp and fixed pale screen.",
+      "image": "forest-again.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "forest-again-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "forest-again-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "forest-again-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "forest-again-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "large",
+            "image": "forest-again-large.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small",
+            "image": "forest-again-small.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "forest-again-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "large",
+        "small"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-forest-again",
+        "variable": "Puppet position between the fixed light and screen",
+        "fixed": [
+          "Same fixed light position",
+          "Same fixed screen position",
+          "Same upright paper tree puppet and size"
+        ],
+        "controls": [
+          {
+            "id": "near-light",
+            "label": "Puppet nearer the fixed light",
+            "image": "control-near-light.svg"
+          },
+          {
+            "id": "near-screen",
+            "label": "Puppet nearer the fixed screen",
+            "image": "control-near-screen.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "large-shadow",
+            "label": "I predict a larger shadow",
+            "image": "prediction-large-shadow.svg"
+          },
+          {
+            "id": "small-shadow",
+            "label": "I predict a smaller shadow",
+            "image": "prediction-small-shadow.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "near-light",
+            "observation": "Nearer the fixed light, the same tree puppet makes a larger shadow on the screen.",
+            "image": "forest-again-large.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "forest-again",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "forest-again",
+                "layerId": "large"
+              },
+              {
+                "type": "hide",
+                "sceneId": "forest-again",
+                "layerId": "small"
+              }
+            ]
+          },
+          {
+            "controlId": "near-screen",
+            "observation": "Nearer the fixed screen, the same tree puppet makes a smaller shadow on the screen.",
+            "image": "forest-again-small.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "forest-again",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "forest-again",
+                "layerId": "small"
+              },
+              {
+                "type": "hide",
+                "sceneId": "forest-again",
+                "layerId": "large"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare the saved trials: where was the puppet, and how large was its shadow? Only the puppet position changes. With this point-like light and fixed screen, moving the same puppet toward the light enlarges the shadow; moving it toward the screen makes it smaller. The ray diagram is an illustrative model."
+      }
+    },
+    {
+      "id": "shadow-notebook",
+      "narrative": "Mina opens a notebook for the forest show. One page can remember the puppet near the light; another can remember it near the screen. Test one position, then try again with the other. The saved observations let the siblings compare both shadows while the lamp, screen and tree shape stay unchanged.",
+      "alt": "Two straight boundary rays explain the paper tree shadow. The lamp and screen stay fixed while only the puppet position changes.",
+      "image": "shadow-notebook.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "shadow-notebook-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "shadow-notebook-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "shadow-notebook-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "shadow-notebook-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "large",
+            "image": "shadow-notebook-large.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small",
+            "image": "shadow-notebook-small.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "shadow-notebook-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "large",
+        "small"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-shadow-notebook",
+        "variable": "Puppet position between the fixed light and screen",
+        "fixed": [
+          "Same fixed light position",
+          "Same fixed screen position",
+          "Same upright paper tree puppet and size"
+        ],
+        "controls": [
+          {
+            "id": "near-light",
+            "label": "Puppet nearer the fixed light",
+            "image": "control-near-light.svg"
+          },
+          {
+            "id": "near-screen",
+            "label": "Puppet nearer the fixed screen",
+            "image": "control-near-screen.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "large-shadow",
+            "label": "I predict a larger shadow",
+            "image": "prediction-large-shadow.svg"
+          },
+          {
+            "id": "small-shadow",
+            "label": "I predict a smaller shadow",
+            "image": "prediction-small-shadow.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "near-light",
+            "observation": "Nearer the fixed light, the same tree puppet makes a larger shadow on the screen.",
+            "image": "shadow-notebook-large.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "shadow-notebook",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "shadow-notebook",
+                "layerId": "large"
+              },
+              {
+                "type": "hide",
+                "sceneId": "shadow-notebook",
+                "layerId": "small"
+              }
+            ]
+          },
+          {
+            "controlId": "near-screen",
+            "observation": "Nearer the fixed screen, the same tree puppet makes a smaller shadow on the screen.",
+            "image": "shadow-notebook-small.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "shadow-notebook",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "shadow-notebook",
+                "layerId": "small"
+              },
+              {
+                "type": "hide",
+                "sceneId": "shadow-notebook",
+                "layerId": "large"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare the saved trials: where was the puppet, and how large was its shadow? Only the puppet position changes. With this point-like light and fixed screen, moving the same puppet toward the light enlarges the shadow; moving it toward the screen makes it smaller. The ray diagram is an illustrative model."
+      }
+    },
+    {
+      "id": "grove-rehearsal",
+      "narrative": "The curtain tassel sways gently as the siblings rehearse the tiny grove. The shadow itself will stay still after the test. Choose a puppet position, predict and observe. If the size is different from what you expected, Mina can use that observation to plan another part of their forest story.",
+      "alt": "A curtain tassel moves gently while the tested tree shadow stays still on the fixed screen.",
+      "image": "grove-rehearsal.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "grove-rehearsal-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "grove-rehearsal-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "grove-rehearsal-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "grove-rehearsal-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "large",
+            "image": "grove-rehearsal-large.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small",
+            "image": "grove-rehearsal-small.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "grove-rehearsal-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "large",
+        "small"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-grove-rehearsal",
+        "variable": "Puppet position between the fixed light and screen",
+        "fixed": [
+          "Same fixed light position",
+          "Same fixed screen position",
+          "Same upright paper tree puppet and size"
+        ],
+        "controls": [
+          {
+            "id": "near-light",
+            "label": "Puppet nearer the fixed light",
+            "image": "control-near-light.svg"
+          },
+          {
+            "id": "near-screen",
+            "label": "Puppet nearer the fixed screen",
+            "image": "control-near-screen.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "large-shadow",
+            "label": "I predict a larger shadow",
+            "image": "prediction-large-shadow.svg"
+          },
+          {
+            "id": "small-shadow",
+            "label": "I predict a smaller shadow",
+            "image": "prediction-small-shadow.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "near-light",
+            "observation": "Nearer the fixed light, the same tree puppet makes a larger shadow on the screen.",
+            "image": "grove-rehearsal-large.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "grove-rehearsal",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "grove-rehearsal",
+                "layerId": "large"
+              },
+              {
+                "type": "hide",
+                "sceneId": "grove-rehearsal",
+                "layerId": "small"
+              }
+            ]
+          },
+          {
+            "controlId": "near-screen",
+            "observation": "Nearer the fixed screen, the same tree puppet makes a smaller shadow on the screen.",
+            "image": "grove-rehearsal-small.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "grove-rehearsal",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "grove-rehearsal",
+                "layerId": "small"
+              },
+              {
+                "type": "hide",
+                "sceneId": "grove-rehearsal",
+                "layerId": "large"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare the saved trials: where was the puppet, and how large was its shadow? Only the puppet position changes. With this point-like light and fixed screen, moving the same puppet toward the light enlarges the shadow; moving it toward the screen makes it smaller. The ray diagram is an illustrative model."
+      }
+    },
+    {
+      "id": "curtain-check",
+      "narrative": "Mina and Arun are almost ready to open their pocket forest show. They want one last look at the tree shadow. You can choose either puppet position and make a fresh prediction. Watch where the rays meet the screen, compare the saved observations, and help the siblings remember how their forest changes.",
+      "alt": "The same tree puppet, fixed lamp and fixed screen wait for the siblings’ final forest-show trial.",
+      "image": "curtain-check.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "curtain-check-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "curtain-check-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "curtain-check-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "curtain-check-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "large",
+            "image": "curtain-check-large.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "small",
+            "image": "curtain-check-small.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "curtain-check-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "large",
+        "small"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-curtain-check",
+        "variable": "Puppet position between the fixed light and screen",
+        "fixed": [
+          "Same fixed light position",
+          "Same fixed screen position",
+          "Same upright paper tree puppet and size"
+        ],
+        "controls": [
+          {
+            "id": "near-light",
+            "label": "Puppet nearer the fixed light",
+            "image": "control-near-light.svg"
+          },
+          {
+            "id": "near-screen",
+            "label": "Puppet nearer the fixed screen",
+            "image": "control-near-screen.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "large-shadow",
+            "label": "I predict a larger shadow",
+            "image": "prediction-large-shadow.svg"
+          },
+          {
+            "id": "small-shadow",
+            "label": "I predict a smaller shadow",
+            "image": "prediction-small-shadow.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "near-light",
+            "observation": "Nearer the fixed light, the same tree puppet makes a larger shadow on the screen.",
+            "image": "curtain-check-large.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "curtain-check",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "curtain-check",
+                "layerId": "large"
+              },
+              {
+                "type": "hide",
+                "sceneId": "curtain-check",
+                "layerId": "small"
+              }
+            ]
+          },
+          {
+            "controlId": "near-screen",
+            "observation": "Nearer the fixed screen, the same tree puppet makes a smaller shadow on the screen.",
+            "image": "curtain-check-small.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "curtain-check",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "curtain-check",
+                "layerId": "small"
+              },
+              {
+                "type": "hide",
+                "sceneId": "curtain-check",
+                "layerId": "large"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare the saved trials: where was the puppet, and how large was its shadow? Only the puppet position changes. With this point-like light and fixed screen, moving the same puppet toward the light enlarges the shadow; moving it toward the screen makes it smaller. The ray diagram is an illustrative model."
+      }
+    },
+    {
+      "id": "ending",
+      "narrative": "The curtain is ready for the pocket forest show. Mina knows how one tree puppet can make a towering shadow near the light and a smaller shadow near the screen. Arun can look back at a saved observation or try another puppet position. Their little forest can seem to grow and shrink while the lamp and screen stay still. The siblings take a bow together.",
+      "alt": "Mina and Arun take a bow beside their purple paper-puppet stage. A tall tree silhouette fills the theatre screen, ready for another forest story.",
+      "image": "ending.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "ending-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "ending-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "ending-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "ending-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              322,
+              570
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "ending-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "opening": {
+          "instruction": "Look at the light, puppet and screen together. What could Mina move to change the shadow?",
+          "feedback": {
+            "complete": "A little tree can make a forest full of questions.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "opening.svg",
+              "label": "Mina, a girl with a long dark braid and coral shirt, and her younger brother Arun in turquoise stand at a purple curtain theatre. A paper tree silhouette waits on their little theatre screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-light.svg",
+              "label": "Same fixed light position. Same fixed screen position. Same upright paper tree puppet and size."
+            }
+          ]
+        },
+        "towering-forest": {
+          "instruction": "Find the fixed light and screen. Discuss which puppet position you want to test for the towering forest, then invite a prediction.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "towering-forest-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "little-grove": {
+          "instruction": "Look for a position to investigate for the tiny grove. Talk about the puppet staying the same size while its shadow may change.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "little-grove-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "forest-again": {
+          "instruction": "Recall a shadow you saw earlier. Invite a repeat and compare its size with the saved observation.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "forest-again-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "shadow-notebook": {
+          "instruction": "Use Try again for a second position. Read both observations and follow the straight rays from light, past puppet, to screen.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "shadow-notebook-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "grove-rehearsal": {
+          "instruction": "Imagine the tiny grove together. Ask what the trial showed and what you might try next, without judging the prediction.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "grove-rehearsal-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "curtain-check": {
+          "instruction": "Let your child choose the last trial. Compare the tree’s size with its shadow, and name the one thing that moved.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "curtain-check-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "ending": {
+          "instruction": "Look back together at the forest show. What can move to change the shadow, and what stays fixed?",
+          "feedback": {
+            "complete": "A little tree can make a forest full of questions.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "ending.svg",
+              "label": "Mina, a girl with a long dark braid and coral shirt, and her younger brother Arun in turquoise stand at a purple curtain theatre. A paper tree silhouette waits on their little theatre screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Same fixed light position. Same fixed screen position. Same upright paper tree puppet and size."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "What can move to change the tree shadow?",
+          "answer": "Only the upright tree puppet changed position. The lamp and screen stayed fixed.",
+          "sceneId": "shadow-notebook"
+        },
+        {
+          "type": "literal",
+          "question": "Where did the tree puppet make a larger shadow?",
+          "answer": "Nearer the fixed light. Nearer the fixed screen it made a smaller shadow.",
+          "sceneId": "curtain-check"
+        },
+        {
+          "type": "feeling",
+          "question": "How might Arun feel when the little tree makes a large shadow?",
+          "answer": "He might feel surprised, curious, excited or something else. Share what you notice.",
+          "sceneId": "towering-forest"
+        },
+        {
+          "type": "personal",
+          "question": "What could happen in your own pocket forest story?",
+          "answer": "Invent a story together. You can choose a large tree, a small grove, or another idea.",
+          "sceneId": "ending"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "opening": {
+          "instruction": "Look at Mina and Arun’s tree-shadow stage.",
+          "feedback": {
+            "complete": "A little tree can make a forest full of questions.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "opening.svg",
+              "label": "Mina, a girl with a long dark braid and coral shirt, and her younger brother Arun in turquoise stand at a purple curtain theatre. A paper tree silhouette waits on their little theatre screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-light.svg",
+              "label": "Same fixed light position. Same fixed screen position. Same upright paper tree puppet and size."
+            }
+          ]
+        },
+        "towering-forest": {
+          "instruction": "Choose a puppet place. Then predict its shadow.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "towering-forest-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "little-grove": {
+          "instruction": "Choose a puppet place. Predict before testing.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "little-grove-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "forest-again": {
+          "instruction": "Try a puppet place again. Predict first.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "forest-again-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "shadow-notebook": {
+          "instruction": "Test once. Try again to compare the other place.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "shadow-notebook-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "grove-rehearsal": {
+          "instruction": "Choose a place. Predict, then test the shadow.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "grove-rehearsal-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "curtain-check": {
+          "instruction": "Choose your last puppet place. Predict and test.",
+          "feedback": {
+            "complete": "The shadow is still on the screen. Notice its size and the puppet position; compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-near-light.svg",
+              "label": "Select the puppet near the light. The light at the left and screen at the right stay fixed.",
+              "controlId": "near-light"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-small-shadow.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "small-shadow"
+            },
+            {
+              "action": "test",
+              "image": "curtain-check-large.svg",
+              "label": "After a prediction, Test shows the larger shadow. Two straight boundary rays run through the puppet to the screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "near-screen"
+            }
+          ]
+        },
+        "ending": {
+          "instruction": "Look at the siblings’ finished forest show.",
+          "feedback": {
+            "complete": "A little tree can make a forest full of questions.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "ending.svg",
+              "label": "Mina, a girl with a long dark braid and coral shirt, and her younger brother Arun in turquoise stand at a purple curtain theatre. A paper tree silhouette waits on their little theatre screen."
+            },
+            {
+              "action": "point",
+              "image": "control-near-screen.svg",
+              "label": "Same fixed light position. Same fixed screen position. Same upright paper tree puppet and size."
+            }
+          ]
+        }
+      },
+      "reflection": "Which tree shadow would you like in your forest story? Tell your adult what you noticed in a saved trial."
+    }
+  },
+  "endings": {
+    "sceneId": "ending",
+    "text": "The curtain is ready for the pocket forest show. Mina knows how one tree puppet can make a towering shadow near the light and a smaller shadow near the screen. Arun can look back at a saved observation or try another puppet position. Their little forest can seem to grow and shrink while the lamp and screen stay still. The siblings take a bow together.",
+    "variants": [],
+    "recap": []
+  },
+  "assets": [
+    {
+      "id": "control-near-light",
+      "file": "control-near-light.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1711,
+      "sha256": "9b4547d7791661871c4647208795c7e548e0f3fe6297b447c268c55fc0790bf9"
+    },
+    {
+      "id": "control-near-screen",
+      "file": "control-near-screen.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1712,
+      "sha256": "de87722e6771ad8cddb385756e6d23e753e3e24c58865233827f89ea7238db06"
+    },
+    {
+      "id": "prediction-large-shadow",
+      "file": "prediction-large-shadow.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 665,
+      "sha256": "fce1564dff9fa4ec39a6ad4851aa2dacee3e88acd00a4e57426da89a42bb9e75"
+    },
+    {
+      "id": "prediction-small-shadow",
+      "file": "prediction-small-shadow.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 666,
+      "sha256": "276dfe974550c8af114439665a2097e18a3a4a906ce8e905007d85e83af5bc6b"
+    },
+    {
+      "id": "opening-cast",
+      "file": "opening-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2823,
+      "sha256": "10c1d5e1bf016c60d81798609fba91ff0ba8cde1e424851c75f1196a5b59465f"
+    },
+    {
+      "id": "opening-decor",
+      "file": "opening-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "opening-apparatus",
+      "file": "opening-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 682,
+      "sha256": "357455a9cdc037bad951c9f76282c7bd87b3cba9ced18b08f176bdfe67fa6b18"
+    },
+    {
+      "id": "opening-story-prop",
+      "file": "opening-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 599,
+      "sha256": "246ce355d34401abf8c3894a7eb00f3a7e0c356e1943148d3e295bc9bf40a7c2"
+    },
+    {
+      "id": "opening",
+      "file": "opening.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4926,
+      "sha256": "4e48b71859fc08cba79ef6c0f8007337f8e074bf11410276bf0c37a306656154"
+    },
+    {
+      "id": "opening-background",
+      "file": "opening-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 812,
+      "sha256": "ed57fc0ef102104c9663dbc3c982996667d80609edef997c1fb59a4ee0839e95"
+    },
+    {
+      "id": "towering-forest-cast",
+      "file": "towering-forest-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2824,
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587"
+    },
+    {
+      "id": "towering-forest-decor",
+      "file": "towering-forest-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "towering-forest-apparatus",
+      "file": "towering-forest-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1790,
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba"
+    },
+    {
+      "id": "towering-forest-large",
+      "file": "towering-forest-large.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2118,
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+    },
+    {
+      "id": "towering-forest-small",
+      "file": "towering-forest-small.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2159,
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+    },
+    {
+      "id": "towering-forest-story-prop",
+      "file": "towering-forest-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 840,
+      "sha256": "92b6bee52912ec05eb4e9e7e43657fc8626d9df16ea6a51c159bfdd189732fed"
+    },
+    {
+      "id": "towering-forest",
+      "file": "towering-forest.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6271,
+      "sha256": "30eeff0f64358487ce940e893fbf909e1d35d26e0af4ff7eb2c9c6220350ec1f"
+    },
+    {
+      "id": "towering-forest-background",
+      "file": "towering-forest-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 807,
+      "sha256": "209acd0f106f0ae0a51930ac89c498566203237b97371c2def396736ef642e58"
+    },
+    {
+      "id": "little-grove-cast",
+      "file": "little-grove-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2824,
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587"
+    },
+    {
+      "id": "little-grove-decor",
+      "file": "little-grove-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "little-grove-apparatus",
+      "file": "little-grove-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1790,
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba"
+    },
+    {
+      "id": "little-grove-large",
+      "file": "little-grove-large.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2118,
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+    },
+    {
+      "id": "little-grove-small",
+      "file": "little-grove-small.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2159,
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+    },
+    {
+      "id": "little-grove-story-prop",
+      "file": "little-grove-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 598,
+      "sha256": "ad9d97eb403d70e17b0e882a549a7cae9642a79a3232cd487b721cbbb8e859c2"
+    },
+    {
+      "id": "little-grove",
+      "file": "little-grove.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6033,
+      "sha256": "2355d4931a8341e2164fe4827ce061ede6f8b89922d8c6e2826a4a7b9add9d26"
+    },
+    {
+      "id": "little-grove-background",
+      "file": "little-grove-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 811,
+      "sha256": "92979f8e6dad9667b15ff2643bf8ed28f4a1c98bce8560fc948ca950f4cd7d82"
+    },
+    {
+      "id": "forest-again-cast",
+      "file": "forest-again-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2824,
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587"
+    },
+    {
+      "id": "forest-again-decor",
+      "file": "forest-again-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "forest-again-apparatus",
+      "file": "forest-again-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1790,
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba"
+    },
+    {
+      "id": "forest-again-large",
+      "file": "forest-again-large.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2118,
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+    },
+    {
+      "id": "forest-again-small",
+      "file": "forest-again-small.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2159,
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+    },
+    {
+      "id": "forest-again-story-prop",
+      "file": "forest-again-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 840,
+      "sha256": "92b6bee52912ec05eb4e9e7e43657fc8626d9df16ea6a51c159bfdd189732fed"
+    },
+    {
+      "id": "forest-again",
+      "file": "forest-again.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6276,
+      "sha256": "f49a458d8f468debdc2a37d73e73241cedf00646356504af141ac83befd47c47"
+    },
+    {
+      "id": "forest-again-background",
+      "file": "forest-again-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 812,
+      "sha256": "0e3a962157cef4641b170a61c3e99d27327d6bc907385c4924ccf2dc0daccd77"
+    },
+    {
+      "id": "shadow-notebook-cast",
+      "file": "shadow-notebook-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2824,
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587"
+    },
+    {
+      "id": "shadow-notebook-decor",
+      "file": "shadow-notebook-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "shadow-notebook-apparatus",
+      "file": "shadow-notebook-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1790,
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba"
+    },
+    {
+      "id": "shadow-notebook-large",
+      "file": "shadow-notebook-large.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2118,
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+    },
+    {
+      "id": "shadow-notebook-small",
+      "file": "shadow-notebook-small.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2159,
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+    },
+    {
+      "id": "shadow-notebook-story-prop",
+      "file": "shadow-notebook-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 946,
+      "sha256": "72b41785ea5874c3377e298b763f2156a92b1c2318454eba982def1488628c19"
+    },
+    {
+      "id": "shadow-notebook",
+      "file": "shadow-notebook.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6381,
+      "sha256": "a40880eb5647fe333fb07b43992a82f431ae1ada07c01a9b2da2103b39351440"
+    },
+    {
+      "id": "shadow-notebook-background",
+      "file": "shadow-notebook-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 811,
+      "sha256": "cddfa987d5514a14635f65d19c70bb653438c185b00ac991d0fc223083328985"
+    },
+    {
+      "id": "grove-rehearsal-cast",
+      "file": "grove-rehearsal-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2824,
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587"
+    },
+    {
+      "id": "grove-rehearsal-decor",
+      "file": "grove-rehearsal-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "grove-rehearsal-apparatus",
+      "file": "grove-rehearsal-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1790,
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba"
+    },
+    {
+      "id": "grove-rehearsal-large",
+      "file": "grove-rehearsal-large.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2118,
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+    },
+    {
+      "id": "grove-rehearsal-small",
+      "file": "grove-rehearsal-small.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2159,
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+    },
+    {
+      "id": "grove-rehearsal-story-prop",
+      "file": "grove-rehearsal-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 837,
+      "sha256": "7059c2549686625c17a7ec83562597911e841706c2c0b4e5ad32e9deb84d5095"
+    },
+    {
+      "id": "grove-rehearsal",
+      "file": "grove-rehearsal.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6274,
+      "sha256": "7cbadc559e93ae68b6c61e8f318ddf9604181910ba84d57581dba56f9ffefb54"
+    },
+    {
+      "id": "grove-rehearsal-background",
+      "file": "grove-rehearsal-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 813,
+      "sha256": "f3fbbc88681e6e97c8b11a8202ec488655a668b658d5ab2015ee660047cae81c"
+    },
+    {
+      "id": "curtain-check-cast",
+      "file": "curtain-check-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2824,
+      "sha256": "ec3c192b8e438399b279c74106b7412823ae94ab88fa107d85243b8e61be8587"
+    },
+    {
+      "id": "curtain-check-decor",
+      "file": "curtain-check-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "curtain-check-apparatus",
+      "file": "curtain-check-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1790,
+      "sha256": "4f03de392995115fd757394ba0b075cc6c3055d1bc86aba9882340622fa8cbba"
+    },
+    {
+      "id": "curtain-check-large",
+      "file": "curtain-check-large.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2118,
+      "sha256": "5d57cf02279490057812dded8f38f078c36accd0126a75300794b546cd617600"
+    },
+    {
+      "id": "curtain-check-small",
+      "file": "curtain-check-small.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2159,
+      "sha256": "a0a211a324071c15853f3fdb4699881ffee73ca09c4b3ed7823a86acb89ed67d"
+    },
+    {
+      "id": "curtain-check-story-prop",
+      "file": "curtain-check-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 601,
+      "sha256": "8b4ca7b4371d2df9c9b0fa3c13a836282621bf05e30507cf2c9e40d1c0d0e977"
+    },
+    {
+      "id": "curtain-check",
+      "file": "curtain-check.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6035,
+      "sha256": "30689c495bcd1c8fb0e779889042e355085aa1bde0a9ec76419166444ad8901e"
+    },
+    {
+      "id": "curtain-check-background",
+      "file": "curtain-check-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 810,
+      "sha256": "ee4711905d4d33a63a250b53d3ddf4b83b6d8a78bd73af03c8db120ceace0acc"
+    },
+    {
+      "id": "ending-cast",
+      "file": "ending-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2823,
+      "sha256": "10c1d5e1bf016c60d81798609fba91ff0ba8cde1e424851c75f1196a5b59465f"
+    },
+    {
+      "id": "ending-decor",
+      "file": "ending-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 390,
+      "sha256": "e54414584d463d85f8dfb715b53ae43b7c2fbf765d9ad72ede9eb7fa80983717"
+    },
+    {
+      "id": "ending-apparatus",
+      "file": "ending-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 685,
+      "sha256": "592047e59dc0dbabeeea156e4ce49bec5f4e4b907c3160adfa17afb72284720b"
+    },
+    {
+      "id": "ending-story-prop",
+      "file": "ending-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 836,
+      "sha256": "2770df3491515ce3bac40479cd399fb522c095f270eae6a6cfd6b8b524a97641"
+    },
+    {
+      "id": "ending",
+      "file": "ending.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 5166,
+      "sha256": "ac89387ee58ab128261b079800fc89b08e4f0009ee580ad2beb231513bf4a99e"
+    },
+    {
+      "id": "ending-background",
+      "file": "ending-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 812,
+      "sha256": "52ba3983847076f4e3d773410d09db409edcdacc1dbe59e9e326ebd23302a77b"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4127,
+      "sha256": "59a0b765956243d42da18ba0ac67aa9e18a8d073d7d8cc9c404146f7a316d494"
+    }
+  ]
+}

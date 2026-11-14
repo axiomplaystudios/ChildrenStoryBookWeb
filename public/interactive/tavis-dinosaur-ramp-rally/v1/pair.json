@@ -1,0 +1,2218 @@
+{
+  "schemaVersion": 1,
+  "id": "tavis-dinosaur-ramp-rally",
+  "version": "v1",
+  "title": "Tavi’s Dinosaur Ramp Rally",
+  "category": "experiments",
+  "credit": "Original story and SVG illustrations created for Axiom Play Studios with OpenAI Codex.",
+  "cover": "cover.svg",
+  "initialState": {},
+  "scenes": [
+    {
+      "id": "opening",
+      "narrative": "Tavi the young triceratops has a little red delivery cart and six leafy parcels for the dinosaur rally. Fern waits at the near stop; Bronto waits farther along. “Can one track serve both neighbours?” Tavi wonders. We can try two tilts of the same hinged ramp in this on-screen illustrative model. Real carts and surfaces can behave differently.",
+      "alt": "Tavi, a mint-green triceratops with three cream horns and a golden neckerchief, stands with long-necked Bronto beside a red parcel cart and a rally delivery table.",
+      "image": "opening.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "opening-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "opening-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "opening-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "opening-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "opening-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ferns-parcel",
+      "narrative": "Fern the little dinosaur waits by the near marker with a basket of ferns. Tavi puts one leafy parcel in the red cart. “I wonder where it will stop from the lower starting point,” he says. Choose a ramp tilt and make a prediction before the picture trial. The ramp length, cart and ground stay the same; lifting the ramp raises its start and makes its tilt steeper.",
+      "alt": "A leafy parcel rides in the red cart. The lower and higher ramp supports lead down the same length wooden ramp toward Fern’s near marker.",
+      "image": "ferns-parcel.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "ferns-parcel-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "ferns-parcel-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "ferns-parcel-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "ferns-parcel-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "near",
+            "image": "ferns-parcel-near.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "far",
+            "image": "ferns-parcel-far.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "ferns-parcel-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "near",
+        "far"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-ferns-parcel",
+        "variable": "Ramp tilt, changed by raising its starting end",
+        "fixed": [
+          "Same cart and parcel",
+          "Same ramp length and fixed bottom hinge",
+          "Same rollout surface and model resistance"
+        ],
+        "controls": [
+          {
+            "id": "low",
+            "label": "Gentler ramp with a lower start",
+            "image": "control-low.svg"
+          },
+          {
+            "id": "high",
+            "label": "Steeper ramp with a higher start",
+            "image": "control-high.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "near-stop",
+            "label": "I predict a nearer stop",
+            "image": "prediction-near-stop.svg"
+          },
+          {
+            "id": "far-stop",
+            "label": "I predict a farther stop",
+            "image": "prediction-far-stop.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "low",
+            "observation": "From the gentler ramp’s lower start, the cart rolls to the near stop in this illustrative model.",
+            "image": "ferns-parcel-near.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "ferns-parcel",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "ferns-parcel",
+                "layerId": "near"
+              },
+              {
+                "type": "hide",
+                "sceneId": "ferns-parcel",
+                "layerId": "far"
+              }
+            ]
+          },
+          {
+            "controlId": "high",
+            "observation": "From the steeper ramp’s higher start, the cart rolls to the far stop in this illustrative model.",
+            "image": "ferns-parcel-far.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "ferns-parcel",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "ferns-parcel",
+                "layerId": "far"
+              },
+              {
+                "type": "hide",
+                "sceneId": "ferns-parcel",
+                "layerId": "near"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare your saved trials: which ramp tilt did you choose, and where did the cart stop? A higher starting point gives this same cart more energy to roll along this unchanged surface. Our picture model is illustrative; real wheels and surfaces may give different distances."
+      }
+    },
+    {
+      "id": "brontos-parcel",
+      "narrative": "Bronto’s long neck peeks over the far delivery marker. His parcel is the same size as Fern’s, and Tavi keeps the same cart. “The far stop is waiting too,” Tavi says. This time you can try the other ramp tilt, or repeat one you want to see again. First choose what you think will happen.",
+      "alt": "The far rollout marker waits for Bronto’s parcel. Both ramp supports and the same red cart remain on the hinged ramp track.",
+      "image": "brontos-parcel.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "brontos-parcel-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "brontos-parcel-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "brontos-parcel-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "brontos-parcel-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "near",
+            "image": "brontos-parcel-near.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "far",
+            "image": "brontos-parcel-far.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "brontos-parcel-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "near",
+        "far"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-brontos-parcel",
+        "variable": "Ramp tilt, changed by raising its starting end",
+        "fixed": [
+          "Same cart and parcel",
+          "Same ramp length and fixed bottom hinge",
+          "Same rollout surface and model resistance"
+        ],
+        "controls": [
+          {
+            "id": "low",
+            "label": "Gentler ramp with a lower start",
+            "image": "control-low.svg"
+          },
+          {
+            "id": "high",
+            "label": "Steeper ramp with a higher start",
+            "image": "control-high.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "near-stop",
+            "label": "I predict a nearer stop",
+            "image": "prediction-near-stop.svg"
+          },
+          {
+            "id": "far-stop",
+            "label": "I predict a farther stop",
+            "image": "prediction-far-stop.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "low",
+            "observation": "From the gentler ramp’s lower start, the cart rolls to the near stop in this illustrative model.",
+            "image": "brontos-parcel-near.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "brontos-parcel",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "brontos-parcel",
+                "layerId": "near"
+              },
+              {
+                "type": "hide",
+                "sceneId": "brontos-parcel",
+                "layerId": "far"
+              }
+            ]
+          },
+          {
+            "controlId": "high",
+            "observation": "From the steeper ramp’s higher start, the cart rolls to the far stop in this illustrative model.",
+            "image": "brontos-parcel-far.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "brontos-parcel",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "brontos-parcel",
+                "layerId": "far"
+              },
+              {
+                "type": "hide",
+                "sceneId": "brontos-parcel",
+                "layerId": "near"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare your saved trials: which ramp tilt did you choose, and where did the cart stop? A higher starting point gives this same cart more energy to roll along this unchanged surface. Our picture model is illustrative; real wheels and surfaces may give different distances."
+      }
+    },
+    {
+      "id": "back-to-fern",
+      "narrative": "Fern has one more leafy parcel to collect. Tavi wants to check the earlier delivery rather than guess from memory. He brings the very same cart back to the very same ramp. “Can we see that stop again?” he asks. Try a ramp tilt, then use Try again if you want to compare it with the other tilt.",
+      "alt": "Tavi checks a repeat delivery on the same length hinged ramp, with Fern’s near and Bronto’s far stops both marked.",
+      "image": "back-to-fern.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "back-to-fern-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "back-to-fern-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "back-to-fern-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "back-to-fern-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "near",
+            "image": "back-to-fern-near.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "far",
+            "image": "back-to-fern-far.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "back-to-fern-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "near",
+        "far"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-back-to-fern",
+        "variable": "Ramp tilt, changed by raising its starting end",
+        "fixed": [
+          "Same cart and parcel",
+          "Same ramp length and fixed bottom hinge",
+          "Same rollout surface and model resistance"
+        ],
+        "controls": [
+          {
+            "id": "low",
+            "label": "Gentler ramp with a lower start",
+            "image": "control-low.svg"
+          },
+          {
+            "id": "high",
+            "label": "Steeper ramp with a higher start",
+            "image": "control-high.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "near-stop",
+            "label": "I predict a nearer stop",
+            "image": "prediction-near-stop.svg"
+          },
+          {
+            "id": "far-stop",
+            "label": "I predict a farther stop",
+            "image": "prediction-far-stop.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "low",
+            "observation": "From the gentler ramp’s lower start, the cart rolls to the near stop in this illustrative model.",
+            "image": "back-to-fern-near.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "back-to-fern",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "back-to-fern",
+                "layerId": "near"
+              },
+              {
+                "type": "hide",
+                "sceneId": "back-to-fern",
+                "layerId": "far"
+              }
+            ]
+          },
+          {
+            "controlId": "high",
+            "observation": "From the steeper ramp’s higher start, the cart rolls to the far stop in this illustrative model.",
+            "image": "back-to-fern-far.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "back-to-fern",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "back-to-fern",
+                "layerId": "far"
+              },
+              {
+                "type": "hide",
+                "sceneId": "back-to-fern",
+                "layerId": "near"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare your saved trials: which ramp tilt did you choose, and where did the cart stop? A higher starting point gives this same cart more energy to roll along this unchanged surface. Our picture model is illustrative; real wheels and surfaces may give different distances."
+      }
+    },
+    {
+      "id": "two-stop-notebook",
+      "narrative": "Tavi opens his rally notebook to two empty spaces: one for each ramp tilt. The neighbours can wait while he looks carefully. Make one picture trial, then try again with the other position. Your saved observations stay below the controls so you can compare the two stops without racing the cart.",
+      "alt": "The rally’s two rollout markers stand side by side in view; the fixed cart, ramp length and surface make the two ramp tilts comparable.",
+      "image": "two-stop-notebook.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "two-stop-notebook-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "two-stop-notebook-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "two-stop-notebook-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "two-stop-notebook-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "near",
+            "image": "two-stop-notebook-near.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "far",
+            "image": "two-stop-notebook-far.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "two-stop-notebook-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "near",
+        "far"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-two-stop-notebook",
+        "variable": "Ramp tilt, changed by raising its starting end",
+        "fixed": [
+          "Same cart and parcel",
+          "Same ramp length and fixed bottom hinge",
+          "Same rollout surface and model resistance"
+        ],
+        "controls": [
+          {
+            "id": "low",
+            "label": "Gentler ramp with a lower start",
+            "image": "control-low.svg"
+          },
+          {
+            "id": "high",
+            "label": "Steeper ramp with a higher start",
+            "image": "control-high.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "near-stop",
+            "label": "I predict a nearer stop",
+            "image": "prediction-near-stop.svg"
+          },
+          {
+            "id": "far-stop",
+            "label": "I predict a farther stop",
+            "image": "prediction-far-stop.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "low",
+            "observation": "From the gentler ramp’s lower start, the cart rolls to the near stop in this illustrative model.",
+            "image": "two-stop-notebook-near.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "two-stop-notebook",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "two-stop-notebook",
+                "layerId": "near"
+              },
+              {
+                "type": "hide",
+                "sceneId": "two-stop-notebook",
+                "layerId": "far"
+              }
+            ]
+          },
+          {
+            "controlId": "high",
+            "observation": "From the steeper ramp’s higher start, the cart rolls to the far stop in this illustrative model.",
+            "image": "two-stop-notebook-far.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "two-stop-notebook",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "two-stop-notebook",
+                "layerId": "far"
+              },
+              {
+                "type": "hide",
+                "sceneId": "two-stop-notebook",
+                "layerId": "near"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare your saved trials: which ramp tilt did you choose, and where did the cart stop? A higher starting point gives this same cart more energy to roll along this unchanged surface. Our picture model is illustrative; real wheels and surfaces may give different distances."
+      }
+    },
+    {
+      "id": "delivery-rehearsal",
+      "narrative": "A breeze flutters the rally flag, but the picture track stays put. Tavi rehearses a delivery for whichever neighbour you choose. Think about a nearby stop or a farther stop, select a ramp tilt and predict. The cart’s resting place will show an observation to discuss, even if it differs from your prediction.",
+      "alt": "A rally pennant flutters beside Tavi while the cart’s completed stop remains still on the hinged ramp track.",
+      "image": "delivery-rehearsal.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "delivery-rehearsal-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "delivery-rehearsal-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "delivery-rehearsal-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "delivery-rehearsal-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "near",
+            "image": "delivery-rehearsal-near.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "far",
+            "image": "delivery-rehearsal-far.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "delivery-rehearsal-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "near",
+        "far"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-delivery-rehearsal",
+        "variable": "Ramp tilt, changed by raising its starting end",
+        "fixed": [
+          "Same cart and parcel",
+          "Same ramp length and fixed bottom hinge",
+          "Same rollout surface and model resistance"
+        ],
+        "controls": [
+          {
+            "id": "low",
+            "label": "Gentler ramp with a lower start",
+            "image": "control-low.svg"
+          },
+          {
+            "id": "high",
+            "label": "Steeper ramp with a higher start",
+            "image": "control-high.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "near-stop",
+            "label": "I predict a nearer stop",
+            "image": "prediction-near-stop.svg"
+          },
+          {
+            "id": "far-stop",
+            "label": "I predict a farther stop",
+            "image": "prediction-far-stop.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "low",
+            "observation": "From the gentler ramp’s lower start, the cart rolls to the near stop in this illustrative model.",
+            "image": "delivery-rehearsal-near.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "delivery-rehearsal",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "delivery-rehearsal",
+                "layerId": "near"
+              },
+              {
+                "type": "hide",
+                "sceneId": "delivery-rehearsal",
+                "layerId": "far"
+              }
+            ]
+          },
+          {
+            "controlId": "high",
+            "observation": "From the steeper ramp’s higher start, the cart rolls to the far stop in this illustrative model.",
+            "image": "delivery-rehearsal-far.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "delivery-rehearsal",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "delivery-rehearsal",
+                "layerId": "far"
+              },
+              {
+                "type": "hide",
+                "sceneId": "delivery-rehearsal",
+                "layerId": "near"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare your saved trials: which ramp tilt did you choose, and where did the cart stop? A higher starting point gives this same cart more energy to roll along this unchanged surface. Our picture model is illustrative; real wheels and surfaces may give different distances."
+      }
+    },
+    {
+      "id": "final-route",
+      "narrative": "The leafy parcels are lined up and the neighbours are ready for the rally. “One last check,” says Tavi. You can test either ramp tilt and revisit the comparison. Each prediction is a question to explore. When the cart has stopped, Tavi will carry what you noticed into the delivery plan.",
+      "alt": "Tavi prepares the final trial, with both ramp supports, the one cart and the two delivery stops clearly visible.",
+      "image": "final-route.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "final-route-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "final-route-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "final-route-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "final-route-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "near",
+            "image": "final-route-near.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "far",
+            "image": "final-route-far.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "final-route-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      },
+      "hiddenLayers": [
+        "near",
+        "far"
+      ],
+      "activity": {
+        "kind": "experiment",
+        "id": "try-final-route",
+        "variable": "Ramp tilt, changed by raising its starting end",
+        "fixed": [
+          "Same cart and parcel",
+          "Same ramp length and fixed bottom hinge",
+          "Same rollout surface and model resistance"
+        ],
+        "controls": [
+          {
+            "id": "low",
+            "label": "Gentler ramp with a lower start",
+            "image": "control-low.svg"
+          },
+          {
+            "id": "high",
+            "label": "Steeper ramp with a higher start",
+            "image": "control-high.svg"
+          }
+        ],
+        "predictions": [
+          {
+            "id": "near-stop",
+            "label": "I predict a nearer stop",
+            "image": "prediction-near-stop.svg"
+          },
+          {
+            "id": "far-stop",
+            "label": "I predict a farther stop",
+            "image": "prediction-far-stop.svg"
+          }
+        ],
+        "outcomes": [
+          {
+            "controlId": "low",
+            "observation": "From the gentler ramp’s lower start, the cart rolls to the near stop in this illustrative model.",
+            "image": "final-route-near.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "final-route",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "final-route",
+                "layerId": "near"
+              },
+              {
+                "type": "hide",
+                "sceneId": "final-route",
+                "layerId": "far"
+              }
+            ]
+          },
+          {
+            "controlId": "high",
+            "observation": "From the steeper ramp’s higher start, the cart rolls to the far stop in this illustrative model.",
+            "image": "final-route-far.svg",
+            "effects": [
+              {
+                "type": "hide",
+                "sceneId": "final-route",
+                "layerId": "apparatus"
+              },
+              {
+                "type": "show",
+                "sceneId": "final-route",
+                "layerId": "far"
+              },
+              {
+                "type": "hide",
+                "sceneId": "final-route",
+                "layerId": "near"
+              }
+            ]
+          }
+        ],
+        "comparison": "Compare your saved trials: which ramp tilt did you choose, and where did the cart stop? A higher starting point gives this same cart more energy to roll along this unchanged surface. Our picture model is illustrative; real wheels and surfaces may give different distances."
+      }
+    },
+    {
+      "id": "ending",
+      "narrative": "The rally neighbours gather beside the track. In this picture model, the same cart can stop nearby from the gentler ramp’s lower start and farther away from the steeper ramp’s higher start. Tavi can choose a ramp tilt for each delivery. Fern waves a leaf; Bronto nods from the far stop. The parcels can join the rally, and there is always time for another try.",
+      "alt": "Tavi and a blue dinosaur neighbour stand beside their red parcel cart and leafy parcels, ready for the rally deliveries.",
+      "image": "ending.svg",
+      "scene": {
+        "width": 1000,
+        "height": 680,
+        "background": "ending-background.svg",
+        "layers": [
+          {
+            "id": "apparatus",
+            "image": "ending-apparatus.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              340
+            ]
+          },
+          {
+            "id": "cast",
+            "image": "ending-cast.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              560
+            ]
+          },
+          {
+            "id": "decor",
+            "image": "ending-decor.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              740,
+              545
+            ]
+          },
+          {
+            "id": "story-prop",
+            "image": "ending-story-prop.svg",
+            "x": 0,
+            "y": 0,
+            "width": 1000,
+            "height": 680,
+            "pivot": [
+              500,
+              605
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "layer": "decor",
+            "preset": "flap",
+            "parameters": {
+              "angle": 4
+            },
+            "durationMs": 4600,
+            "restMs": 600,
+            "delayMs": 0,
+            "playback": "repeat"
+          }
+        ]
+      }
+    }
+  ],
+  "editions": {
+    "together": {
+      "scenes": {
+        "opening": {
+          "instruction": "Look at the two stops together. How might raising the starting end of the same ramp help Tavi?",
+          "feedback": {
+            "complete": "One track can invite more than one question.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "opening.svg",
+              "label": "Tavi, a mint-green triceratops with three cream horns and a golden neckerchief, stands with long-necked Bronto beside a red parcel cart and a rally delivery table."
+            },
+            {
+              "action": "point",
+              "image": "control-low.svg",
+              "label": "Same cart and parcel. Same ramp length and fixed bottom hinge. Same rollout surface and model resistance."
+            }
+          ]
+        },
+        "ferns-parcel": {
+          "instruction": "Find Fern’s near stop. Discuss a possible ramp tilt, then let your child choose a prediction to test.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "ferns-parcel-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "brontos-parcel": {
+          "instruction": "Point out the far stop. Ask what might happen from the other ramp tilt; accept any prediction before the test.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "brontos-parcel-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "back-to-fern": {
+          "instruction": "Recall a previous stop together. Invite a repeated trial and compare its observation with the earlier one.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "back-to-fern-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "two-stop-notebook": {
+          "instruction": "Make two trials using Try again. Read both observations aloud and talk about what changed and what stayed fixed.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "two-stop-notebook-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "delivery-rehearsal": {
+          "instruction": "Choose a neighbour’s stop together. Ask which tilt you want to investigate and describe the result without judging the prediction.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "delivery-rehearsal-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "final-route": {
+          "instruction": "Let your child choose the final trial. Compare a repeated tilt with a changed one before turning to the rally ending.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "final-route-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "ending": {
+          "instruction": "Look back at a saved delivery together. What did the ramp tilt help Tavi notice?",
+          "feedback": {
+            "complete": "One track can invite more than one question.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "ending.svg",
+              "label": "Tavi, a mint-green triceratops with three cream horns and a golden neckerchief, stands with long-necked Bronto beside a red parcel cart and a rally delivery table."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Same cart and parcel. Same ramp length and fixed bottom hinge. Same rollout surface and model resistance."
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "type": "literal",
+          "question": "What stayed the same during the cart trials?",
+          "answer": "The cart, parcel, ramp length and rollout surface stayed the same. Raising the start made the same ramp steeper.",
+          "sceneId": "two-stop-notebook"
+        },
+        {
+          "type": "literal",
+          "question": "Where did the cart from the steeper ramp stop in this picture model?",
+          "answer": "At the farther marker. This was an illustrative model of one cart and surface.",
+          "sceneId": "final-route"
+        },
+        {
+          "type": "feeling",
+          "question": "How might Tavi feel while checking a delivery again?",
+          "answer": "He might feel curious, uncertain, interested or something else. Look at him and share an idea.",
+          "sceneId": "back-to-fern"
+        },
+        {
+          "type": "personal",
+          "question": "Which trial would you like to see again?",
+          "answer": "Choose either ramp tilt and describe what you want to notice. Every prediction can start another question.",
+          "sceneId": "ending"
+        }
+      ]
+    },
+    "independent": {
+      "scenes": {
+        "opening": {
+          "instruction": "Look at Tavi’s two delivery stops.",
+          "feedback": {
+            "complete": "One track can invite more than one question.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "opening.svg",
+              "label": "Tavi, a mint-green triceratops with three cream horns and a golden neckerchief, stands with long-necked Bronto beside a red parcel cart and a rally delivery table."
+            },
+            {
+              "action": "point",
+              "image": "control-low.svg",
+              "label": "Same cart and parcel. Same ramp length and fixed bottom hinge. Same rollout surface and model resistance."
+            }
+          ]
+        },
+        "ferns-parcel": {
+          "instruction": "Choose a ramp tilt. Then predict a stop.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "ferns-parcel-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "brontos-parcel": {
+          "instruction": "Choose a ramp tilt. Predict before testing.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "brontos-parcel-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "back-to-fern": {
+          "instruction": "Try a ramp tilt again. Predict first.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "back-to-fern-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "two-stop-notebook": {
+          "instruction": "Test once. Try again to compare another tilt.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "two-stop-notebook-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "delivery-rehearsal": {
+          "instruction": "Choose a ramp tilt. Predict, then test the delivery.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "delivery-rehearsal-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "final-route": {
+          "instruction": "Choose your last ramp tilt. Predict and test.",
+          "feedback": {
+            "complete": "The cart has stopped. Notice the ramp tilt and the stop, then compare or try another prediction.",
+            "retry": "Choose a setup and a prediction before testing. You can try again and keep both observations."
+          },
+          "demonstration": [
+            {
+              "action": "select",
+              "image": "control-low.svg",
+              "label": "Choose the gentler tilt of the same hinged ramp. The red cart, ramp length, bottom hinge and ground stay the same.",
+              "controlId": "low"
+            },
+            {
+              "action": "predict",
+              "image": "prediction-far-stop.svg",
+              "label": "Choose what you think will happen. Any prediction can be tested.",
+              "predictionId": "far-stop"
+            },
+            {
+              "action": "test",
+              "image": "final-route-near.svg",
+              "label": "After a prediction, Test shows a cart from the gentler ramp stopped at the near marker. The result stays still."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Try again with the other position. Compare the saved observations.",
+              "controlId": "high"
+            }
+          ]
+        },
+        "ending": {
+          "instruction": "Look back at a saved cart stop.",
+          "feedback": {
+            "complete": "One track can invite more than one question.",
+            "retry": "Look at the people and the picture while your adult reads."
+          },
+          "demonstration": [
+            {
+              "action": "point",
+              "image": "ending.svg",
+              "label": "Tavi, a mint-green triceratops with three cream horns and a golden neckerchief, stands with long-necked Bronto beside a red parcel cart and a rally delivery table."
+            },
+            {
+              "action": "point",
+              "image": "control-high.svg",
+              "label": "Same cart and parcel. Same ramp length and fixed bottom hinge. Same rollout surface and model resistance."
+            }
+          ]
+        }
+      },
+      "reflection": "Which ramp tilt would you try again for a nearby delivery? Your adult can read the saved observations with you."
+    }
+  },
+  "endings": {
+    "sceneId": "ending",
+    "text": "The rally neighbours gather beside the track. In this picture model, the same cart can stop nearby from the gentler ramp’s lower start and farther away from the steeper ramp’s higher start. Tavi can choose a ramp tilt for each delivery. Fern waves a leaf; Bronto nods from the far stop. The parcels can join the rally, and there is always time for another try.",
+    "variants": [],
+    "recap": []
+  },
+  "assets": [
+    {
+      "id": "control-low",
+      "file": "control-low.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2366,
+      "sha256": "b6418b5df709b0ab6f37ba18673e2cfaab20fa4e2d4990e5813bd000710e2aeb"
+    },
+    {
+      "id": "control-high",
+      "file": "control-high.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2328,
+      "sha256": "696d273d38f1292c10eb26348dc78afdb03c366a559b745f2a21f46e61554fe8"
+    },
+    {
+      "id": "prediction-near-stop",
+      "file": "prediction-near-stop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1524,
+      "sha256": "8c4f12ce2c951524dde58a0394f3aa93687b0067ae84ff3ec8a97e8aae8bbbaf"
+    },
+    {
+      "id": "prediction-far-stop",
+      "file": "prediction-far-stop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1525,
+      "sha256": "b953ae28cdd800d01a12cc0e29bac6b589f7988293e48dd5370167bda874adc9"
+    },
+    {
+      "id": "opening-cast",
+      "file": "opening-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2629,
+      "sha256": "3a76f762967c5a186bb7af5220d11241b33d1fe057ab4d3021d555daaa8c4a68"
+    },
+    {
+      "id": "opening-decor",
+      "file": "opening-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "opening-apparatus",
+      "file": "opening-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1296,
+      "sha256": "f08eca4acb0fdbee5d6a9226b565837bd908705770a5cb43a8bc71fd588631d9"
+    },
+    {
+      "id": "opening-story-prop",
+      "file": "opening-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1477,
+      "sha256": "37ec8f7f7af557a690b04f9736df4236017296b54997e2f50dfde85cb4b34144"
+    },
+    {
+      "id": "opening",
+      "file": "opening.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6103,
+      "sha256": "283c357bf8c7ea789b84b37c4aa3d22d95d0c17598f56e1d89b3e44bd137bbdd"
+    },
+    {
+      "id": "opening-background",
+      "file": "opening-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 698,
+      "sha256": "add143f691bfe52b20b5dcae129260908ea645b80805a4d5c9e0d5a16cc53f62"
+    },
+    {
+      "id": "ferns-parcel-cast",
+      "file": "ferns-parcel-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3148,
+      "sha256": "6017f625bc4e400fafdf2515cefdfc17f0f11a9fea425998fe276e4bd23d67b0"
+    },
+    {
+      "id": "ferns-parcel-decor",
+      "file": "ferns-parcel-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "ferns-parcel-apparatus",
+      "file": "ferns-parcel-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2101,
+      "sha256": "bb137cb64ebf1c818bf4d4e0f891bc15dd5e9e37a2f9870ec86bd6ee7aa07c22"
+    },
+    {
+      "id": "ferns-parcel-near",
+      "file": "ferns-parcel-near.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3095,
+      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+    },
+    {
+      "id": "ferns-parcel-far",
+      "file": "ferns-parcel-far.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3057,
+      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+    },
+    {
+      "id": "ferns-parcel-story-prop",
+      "file": "ferns-parcel-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1114,
+      "sha256": "bb36fa095952ad25509bdc8ff8a5f7efb819c4712a1a3e4edb530d79c0720b2f"
+    },
+    {
+      "id": "ferns-parcel",
+      "file": "ferns-parcel.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7063,
+      "sha256": "6fb49466debe63a2e2a108a6bdd321aa7d365c4b84d0e8a8177e371cdfba4af7"
+    },
+    {
+      "id": "ferns-parcel-background",
+      "file": "ferns-parcel-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 697,
+      "sha256": "20ea48b47916e37ed0a8bf9102ec265e3c5f4e02043c7fe8837794c6445c200a"
+    },
+    {
+      "id": "brontos-parcel-cast",
+      "file": "brontos-parcel-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2629,
+      "sha256": "7a42de16ab493e410a847942105cbef94f03bfb100182cae640c36bf032852fd"
+    },
+    {
+      "id": "brontos-parcel-decor",
+      "file": "brontos-parcel-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "brontos-parcel-apparatus",
+      "file": "brontos-parcel-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2101,
+      "sha256": "bb137cb64ebf1c818bf4d4e0f891bc15dd5e9e37a2f9870ec86bd6ee7aa07c22"
+    },
+    {
+      "id": "brontos-parcel-near",
+      "file": "brontos-parcel-near.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3095,
+      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+    },
+    {
+      "id": "brontos-parcel-far",
+      "file": "brontos-parcel-far.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3057,
+      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+    },
+    {
+      "id": "brontos-parcel-story-prop",
+      "file": "brontos-parcel-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1478,
+      "sha256": "1f4ced27bcd09eaf24f6f1f3293f2b779a95009528e6de3210b41bfe58000ef3"
+    },
+    {
+      "id": "brontos-parcel",
+      "file": "brontos-parcel.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6910,
+      "sha256": "006806df5da3b737c02aa3063b9968fff79be9e8c437be0dc0c92245f78a7556"
+    },
+    {
+      "id": "brontos-parcel-background",
+      "file": "brontos-parcel-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 699,
+      "sha256": "bf859b69ee8b677896d1672022d3436afe16410f609d3af96c5b40e887e03b68"
+    },
+    {
+      "id": "back-to-fern-cast",
+      "file": "back-to-fern-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3148,
+      "sha256": "6017f625bc4e400fafdf2515cefdfc17f0f11a9fea425998fe276e4bd23d67b0"
+    },
+    {
+      "id": "back-to-fern-decor",
+      "file": "back-to-fern-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "back-to-fern-apparatus",
+      "file": "back-to-fern-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2101,
+      "sha256": "bb137cb64ebf1c818bf4d4e0f891bc15dd5e9e37a2f9870ec86bd6ee7aa07c22"
+    },
+    {
+      "id": "back-to-fern-near",
+      "file": "back-to-fern-near.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3095,
+      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+    },
+    {
+      "id": "back-to-fern-far",
+      "file": "back-to-fern-far.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3057,
+      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+    },
+    {
+      "id": "back-to-fern-story-prop",
+      "file": "back-to-fern-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 735,
+      "sha256": "6807e4b260e1fcfc5eb1371a8cb2f91a1e2f8e643997d90a943f70a9c8f4db87"
+    },
+    {
+      "id": "back-to-fern",
+      "file": "back-to-fern.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6688,
+      "sha256": "9feeaf29f71940f93b3306c761ccf4d4c88956a96e7855920dc0bd3f463ff301"
+    },
+    {
+      "id": "back-to-fern-background",
+      "file": "back-to-fern-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 701,
+      "sha256": "bd7a691e4464974cbd0e9f80a5f6c3a78305d998285a106b0cd44a27f05ffdf8"
+    },
+    {
+      "id": "two-stop-notebook-cast",
+      "file": "two-stop-notebook-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2629,
+      "sha256": "7a42de16ab493e410a847942105cbef94f03bfb100182cae640c36bf032852fd"
+    },
+    {
+      "id": "two-stop-notebook-decor",
+      "file": "two-stop-notebook-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "two-stop-notebook-apparatus",
+      "file": "two-stop-notebook-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2101,
+      "sha256": "bb137cb64ebf1c818bf4d4e0f891bc15dd5e9e37a2f9870ec86bd6ee7aa07c22"
+    },
+    {
+      "id": "two-stop-notebook-near",
+      "file": "two-stop-notebook-near.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3095,
+      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+    },
+    {
+      "id": "two-stop-notebook-far",
+      "file": "two-stop-notebook-far.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3057,
+      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+    },
+    {
+      "id": "two-stop-notebook-story-prop",
+      "file": "two-stop-notebook-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1630,
+      "sha256": "e89b8a812d882901f8571a1943836a49fd044769e778d241f3eea79e12951ca8"
+    },
+    {
+      "id": "two-stop-notebook",
+      "file": "two-stop-notebook.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7064,
+      "sha256": "c3a666bb1cf9b47249091e6b6e92723e0ca6374563bf68bfbdac9f2795e92f43"
+    },
+    {
+      "id": "two-stop-notebook-background",
+      "file": "two-stop-notebook-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 701,
+      "sha256": "c4188149f19c254581ce47f8ad711e8a578f4476c651b616eb27ebe4c5ffa9e8"
+    },
+    {
+      "id": "delivery-rehearsal-cast",
+      "file": "delivery-rehearsal-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2629,
+      "sha256": "7a42de16ab493e410a847942105cbef94f03bfb100182cae640c36bf032852fd"
+    },
+    {
+      "id": "delivery-rehearsal-decor",
+      "file": "delivery-rehearsal-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "delivery-rehearsal-apparatus",
+      "file": "delivery-rehearsal-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2101,
+      "sha256": "bb137cb64ebf1c818bf4d4e0f891bc15dd5e9e37a2f9870ec86bd6ee7aa07c22"
+    },
+    {
+      "id": "delivery-rehearsal-near",
+      "file": "delivery-rehearsal-near.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3095,
+      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+    },
+    {
+      "id": "delivery-rehearsal-far",
+      "file": "delivery-rehearsal-far.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3057,
+      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+    },
+    {
+      "id": "delivery-rehearsal-story-prop",
+      "file": "delivery-rehearsal-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1475,
+      "sha256": "18c49d5e642ea9f97d5541ff1cf462426dffd140eca431eac9dc27238e291c65"
+    },
+    {
+      "id": "delivery-rehearsal",
+      "file": "delivery-rehearsal.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6908,
+      "sha256": "92ad6c2d1c872df348b228e49c356d4dc63b51afa403ab058744fe0e663ff5a8"
+    },
+    {
+      "id": "delivery-rehearsal-background",
+      "file": "delivery-rehearsal-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 700,
+      "sha256": "d291feab5e775b8638be4165ea5f59b6c857a17bfb2d46a42e9f15e607dac8ad"
+    },
+    {
+      "id": "final-route-cast",
+      "file": "final-route-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2629,
+      "sha256": "7a42de16ab493e410a847942105cbef94f03bfb100182cae640c36bf032852fd"
+    },
+    {
+      "id": "final-route-decor",
+      "file": "final-route-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "final-route-apparatus",
+      "file": "final-route-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2101,
+      "sha256": "bb137cb64ebf1c818bf4d4e0f891bc15dd5e9e37a2f9870ec86bd6ee7aa07c22"
+    },
+    {
+      "id": "final-route-near",
+      "file": "final-route-near.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3095,
+      "sha256": "3656aeed8ffd55a76bdd9fcf0b674a0fd852fefd1f1cb62aef38cbe9d4b315fe"
+    },
+    {
+      "id": "final-route-far",
+      "file": "final-route-far.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 3057,
+      "sha256": "9612e38d193feb266f8306d115814e3f63c1aa057b064650572d696624c0233e"
+    },
+    {
+      "id": "final-route-story-prop",
+      "file": "final-route-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 735,
+      "sha256": "6807e4b260e1fcfc5eb1371a8cb2f91a1e2f8e643997d90a943f70a9c8f4db87"
+    },
+    {
+      "id": "final-route",
+      "file": "final-route.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 6170,
+      "sha256": "a445fcbb46e5a586b899f86c10300bb2bf60b8c8453e06f28ad2e0f4f4baf1e8"
+    },
+    {
+      "id": "final-route-background",
+      "file": "final-route-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 702,
+      "sha256": "eb8d8ddbb0021bcf15d8e40a617dfde4299716b174147f8543e987ccbfd2d4b5"
+    },
+    {
+      "id": "ending-cast",
+      "file": "ending-cast.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2629,
+      "sha256": "3a76f762967c5a186bb7af5220d11241b33d1fe057ab4d3021d555daaa8c4a68"
+    },
+    {
+      "id": "ending-decor",
+      "file": "ending-decor.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 383,
+      "sha256": "f4bc8f15e563d23f38402fbad9b02196e4068cc9a06f5782283ac418b5aa6a0b"
+    },
+    {
+      "id": "ending-apparatus",
+      "file": "ending-apparatus.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 1299,
+      "sha256": "678e1423ae85bccccbe18c53b86491e463131b214dacc18f72f185db8352306a"
+    },
+    {
+      "id": "ending-story-prop",
+      "file": "ending-story-prop.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 2608,
+      "sha256": "ad69c462615dc64a2994f4d19476db9790653a41968ad88457d253f24b87aeb1"
+    },
+    {
+      "id": "ending",
+      "file": "ending.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 7237,
+      "sha256": "39cd01d5a012fa4b4ebef0225aecd529d6af5849499aa7eec90bbf306b6121bf"
+    },
+    {
+      "id": "ending-background",
+      "file": "ending-background.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 698,
+      "sha256": "854c5009a74e0ba44c5e55545fae9baac06c56e041e69808b90c90602dbc0805"
+    },
+    {
+      "id": "cover",
+      "file": "cover.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 4433,
+      "sha256": "7482725c32244d6d537943f9fd025a0565d80852e04ec04fac5985da73fe9d32"
+    }
+  ]
+}

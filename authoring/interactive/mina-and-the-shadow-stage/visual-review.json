@@ -1,0 +1,323 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "control-near-light",
+      "reviewed": true
+    },
+    {
+      "assetId": "control-near-screen",
+      "reviewed": true
+    },
+    {
+      "assetId": "prediction-large-shadow",
+      "reviewed": true
+    },
+    {
+      "assetId": "prediction-small-shadow",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening",
+      "reviewed": true
+    },
+    {
+      "assetId": "opening-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-large",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-small",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest",
+      "reviewed": true
+    },
+    {
+      "assetId": "towering-forest-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-large",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-small",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove",
+      "reviewed": true
+    },
+    {
+      "assetId": "little-grove-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-large",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-small",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again",
+      "reviewed": true
+    },
+    {
+      "assetId": "forest-again-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-large",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-small",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook",
+      "reviewed": true
+    },
+    {
+      "assetId": "shadow-notebook-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-large",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-small",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal",
+      "reviewed": true
+    },
+    {
+      "assetId": "grove-rehearsal-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-large",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-small",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check",
+      "reviewed": true
+    },
+    {
+      "assetId": "curtain-check-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-cast",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-decor",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-apparatus",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-story-prop",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending",
+      "reviewed": true
+    },
+    {
+      "assetId": "ending-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "opening",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "towering-forest",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "little-grove",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "forest-again",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "shadow-notebook",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "grove-rehearsal",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "curtain-check",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "ending",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}

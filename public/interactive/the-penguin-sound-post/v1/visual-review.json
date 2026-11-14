@@ -1,0 +1,375 @@
+{
+  "reviewed": true,
+  "assets": [
+    {
+      "assetId": "dot-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "dash-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "pause-control",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "morning-post",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "pebble-message-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "long-ice-bridge-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "lantern-bay-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "quiet-inlet-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "twin-towers-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-completed",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-clue",
+      "reviewed": true
+    },
+    {
+      "assetId": "welcome-harbour-demo",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home-background",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home-landmark",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home-character",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home-companion",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home-wind",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home-foreground",
+      "reviewed": true
+    },
+    {
+      "assetId": "letters-home",
+      "reviewed": true
+    },
+    {
+      "assetId": "cover",
+      "reviewed": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "morning-post",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "pebble-message",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "long-ice-bridge",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "lantern-bay",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "quiet-inlet",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "twin-towers",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "welcome-harbour",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    },
+    {
+      "sceneId": "letters-home",
+      "rest": true,
+      "motion": true,
+      "outcomes": true,
+      "guidance": true
+    }
+  ]
+}
