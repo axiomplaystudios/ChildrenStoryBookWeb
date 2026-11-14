@@ -9,7 +9,7 @@
   "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
   "pages": [
     {
-      "text": "Bear and Mouse were making a play space. They brought different things to share.",
+      "text": "Bear and Mouse were making a play space, with different things for them to share.",
       "alt": "Bear and Mouse bring buckets and a cart to an empty garden play space.",
       "image": "page-01.svg",
       "scene": {
@@ -18,29 +18,83 @@
         "background": "page-01-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-01-friend.svg",
+            "id": "mouse",
+            "image": "page-01-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              165,
+              90,
+              675
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-01-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-01-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
               620
             ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-01-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -63,29 +117,83 @@
         "background": "page-02-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-02-friend.svg",
+            "id": "mouse",
+            "image": "page-02-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              160,
-              615
+              90,
+              675
             ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-02-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-02-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-02-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -108,29 +216,83 @@
         "background": "page-03-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-03-friend.svg",
+            "id": "mouse",
+            "image": "page-03-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              765,
-              530
+              90,
+              675
             ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-03-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-03-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-03-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -153,29 +315,83 @@
         "background": "page-04-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-04-friend.svg",
+            "id": "mouse",
+            "image": "page-04-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              170,
-              635
+              90,
+              675
             ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-04-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-04-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              500
+            ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-04-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              500
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -198,29 +414,83 @@
         "background": "page-05-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-05-friend.svg",
+            "id": "mouse",
+            "image": "page-05-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              145,
-              635
+              90,
+              675
             ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-05-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-05-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-05-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -243,6 +513,56 @@
         "background": "page-06-background.svg",
         "layers": [
           {
+            "id": "mouse",
+            "image": "page-06-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-06-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-06-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-06-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
+          },
+          {
             "id": "fast-cart",
             "image": "page-06-fast-cart.svg",
             "x": 0,
@@ -250,8 +570,8 @@
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              370,
+              330
             ]
           },
           {
@@ -262,22 +582,40 @@
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              370,
+              520
             ]
           }
         ],
         "tracks": [
           {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
             "layer": "fast-cart",
             "preset": "gesture",
             "parameters": {
-              "x": 85,
+              "x": 310,
               "y": 0,
               "angle": 0
             },
             "durationMs": 1400,
-            "restMs": 200,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           },
@@ -285,12 +623,12 @@
             "layer": "slow-cart",
             "preset": "gesture",
             "parameters": {
-              "x": 85,
+              "x": 310,
               "y": 0,
               "angle": 0
             },
             "durationMs": 4400,
-            "restMs": 200,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -298,7 +636,7 @@
       }
     },
     {
-      "text": "They parked the carts near the towers. Big and small things all belonged in their play space.",
+      "text": "They parked the carts near the towers. There was room for big and small things in their play space.",
       "alt": "Big and small balls, tall and short towers and two carts fill the completed play area.",
       "image": "page-07.svg",
       "scene": {
@@ -307,29 +645,83 @@
         "background": "page-07-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-07-friend.svg",
+            "id": "mouse",
+            "image": "page-07-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              750,
-              485
+              90,
+              675
             ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-07-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-07-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-07-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -346,29 +738,83 @@
         "background": "page-08-background.svg",
         "layers": [
           {
-            "id": "friend",
-            "image": "page-08-friend.svg",
+            "id": "mouse",
+            "image": "page-08-mouse.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              260,
+              90,
+              675
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-08-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              90,
+              675
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "bear",
+            "image": "page-08-bear.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
               620
             ]
+          },
+          {
+            "id": "bear-lids",
+            "image": "page-08-bear-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              250,
+              620
+            ],
+            "parent": "bear"
           }
         ],
         "tracks": [
           {
-            "layer": "friend",
-            "preset": "gesture",
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear",
+            "preset": "breathe",
             "parameters": {
-              "x": 0,
-              "y": -5,
-              "angle": 1
+              "amount": 0.025
             },
             "durationMs": 3000,
-            "restMs": 600,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "bear-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }

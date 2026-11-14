@@ -28,3 +28,18 @@ test('learning books complete through questions, including long alphabet and odd
   await expect(page.getByRole('button',{name:`Read ${book.title} · Finished`,exact:true})).toBeVisible();
  }
 });
+for(const [width,height,columns]of [[1180,820,3],[820,1180,2],[390,844,1]])test(`shelf groups fill ${columns} columns at ${width}px`,async({page})=>{
+ await page.setViewportSize({width,height});await page.goto('/');await expect(page.locator('.book-card')).toHaveCount(13);
+ await expect(page.getByRole('heading',{name:'Bedtime stories',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'Learn together',exact:true})).toBeVisible();
+ const result=await page.locator('.book-grid').first().evaluate(el=>{const cards=[...el.children].map(c=>c.getBoundingClientRect()),main=document.querySelector('#main'),mr=main.getBoundingClientRect();return {rows:cards.map(c=>Math.round(c.top)),gap:mr.right-parseFloat(getComputedStyle(main).paddingRight)-el.getBoundingClientRect().right};});
+ expect(result.rows.filter(y=>y===result.rows[0])).toHaveLength(columns);expect(Math.abs(result.gap)).toBeLessThanOrEqual(40);
+ for(const grid of await page.locator('.book-grid').all()){const titles=await grid.locator('h3').allTextContents();expect(titles).toEqual([...titles].sort((a,b)=>a.localeCompare(b)));}
+});
+test('illustration settings stay clickable after fullscreen and book changes',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/');
+ await page.getByRole('button',{name:'Read Pip’s Alphabet Adventure',exact:true}).click();await expect(page.locator('.flip-book')).toBeVisible();
+ await page.setViewportSize({width:1180,height:820});await page.getByRole('button',{name:'Full screen',exact:true}).click();await page.emulateMedia({reducedMotion:'reduce'});
+ await page.getByRole('button',{name:'Exit full screen',exact:true}).click();await page.getByRole('button',{name:'← Bookshelf',exact:true}).click();await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.getByRole('button',{name:'Read Mouse’s Counting Picnic',exact:true}).click();await expect(page.locator('.flip-book')).toBeVisible();
+ await page.getByText('Illustration settings',{exact:true}).click();await page.getByRole('button',{name:'Pause illustrations',exact:true}).click();await expect(page.getByRole('button',{name:'Resume illustrations',exact:true})).toBeVisible();
+});

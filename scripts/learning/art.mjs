@@ -1,10 +1,46 @@
-const ink='#624b43', cream='#fff3d9', mouse='#b8aaa1', rose='#e4a19b';
-const path=(d,fill,stroke=ink,w=4)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
-const ellipse=(cx,cy,rx,ry,fill,stroke='none',w=3)=>`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${stroke}" stroke-width="${w}"/>`;
-const rect=(x,y,w,h,fill,r=0,stroke='none')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
-const group=(x,y,s,content,angle=0)=>`<g transform="translate(${x} ${y}) scale(${s}) rotate(${angle})">${content}</g>`;
-const defs=`<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#dcece6"/><stop offset="1" stop-color="#fcf0d8"/></linearGradient><linearGradient id="night" x2="0" y2="1"><stop stop-color="#304c60"/><stop offset="1" stop-color="#7fa89b"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9e6df"/><stop offset="1" stop-color="#629f9e"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffe5a1" stop-opacity=".8"/><stop offset="1" stop-color="#ffe5a1" stop-opacity="0"/></radialGradient></defs>`;
-const svg=(content)=>`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">${defs}${content}</svg>`;
+import {readFileSync} from 'node:fs';
+import opentype from 'opentype.js';
+const fontBytes=readFileSync(new URL('../../node_modules/@fontsource/andika/files/andika-latin-700-normal.woff',import.meta.url));
+const font=opentype.parse(fontBytes.buffer.slice(fontBytes.byteOffset,fontBytes.byteOffset+fontBytes.byteLength));
+export const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const n=value=>Math.round(value*10)/10;
+const attrs=values=>Object.entries(values).filter(([,v])=>v!==undefined).map(([k,v])=>` ${k}="${esc(typeof v==='number'?n(v):v)}"`).join('');
+export const ink='#5d473f';
+export const palette={cream:'#fff3d9',mouse:'#b8aaa1',rose:'#e4a19b',pip:'#b88958',rabbit:'#eee2cb',bear:'#ae7a53',sky:'#dcece6',grass:'#91aa77',wood:'#b98c60',red:'#cf564d',blue:'#508cb5',yellow:'#e9bc50',green:'#749763'};
+export const P=(d,fill='none',stroke=ink,width=4,extra={})=>`<path${attrs({d,fill,stroke,'stroke-width':width,'stroke-linecap':'round','stroke-linejoin':'round',...extra})}/>`;
+export const E=(cx,cy,rx,ry,fill,stroke='none',width=4,extra={})=>`<ellipse${attrs({cx,cy,rx,ry,fill,stroke,'stroke-width':width,...extra})}/>`;
+export const R=(x,y,width,height,fill,rx=0,stroke='none',sw=4,extra={})=>`<rect${attrs({x,y,width,height,rx,fill,stroke,'stroke-width':sw,...extra})}/>`;
+export const G=(content,{x=0,y=0,s=1,rot=0,opacity}={})=>`<g${attrs({transform:`translate(${n(x)} ${n(y)}) scale(${n(s)}) rotate(${n(rot)})`,opacity})}>${content}</g>`;
+const registry=new Map();
+export function gradient(id,kind,stops,attributes={}){
+ if(!['linear','radial'].includes(kind))throw Error('Unknown gradient kind');
+ registry.set(id,`<${kind}Gradient${attrs({id,...attributes})}>${stops.map(([offset,color,opacity])=>`<stop${attrs({offset,'stop-color':color,'stop-opacity':opacity})}/>`).join('')}</${kind}Gradient>`);return `url(#${id})`;
+}
+// Reusable groups are supported by the importer; SVG symbols are not.
+export function define(id,content){registry.set(id,`<g id="${esc(id)}">${content}</g>`);return id;}
+export const use=(id,x,y,s=1,rot=0)=>G(`<use href="#${esc(id)}"/>`,{x,y,s,rot});
+export function svg(content){
+ const used=new Set();
+ function collect(text){for(const match of text.matchAll(/(?:url\(#|href="#)([\w.-]+)/g)){const id=match[1];if(used.has(id))continue;if(!registry.has(id))throw Error(`Unknown SVG definition: ${id}`);used.add(id);collect(registry.get(id));}}
+ collect(content);
+ return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">${used.size?`<defs>${[...used].map(id=>registry.get(id)).join('')}</defs>`:''}${content}</svg>`;
+}
+export function random(seed){let state=seed>>>0;return()=>{state=(Math.imul(1664525,state)+1013904223)>>>0;return state/4294967296;};}
+export const shadow=(x,y,rx,ry=rx*.28,opacity=.16)=>E(x,y,rx,ry,ink,'none',0,{opacity});
+export const labelWidth=(text,size)=>font.getAdvanceWidth(String(text),size);
+export function label(text,x,y,size=36,options={},legacyAnchor='middle'){
+ if(size<18)throw Error('Lettering must be at least 18 px');
+ const {fill=ink,anchor='middle',outline,outlineWidth=size*.22}=typeof options==='string'?{fill:options,anchor:legacyAnchor}:options;
+ const width=labelWidth(text,size),left=x-(anchor==='middle'?width/2:anchor==='end'?width:0);
+ const d=font.getPath(String(text),left,y,size).toPathData(1);
+ return `<g><title>${esc(text)}</title>${outline?`<path d="${d}" stroke="${esc(outline)}" stroke-width="${n(outlineWidth)}" stroke-linejoin="round" fill="none"/>`:''}<path d="${d}" fill="${esc(fill)}"/></g>`;
+}
+gradient('sky','linear',[[0,'#dcece6'],[1,'#fcf0d8']],{x2:0,y2:1});
+gradient('night','linear',[[0,'#304c60'],[1,'#7fa89b']],{x2:0,y2:1});
+gradient('water','linear',[[0,'#c9e6df'],[1,'#629f9e']],{x2:0,y2:1});
+gradient('glow','radial',[[0,'#ffe5a1',.8],[1,'#ffe5a1',0]]);
+const cream=palette.cream,mouse=palette.mouse,rose=palette.rose;
+const path=P,ellipse=E,rect=R,group=(x,y,s,content,angle=0)=>G(content,{x,y,s,rot:angle});
 const twig=(x,y,s=1)=>group(x,y,s,path('M0 65 Q12 30 3 0','none','#68836a',3)+path('M7 40 Q-22 23 -19 10 Q5 14 7 40','#91a67a','none')+path('M7 26 Q31 9 32 -4 Q7 -1 7 26','#adba83','none'));
 const flower=(x,y,s=1)=>group(x,y,s,Array.from({length:5},(_,i)=>`<g transform="rotate(${i*72})">${ellipse(0,-10,6,10,'#e8a17c')}</g>`).join('')+ellipse(0,0,5,5,'#b48049'));
 const stars=()=>Array.from({length:28},(_,i)=>{let x=35+(i*127)%835,y=25+(i*73)%430;return path(`M${x-4} ${y}h8 M${x} ${y-4}v8`,'none','#eee0ad',2)}).join('');
@@ -27,10 +63,8 @@ const puppy=()=>path('M-118 65Q-146 -9-92 -47Q-14 -87 45 -26L66 71Z','#4e5554')+
 const puppyTail=()=>path('M-109 15Q-184 -12-163 -69Q-152 -86-143 -65Q-151 -31-102 -19Z','#4e5554');
 const nightCloud=(x,y,s=1)=>group(x,y,s,path('M-100 18Q-126 -8-96 -29Q-96 -69-54 -59Q-29 -96 7 -66Q48 -80 63 -40Q112 -46 111 -6Q137 35 87 44L-73 44Q-111 46-100 18','#cedbd0','none'));
 
-export {ink,cream,rose,mouse,path,ellipse,rect,group,svg,twig,flower,stars,floor,room,rug,windowArt,mouseBody,mouseTail,mouseHead,mousePaw,m,mouseLayers,plant,books,fish,parrotBody,parrotWing,puppy,puppyTail,nightCloud};
+export {cream,rose,mouse,path,ellipse,rect,group,twig,flower,stars,floor,room,rug,windowArt,mouseBody,mouseTail,mouseHead,mousePaw,m,mouseLayers,plant,books,fish,parrotBody,parrotWing,puppy,puppyTail,nightCloud};
 
-export const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-export const label = (value,x,y,size=36,fill=ink,anchor='middle') => `<text x="${x}" y="${y}" font-family="Verdana, sans-serif" font-size="${size}" font-weight="bold" text-anchor="${anchor}" fill="${fill}">${esc(value)}</text>`;
 export const owl = (x,y,s=1) => group(x,y,s,path('M-60 -55L-67 -110 -25 -86Q0 -97 25 -86L67 -110 60 -55','#b88958')+ellipse(0,0,64,87,'#bc976c',ink)+ellipse(0,29,43,51,'#e4c28b')+ellipse(-27,-40,30,35,'#ffedbd')+ellipse(27,-40,30,35,'#ffedbd')+ellipse(-25,-42,6,8,ink)+ellipse(25,-42,6,8,ink)+path('M-12 -23L0 -5 12 -23Z','#d29a4f')+path('M-20 80v19M-10 81v17M15 80v19M25 79v19','none','#ad764d',5)+path('M-11 17l9 8M8 31l8 7M-11 46l9 7','none','#b48d63',3));
 export const owlWing = (x,y,s=1) => group(x,y,s,path('M-54 -25Q-94 -29-84 43Q-69 59-48 15Z','#8e705a'));
 export const rabbit = (x,y,s=1) => group(x,y,s,ellipse(-18,-110,17,59,'#e5d8c6',ink)+ellipse(21,-112,17,59,'#e5d8c6',ink)+ellipse(-18,-110,8,44,rose)+ellipse(21,-112,8,44,rose)+ellipse(0,19,47,61,'#dacbb9',ink)+ellipse(0,-40,51,47,'#e5d8c6',ink)+ellipse(-17,-48,5,6,ink)+ellipse(18,-48,5,6,ink)+path('M-7 -32L0 -25 7 -32Z',rose)+path('M0 -24q-10 16-20 5M0 -24q10 16 20 5','none',ink,3)+ellipse(-30,74,25,10,'#e5d8c6')+ellipse(27,74,25,10,'#e5d8c6')+ellipse(48,42,19,19,'#fff3d9'));

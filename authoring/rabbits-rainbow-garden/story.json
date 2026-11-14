@@ -9,7 +9,7 @@
   "credit": "Original story and vector illustrations created for Bedtime Bookshelf with AI assistance. For playful shared reading; not an assessment or certified curriculum.",
   "pages": [
     {
-      "text": "Rabbit wants a garden full of colours. Where can she find them?",
+      "text": "Rabbit dreams of a garden full of colours. Where will she find them?",
       "alt": "Rabbit stands by empty garden beds with a watering can while a butterfly visits.",
       "image": "page-01.svg",
       "scene": {
@@ -18,6 +18,18 @@
         "background": "page-01-background.svg",
         "layers": [
           {
+            "id": "rabbit-ears",
+            "image": "page-01-rabbit-ears.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              147.45,
+              467.85
+            ]
+          },
+          {
             "id": "rabbit",
             "image": "page-01-rabbit.svg",
             "x": 0,
@@ -25,34 +37,70 @@
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              180,
+              660
             ]
           },
           {
-            "id": "butterfly",
-            "image": "page-01-butterfly.svg",
+            "id": "rabbit-arm",
+            "image": "page-01-rabbit-arm.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
-            ]
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-01-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
           }
         ],
         "tracks": [
           {
-            "layer": "butterfly",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 40,
-              "y": -18,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
-            "durationMs": 3300,
+            "durationMs": 2800,
             "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -61,7 +109,7 @@
     },
     {
       "text": "Red flowers! Rabbit plants them by the gate.",
-      "alt": "Rabbit finds red flowers by the gate. A large label says red.",
+      "alt": "Rabbit explores red flowers in a softly coloured garden. The word red is on a cream plaque.",
       "image": "page-02.svg",
       "learning": {
         "colour": "red"
@@ -72,29 +120,114 @@
         "background": "page-02-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-02-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-02-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-02-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-02-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-02-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-02-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              230
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -14,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -103,7 +236,7 @@
     },
     {
       "text": "Orange carrots! Rabbit gives them a drink.",
-      "alt": "Rabbit finds orange carrots in the soil. A large label says orange.",
+      "alt": "Rabbit explores orange carrots in a softly coloured garden. The word orange is on a cream plaque.",
       "image": "page-03.svg",
       "learning": {
         "colour": "orange"
@@ -114,8 +247,58 @@
         "background": "page-03-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-03-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-03-rabbit-ears.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-03-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-03-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-03-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "water",
+            "image": "page-03-water.svg",
             "x": 0,
             "y": 0,
             "width": 900,
@@ -128,15 +311,48 @@
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 4,
-              "y": 23,
-              "angle": 0
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "water",
+            "preset": "tear-fall",
+            "parameters": {
+              "distanceY": 25
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -145,7 +361,7 @@
     },
     {
       "text": "Yellow sunflowers! They reach up to the sun.",
-      "alt": "Rabbit finds yellow sunflowers reaching upward. A large label says yellow.",
+      "alt": "Rabbit explores yellow flowers in a softly coloured garden. The word yellow is on a cream plaque.",
       "image": "page-04.svg",
       "learning": {
         "colour": "yellow"
@@ -156,29 +372,114 @@
         "background": "page-04-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-04-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-04-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-04-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-04-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-04-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-04-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              230
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -14,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -187,7 +488,7 @@
     },
     {
       "text": "Green leaves! They make a cool little nook.",
-      "alt": "Rabbit finds green leaves around a garden nook. A large label says green.",
+      "alt": "Rabbit explores green leaves in a softly coloured garden. The word green is on a cream plaque.",
       "image": "page-05.svg",
       "learning": {
         "colour": "green"
@@ -198,29 +499,114 @@
         "background": "page-05-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-05-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-05-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-05-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-05-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-05-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-05-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              230
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -14,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -229,7 +615,7 @@
     },
     {
       "text": "Blue flowers! Mouse brings some for the path.",
-      "alt": "Rabbit finds blue flowers beside Mouse on the path. A large label says blue.",
+      "alt": "Rabbit explores blue flowers in a softly coloured garden. The word blue is on a cream plaque.",
       "image": "page-06.svg",
       "learning": {
         "colour": "blue"
@@ -240,29 +626,148 @@
         "background": "page-06-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-06-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-06-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-06-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-06-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-06-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "mouse",
+            "image": "page-06-mouse.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775,
+              650
+            ]
+          },
+          {
+            "id": "mouse-lids",
+            "image": "page-06-mouse-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              775,
+              650
+            ],
+            "parent": "mouse"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-06-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              230
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -14,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "mouse-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -271,7 +776,7 @@
     },
     {
       "text": "Purple plums! Rabbit finds them on the tree.",
-      "alt": "Rabbit finds purple plums hanging on a tree. A large label says purple.",
+      "alt": "Rabbit explores purple plums on the tree in a softly coloured garden. The word purple is on a cream plaque.",
       "image": "page-07.svg",
       "learning": {
         "colour": "purple"
@@ -282,29 +787,114 @@
         "background": "page-07-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-07-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-07-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-07-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-07-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-07-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-07-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              230
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -14,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -312,8 +902,8 @@
       }
     },
     {
-      "text": "Pink flowers! Now the garden has a soft pink corner.",
-      "alt": "Rabbit finds pink flowers in the corner. A large label says pink.",
+      "text": "Pink flowers! A soft pink corner, just for Rabbit’s garden.",
+      "alt": "Rabbit explores pink flowers in a softly coloured garden. The word pink is on a cream plaque.",
       "image": "page-08.svg",
       "learning": {
         "colour": "pink"
@@ -324,29 +914,114 @@
         "background": "page-08-background.svg",
         "layers": [
           {
-            "id": "visitor",
-            "image": "page-08-visitor.svg",
+            "id": "rabbit-ears",
+            "image": "page-08-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              467.85
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-08-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-08-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              559.2
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-08-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "butterfly",
+            "image": "page-08-butterfly.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              760,
+              230
             ]
           }
         ],
         "tracks": [
           {
-            "layer": "visitor",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 20,
-              "y": -14,
-              "angle": 8
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
             "durationMs": 2800,
-            "restMs": 350,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "butterfly",
+            "preset": "bee-flight",
+            "parameters": {
+              "radiusX": 15,
+              "radiusY": 9,
+              "phase": 0
+            },
+            "durationMs": 7000,
+            "restMs": 500,
             "delayMs": 0,
             "playback": "repeat"
           }
@@ -363,6 +1038,18 @@
         "background": "page-09-background.svg",
         "layers": [
           {
+            "id": "rabbit-ears",
+            "image": "page-09-rabbit-ears.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              434.5,
+              623.5
+            ]
+          },
+          {
             "id": "rabbit",
             "image": "page-09-rabbit.svg",
             "x": 0,
@@ -371,22 +1058,70 @@
             "height": 720,
             "pivot": [
               450,
-              360
+              715
             ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-09-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              471.5,
+              667
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-09-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              450,
+              715
+            ],
+            "parent": "rabbit"
           }
         ],
         "tracks": [
           {
-            "layer": "rabbit",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
               "x": 0,
-              "y": -5,
-              "angle": 2
+              "y": 0,
+              "angle": 3
             },
-            "durationMs": 3200,
-            "restMs": 600,
-            "delayMs": 200,
+            "durationMs": 2800,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]
@@ -402,30 +1137,90 @@
         "background": "page-10-background.svg",
         "layers": [
           {
-            "id": "butterfly",
-            "image": "page-10-butterfly.svg",
+            "id": "rabbit-ears",
+            "image": "page-10-rabbit-ears.svg",
             "x": 0,
             "y": 0,
             "width": 900,
             "height": 720,
             "pivot": [
-              450,
-              360
+              147.45,
+              494.1
             ]
+          },
+          {
+            "id": "rabbit",
+            "image": "page-10-rabbit.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ]
+          },
+          {
+            "id": "rabbit-arm",
+            "image": "page-10-rabbit-arm.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              225.15,
+              578.1
+            ],
+            "parent": "rabbit"
+          },
+          {
+            "id": "rabbit-lids",
+            "image": "page-10-rabbit-lids.svg",
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 720,
+            "pivot": [
+              180,
+              660
+            ],
+            "parent": "rabbit"
           }
         ],
         "tracks": [
           {
-            "layer": "butterfly",
+            "layer": "rabbit-ears",
             "preset": "gesture",
             "parameters": {
-              "x": 30,
-              "y": -18,
-              "angle": 7
+              "x": 0,
+              "y": 0,
+              "angle": 3
             },
-            "durationMs": 3000,
+            "durationMs": 2800,
             "restMs": 400,
-            "delayMs": 200,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-arm",
+            "preset": "gesture",
+            "parameters": {
+              "x": 0,
+              "y": 0,
+              "angle": -12
+            },
+            "durationMs": 2400,
+            "restMs": 400,
+            "delayMs": 0,
+            "playback": "repeat"
+          },
+          {
+            "layer": "rabbit-lids",
+            "preset": "blink",
+            "parameters": {},
+            "durationMs": 700,
+            "restMs": 1600,
+            "delayMs": 0,
             "playback": "repeat"
           }
         ]

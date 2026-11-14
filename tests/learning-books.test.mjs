@@ -20,7 +20,7 @@ test('alphabet contains A-Z once in order, uppercase/lowercase and pictured word
  assert.deepEqual(letters.map(p=>p.learning.letter),Array.from({length:26},(_,i)=>String.fromCharCode(65+i)));
  const words='apple ball cup drum egg fish gift hat insect jug kite leaf moon nest orange paintbrush quilt rabbit sock teddy umbrella vase wagon x-ray yarn zip'.split(' ');
  assert.deepEqual(letters.map(p=>p.learning.word),words);
- for(const p of letters){const {letter,word}=p.learning;assert.ok(word);assert.match(p.text,new RegExp(`\\b${letter}\\b`));const art=await readFile(`public/books/${b.id}/${p.image}`,'utf8');const labels=[...art.matchAll(/<text\b[^>]*>([^<]*)<\/text>/g)].map(m=>m[1]);assert.ok(labels.includes(`${letter} ${letter.toLowerCase()}`));assert.ok(labels.includes(word));assert.ok(p.text.toLowerCase().includes(word.toLowerCase()));}
+ for(const p of letters){const {letter,word}=p.learning;assert.ok(word);assert.match(p.text,new RegExp(`\\b${letter}\\b`));const art=await readFile(`public/books/${b.id}/${p.image}`,'utf8');const labels=[...art.matchAll(/<title>([^<]*)<\/title>/g)].map(m=>m[1]);assert.ok(!/<text\b/.test(art));assert.ok(labels.includes(`${letter} ${letter.toLowerCase()}`));assert.ok(labels.includes(word));assert.ok(p.text.toLowerCase().includes(word.toLowerCase()));}
  assert.equal(letters[23].learning.word.toLowerCase(),'x-ray');
 });
 test('counting scenes have exactly one through ten distinct visible targets',async()=>{
@@ -72,4 +72,12 @@ test('pattern pictures preserve the planned AB and AAB sequences',async()=>{
    assert.match(item[2],new RegExp('<'+({circle:'ellipse',square:'rect',triangle:'path'}[shape])+'\\b'));
   }
  }
+});
+test('counting backgrounds contain no incidental flowers, sprigs or fruit',async()=>{
+ const b=await get('mouses-counting-picnic');
+ for(const p of b.pages.filter(p=>p.learning?.number))assert.doesNotMatch(await readFile(`public/books/${b.id}/${p.image}`,'utf8'),/href="#(?:flower|sprig|fruit)"/);
+});
+test('planet rocket flames stay attached while the rocket floats',async()=>{
+ const b=await get('pips-planet-journey');
+ for(const p of b.pages.filter(p=>p.learning?.planet))assert.equal(p.scene.layers.find(l=>l.id==='flame')?.parent,'rocket');
 });

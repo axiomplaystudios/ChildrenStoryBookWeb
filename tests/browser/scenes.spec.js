@@ -26,7 +26,8 @@ async function fixture(page, { failAsset = false, fallback = false, assetGate } 
 
 async function moving(page) {
   await expect(page.locator(stage)).toBeVisible();
-  await expect(page.locator(`${current} .illustration`)).toHaveAttribute('data-playing', 'true');
+  // Landscape also shows the static facing page; assert on the fixture's scene.
+  await expect(page.locator(`${current} .illustration`).filter({ has: page.locator('[data-layer="tear"]') })).toHaveAttribute('data-playing', 'true');
   const first = await page.locator(tear).getAttribute('transform');
   await expect.poll(() => page.locator(tear).getAttribute('transform')).not.toBe(first);
 }

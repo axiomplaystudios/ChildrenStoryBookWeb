@@ -92,3 +92,26 @@ body.reader-expanded > .skip-link { display: none; }
 .animation-note { font-size: 11px; margin: 6px 0; }
 .reader-view.is-expanded .animation-settings { position: absolute; z-index: 60; top: max(8px, env(safe-area-inset-top)); left: max(8px, env(safe-area-inset-left)); max-width: min(440px, calc(100% - 125px)); margin: 0; background: #fffdf5ed; border-radius: 10px; padding: 0 8px; max-height: calc(100% - 16px); overflow: auto; }
 .reader-view.is-expanded .animation-settings summary { font-size: 11px; }
+
+/* A full-width shelf, grouped by the kind of shared reading. */
+.book-grid { max-width: none; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.shelf-group + .shelf-group { margin-top: 42px; }
+.shelf-group-title { font-size: 25px; margin-bottom: 24px; }
+@media (max-width: 1000px) { .book-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 650px) { .book-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Keep portrait artwork and its words together, with at most a small top margin. */
+@media (orientation: portrait) {
+  .reader-view:not(.is-expanded) .page-content { display: flex; flex-direction: column; }
+  .reader-view:not(.is-expanded) .page-content::before { content: ''; flex: 1; max-height: 58px; }
+  .reader-view:not(.is-expanded) .page-content::after { content: ''; flex: 1; }
+  .reader-view:not(.is-expanded) .illustration { height: auto; aspect-ratio: var(--picture-ratio, 1); flex: 0 0 auto; width: 100%; }
+  .reader-view:not(.is-expanded) .page-content img,
+  .reader-view:not(.is-expanded) .scene-stage { padding: 0; }
+  .reader-view:not(.is-expanded) .page-content p { flex: 0 0 auto; padding: 12px 18px; }
+  .reader-view:not(.is-expanded) .page-number { flex: 0 0 24px; }
+}
+@media (max-width: 650px) {
+  .reader-view:not(.is-expanded) .reader-bar { grid-template-columns: 1fr auto auto; }
+  .reader-view:not(.is-expanded) .reader-title { grid-column: 1 / -1; grid-row: 2; white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.2; }
+}
